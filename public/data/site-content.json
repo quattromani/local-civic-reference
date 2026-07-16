@@ -36,7 +36,7 @@
   },
   "directory": {
     "heading": "Candidate Directory",
-    "searchLabel": "Search",
+    "searchLabel": "Search the directory",
     "searchPlaceholder": "Candidate, office, city, or district…",
     "suggestionsLabel": "Directory suggestions",
     "initialStatus": "Preparing candidate listings…",

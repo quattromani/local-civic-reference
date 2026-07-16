@@ -4,6 +4,8 @@ Meaningful data, architecture, governance, and publication milestones are record
 
 ## 2026-07-16 — Repository promotion
 
+- Activated focused GitHub Pages deployment of the generated `public/` publication while retaining `src/` as the only editing authority.
+- Unified the Candidate Directory heading, search, and data-derived scope statistics into one semantic editorial utility.
 - Promoted the project from a stakeholder demonstration to the Local Civic Reference knowledge repository.
 - Established `src/` as the authoritative source for normalized data, provenance, editorial content, and website source.
 - Established `public/` as the reproducible GitHub Pages publication.

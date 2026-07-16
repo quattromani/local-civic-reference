@@ -123,11 +123,11 @@ The public projection excludes internal manual-review queues, scope-review recor
 
 ## GitHub Pages publication
 
-The repository is designed for GitHub Pages deployment of the generated `public/` payload.
+The repository deploys the generated `public/` payload through GitHub Pages.
 
-- Pages must not be enabled by automation during the initial repository creation.
-- The repository owner will enable Pages after the initial push and select GitHub Actions as the publication source.
-- A focused Pages workflow must upload `public/` unchanged; it must not create a second build or data authority.
+- The repository owner enabled Pages with GitHub Actions as the publication source.
+- `.github/workflows/deploy-pages.yml` uploads `public/` unchanged; it does not create a second build or data authority.
+- The current GitHub Pages address is a temporary publication location rather than the permanent public home.
 - No canonical or Open Graph URL is emitted until the hosted URL is approved in `src/content/site-content.json`.
 - `public/` must always be regenerated through `npm run build`; direct edits are release defects.
 
@@ -154,22 +154,21 @@ These blockers apply to a trusted public election release. They do not invalidat
 - [x] Preserve the canonical public election projection without factual changes.
 - [x] Rewrite repository and governance documentation around knowledge-first publishing.
 - [x] Create and push the public GitHub repository.
-- [ ] Owner enables GitHub Pages with a workflow that publishes `public/`.
+- [x] Owner enabled GitHub Pages with a workflow that publishes `public/`.
 
 ## Next recommended work
 
-1. Add the focused Pages deployment workflow and have the repository owner enable GitHub Pages.
-2. Verify the deployed `public/` site in multiple browsers and assistive technology.
-3. Refresh official filing sources after the relevant deadlines.
-4. Resolve pending affiliation and scope-review records.
-5. Add a documented election-cycle rollover process before introducing the next cycle.
-6. Define the next civic knowledge domain only after its source, normalization, and validation contract is documented.
+1. Verify the deployed `public/` site in multiple browsers and assistive technology.
+2. Refresh official filing sources after the relevant deadlines.
+3. Resolve pending affiliation and scope-review records.
+4. Add a documented election-cycle rollover process before introducing the next cycle.
+5. Define the next civic knowledge domain only after its source, normalization, and validation contract is documented.
 
 ## Handoff
 
-- **Current phase:** Repository promotion and initial publication setup.
+- **Current phase:** Published reference refinement and provisional election-data completion.
 - **Architecture confidence:** High.
 - **Data integrity confidence:** High within the documented source scope.
 - **Public-election completeness:** Provisional while filings and manual review remain open.
 - **Primary risk:** Treating a time-bounded filing snapshot as a final ballot.
-- **Next milestone:** GitHub Pages workflow and owner activation, followed by hosted accessibility QA.
+- **Next milestone:** Hosted accessibility QA, followed by filing-window and final-ballot closeout.

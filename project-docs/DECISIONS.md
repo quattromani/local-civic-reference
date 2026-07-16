@@ -40,4 +40,4 @@ Merriweather and Source Sans 3 are stored locally in the repository using only t
 
 ## ADR-010 — GitHub Pages publishes the generated `public/` payload
 
-The public site is built for GitHub Pages deployment from the generated `public/` directory. Because GitHub Pages branch-based settings do not expose `/public` as a selectable folder, deployment should use a focused GitHub Actions workflow that uploads `public/` unchanged. Pages activation remains a repository-owner action after the initial push. Canonical and Open Graph URLs remain absent until the hosted URL is approved.
+The public site is deployed to GitHub Pages from the generated `public/` directory. Because GitHub Pages branch-based settings do not expose `/public` as a selectable folder, a focused GitHub Actions workflow uploads `public/` unchanged. The workflow is publication transport only and does not rebuild or redefine canonical knowledge. The current Pages address is temporary, so canonical and Open Graph URLs remain absent until a permanent public home is approved.

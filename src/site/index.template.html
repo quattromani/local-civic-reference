@@ -41,28 +41,13 @@
 
     <section id="candidate-directory" aria-labelledby="directory-heading" tabindex="-1">
       <div class="container">
-        <div class="section-heading">
-          <h2 id="directory-heading">{{DIRECTORY_HEADING}}</h2>
-        </div>
-
         <div class="directory-tools">
-          <dl class="directory-stats" aria-label="Directory summary">
-            <div class="directory-stat">
-              <dt>Categories</dt>
-              <dd data-directory-category-count>—</dd>
-            </div>
-            <div class="directory-stat">
-              <dt>Offices</dt>
-              <dd data-directory-office-count>—</dd>
-            </div>
-            <div class="directory-stat">
-              <dt>Candidates</dt>
-              <dd data-directory-candidate-count>—</dd>
-            </div>
-          </dl>
+          <div class="section-heading directory-utility-heading">
+            <h2 id="directory-heading">{{DIRECTORY_HEADING}}</h2>
+          </div>
 
           <div class="directory-search">
-            <label for="directory-search">{{SEARCH_LABEL}}</label>
+            <label class="visually-hidden" for="directory-search">{{SEARCH_LABEL}}</label>
             <div class="search-control">
               <div class="typeahead" id="directory-typeahead">
                 <input
@@ -88,6 +73,21 @@
               <button class="search-clear" id="directory-search-clear" type="button" hidden>Clear</button>
             </div>
           </div>
+
+          <ul class="directory-stats" aria-label="Directory summary">
+            <li class="directory-stat">
+              <span class="directory-stat-number" data-directory-office-count>—</span>
+              <span class="directory-stat-label">Offices</span>
+            </li>
+            <li class="directory-stat">
+              <span class="directory-stat-number" data-directory-candidate-count>—</span>
+              <span class="directory-stat-label">Candidates</span>
+            </li>
+            <li class="directory-stat">
+              <span class="directory-stat-number" data-directory-category-count>—</span>
+              <span class="directory-stat-label">Categories</span>
+            </li>
+          </ul>
         </div>
 
         <noscript>

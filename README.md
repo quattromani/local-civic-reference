@@ -67,9 +67,9 @@ These are architectural guarantees, not optional presentation preferences.
 
 ## GitHub Pages
 
-GitHub Pages is designed to publish the generated contents of `public/`. Pages is intentionally not enabled by repository automation. GitHub Pages does not offer `/public` as a branch-folder selector, so the repository owner should select **GitHub Actions** as the Pages source and use a focused deployment workflow that uploads `public/` as the Pages artifact. That workflow is a publication transport only; it must not rebuild or redefine the canonical knowledge.
+GitHub Pages publishes the generated contents of `public/` through `.github/workflows/deploy-pages.yml`. GitHub Pages does not offer `/public` as a branch-folder selector, so the focused workflow uploads `public/` as the Pages artifact. The workflow is publication transport only; it does not rebuild or redefine canonical knowledge.
 
-No canonical URL is emitted until a final hosted URL is approved and recorded in `src/content/site-content.json`.
+The current Pages address is temporary. No canonical URL is emitted until a permanent public home is approved and recorded in `src/content/site-content.json`.
 
 ## Extending the reference
 
