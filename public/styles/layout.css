@@ -9,7 +9,7 @@
 
 .site-header {
       border-bottom: 1px solid var(--rule);
-      background: var(--surface);
+      background: #fffefa;
     }
 
 .header-inner {
@@ -61,11 +61,15 @@
       font-weight: 600;
     }
 
+.utility-nav a:hover {
+      color: #2f5d55;
+    }
+
 .hero {
       padding-block: clamp(3rem, 6vw, 4.75rem);
       border-bottom: 1px solid var(--rule);
       background:
-        linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(40, 79, 75, 0.08) calc(100% - 1px)),
+        linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(36, 77, 70, 0.065) calc(100% - 1px)),
         var(--paper);
       background-size: min(100%, 18rem) 100%;
     }
@@ -95,7 +99,7 @@ main > section:not(.hero):not(.notice-wrap) {
 .site-footer {
       padding-block: var(--space-6);
       border-top: 1px solid var(--rule-strong);
-      background: #ece9e1;
+      background: #eeece5;
     }
 
 .footer-grid {

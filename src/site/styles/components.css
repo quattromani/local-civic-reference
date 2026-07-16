@@ -15,7 +15,7 @@
 
 .notice {
       padding: var(--space-4);
-      border: 1px solid var(--rule-strong);
+      border: 1px solid #80968a;
       border-left: 0.28rem solid var(--accent);
       border-radius: var(--radius);
       background: var(--accent-soft);
@@ -51,9 +51,9 @@
 .primary-history-disclosure {
       margin: var(--space-4) 0;
       padding: 0;
-      border: 1px solid var(--rule);
+      border: 1px solid #c9d1d4;
       border-radius: var(--radius);
-      background: var(--surface-muted);
+      background: #f1f3f4;
     }
 
 .primary-history-summary {
@@ -120,7 +120,7 @@
 
 .context-section {
       border-block: 1px solid var(--rule);
-      background: var(--surface-muted);
+      background: var(--sage-field);
     }
 
 .plain-list {
@@ -145,7 +145,7 @@
 .methodology-list dt {
       padding-top: var(--space-3);
       border-top: 1px solid var(--rule);
-      color: var(--accent-dark);
+      color: #2b554e;
       font-weight: 700;
       line-height: 1.4;
     }
@@ -166,8 +166,8 @@
 .policy-card {
       align-self: start;
       padding: var(--space-4);
-      border-top: 3px solid var(--accent);
-      background: var(--surface);
+      border-top: 3px solid var(--reference-ink);
+      background: var(--reference-field);
     }
 
 .policy-card h3 {

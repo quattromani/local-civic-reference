@@ -5,7 +5,7 @@
     "pageTitle": "Gage County Candidate Directory | Local Civic Reference",
     "description": "A neutral candidate reference based on cited public sources for selected 2026 races appearing in Gage County.",
     "language": "en",
-    "themeColor": "#284f4b",
+    "themeColor": "#244d46",
     "canonicalUrl": null
   },
   "election": {
@@ -32,7 +32,7 @@
   "hero": {
     "kicker": "Local voter information",
     "headline": "Not every local race lists party affiliation on the ballot.",
-    "body": "This guide brings together candidates who appear on ballots across Gage County, along with publicly documented affiliation information and the sources used to verify it. It is intended as a factual reference for voters preparing for Election Day."
+    "body": "This guide brings together candidates appearing on ballots across Gage County, along with publicly documented affiliation information and the sources used to verify it. Browse by office, community, or candidate below."
   },
   "directory": {
     "heading": "Candidate Directory",
