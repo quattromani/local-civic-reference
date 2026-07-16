@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+*.log
+.env
+.env.*
+coverage/
+tmp/
+
+# Source files and public/ are both versioned. public/ is the reproducible
+# GitHub Pages output and must remain reviewable in release commits.

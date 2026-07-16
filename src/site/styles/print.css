@@ -1,0 +1,174 @@
+@media print {
+      @page {
+        margin: 0.65in;
+      }
+
+      :root {
+        --paper: #ffffff;
+        --surface: #ffffff;
+        --surface-muted: #ffffff;
+        --ink: #000000;
+        --ink-soft: #222222;
+        --rule: #777777;
+        --rule-strong: #333333;
+        --accent: #000000;
+        --accent-dark: #000000;
+        --accent-soft: #ffffff;
+      }
+
+      body {
+        background: #ffffff;
+        color: #000000;
+        font-size: 10.5pt;
+        line-height: 1.5;
+      }
+
+      .skip-link,
+      .utility-nav,
+      .directory-search,
+      .directory-status {
+        display: none !important;
+      }
+
+      .container {
+        width: 100%;
+        max-width: none;
+      }
+
+      .site-header,
+      .hero,
+      .notice-wrap,
+      main > section:not(.hero):not(.notice-wrap),
+      .site-footer {
+        padding-block: 0.18in;
+        background: #ffffff;
+      }
+
+      .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: 25pt;
+      }
+
+      h2 {
+        font-size: 18pt;
+      }
+
+      h3 {
+        font-size: 13pt;
+      }
+
+      .hero-copy {
+        max-width: none;
+        margin-top: 0.12in;
+        color: #000000;
+        font-size: 11pt;
+      }
+
+      .notice {
+        padding: 0.12in;
+        border: 1px solid #333333;
+      }
+
+      .section-heading {
+        margin-bottom: 0.15in;
+      }
+
+      .directory-category {
+        margin-top: 0.16in;
+        overflow: visible;
+        break-inside: auto;
+        border: 1px solid #555555;
+      }
+
+      .category-summary,
+      .office-summary {
+        min-height: 0;
+        padding: 0.08in;
+      }
+
+      .category-summary::after,
+      .office-summary::after {
+        content: none !important;
+      }
+
+      .category-affordance {
+        display: none;
+      }
+
+      .category-offices {
+        padding: 0 0.08in 0.08in;
+      }
+
+      .office-disclosure {
+        break-inside: avoid-page;
+      }
+
+      .candidate-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.08in;
+        padding-bottom: 0.12in;
+      }
+
+      .candidate-card {
+        padding: 0.08in;
+        break-inside: avoid;
+        border: 1px solid #777777;
+      }
+
+      .candidate-source-row {
+        margin-top: 0.06in;
+        padding-top: 0.04in;
+      }
+
+      .affiliation-badge {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: #000000;
+      }
+
+      a {
+        color: #000000;
+      }
+
+      a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.88em;
+        font-weight: 400;
+        overflow-wrap: anywhere;
+      }
+
+      details,
+      details[open] {
+        display: block;
+      }
+
+      details > * {
+        display: block !important;
+      }
+
+      summary {
+        min-height: 0;
+        padding-block: 0.08in;
+      }
+
+      details p {
+        padding-bottom: 0.08in;
+      }
+
+      .guide-methodology,
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.25in;
+      }
+
+      .policy-card {
+        padding: 0.12in;
+        border: 1px solid #777777;
+      }
+    }

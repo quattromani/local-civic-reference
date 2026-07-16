@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="{{SITE_LANGUAGE}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{SITE_DESCRIPTION}}">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  <meta property="og:title" content="{{PAGE_TITLE}}">
+  <meta property="og:description" content="{{SITE_DESCRIPTION}}">
+{{CANONICAL_METADATA}}
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#candidate-directory">Skip to candidate information</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="masthead-dateline">
+        <span class="masthead-label">{{ELECTION_LABEL}}<span class="masthead-separator" aria-hidden="true">•</span>{{ELECTION_JURISDICTION}}</span>
+        <time class="masthead-date" datetime="{{ELECTION_DATE_ISO}}">{{ELECTION_DATE_DISPLAY}}</time>
+      </div>
+
+      <nav class="utility-nav" aria-label="Page navigation">
+        {{NAVIGATION_ITEMS}}
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="hero-introduction">
+          <p class="kicker">{{HERO_KICKER}}</p>
+          <h1 id="page-title" tabindex="-1">{{HERO_HEADLINE}}</h1>
+          <p class="hero-copy">{{HERO_BODY}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="candidate-directory" aria-labelledby="directory-heading" tabindex="-1">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="directory-heading">{{DIRECTORY_HEADING}}</h2>
+        </div>
+
+        <div class="directory-tools">
+          <dl class="directory-stats" aria-label="Directory summary">
+            <div class="directory-stat">
+              <dt>Categories</dt>
+              <dd data-directory-category-count>—</dd>
+            </div>
+            <div class="directory-stat">
+              <dt>Offices</dt>
+              <dd data-directory-office-count>—</dd>
+            </div>
+            <div class="directory-stat">
+              <dt>Candidates</dt>
+              <dd data-directory-candidate-count>—</dd>
+            </div>
+          </dl>
+
+          <div class="directory-search">
+            <label for="directory-search">{{SEARCH_LABEL}}</label>
+            <div class="search-control">
+              <div class="typeahead" id="directory-typeahead">
+                <input
+                  id="directory-search"
+                  type="search"
+                  role="combobox"
+                  placeholder="{{SEARCH_PLACEHOLDER}}"
+                  autocomplete="off"
+                  spellcheck="false"
+                  aria-autocomplete="list"
+                  aria-controls="directory-search-suggestions"
+                  aria-expanded="false"
+                  aria-describedby="directory-status"
+                >
+                <div
+                  class="typeahead-list"
+                  id="directory-search-suggestions"
+                  role="listbox"
+                  aria-label="{{SUGGESTIONS_LABEL}}"
+                  hidden
+                ></div>
+              </div>
+              <button class="search-clear" id="directory-search-clear" type="button" hidden>Clear</button>
+            </div>
+          </div>
+        </div>
+
+        <noscript>
+          <div class="notice">
+            <h2>{{NOSCRIPT_HEADING}}</h2>
+            <p>{{NOSCRIPT_BODY}}</p>
+          </div>
+        </noscript>
+
+        <p id="directory-status" class="directory-status" role="status" aria-live="polite">{{DIRECTORY_INITIAL_STATUS}}</p>
+        <div class="directory-categories" id="directory-content"></div>
+      </div>
+    </section>
+
+    <section class="notice-wrap" id="guide-notes" aria-labelledby="guide-notes-heading">
+      <div class="container">
+        <div class="section-heading">
+          <p class="kicker">{{GUIDE_KICKER}}</p>
+          <h2 id="guide-notes-heading">{{GUIDE_HEADING}}</h2>
+          <p>{{GUIDE_INTRODUCTION}}</p>
+        </div>
+
+        <aside class="notice" aria-labelledby="notice-heading">
+          <h3 id="notice-heading">{{NOTICE_HEADING}}</h3>
+          <p>{{NOTICE_BODY}}</p>
+        </aside>
+
+        <div id="verification" class="guide-methodology" aria-labelledby="verification-heading">
+          <div class="guide-methodology-main">
+            <h3 id="verification-heading">{{VERIFICATION_HEADING}}</h3>
+            <p>{{VERIFICATION_INTRODUCTION}}</p>
+            <dl class="methodology-list">
+              {{METHODOLOGY_ITEMS}}
+            </dl>
+          </div>
+
+          <aside class="policy-card" aria-labelledby="correction-heading">
+            <h3 id="correction-heading">{{CORRECTION_HEADING}}</h3>
+            <p>{{CORRECTION_INTRODUCTION}} The guide-level review date is {{LAST_REVIEWED}}.</p>
+            <p>{{CORRECTION_PROMPT}}</p>
+            <a class="correction-contact" href="mailto:{{CORRECTION_EMAIL}}">{{CORRECTION_EMAIL}}</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="context" aria-labelledby="context-heading">
+      <div class="container reading-width">
+        <div class="section-heading">
+          <p class="kicker">{{CONTEXT_KICKER}}</p>
+          <h2 id="context-heading">{{CONTEXT_HEADING}}</h2>
+        </div>
+        {{CONTEXT_PARAGRAPHS}}
+      </div>
+    </section>
+
+    <section id="faq" class="context-section" aria-labelledby="faq-heading">
+      <div class="container reading-width">
+        <div class="section-heading">
+          <p class="kicker">{{FAQ_KICKER}}</p>
+          <h2 id="faq-heading">{{FAQ_HEADING}}</h2>
+        </div>
+        <div class="faq-list">
+          {{FAQ_ITEMS}}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-heading">{{FOOTER_HEADING}}</p>
+        <p class="footer-small">{{FOOTER_PURPOSE}}</p>
+      </div>
+      <div>
+        <p class="footer-small"><strong>Guide reviewed:</strong> {{LAST_REVIEWED}}</p>
+        <p class="footer-small"><strong>Corrections:</strong> <a href="mailto:{{CORRECTION_EMAIL}}">{{CORRECTION_EMAIL}}</a></p>
+        <p class="footer-small">{{FOOTER_AUTHORITY_NOTICE}}</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>

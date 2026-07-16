@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0.0",
+  "site": {
+    "title": "Local Civic Reference",
+    "pageTitle": "Gage County Candidate Directory | Local Civic Reference",
+    "description": "A neutral candidate reference based on cited public sources for selected 2026 races appearing in Gage County.",
+    "language": "en",
+    "themeColor": "#284f4b",
+    "canonicalUrl": null
+  },
+  "election": {
+    "label": "Election Day",
+    "jurisdiction": "Gage County",
+    "dateIso": "2026-11-03",
+    "dateDisplay": "Tuesday, November 3, 2026",
+    "lastReviewed": "July 15, 2026"
+  },
+  "navigation": [
+    {
+      "label": "Candidates",
+      "href": "#candidate-directory"
+    },
+    {
+      "label": "About this guide",
+      "href": "#guide-notes"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
+    }
+  ],
+  "hero": {
+    "kicker": "Local voter information",
+    "headline": "Not every local race lists party affiliation on the ballot.",
+    "body": "This guide brings together candidates who appear on ballots across Gage County, along with publicly documented affiliation information and the sources used to verify it. It is intended as a factual reference for voters preparing for Election Day."
+  },
+  "directory": {
+    "heading": "Candidate Directory",
+    "searchLabel": "Search",
+    "searchPlaceholder": "Candidate, office, city, or district…",
+    "suggestionsLabel": "Directory suggestions",
+    "initialStatus": "Preparing candidate listings…",
+    "noScriptHeading": "Candidate listings require JavaScript",
+    "noScriptBody": "This reference uses JavaScript to load the published civic data. Enable JavaScript to view the directory."
+  },
+  "guide": {
+    "kicker": "About this guide",
+    "heading": "How to read this directory",
+    "introduction": "Purpose, sourcing, review dates, and corrections are collected here for readers who want more context.",
+    "noticeHeading": "Information, not endorsement",
+    "noticeBody": "This guide presents factual candidate information using a consistent editorial standard. Appearance in the directory is not an endorsement, recommendation, ranking, or evaluation of any candidate.",
+    "verificationHeading": "How information is verified",
+    "verificationIntroduction": "Different sources establish different facts. Candidate cards identify the source used for each displayed claim.",
+    "methodologyLabels": {
+      "registrationVerification": "Party registration",
+      "primaryParticipation": "Primary participation",
+      "filingInformation": "Current filings",
+      "electionOutcomes": "Election results",
+      "stageSeparation": "Election stage",
+      "missingVerification": "Pending verification"
+    },
+    "correctionHeading": "Sources, review, and corrections",
+    "correctionIntroduction": "Candidate cards link each displayed fact to its source and show the source review date.",
+    "correctionPrompt": "If an entry appears inaccurate or outdated, send a supporting public source to:",
+    "correctionEmail": "gagecountygop.media@gmail.com"
+  },
+  "context": {
+    "kicker": "Important context",
+    "heading": "What “nonpartisan” means here",
+    "paragraphs": [
+      "A nonpartisan race is one in which party labels do not appear beside candidate names on the ballot. A candidate may still have a publicly documented political affiliation.",
+      "Affiliation is one piece of information, not a complete description of a candidate. It does not predict every decision, and local questions may not divide along conventional party lines.",
+      "The county and state drawers include supplemental races that may use different ballot rules. Their inclusion does not mean every race in this directory is officially nonpartisan."
+    ]
+  },
+  "faq": {
+    "kicker": "Frequently asked questions",
+    "heading": "Questions about this reference",
+    "items": [
+      {
+        "question": "Why are these races called nonpartisan?",
+        "answer": "Party labels do not appear beside candidate names on the ballot. Rules vary by office and jurisdiction."
+      },
+      {
+        "question": "Does a listed affiliation mean the candidate is officially running as a party nominee?",
+        "answer": "Not necessarily. The directory includes races with different ballot rules. A publicly documented political affiliation should not be treated as proof of nomination status; consult official election materials for the specific race."
+      },
+      {
+        "question": "How was this information verified?",
+        "answer": "See How information is verified for the source types and the facts each establishes.",
+        "answerLink": {
+          "label": "How information is verified",
+          "href": "#verification"
+        }
+      },
+      {
+        "question": "Why are some candidates listed under primary history?",
+        "answer": "They participated in the primary but did not advance. They remain visible as election history, separate from current listings."
+      },
+      {
+        "question": "What happens if an affiliation changes?",
+        "answer": "The entry should be updated when a reliable public source documents the change. Each card shows when its source was reviewed."
+      },
+      {
+        "question": "Does this site endorse candidates?",
+        "answer": "No. Appearance in the directory is not an endorsement, recommendation, ranking, or evaluation."
+      },
+      {
+        "question": "Why might a voter consider this information relevant?",
+        "answer": "Some voters consider political affiliation alongside a candidate’s experience, qualifications, statements, and priorities when evaluating people who may make decisions about public budgets, services, or tax levies."
+      },
+      {
+        "question": "How can an error be corrected?",
+        "answer": "Send a supporting public source to the correction contact shown in this guide."
+      }
+    ]
+  },
+  "footer": {
+    "heading": "Local Civic Reference",
+    "purpose": "An independent candidate reference. This resource is not an official election authority.",
+    "authorityNotice": "Consult the appropriate official election authority for ballot details, polling information, deadlines, and final candidate lists."
+  },
+  "interfaceCopy": {
+    "viewSource": "Open cited source →",
+    "sourceDetailsSummary": "Sources and review details",
+    "reviewedPrefix": "Reviewed",
+    "clearSearchLabel": "Clear directory search",
+    "emptyDirectory": "No candidate entries are currently available.",
+    "directoryError": "The candidate directory could not be displayed. Reload the page or contact the site administrator if the problem continues."
+  }
+}

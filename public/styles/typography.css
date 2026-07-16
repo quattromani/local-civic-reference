@@ -1,0 +1,58 @@
+@font-face {
+      font-family: "Merriweather";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url("../assets/fonts/merriweather-700-latin.woff2") format("woff2");
+    }
+
+@font-face {
+      font-family: "Source Sans 3";
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url("../assets/fonts/source-sans-3-latin.woff2") format("woff2");
+    }
+
+body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body-font);
+      font-size: 1rem;
+      line-height: 1.65;
+      font-kerning: normal;
+      text-rendering: optimizeLegibility;
+    }
+
+h1,
+    h2,
+    h3 {
+      margin-block: 0;
+      color: var(--ink);
+      font-family: var(--heading-font);
+      font-weight: 700;
+      line-height: 1.15;
+      text-wrap: balance;
+    }
+
+h1 {
+      max-width: 18ch;
+      font-size: clamp(2.25rem, 6.5vw, 4.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+h2 {
+      font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+      letter-spacing: -0.015em;
+    }
+
+h3 {
+      font-size: clamp(1.25rem, 3vw, 1.625rem);
+    }
+
+p,
+    ul {
+      margin-block: 0;
+    }

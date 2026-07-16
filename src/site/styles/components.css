@@ -1,0 +1,205 @@
+.kicker {
+      margin-bottom: var(--space-3);
+      color: var(--accent);
+      font-size: var(--text-label);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+.notice-wrap {
+      padding-block: var(--space-6);
+      border-top: 1px solid var(--rule);
+    }
+
+.notice {
+      padding: var(--space-4);
+      border: 1px solid var(--rule-strong);
+      border-left: 0.28rem solid var(--accent);
+      border-radius: var(--radius);
+      background: var(--accent-soft);
+    }
+
+.notice h2,
+    .notice h3 {
+      font-size: 1.35rem;
+    }
+
+.notice p {
+      max-width: 65rem;
+      margin-top: var(--space-2);
+      color: #37423d;
+    }
+
+.guide-methodology {
+      display: grid;
+      gap: var(--space-5);
+      margin-top: var(--space-5);
+    }
+
+.guide-methodology > * {
+      min-width: 0;
+    }
+
+.guide-methodology-main > p {
+      max-width: 46rem;
+      margin-top: var(--space-2);
+      color: var(--ink-soft);
+    }
+
+.primary-history-disclosure {
+      margin: var(--space-4) 0;
+      padding: 0;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: var(--surface-muted);
+    }
+
+.primary-history-summary {
+      position: relative;
+      display: grid;
+      gap: 0.18rem;
+      min-height: 3rem;
+      padding: var(--space-3) 2.75rem var(--space-3) var(--space-3);
+      cursor: pointer;
+      list-style: none;
+    }
+
+.primary-history-summary::-webkit-details-marker {
+      display: none;
+    }
+
+.primary-history-summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: var(--space-3);
+      color: var(--ink-soft);
+      font-size: 1.2rem;
+      font-weight: 400;
+      transform: translateY(-50%);
+    }
+
+.primary-history-disclosure[open] > .primary-history-summary::after {
+      content: "−";
+    }
+
+.primary-history-heading {
+      margin: 0;
+      font-family: var(--heading-font);
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+.primary-history-count {
+      color: var(--ink-soft);
+      font-size: var(--text-meta);
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+.primary-history-prompt {
+      color: var(--ink-soft);
+      font-size: var(--text-meta);
+      line-height: 1.45;
+    }
+
+.primary-history-content {
+      padding: 0 var(--space-3) var(--space-3);
+      border-top: 1px solid var(--rule);
+    }
+
+.primary-history-context {
+      margin: 0;
+      padding: var(--space-3) 0;
+      color: var(--ink-soft);
+      font-size: var(--text-meta);
+      line-height: 1.5;
+    }
+
+.context-section {
+      border-block: 1px solid var(--rule);
+      background: var(--surface-muted);
+    }
+
+.plain-list {
+      margin-top: var(--space-4);
+      padding-left: 1.25rem;
+    }
+
+.plain-list li + li {
+      margin-top: var(--space-2);
+    }
+
+.methodology-list {
+      margin: var(--space-5) 0 var(--space-4);
+      border-bottom: 1px solid var(--rule);
+    }
+
+.methodology-list dt,
+    .methodology-list dd {
+      margin: 0;
+    }
+
+.methodology-list dt {
+      padding-top: var(--space-3);
+      border-top: 1px solid var(--rule);
+      color: var(--accent-dark);
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+.methodology-list dd {
+      padding: var(--space-1) 0 var(--space-3);
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+.methodology-list + p {
+      max-width: 46rem;
+      padding-left: var(--space-3);
+      border-left: 3px solid var(--accent);
+      color: var(--ink-soft);
+    }
+
+.policy-card {
+      align-self: start;
+      padding: var(--space-4);
+      border-top: 3px solid var(--accent);
+      background: var(--surface);
+    }
+
+.policy-card h3 {
+      margin-bottom: var(--space-2);
+    }
+
+.correction-contact {
+      display: inline-block;
+      margin-top: var(--space-2);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+.faq-list {
+      border-top: 1px solid var(--rule-strong);
+    }
+
+.faq-list details {
+      border-bottom: 1px solid var(--rule);
+    }
+
+.faq-list summary {
+      min-height: 3.5rem;
+      padding: var(--space-3) 2.25rem var(--space-3) 0;
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.45;
+      list-style-position: outside;
+    }
+
+.faq-list details p {
+      max-width: 48rem;
+      padding: 0 0 var(--space-4) 1.15rem;
+      color: var(--ink-soft);
+    }

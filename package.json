@@ -1,0 +1,15 @@
+{
+  "name": "local-civic-reference",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A knowledge-first civic reference repository with a generated public website.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-certified-election-data.mjs --write && node scripts/build-site.mjs",
+    "validate": "npm run build && node scripts/validate-all.mjs",
+    "release": "npm run validate && npm run build && node scripts/check-release.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

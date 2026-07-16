@@ -1,0 +1,305 @@
+{
+  "schemaVersion": "1.0.0",
+  "datasetId": "gage-ne-2026-primary-electionware",
+  "lastReviewed": "2026-07-15",
+  "authoritativeSource": {
+    "label": "Gage County Electionware Summary Results Report - 2026 Primary Election",
+    "url": "https://countyelectionresults.nebraska.gov/election_files/Gage/2026_Primary_unofficial_results.pdf",
+    "electionDate": "2026-05-12",
+    "generatedAt": "2026-05-14T14:56:00-05:00",
+    "reportLabel": "UNOFFICIAL RESULTS",
+    "jurisdiction": "Gage County, Nebraska",
+    "pages": 7,
+    "localArchive": "src/provenance/elections/2026/sources/gage-2026-primary-electionware-unofficial-results.pdf",
+    "sha256": "c9fae2525b6eea5dab630257103d3b2349ed3ca6a9ef852a8eb277553f3e55eb"
+  },
+  "methodology": {
+    "votePercent": "Calculated as candidate votes divided by Total Votes Cast for the contest, rounded to two decimals. The PDF reports vote totals but does not print percentages.",
+    "placement": "Calculated by descending candidate vote total; write-in totals are excluded from placement.",
+    "scopeLimit": "Statewide, federal, legislative, and State Board totals are the Gage County portion only and cannot independently establish the full-district or statewide winner.",
+    "absenceRule": "For county offices already present in the filing-source roster, absence of a contest from this summary is recorded as no primary contest required, consistent with the supplied reconciliation instruction. The filing-source record is retained separately."
+  },
+  "offices": [
+    {
+      "officeId": "rep-us-senator-6-year",
+      "officeName": "United States Senator - 6 Year Term",
+      "category": "Federal Offices",
+      "jurisdiction": "Nebraska - Gage County reporting portion",
+      "electionType": "Republican Primary",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 3515,
+      "writeInVotes": 25,
+      "primaryResults": [
+        { "candidate": "Eric Mortimore", "votes": 71, "percentage": 2.02, "placement": 5 },
+        { "candidate": "Pete Ricketts", "votes": 2729, "percentage": 77.64, "placement": 1 },
+        { "candidate": "Todd Knobel", "votes": 340, "percentage": 9.67, "placement": 2 },
+        { "candidate": "Mac Stevens", "votes": 100, "percentage": 2.84, "placement": 4 },
+        { "candidate": "Debb Axtell Schultz", "votes": 250, "percentage": 7.11, "placement": 3 }
+      ]
+    },
+    {
+      "officeId": "rep-us-house-district-3",
+      "officeName": "United States Representative - District 3",
+      "category": "Federal Offices",
+      "jurisdiction": "Nebraska Congressional District 3 - Gage County reporting portion",
+      "electionType": "Republican Primary",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 3496,
+      "writeInVotes": 16,
+      "primaryResults": [
+        { "candidate": "David P. Huebner", "votes": 881, "percentage": 25.20, "placement": 2 },
+        { "candidate": "Adrian Smith", "votes": 2599, "percentage": 74.34, "placement": 1 }
+      ]
+    },
+    {
+      "officeId": "rep-governor",
+      "officeName": "Nebraska Governor",
+      "category": "State Offices",
+      "jurisdiction": "Nebraska - Gage County reporting portion",
+      "electionType": "Republican Primary",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 3337,
+      "writeInVotes": 16,
+      "primaryResults": [
+        { "candidate": "Sheila J. Korth-Focken", "votes": 225, "percentage": 6.74, "placement": 4 },
+        { "candidate": "Gary L. Rogge", "votes": 256, "percentage": 7.67, "placement": 3 },
+        { "candidate": "Jim Pillen", "votes": 2403, "percentage": 72.01, "placement": 1 },
+        { "candidate": "Jacy Todd", "votes": 92, "percentage": 2.76, "placement": 5 },
+        { "candidate": "Sal Holguin", "votes": 28, "percentage": 0.84, "placement": 6 },
+        { "candidate": "John Walz", "votes": 317, "percentage": 9.50, "placement": 2 }
+      ]
+    },
+    {
+      "officeId": "rep-secretary-of-state",
+      "officeName": "Nebraska Secretary of State",
+      "category": "State Offices",
+      "jurisdiction": "Nebraska - Gage County reporting portion",
+      "electionType": "Republican Primary",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 3084,
+      "writeInVotes": 12,
+      "primaryResults": [
+        { "candidate": "Bob Evnen", "votes": 1362, "percentage": 44.16, "placement": 2 },
+        { "candidate": "Scott Petersen", "votes": 1710, "percentage": 55.45, "placement": 1 }
+      ]
+    },
+    {
+      "officeId": "rep-state-treasurer",
+      "officeName": "Nebraska State Treasurer",
+      "category": "State Offices",
+      "jurisdiction": "Nebraska - Gage County reporting portion",
+      "electionType": "Republican Primary",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Uncontested",
+      "totalVotesCast": 2737,
+      "writeInVotes": 20,
+      "primaryResults": [
+        { "candidate": "Joey Spellerberg", "votes": 2717, "percentage": 99.27, "placement": 1 }
+      ]
+    },
+    {
+      "officeId": "rep-attorney-general",
+      "officeName": "Nebraska Attorney General",
+      "category": "State Offices",
+      "jurisdiction": "Nebraska - Gage County reporting portion",
+      "electionType": "Republican Primary",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Uncontested",
+      "totalVotesCast": 2829,
+      "writeInVotes": 30,
+      "primaryResults": [
+        { "candidate": "Mike Hilgers", "votes": 2799, "percentage": 98.94, "placement": 1 }
+      ]
+    },
+    {
+      "officeId": "rep-state-auditor",
+      "officeName": "Nebraska State Auditor",
+      "category": "State Offices",
+      "jurisdiction": "Nebraska - Gage County reporting portion",
+      "electionType": "Republican Primary",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Uncontested",
+      "totalVotesCast": 2941,
+      "writeInVotes": 17,
+      "primaryResults": [
+        { "candidate": "Mike Foley", "votes": 2924, "percentage": 99.42, "placement": 1 }
+      ]
+    },
+    {
+      "officeId": "gage-county-sheriff-republican",
+      "officeName": "Gage County Sheriff",
+      "category": "County Offices",
+      "jurisdiction": "Gage County",
+      "electionType": "Republican Primary",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 3427,
+      "writeInVotes": 4,
+      "primaryResults": [
+        { "candidate": "Spencer Behrens", "votes": 1424, "percentage": 41.55, "placement": 1 },
+        { "candidate": "Michael Hager", "votes": 1304, "percentage": 38.05, "placement": 2 },
+        { "candidate": "Tim Hanson", "votes": 695, "percentage": 20.28, "placement": 3 }
+      ]
+    },
+    {
+      "officeId": "gage-county-supervisor-district-7-republican",
+      "officeName": "Gage County Supervisor",
+      "category": "County Offices",
+      "jurisdiction": "Gage County",
+      "district": "District 7",
+      "electionType": "Republican Primary",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 428,
+      "writeInVotes": 3,
+      "primaryResults": [
+        { "candidate": "Gary Bergmeier", "votes": 190, "percentage": 44.39, "placement": 2 },
+        { "candidate": "Terry Jurgens", "votes": 235, "percentage": 54.91, "placement": 1 }
+      ]
+    },
+    {
+      "officeId": "legislature-district-30",
+      "officeName": "Nebraska Legislature",
+      "category": "State Offices",
+      "jurisdiction": "Legislative District 30 - Gage County reporting portion",
+      "district": "District 30",
+      "electionType": "Nonpartisan Primary",
+      "partisanStatus": "Nonpartisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 5324,
+      "writeInVotes": 19,
+      "primaryResults": [
+        { "candidate": "Cally Ideus", "votes": 3342, "percentage": 62.77, "placement": 1 },
+        { "candidate": "Janet M. Bock", "votes": 1963, "percentage": 36.87, "placement": 2 }
+      ]
+    },
+    {
+      "officeId": "state-board-of-education-district-5",
+      "officeName": "Nebraska State Board of Education",
+      "category": "State Offices",
+      "jurisdiction": "State Board District 5 - Gage County reporting portion",
+      "district": "District 5",
+      "electionType": "Nonpartisan Primary",
+      "partisanStatus": "Nonpartisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 4402,
+      "writeInVotes": 30,
+      "primaryResults": [
+        { "candidate": "Michaela Conway", "votes": 1601, "percentage": 36.37, "placement": 2 },
+        { "candidate": "Angie Eberspacher", "votes": 1874, "percentage": 42.57, "placement": 1 },
+        { "candidate": "Lana Daws", "votes": 897, "percentage": 20.38, "placement": 3 }
+      ]
+    },
+    {
+      "officeId": "beatrice-mayor",
+      "officeName": "Beatrice Mayor",
+      "category": "Cities & Villages",
+      "jurisdiction": "City of Beatrice",
+      "electionType": "Nonpartisan Primary",
+      "partisanStatus": "Nonpartisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 2700,
+      "writeInVotes": 6,
+      "primaryResults": [
+        { "candidate": "Duane Ruh", "votes": 1374, "percentage": 50.89, "placement": 1 },
+        { "candidate": "Ted Fairbanks", "votes": 1011, "percentage": 37.44, "placement": 2 },
+        { "candidate": "Tyson Parks", "votes": 309, "percentage": 11.44, "placement": 3 }
+      ]
+    },
+    {
+      "officeId": "wymore-mayor",
+      "officeName": "Wymore Mayor",
+      "category": "Cities & Villages",
+      "jurisdiction": "City of Wymore",
+      "electionType": "Nonpartisan Primary",
+      "partisanStatus": "Nonpartisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Contested",
+      "totalVotesCast": 315,
+      "writeInVotes": 0,
+      "primaryResults": [
+        { "candidate": "Jeffrey D. Spier", "votes": 18, "percentage": 5.71, "placement": 5 },
+        { "candidate": "Paul Borzekofski", "votes": 106, "percentage": 33.65, "placement": 1 },
+        { "candidate": "Kevin Sturm", "votes": 67, "percentage": 21.27, "placement": 3 },
+        { "candidate": "Milton Pike", "votes": 20, "percentage": 6.35, "placement": 4 },
+        { "candidate": "Jacob Harding", "votes": 6, "percentage": 1.90, "placement": 6 },
+        { "candidate": "Max Manuilov", "votes": 98, "percentage": 31.11, "placement": 2 }
+      ]
+    }
+  ],
+  "additionalReportedContests": [
+    { "contest": "DEM US Senator 6 YR", "totalVotesCast": 1351, "writeInVotes": 15, "primaryResults": [{ "candidate": "William J. Forbes", "votes": 174, "percentage": 12.88, "placement": 2 }, { "candidate": "Cindy Burbank", "votes": 1162, "percentage": 86.01, "placement": 1 }] },
+    { "contest": "DEM Congress Dist. 3", "totalVotesCast": 1210, "writeInVotes": 15, "primaryResults": [{ "candidate": "Becky Kelly Stille", "votes": 1195, "percentage": 98.76, "placement": 1 }] },
+    { "contest": "DEM Governor", "totalVotesCast": 1384, "writeInVotes": 5, "primaryResults": [{ "candidate": "Lynne Walz", "votes": 1232, "percentage": 89.02, "placement": 1 }, { "candidate": "Larry Marvin", "votes": 147, "percentage": 10.62, "placement": 2 }] },
+    { "contest": "DEM Sec. of State", "totalVotesCast": 1266, "writeInVotes": 4, "primaryResults": [{ "candidate": "Lee M. Cimfel", "votes": 138, "percentage": 10.90, "placement": 2 }, { "candidate": "Sarah J. Slattery", "votes": 1124, "percentage": 88.78, "placement": 1 }] },
+    { "contest": "DEM State Treasurer", "totalVotesCast": 1190, "writeInVotes": 6, "primaryResults": [{ "candidate": "Daniel Ebers", "votes": 1184, "percentage": 99.50, "placement": 1 }] },
+    { "contest": "DEM Attorney General", "totalVotesCast": 1226, "writeInVotes": 7, "primaryResults": [{ "candidate": "Jocelyn Brasher", "votes": 1219, "percentage": 99.43, "placement": 1 }] },
+    { "contest": "DEM State Auditor", "totalVotesCast": 56, "writeInVotes": 56, "primaryResults": [] },
+    { "contest": "LIB US Senator 6 YR", "totalVotesCast": 13, "writeInVotes": 13, "primaryResults": [] },
+    { "contest": "LIB Congress Dist. 3", "totalVotesCast": 11, "writeInVotes": 11, "primaryResults": [] },
+    { "contest": "LIB Governor", "totalVotesCast": 12, "writeInVotes": 12, "primaryResults": [] },
+    { "contest": "LIB Sec. of State", "totalVotesCast": 10, "writeInVotes": 10, "primaryResults": [] },
+    { "contest": "LIB State Treasurer", "totalVotesCast": 9, "writeInVotes": 9, "primaryResults": [] },
+    { "contest": "LIB Attorney General", "totalVotesCast": 10, "writeInVotes": 10, "primaryResults": [] },
+    { "contest": "LIB State Auditor", "totalVotesCast": 4, "writeInVotes": 4, "primaryResults": [] },
+    { "contest": "LMN US Senator 6 YR", "totalVotesCast": 20, "writeInVotes": 0, "primaryResults": [{ "candidate": "Earl Starkey", "votes": 9, "percentage": 45.00, "placement": 2 }, { "candidate": "Mike Marvin", "votes": 11, "percentage": 55.00, "placement": 1 }] },
+    { "contest": "LMN Congress Dist. 3", "totalVotesCast": 20, "writeInVotes": 0, "primaryResults": [{ "candidate": "David J. Else", "votes": 20, "percentage": 100.00, "placement": 1 }] },
+    { "contest": "LMN Governor", "totalVotesCast": 6, "writeInVotes": 0, "primaryResults": [{ "candidate": "Rick Beard", "votes": 4, "percentage": 66.67, "placement": 1 }, { "candidate": "James J. Charvat III", "votes": 2, "percentage": 33.33, "placement": 2 }] },
+    { "contest": "LMN Sec. of State", "totalVotesCast": 1, "writeInVotes": 1, "primaryResults": [] },
+    { "contest": "LMN State Treasurer", "totalVotesCast": 1, "writeInVotes": 1, "primaryResults": [] },
+    { "contest": "LMN Attorney General", "totalVotesCast": 1, "writeInVotes": 1, "primaryResults": [] },
+    { "contest": "LMN State Auditor", "totalVotesCast": 1, "writeInVotes": 1, "primaryResults": [] }
+  ],
+  "ballotMeasures": [
+    {
+      "measureId": "norris-school-bond",
+      "measureName": "Norris School Bond",
+      "totalVotesCast": 444,
+      "results": [
+        { "choice": "FOR such Bonds and tax", "votes": 154, "percentage": 34.68 },
+        { "choice": "AGAINST such Bonds and tax", "votes": 290, "percentage": 65.32 }
+      ]
+    }
+  ],
+  "noPrimaryContestRequired": [
+    { "office": "Gage County Supervisor", "district": "District 1", "candidate": "Eddie Dorn" },
+    { "office": "Gage County Supervisor", "district": "District 3", "candidate": "Eric Tiemann" },
+    { "office": "Gage County Supervisor", "district": "District 5", "candidate": "Gary Lytle" },
+    { "office": "Gage County Attorney", "candidate": "Amanda Fanning" },
+    { "office": "Gage County Assessor", "candidate": "Max Quattromani" },
+    { "office": "Gage County Clerk", "candidate": "Dawn Hill" },
+    { "office": "Gage County Surveyor", "candidate": "Chris Witulski" },
+    { "office": "Gage County Treasurer", "candidate": "Lisa Sohl" },
+    { "office": "Gage County Register of Deeds", "candidate": "Donna Munoz" },
+    { "office": "Gage County Clerk of the District Court", "candidate": "Kelly Bagwell" }
+  ]
+}

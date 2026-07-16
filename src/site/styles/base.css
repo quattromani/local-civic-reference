@@ -1,0 +1,23 @@
+*,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+html {
+      scroll-behavior: smooth;
+    }
+
+p + p {
+      margin-top: var(--space-3);
+    }
+
+a {
+      color: var(--accent-dark);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+a:hover {
+      text-decoration-thickness: 0.14em;
+    }

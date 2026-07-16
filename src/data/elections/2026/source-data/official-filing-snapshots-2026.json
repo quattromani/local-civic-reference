@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotDate": "2026-07-15",
+  "filingWindowStatus": "Open — the incumbent filing deadline is July 15, 2026, and the non-incumbent filing deadline is August 3, 2026.",
+  "generalElectionDate": "2026-11-03",
+  "sources": [
+    {
+      "sourceId": "src-gage-county-filing-snapshot-2026-07-15",
+      "name": "Gage County 2026 Candidate Filing List",
+      "url": "https://gagecountyne.gov/wp-content/uploads/sites/35/2026/07/2026-filings_for_office-General-for-web-page.pdf",
+      "localArchive": "src/provenance/elections/2026/sources/gage-2026-general-filing-snapshot-2026-07-15.pdf",
+      "sha256": "10591a9135938f44bb638fa3bf69d0ffd46d167173fc280edf17026f7a352fd3",
+      "authorityTier": 1,
+      "sourceType": "Official county filing snapshot",
+      "publicStatus": "Official filing snapshot current July 15, 2026",
+      "publicDescription": "The Gage County Election Office filing list identifies candidates currently filed for county, municipal, school, village, and township offices. The filing window is still open, so it does not establish a final general-election contest status.",
+      "reviewedDate": "2026-07-15"
+    },
+    {
+      "sourceId": "src-gage-general-offices-notice-2026",
+      "name": "Gage County Notice of Offices to Be Filled at the 2026 General Election",
+      "url": "https://gagecountyne.gov/wp-content/uploads/sites/35/2026/07/Notice-of-Gen-Elec-Jun-2026-offcs-up.pdf",
+      "localArchive": "src/provenance/elections/2026/sources/gage-2026-general-offices-up-for-election.pdf",
+      "sha256": "b067990374e9ddbfd9e485cb84d13871f07c5055400da9a7e808f51490225854",
+      "authorityTier": 1,
+      "sourceType": "Official county election notice",
+      "publicStatus": "Official notice dated June 17, 2026",
+      "publicDescription": "The notice identifies general-election offices, seats, terms, filing authorities, and the July 15 and August 3 filing deadlines applicable to the listed offices.",
+      "reviewedDate": "2026-07-15"
+    },
+    {
+      "sourceId": "src-gage-primary-offices-notice-2026",
+      "name": "Gage County Notice of Offices to Be Filled at the 2026 Primary Election",
+      "url": "https://gagecountyne.gov/pdfs/election/2026/Notice%20of%20Prim%20Elec%20Jan%202026%20offices%20up%20for%20election.pdf",
+      "authorityTier": 1,
+      "sourceType": "Official county election notice",
+      "publicStatus": "Official notice dated January 15, 2026",
+      "publicDescription": "The notice identifies offices appearing in the 2026 primary cycle, the number to be elected, partisan status, term length, and filing authority.",
+      "reviewedDate": "2026-07-16"
+    },
+    {
+      "sourceId": "src-ne-general-filing-snapshot-2026-07-15",
+      "name": "Nebraska 2026 Statewide Candidate Filing List",
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/Statewide_Candidate_Filing_List.xlsx",
+      "localArchive": "src/provenance/elections/2026/sources/ne-2026-statewide-candidate-filing-list-2026-07-15.xlsx",
+      "sha256": "0e11bcd4324f559384fa530b259364f24108e0c63ae9a892aea6f6c499fe24fd",
+      "authorityTier": 1,
+      "sourceType": "Official statewide filing snapshot",
+      "publicStatus": "Official filing snapshot current July 15, 2026",
+      "publicDescription": "The Nebraska Secretary of State workbook identifies candidates currently listed for the 2026 general election. Candidate-access pathways remain open, so it does not establish a final general-election contest status.",
+      "reviewedDate": "2026-07-15"
+    },
+    {
+      "sourceId": "src-ne-primary-canvass-2026",
+      "name": "Nebraska Board of State Canvassers 2026 Primary Election Official Report",
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/2026_Primary_Canvass_Book.pdf",
+      "localArchive": "src/provenance/elections/2026/sources/ne-2026-primary-canvass-official-results.pdf",
+      "sha256": "d1b2ce9b9746a4faddc2700ce613b3cd620ec1b9bd3f9bacf5e36d9586055fba",
+      "authorityTier": 1,
+      "sourceType": "Official certified statewide primary results",
+      "publicStatus": "Official statewide primary canvass",
+      "publicDescription": "The Nebraska Board of State Canvassers report identifies official 2026 primary nominees and statewide or districtwide primary outcomes.",
+      "reviewedDate": "2026-07-15"
+    },
+    {
+      "sourceId": "src-gage-primary-sample-ballots-2026",
+      "name": "Gage County 2026 Primary Sample Ballots",
+      "url": "https://gagecountyne.gov/wp-content/uploads/sites/35/2026/03/Sample-ballot-Prim-2026.pdf",
+      "localArchive": "src/provenance/elections/2026/sources/gage-2026-primary-sample-ballots.pdf",
+      "sha256": "aa1f6f181f713cdc565d2ed9ceb121a429a2e58767050b3eb390a294273c4277",
+      "authorityTier": 1,
+      "sourceType": "Official county sample ballot notice",
+      "publicStatus": "Official primary sample-ballot notice",
+      "publicDescription": "The county sample-ballot notice explains that candidates are declared nominated and omitted from the primary ballot when filings do not exceed the statutory primary threshold.",
+      "reviewedDate": "2026-07-15"
+    }
+  ],
+  "stateOffices": [
+    {
+      "officeId": "office-us-senator",
+      "currentCandidates": [
+        { "name": "Pete Ricketts", "party": "Republican", "incumbencyStatus": "Incumbent" },
+        { "name": "Cindy Burbank", "party": "Democratic", "incumbencyStatus": "Nonincumbent" },
+        { "name": "Mike Marvin", "party": "Legal Marijuana NOW", "incumbencyStatus": "Nonincumbent" }
+      ]
+    },
+    {
+      "officeId": "office-us-house-district-3",
+      "currentCandidates": [
+        { "name": "Adrian Smith", "party": "Republican", "incumbencyStatus": "Incumbent" },
+        { "name": "Becky Kelly Stille", "party": "Democratic", "incumbencyStatus": "Nonincumbent" },
+        { "name": "David J. Else", "party": "Legal Marijuana NOW", "incumbencyStatus": "Nonincumbent" }
+      ]
+    },
+    {
+      "officeId": "office-nebraska-governor",
+      "officeName": "Nebraska Governor and Lieutenant Governor",
+      "currentCandidates": [
+        { "name": "Jim Pillen", "ballotName": "Jim Pillen and (undeclared)", "party": "Republican", "incumbencyStatus": "Incumbent" },
+        { "name": "Lynne Walz", "ballotName": "Lynne Walz and (undeclared)", "party": "Democratic", "incumbencyStatus": "Nonincumbent" },
+        { "name": "Rick Beard", "ballotName": "Rick Beard and (undeclared)", "party": "Legal Marijuana NOW", "incumbencyStatus": "Nonincumbent" }
+      ]
+    },
+    {
+      "officeId": "office-nebraska-secretary-of-state",
+      "currentCandidates": [
+        { "name": "Scott Petersen", "party": "Republican", "incumbencyStatus": "Nonincumbent" },
+        { "name": "Sarah J. Slattery", "party": "Democratic", "incumbencyStatus": "Nonincumbent" }
+      ]
+    },
+    {
+      "officeId": "office-nebraska-state-treasurer",
+      "currentCandidates": [
+        { "name": "Joey Spellerberg", "party": "Republican", "incumbencyStatus": "Incumbent" },
+        { "name": "Daniel Ebers", "party": "Democratic", "incumbencyStatus": "Nonincumbent" }
+      ]
+    },
+    {
+      "officeId": "office-nebraska-attorney-general",
+      "currentCandidates": [
+        { "name": "Mike Hilgers", "party": "Republican", "incumbencyStatus": "Incumbent" },
+        { "name": "Jocelyn Brasher", "party": "Democratic", "incumbencyStatus": "Nonincumbent" }
+      ]
+    },
+    {
+      "officeId": "office-nebraska-state-auditor",
+      "currentCandidates": [
+        { "name": "Mike Foley", "party": "Republican", "incumbencyStatus": "Incumbent" }
+      ]
+    },
+    {
+      "officeId": "office-nebraska-legislature-district-30",
+      "currentCandidates": [
+        { "name": "Cally Ideus", "party": null, "incumbencyStatus": "Nonincumbent" },
+        { "name": "Janet M. Bock", "party": null, "incumbencyStatus": "Nonincumbent" }
+      ]
+    },
+    {
+      "officeId": "office-state-board-of-education-district-5",
+      "currentCandidates": [
+        { "name": "Michaela Conway", "party": null, "incumbencyStatus": "Nonincumbent" },
+        { "name": "Angie Eberspacher", "party": null, "incumbencyStatus": "Nonincumbent" }
+      ]
+    }
+  ],
+  "localOffices": [
+    { "officeId": "office-gage-county-clerk", "officeName": "Gage County Clerk", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Dawn Hill", "party": "Republican", "incumbencyStatus": "Incumbent" }] },
+    { "officeId": "office-gage-county-supervisor-district-1", "officeName": "Gage County Supervisor - District 1", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "district": "District 1", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Eddie Dorn", "party": "Republican", "incumbencyStatus": "Incumbent" }] },
+    { "officeId": "office-gage-county-supervisor-district-3", "officeName": "Gage County Supervisor - District 3", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "district": "District 3", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Erich Tiemann", "party": "Republican", "incumbencyStatus": "Incumbent" }] },
+    { "officeId": "office-gage-county-supervisor-district-5", "officeName": "Gage County Supervisor - District 5", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "district": "District 5", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Gary Lytle", "party": "Republican", "incumbencyStatus": "Incumbent" }] },
+    { "officeId": "office-gage-county-register-of-deeds", "officeName": "Gage County Register of Deeds", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Donna Remmers Munoz", "party": "Republican", "incumbencyStatus": "Incumbent" }] },
+    { "officeId": "office-gage-county-treasurer", "officeName": "Gage County Treasurer", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Lisa Sohl", "party": "Republican", "incumbencyStatus": "Nonincumbent" }] },
+    { "officeId": "office-gage-county-clerk-of-district-court", "officeName": "Gage County Clerk of the District Court", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Kelly D. Bagwell", "party": "Democratic", "incumbencyStatus": "Nonincumbent" }] },
+    { "officeId": "office-gage-county-attorney", "officeName": "Gage County Attorney", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Amanda Fanning", "party": "Republican", "incumbencyStatus": "Incumbent" }] },
+    { "officeId": "office-gage-county-assessor", "officeName": "Gage County Assessor", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Max Quattromani", "party": "Republican", "incumbencyStatus": "Nonincumbent" }] },
+    { "officeId": "office-gage-county-surveyor", "officeName": "Gage County Surveyor", "category": "County Offices", "jurisdiction": "Gage County", "jurisdictionType": "County", "partisanStatus": "Partisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Chris Witulski", "party": "Republican", "incumbencyStatus": "Incumbent" }] },
+
+    { "officeId": "office-beatrice-public-schools", "officeName": "Beatrice Public Schools", "category": "School Boards", "jurisdiction": "Beatrice Public Schools", "jurisdictionType": "School district", "partisanStatus": "Nonpartisan", "seatsAvailable": 4, "voteFor": 4, "candidates": [{ "name": "Charles Riedesel" }, { "name": "Doris J. Martin" }, { "name": "Dee Enevoldsen" }, { "name": "Chad Omar" }, { "name": "Sabrina M. Given" }, { "name": "Matt Bogle" }] },
+    { "officeId": "office-diller-odell-public-schools", "officeName": "Diller-Odell Public Schools", "category": "School Boards", "jurisdiction": "Diller-Odell Public Schools", "jurisdictionType": "School district", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Allen Roelfs", "seat": "Ward 1" }, { "name": "B.J. Stein", "seat": "Ward 1" }, { "name": "Kasey Murphy", "seat": "Ward 1" }, { "name": "Adam Engelman", "seat": "Ward 1" }, { "name": "Angie Clifford", "seat": "Ward 1" }, { "name": "Randall Saathoff", "seat": "Ward 1" }] },
+    { "officeId": "office-freeman-public-schools", "officeName": "Freeman Public Schools", "category": "School Boards", "jurisdiction": "Freeman Public Schools", "jurisdictionType": "School district", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Kyle Dorn" }, { "name": "Shawn E. Mencl" }, { "name": "Theron Troxel" }, { "name": "Jordan N. Freeman" }] },
+    { "officeId": "office-southern-public-schools", "officeName": "Southern Public Schools", "category": "School Boards", "jurisdiction": "Southern Public Schools", "jurisdictionType": "School district", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "David A. Zimmerman" }, { "name": "Jeff Argo" }, { "name": "Debra Schlake" }, { "name": "Beverly R. Acton" }] },
+
+    { "officeId": "office-beatrice-city-council", "officeName": "Beatrice City Council", "category": "Cities & Villages", "jurisdiction": "City of Beatrice", "jurisdictionType": "Municipality", "partisanStatus": "Nonpartisan", "seatsAvailable": 4, "voteFor": 4, "candidates": [{ "name": "Terry Doyle", "seat": "Ward 1" }, { "name": "David R. Eskra", "seat": "Ward 2" }, { "name": "Mike McLain", "seat": "Ward 3" }, { "name": "Rod Aden", "seat": "Ward 4" }] },
+    { "officeId": "office-blue-springs-city-council", "officeName": "Blue Springs City Council", "category": "Cities & Villages", "jurisdiction": "City of Blue Springs", "jurisdictionType": "Municipality", "partisanStatus": "Nonpartisan", "seatsAvailable": 2, "voteFor": 2, "candidates": [{ "name": "Debra P. Dorn" }, { "name": "Carol M. Hughes" }] },
+    { "officeId": "office-blue-springs-mayor", "officeName": "Blue Springs Mayor", "category": "Cities & Villages", "jurisdiction": "City of Blue Springs", "jurisdictionType": "Municipality", "partisanStatus": "Nonpartisan", "seatsAvailable": 2, "voteFor": 2, "candidates": [] },
+    { "officeId": "office-wymore-city-council", "officeName": "Wymore City Council", "category": "Cities & Villages", "jurisdiction": "City of Wymore", "jurisdictionType": "Municipality", "partisanStatus": "Nonpartisan", "seatsAvailable": 2, "voteFor": 2, "candidates": [{ "name": "Curt M. Oblinger", "seat": "Ward 1" }, { "name": "Lisa K. Munstermann", "seat": "Ward 1" }, { "name": "Neil VanBoening", "seat": "Ward 2" }, { "name": "Isaac Bachmann", "seat": "Ward 2" }] },
+    { "officeId": "office-adams-village-board", "officeName": "Adams Village Board", "category": "Cities & Villages", "jurisdiction": "Village of Adams", "jurisdictionType": "Village", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Chris Schiebur" }, { "name": "Steve Robeson" }] },
+    { "officeId": "office-barneston-village-board", "officeName": "Barneston Village Board", "category": "Cities & Villages", "jurisdiction": "Village of Barneston", "jurisdictionType": "Village", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Louis Svoboda" }, { "name": "Scott R. Habluetzel" }, { "name": "Todd Wilcox" }] },
+    { "officeId": "office-clatonia-village-board", "officeName": "Clatonia Village Board", "category": "Cities & Villages", "jurisdiction": "Village of Clatonia", "jurisdictionType": "Village", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Bernita Antons" }, { "name": "Carrie Keslar" }, { "name": "Shannon Brydl" }, { "name": "John Kaiser" }] },
+    { "officeId": "office-cortland-village-board", "officeName": "Cortland Village Board", "category": "Cities & Villages", "jurisdiction": "Village of Cortland", "jurisdictionType": "Village", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Lisa Kohout" }, { "name": "Adam German" }, { "name": "Cheryl Moormeier" }] },
+    { "officeId": "office-filley-village-board", "officeName": "Filley Village Board", "category": "Cities & Villages", "jurisdiction": "Village of Filley", "jurisdictionType": "Village", "partisanStatus": "Nonpartisan", "seatsAvailable": 2, "voteFor": 2, "candidates": [{ "name": "Connor Mason" }, { "name": "Isaac Frerichs" }, { "name": "Brandon Jensen" }] },
+    { "officeId": "office-liberty-village-board", "officeName": "Liberty Village Board", "category": "Cities & Villages", "jurisdiction": "Village of Liberty", "jurisdictionType": "Village", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Thomasena Wiles" }, { "name": "Michael Tallant" }] },
+    { "officeId": "office-odell-village-board", "officeName": "Odell Village Board", "category": "Cities & Villages", "jurisdiction": "Village of Odell", "jurisdictionType": "Village", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Travus M. Snyder" }, { "name": "Andrew W. Adam" }] },
+    { "officeId": "office-pickrell-village-board", "officeName": "Pickrell Village Board", "category": "Cities & Villages", "jurisdiction": "Village of Pickrell", "jurisdictionType": "Village", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Ross Trauernicht" }, { "name": "Alan A. Wallman" }] },
+    { "officeId": "office-virginia-village-board", "officeName": "Virginia Village Board", "category": "Cities & Villages", "jurisdiction": "Village of Virginia", "jurisdictionType": "Village", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Russell Harms" }, { "name": "Chris Bredemeier" }] },
+
+    { "officeId": "office-adams-township-board", "officeName": "Adams Township Board", "category": "Township Boards", "jurisdiction": "Adams Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-barneston-township-board", "officeName": "Barneston Township Board", "category": "Township Boards", "jurisdiction": "Barneston Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "David A. Zimmerman" }, { "name": "Jason Allington" }, { "name": "Keith A. Maguire" }, { "name": "Lewis Carr" }] },
+    { "officeId": "office-blakely-township-board", "officeName": "Blakely Township Board", "category": "Township Boards", "jurisdiction": "Blakely Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-blue-springs-wymore-township-board", "officeName": "Blue Springs/Wymore Township Board", "category": "Township Boards", "jurisdiction": "Blue Springs/Wymore Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-clatonia-township-board", "officeName": "Clatonia Township Board", "category": "Township Boards", "jurisdiction": "Clatonia Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-elm-township-board", "officeName": "Elm Township Board", "category": "Township Boards", "jurisdiction": "Elm Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Larry W. Bergmeier" }, { "name": "Josh Novotny" }, { "name": "Terrance A. Bures" }] },
+    { "officeId": "office-filley-township-board", "officeName": "Filley Township Board", "category": "Township Boards", "jurisdiction": "Filley Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Alan W. Wiese" }, { "name": "Les Blythe" }, { "name": "Dennis Remmers" }] },
+    { "officeId": "office-glenwood-township-board", "officeName": "Glenwood Township Board", "category": "Township Boards", "jurisdiction": "Glenwood Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-grant-township-board", "officeName": "Grant Township Board", "category": "Township Boards", "jurisdiction": "Grant Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Jason Siems" }, { "name": "Kyle Pohlmann" }, { "name": "Wes Cammack" }] },
+    { "officeId": "office-hanover-township-board", "officeName": "Hanover Township Board", "category": "Township Boards", "jurisdiction": "Hanover Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Kent Buss" }] },
+    { "officeId": "office-highland-township-board", "officeName": "Highland Township Board", "category": "Township Boards", "jurisdiction": "Highland Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-holt-township-board", "officeName": "Holt Township Board", "category": "Township Boards", "jurisdiction": "Holt Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Jordan Busboom" }] },
+    { "officeId": "office-hooker-township-board", "officeName": "Hooker Township Board", "category": "Township Boards", "jurisdiction": "Hooker Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-island-grove-township-board", "officeName": "Island Grove Township Board", "category": "Township Boards", "jurisdiction": "Island Grove Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Gregg F. Thomas" }, { "name": "Mark Wieden" }] },
+    { "officeId": "office-liberty-township-board", "officeName": "Liberty Township Board", "category": "Township Boards", "jurisdiction": "Liberty Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Skip Barr" }, { "name": "Tom McGuire" }] },
+    { "officeId": "office-lincoln-township-board", "officeName": "Lincoln Township Board", "category": "Township Boards", "jurisdiction": "Lincoln Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "David L. Koenig" }, { "name": "Dan Crawford" }, { "name": "Justin M. Wiegand" }] },
+    { "officeId": "office-logan-township-board", "officeName": "Logan Township Board", "category": "Township Boards", "jurisdiction": "Logan Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Jeff Gronewold" }, { "name": "Alan Folkerts" }, { "name": "Eric Jobman" }] },
+    { "officeId": "office-midland-township-board", "officeName": "Midland Township Board", "category": "Township Boards", "jurisdiction": "Midland Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-nemaha-township-board", "officeName": "Nemaha Township Board", "category": "Township Boards", "jurisdiction": "Nemaha Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-paddock-township-board", "officeName": "Paddock Township Board", "category": "Township Boards", "jurisdiction": "Paddock Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Theodore F. Hajek" }, { "name": "Dave Bures" }, { "name": "Dennis R. Kostal" }] },
+    { "officeId": "office-riverside-township-board", "officeName": "Riverside Township Board", "category": "Township Boards", "jurisdiction": "Riverside Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-rockford-township-board", "officeName": "Rockford Township Board", "category": "Township Boards", "jurisdiction": "Rockford Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [] },
+    { "officeId": "office-sherman-township-board", "officeName": "Sherman Township Board", "category": "Township Boards", "jurisdiction": "Sherman Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Darin Frerichs" }, { "name": "Brad Frerichs" }, { "name": "Denise Spilker" }] },
+    { "officeId": "office-sicily-township-board", "officeName": "Sicily Township Board", "category": "Township Boards", "jurisdiction": "Sicily Township", "jurisdictionType": "Township", "partisanStatus": "Nonpartisan", "seatsAvailable": 3, "voteFor": 3, "candidates": [{ "name": "Fred Wright" }] }
+  ],
+  "stateFiledLocalDistricts": [
+    { "officeId": "office-norris-public-power-district-subdivision-4", "officeName": "Norris Public Power District - Subdivision 4", "category": "Other Local Districts", "jurisdiction": "Norris Public Power District", "jurisdictionType": "Public power district", "district": "Subdivision 4", "partisanStatus": "Nonpartisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "John D. Novotny" }, { "name": "Mark P. Kujath" }] },
+    { "officeId": "office-esu-4-district-3", "officeName": "Educational Service Unit 4 - District 3", "category": "Other Local Districts", "jurisdiction": "Educational Service Unit 4", "jurisdictionType": "Educational service unit", "district": "District 3", "partisanStatus": "Nonpartisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Jeff Bacon" }] },
+    { "officeId": "office-esu-5-district-5", "officeName": "Educational Service Unit 5 - District 5", "category": "Other Local Districts", "jurisdiction": "Educational Service Unit 5", "jurisdictionType": "Educational service unit", "district": "District 5", "partisanStatus": "Nonpartisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Carla J. Loemker" }] },
+    { "officeId": "office-esu-5-district-7", "officeName": "Educational Service Unit 5 - District 7", "category": "Other Local Districts", "jurisdiction": "Educational Service Unit 5", "jurisdictionType": "Educational service unit", "district": "District 7", "partisanStatus": "Nonpartisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Duane W. Smith" }] },
+    { "officeId": "office-esu-6-district-5", "officeName": "Educational Service Unit 6 - District 5", "category": "Other Local Districts", "jurisdiction": "Educational Service Unit 6", "jurisdictionType": "Educational service unit", "district": "District 5", "partisanStatus": "Nonpartisan", "seatsAvailable": 1, "voteFor": 1, "candidates": [{ "name": "Eric G. Malina" }] }
+  ]
+}
