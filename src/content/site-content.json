@@ -106,7 +106,11 @@
   "footer": {
     "heading": "Local Civic Reference",
     "purpose": "An independent candidate reference. This resource is not an official election authority.",
-    "authorityNotice": "Consult the appropriate official election authority for ballot details, polling information, deadlines, and final candidate lists."
+    "authorityNotice": "Consult the appropriate official election authority for ballot details, polling information, deadlines, and final candidate lists.",
+    "repositoryLink": {
+      "label": "Project source and documentation available on GitHub.",
+      "url": "https://github.com/quattromani/local-civic-reference"
+    }
   },
   "interfaceCopy": {
     "viewSource": "Open cited source →",
