@@ -115,6 +115,9 @@
   "interfaceCopy": {
     "viewSource": "Open cited source →",
     "sourceDetailsSummary": "Sources and review details",
+    "candidateResultLabel": "Gage County Result",
+    "officeVerificationPrefix": "Candidate filings verified as of",
+    "officeCandidateListNotice": "General-election candidate list is not yet final.",
     "reviewedPrefix": "Reviewed",
     "clearSearchLabel": "Clear directory search",
     "emptyDirectory": "No candidate entries are currently available.",

@@ -63,10 +63,16 @@ if (/role=["']heading["']|aria-level=/i.test(html)) errors.push("Generic ARIA he
 for (const nativeHeadingGenerator of [
   'makeElement("h3", "category-title"',
   'makeElement("h4", "office-title"',
-  'makeElement("h5", "candidate-section-heading"',
+  'makeElement("h5", "primary-history-heading"',
   'makeElement("h6", "candidate-name"'
 ]) {
   if (!sourceText.includes(nativeHeadingGenerator)) errors.push(`Missing native generated heading: ${nativeHeadingGenerator}`);
+}
+if (sourceText.includes("Current general-election candidates")) {
+  errors.push("Redundant current-candidate section heading remains in the rendered directory");
+}
+if (!sourceText.includes('currentList.setAttribute("aria-label", `${office.office} current general-election candidates`)')) {
+  errors.push("Current-candidate lists lack office-specific accessible labels");
 }
 
 const searchLabelMatch = html.match(/<label\b([^>]*)\bfor="directory-search"([^>]*)>([\s\S]*?)<\/label>/i);

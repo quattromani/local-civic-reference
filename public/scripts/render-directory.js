@@ -70,6 +70,28 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
         .replace(/\s*Statewide or districtwide advancement is established separately by the official state canvass\.$/, "");
     }
 
+    function candidateNotePresentation(candidate, electionStage) {
+      if (!candidate.note) return {};
+
+      const resultPrefix = /^(?:Gage County primary result|Gage County reporting portion):\s*/;
+      if (!resultPrefix.test(candidate.note)) {
+        return { fallbackNote: electionStage === "primary-history" ? historyNote(candidate) : candidate.note };
+      }
+
+      const methodologyText = "Statewide or districtwide advancement is established separately by the official state canvass.";
+      const resultText = candidate.note
+        .replace(` ${methodologyText}`, "")
+        .replace(resultPrefix, "")
+        .replace(/\.$/, "");
+
+      return {
+        resultText,
+        methodologyText: electionStage === "primary-history" || !candidate.note.includes(methodologyText)
+          ? ""
+          : methodologyText
+      };
+    }
+
     function makeCandidateCard(candidate, office, electionStage = "current-general-election") {
       const item = makeElement("li", "candidate-card");
       const header = makeElement("div", "candidate-card-header");
@@ -95,8 +117,21 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
         item.append(makeElement("p", "candidate-seat", candidate.seat));
       }
       item.append(electionStatus);
-      const publicNote = electionStage === "primary-history" ? historyNote(candidate) : candidate.note;
-      if (publicNote) item.append(makeElement("p", "candidate-note", publicNote));
+      const notePresentation = candidateNotePresentation(candidate, electionStage);
+      if (notePresentation.resultText) {
+        const result = makeElement("div", "candidate-result");
+        result.append(
+          makeElement("p", "candidate-result-label", interfaceCopy.candidateResultLabel),
+          makeElement("p", "candidate-result-value", notePresentation.resultText)
+        );
+        item.append(result);
+      }
+      if (notePresentation.methodologyText) {
+        item.append(makeElement("p", "candidate-methodology-note", notePresentation.methodologyText));
+      }
+      if (notePresentation.fallbackNote) {
+        item.append(makeElement("p", "candidate-note", notePresentation.fallbackNote));
+      }
       item.append(sources);
 
       item.dataset.electionStage = electionStage;
@@ -128,28 +163,34 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
 
       const currentCandidates = office.candidates.filter((candidate) => candidate.electionStageGroup === "current-general-election");
       const primaryHistory = office.candidates.filter((candidate) => candidate.electionStageGroup === "primary-history");
-      const officeMeta = [];
       if (office.jurisdiction && !office.office.toLowerCase().includes(office.jurisdiction.toLowerCase())) {
-        officeMeta.push(office.jurisdiction);
+        summaryMain.append(makeElement("span", "office-summary-jurisdiction", office.jurisdiction));
       }
-      if (office.officeMetadata.voteFor) officeMeta.push(`Vote for ${office.officeMetadata.voteFor}`);
-      officeMeta.push(`${currentCandidates.length} current`);
-      if (primaryHistory.length) officeMeta.push(`${primaryHistory.length} primary history`);
-      const meta = makeElement(
-        "span",
-        "office-summary-meta",
-        officeMeta.join(" · ")
-      );
-      summaryMain.append(title, meta);
+      const currentMeta = [
+        office.officeMetadata.voteFor ? `Vote for ${office.officeMetadata.voteFor}` : null,
+        `${currentCandidates.length} Current`
+      ].filter(Boolean).join(" · ");
+      const metadata = makeElement("span", "office-summary-metadata");
+      metadata.append(makeElement("span", "office-summary-meta office-summary-meta--current", currentMeta));
+      if (primaryHistory.length) {
+        metadata.append(makeElement(
+          "span",
+          "office-summary-meta office-summary-meta--history",
+          `${primaryHistory.length} Primary History`
+        ));
+      }
+      summaryMain.prepend(title);
+      summaryMain.append(metadata);
       summary.append(summaryMain);
 
       const candidateContent = makeElement("div", "office-candidate-content");
-      const currentSection = makeElement("section", "office-candidate-section");
-      const currentHeading = makeElement("h5", "candidate-section-heading", "Current general-election candidates");
-      currentHeading.id = `${office.officeId}-current-candidates`;
-      const currentContext = makeElement("p", "candidate-section-context", `${office.generalElectionStatus} Filing snapshot: ${office.filingSnapshotDate}.`);
-      currentSection.setAttribute("aria-labelledby", currentHeading.id);
-      currentSection.append(currentHeading, currentContext);
+      const currentSection = makeElement("div", "office-candidate-section");
+      const currentContext = makeElement(
+        "p",
+        "candidate-section-context",
+        `${interfaceCopy.officeVerificationPrefix} ${office.filingSnapshotDate} · ${interfaceCopy.officeCandidateListNotice}`
+      );
+      currentSection.append(currentContext);
       if (currentCandidates.length) {
         const currentList = makeElement("ul", "candidate-list");
         currentList.setAttribute("aria-label", `${office.office} current general-election candidates`);

@@ -357,7 +357,9 @@
 
 .office-summary-main {
       display: grid;
-      gap: 0.18rem;
+      width: 100%;
+      gap: 0.18rem var(--space-3);
+      align-items: center;
     }
 
 .office-title {
@@ -368,10 +370,57 @@
       line-height: 1.25;
     }
 
-.office-summary-meta {
+.office-summary-jurisdiction {
       color: var(--ink-soft);
       font-size: var(--text-meta);
       line-height: 1.4;
+    }
+
+.office-summary-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-1);
+      align-items: center;
+    }
+
+.office-summary-meta {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.22rem 0.5rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      color: var(--ink-soft);
+      font-size: var(--text-meta);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+.office-summary-meta--current {
+      background: var(--sage-field);
+      color: var(--ink);
+    }
+
+.office-summary-meta--history {
+      border-color: var(--rule-light);
+      background: var(--paper);
+      color: var(--ink-soft);
+    }
+
+@media (min-width: 48rem) {
+      .office-summary-main {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+
+      .office-title,
+      .office-summary-jurisdiction {
+        grid-column: 1;
+      }
+
+      .office-summary-metadata {
+        grid-row: 1 / span 2;
+        grid-column: 2;
+        justify-content: flex-end;
+      }
     }
 
 .candidate-list {
@@ -401,25 +450,19 @@
       padding: var(--space-2);
     }
 
-.candidate-section-heading {
-      margin: 0 0 var(--space-1);
-      font-family: var(--heading-font);
-      font-size: 1rem;
-      line-height: 1.35;
-    }
-
 .candidate-section-context {
       margin: 0 0 var(--space-3);
       color: var(--ink-soft);
-      font-size: var(--text-small);
-      line-height: 1.5;
+      font-size: var(--text-meta);
+      line-height: 1.4;
     }
 
 .candidate-election-status {
-      margin: var(--space-2) 0 0;
-      color: var(--ink-soft);
-      font-size: var(--text-small);
-      line-height: 1.45;
+      margin: 0.85rem 0 0;
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
     }
 
 .candidate-card {
@@ -444,6 +487,39 @@
       font-size: var(--text-card-title);
       font-weight: 700;
       line-height: 1.3;
+    }
+
+.candidate-result {
+      display: grid;
+      gap: 0.18rem;
+      margin-top: var(--space-3);
+    }
+
+.candidate-result-label {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: var(--text-label);
+      font-weight: 700;
+      letter-spacing: 0.075em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+.candidate-result-value {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--heading-font);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+.candidate-methodology-note {
+      max-width: 42rem;
+      margin: var(--space-2) 0 0;
+      color: var(--ink-soft);
+      font-size: var(--text-meta);
+      line-height: 1.5;
     }
 
 .affiliation-badge {
