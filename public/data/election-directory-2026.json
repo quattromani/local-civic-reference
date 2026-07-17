@@ -1007,15 +1007,15 @@
           "name": "Shawn E. Mencl",
           "ballotName": "Shawn E. Mencl",
           "seat": "",
-          "affiliation": "Verification Needed",
-          "affiliationVerificationState": "Pending Verification",
+          "affiliation": "Republican",
+          "affiliationVerificationState": "Verified",
           "electionStageGroup": "current-general-election",
           "primaryOutcome": "No Contested Primary Shown",
           "generalElectionStatus": "4 candidates are currently listed; general-election contest status is not yet final.",
           "note": null,
           "sourceBindings": {
             "candidateNameSourceId": "src-gage-county-filing-snapshot-2026-07-15",
-            "affiliationSourceId": null,
+            "affiliationSourceId": "src-ne-votercheck",
             "filingSourceId": "src-gage-county-filing-snapshot-2026-07-15",
             "participationSourceId": null,
             "resultSourceId": null,
@@ -1024,20 +1024,20 @@
           },
           "sourceEntries": [
             {
-              "sourceId": null,
+              "sourceId": "src-ne-votercheck",
               "roles": [
                 "affiliation"
               ],
               "roleLabels": [
                 "Affiliation"
               ],
-              "sourceLabel": "Verification Pending",
-              "sourceDescription": "No affiliation source is currently confirmed.",
-              "sourceUrl": null,
-              "sourceStatus": "Pending Verification",
-              "sourceDate": null,
+              "sourceLabel": "Nebraska VoterCheck",
+              "sourceDescription": "Confirms voter-registration affiliation.",
+              "sourceUrl": "https://www.votercheck.necvr.ne.gov/voterview/",
+              "sourceStatus": "Official voter registration verification",
+              "sourceDate": "July 16, 2026",
               "roleDates": {
-                "affiliation": null
+                "affiliation": "July 16, 2026"
               }
             },
             {

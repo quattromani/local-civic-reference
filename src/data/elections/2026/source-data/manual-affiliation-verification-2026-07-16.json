@@ -12,6 +12,7 @@
     { "displayName": "Kasey Murphy", "affiliation": "Democratic" },
     { "displayName": "Jordan N. Freeman", "affiliation": "Republican" },
     { "displayName": "Kyle Dorn", "affiliation": "Republican" },
+    { "displayName": "Shawn E. Mencl", "affiliation": "Republican" },
     { "displayName": "Theron Troxel", "affiliation": "Republican" },
     { "displayName": "Beverly R. Acton", "affiliation": "Republican" },
     { "displayName": "David A. Zimmerman", "affiliation": "Republican" },
@@ -116,7 +117,6 @@
   ],
   "pending": [
     "Adam Engelman",
-    "Shawn E. Mencl",
     "Max Manuilov",
     "Skip Barr",
     "Jeff Bacon",

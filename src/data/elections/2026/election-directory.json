@@ -4021,11 +4021,11 @@
     {
       "affiliationId": "aff-shawn-e-mencl-2026",
       "candidateId": "cand-shawn-e-mencl",
-      "label": "Verification Needed",
-      "verificationState": "Pending Verification",
-      "basis": null,
-      "sourceId": null,
-      "verifiedDate": null
+      "label": "Republican",
+      "verificationState": "Verified",
+      "basis": "Official voter registration verification",
+      "sourceId": "src-ne-votercheck",
+      "verifiedDate": "2026-07-16"
     },
     {
       "affiliationId": "aff-sheila-j-korth-focken-2026",
@@ -8757,14 +8757,6 @@
       "reviewId": "review-affiliation-randall-saathoff-diller-odell-public-schools",
       "candidateId": "cand-randall-saathoff",
       "candidacyId": "cdy-cand-randall-saathoff-office-diller-odell-public-schools-contest-office-diller-odell-public-schools-2026-general-filing-snapshot",
-      "field": "partyAffiliation",
-      "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
-      "status": "Pending Verification"
-    },
-    {
-      "reviewId": "review-affiliation-shawn-e-mencl-freeman-public-schools",
-      "candidateId": "cand-shawn-e-mencl",
-      "candidacyId": "cdy-cand-shawn-e-mencl-office-freeman-public-schools-contest-office-freeman-public-schools-2026-general-filing-snapshot",
       "field": "partyAffiliation",
       "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
       "status": "Pending Verification"
