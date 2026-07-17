@@ -97,6 +97,9 @@ if (!html.includes('<time class="masthead-date" datetime="2026-11-03">Tuesday, N
 
 if (!/:focus-visible\s*\{/i.test(sourceText)) errors.push("Required focus-visible styling is missing");
 if (!/@media\s*\(prefers-reduced-motion:\s*reduce\)/i.test(sourceText)) errors.push("Reduced-motion rules are missing");
+if (!sourceText.includes("position: sticky") || !sourceText.includes("scroll-padding-top")) {
+  errors.push("Sticky masthead or anchored-content offset is missing");
+}
 if (!sourceText.includes("The candidate directory could not be displayed.")) errors.push("Visible fatal directory error messaging is missing");
 if (!sourceText.includes('status.setAttribute("role", "alert")')) errors.push("Fatal directory errors are not exposed as alerts");
 

@@ -44,6 +44,10 @@
         background: #ffffff;
       }
 
+      .site-header {
+        position: static;
+      }
+
       .header-inner {
         flex-direction: row;
         justify-content: space-between;
