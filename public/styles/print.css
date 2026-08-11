@@ -95,6 +95,10 @@
         padding: 0.08in;
       }
 
+      .category-summary {
+        background: #ffffff;
+      }
+
       .category-summary::after,
       .office-summary::after {
         content: none !important;

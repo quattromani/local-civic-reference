@@ -46,6 +46,23 @@
       white-space: nowrap;
     }
 
+.masthead-date-link {
+      display: grid;
+      width: fit-content;
+      min-height: 2.75rem;
+      align-content: center;
+      gap: 0.08rem;
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.16em;
+    }
+
+.masthead-date-link:hover .masthead-date,
+    .masthead-date-link:focus-visible .masthead-date {
+      color: var(--accent);
+    }
+
 .utility-nav {
       display: flex;
       flex-wrap: wrap;

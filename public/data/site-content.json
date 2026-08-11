@@ -13,7 +13,17 @@
     "jurisdiction": "Gage County",
     "dateIso": "2026-11-03",
     "dateDisplay": "Tuesday, November 3, 2026",
-    "lastReviewed": "July 15, 2026"
+    "lastReviewed": "July 15, 2026",
+    "calendar": {
+      "fileName": "gage-county-election-day-2026.ics",
+      "ariaLabel": "Add Tuesday, November 3, 2026 to your calendar with a one-day reminder",
+      "eventTitle": "Election Day - Gage County",
+      "eventDescription": "Election Day in Gage County, Nebraska. Review local candidates at https://quattromani.github.io/local-civic-reference/",
+      "eventUrl": "https://quattromani.github.io/local-civic-reference/",
+      "reminderDescription": "Election Day is tomorrow in Gage County.",
+      "reminderDaysBefore": 1,
+      "stampUtc": "20260715T000000Z"
+    }
   },
   "navigation": [
     {
@@ -32,7 +42,8 @@
   "hero": {
     "kicker": "Local voter information",
     "headline": "Not every local race lists party affiliation on the ballot.",
-    "body": "This guide brings together candidates appearing on ballots across Gage County, along with publicly documented affiliation information and the sources used to verify it. Browse by office, community, or candidate below."
+    "body": "This guide brings together candidates appearing on ballots across Gage County, along with publicly documented affiliation information and the sources used to verify it. Browse by office, community, or candidate below.",
+    "bodyEmphasis": "Gage County"
   },
   "directory": {
     "heading": "Candidate Directory",

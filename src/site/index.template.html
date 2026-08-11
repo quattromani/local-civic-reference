@@ -9,7 +9,7 @@
   <meta property="og:title" content="{{PAGE_TITLE}}">
   <meta property="og:description" content="{{SITE_DESCRIPTION}}">
 {{CANONICAL_METADATA}}
-  <link rel="stylesheet" href="styles/site.css">
+  <link rel="stylesheet" href="{{STYLESHEET_URL}}">
 </head>
 
 <body>
@@ -19,7 +19,9 @@
     <div class="container header-inner">
       <div class="masthead-dateline">
         <span class="masthead-label">{{ELECTION_LABEL}}<span class="masthead-separator" aria-hidden="true">•</span>{{ELECTION_JURISDICTION}}</span>
-        <time class="masthead-date" datetime="{{ELECTION_DATE_ISO}}">{{ELECTION_DATE_DISPLAY}}</time>
+        <a class="masthead-date-link" href="{{ELECTION_CALENDAR_PATH}}" type="text/calendar" aria-label="{{ELECTION_CALENDAR_ARIA_LABEL}}">
+          <time class="masthead-date" datetime="{{ELECTION_DATE_ISO}}">{{ELECTION_DATE_DISPLAY}}</time>
+        </a>
       </div>
 
       <nav class="utility-nav" aria-label="Page navigation">

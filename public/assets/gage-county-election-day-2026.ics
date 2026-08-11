@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Local Civic Reference//Election Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-general-election-gage-county@local-civic-reference
+DTSTAMP:20260715T000000Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Election Day - Gage County
+DESCRIPTION:Election Day in Gage County\, Nebraska. Review local candidat
+ es at https://quattromani.github.io/local-civic-reference/
+URL:https://quattromani.github.io/local-civic-reference/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Election Day is tomorrow in Gage County.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

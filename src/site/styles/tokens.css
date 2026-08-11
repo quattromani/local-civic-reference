@@ -16,6 +16,18 @@
       --sage-field: #edf1ec;
       --reference-field: #eef1f2;
       --reference-ink: #596f79;
+      --category-school-field: #dde8de;
+      --category-school-rule: #7e917f;
+      --category-municipal-field: #e9e4d8;
+      --category-municipal-rule: #92866f;
+      --category-county-field: #d9e7e4;
+      --category-county-rule: #6e8d88;
+      --category-state-field: #dfe4e6;
+      --category-state-rule: #76858b;
+      --category-township-field: #ece6cc;
+      --category-township-rule: #95875c;
+      --category-district-field: #e8ddd6;
+      --category-district-rule: #95796d;
       --heading-font: "Merriweather", Georgia, "Times New Roman", Times, serif;
       --body-font: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       --text-label: 0.75rem;

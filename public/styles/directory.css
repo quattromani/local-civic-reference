@@ -8,14 +8,14 @@
       background: var(--surface);
     }
 
-.directory-utility-heading {
+.section-heading.directory-utility-heading {
       max-width: none;
       margin: 0;
       padding: var(--space-4) var(--space-3) 0;
     }
 
 .directory-search {
-      padding: var(--space-3) var(--space-3) 1.25rem;
+      padding: 0.5rem var(--space-3) 1.25rem;
     }
 
 .directory-stats {
@@ -209,10 +209,42 @@
     }
 
 .directory-category {
+      --category-field: #f2f3ef;
+      --category-rule: #87978e;
       overflow: clip;
-      border: 1px solid #87978e;
+      border: 1px solid var(--category-rule);
       border-radius: var(--radius);
       background: var(--surface);
+    }
+
+#category-school-boards {
+      --category-field: var(--category-school-field);
+      --category-rule: var(--category-school-rule);
+    }
+
+#category-cities-villages {
+      --category-field: var(--category-municipal-field);
+      --category-rule: var(--category-municipal-rule);
+    }
+
+#category-county-offices {
+      --category-field: var(--category-county-field);
+      --category-rule: var(--category-county-rule);
+    }
+
+#category-state-offices {
+      --category-field: var(--category-state-field);
+      --category-rule: var(--category-state-rule);
+    }
+
+#category-township-boards {
+      --category-field: var(--category-township-field);
+      --category-rule: var(--category-township-rule);
+    }
+
+#category-other-local-districts {
+      --category-field: var(--category-district-field);
+      --category-rule: var(--category-district-rule);
     }
 
 .category-summary,
@@ -251,11 +283,11 @@
       padding-right: var(--space-3);
       align-items: center;
       border-bottom: 0;
-      background: #f2f3ef;
+      background: var(--category-field);
     }
 
 .category-summary:hover {
-      background: #e9eee9;
+      background: color-mix(in srgb, var(--category-field), var(--accent) 7%);
     }
 
 .directory-category[open] > .category-summary {
@@ -280,7 +312,7 @@
       display: inline-flex;
       width: fit-content;
       padding: 0.18rem 0.5rem;
-      border: 1px solid #c4cec7;
+      border: 1px solid color-mix(in srgb, var(--category-rule), white 38%);
       border-radius: var(--radius);
       background: #fffefa;
       color: var(--ink-soft);

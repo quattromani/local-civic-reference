@@ -90,9 +90,19 @@ if (content.interfaceCopy.clearSearchLabel !== "Clear directory search"
 }
 
 if (html.includes("Browse the candidate directory")) errors.push("Redundant hero directory button remains");
+const calendarPath = path.join(root, "public", "assets", content.election.calendar.fileName);
+const calendarFile = fs.existsSync(calendarPath) ? fs.readFileSync(calendarPath, "utf8") : "";
 if (!html.includes('<time class="masthead-date" datetime="2026-11-03">Tuesday, November 3, 2026</time>')
+  || !html.includes('class="masthead-date-link"')
+  || !html.includes('type="text/calendar"')
   || content.election.dateIso !== "2026-11-03") {
   errors.push("The masthead lacks a semantic, configurable Election Day dateline");
+}
+if (!calendarFile.includes("DTSTART;VALUE=DATE:20261103")
+  || !calendarFile.includes("DTEND;VALUE=DATE:20261104")
+  || !calendarFile.includes("BEGIN:VALARM")
+  || !calendarFile.includes("TRIGGER:-P1D")) {
+  errors.push("The Election Day calendar file lacks the correct all-day event or reminder");
 }
 
 if (!/:focus-visible\s*\{/i.test(sourceText)) errors.push("Required focus-visible styling is missing");

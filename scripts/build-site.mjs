@@ -16,6 +16,12 @@ const canonicalBytes = fs.readFileSync(canonicalPath);
 const content = JSON.parse(contentBytes.toString("utf8"));
 const canonical = JSON.parse(canonicalBytes.toString("utf8"));
 const sha256 = (value) => crypto.createHash("sha256").update(value).digest("hex");
+const stylesRoot = path.join(sourceRoot, "site/styles");
+const styleVersion = sha256(fs.readdirSync(stylesRoot)
+  .filter((file) => file.endsWith(".css"))
+  .sort()
+  .map((file) => `${file}\n${fs.readFileSync(path.join(stylesRoot, file), "utf8")}`)
+  .join("\n")).slice(0, 12);
 
 const escapeHtml = (value) => String(value)
   .replaceAll("&", "&amp;")
@@ -23,11 +29,68 @@ const escapeHtml = (value) => String(value)
   .replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;");
 
+const emphasizeText = (value, emphasis) => {
+  const text = escapeHtml(value);
+  const label = escapeHtml(emphasis);
+  if (!label || !text.includes(label)) {
+    throw new Error("Hero body emphasis must match text in the hero body");
+  }
+  return text.replace(label, `<strong>${label}</strong>`);
+};
+
 const replaceToken = (html, token, value) => {
   const marker = `{{${token}}}`;
   if (!html.includes(marker)) throw new Error(`Template token is missing: ${marker}`);
   return html.replaceAll(marker, value);
 };
+
+const calendar = content.election.calendar;
+const calendarPath = path.posix.join("assets", calendar.fileName);
+const dateToBasic = (dateIso) => dateIso.replaceAll("-", "");
+const addDays = (dateIso, days) => {
+  const date = new Date(`${dateIso}T00:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
+};
+const escapeCalendarText = (value) => String(value)
+  .replaceAll("\\", "\\\\")
+  .replaceAll(";", "\\;")
+  .replaceAll(",", "\\,")
+  .replaceAll("\n", "\\n");
+const foldCalendarLine = (line) => {
+  const segments = [];
+  let remaining = line;
+  while (remaining.length > 73) {
+    segments.push(remaining.slice(0, 73));
+    remaining = ` ${remaining.slice(73)}`;
+  }
+  segments.push(remaining);
+  return segments.join("\r\n");
+};
+const calendarLines = [
+  "BEGIN:VCALENDAR",
+  "VERSION:2.0",
+  "PRODID:-//Local Civic Reference//Election Calendar//EN",
+  "CALSCALE:GREGORIAN",
+  "METHOD:PUBLISH",
+  "BEGIN:VEVENT",
+  "UID:2026-general-election-gage-county@local-civic-reference",
+  `DTSTAMP:${calendar.stampUtc}`,
+  `DTSTART;VALUE=DATE:${dateToBasic(content.election.dateIso)}`,
+  `DTEND;VALUE=DATE:${dateToBasic(addDays(content.election.dateIso, 1))}`,
+  `SUMMARY:${escapeCalendarText(calendar.eventTitle)}`,
+  `DESCRIPTION:${escapeCalendarText(calendar.eventDescription)}`,
+  `URL:${calendar.eventUrl}`,
+  "TRANSP:TRANSPARENT",
+  "BEGIN:VALARM",
+  `TRIGGER:-P${calendar.reminderDaysBefore}D`,
+  "ACTION:DISPLAY",
+  `DESCRIPTION:${escapeCalendarText(calendar.reminderDescription)}`,
+  "END:VALARM",
+  "END:VEVENT",
+  "END:VCALENDAR"
+];
+const calendarFile = `${calendarLines.map(foldCalendarLine).join("\r\n")}\r\n`;
 
 const navigationItems = content.navigation
   .map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`)
@@ -63,15 +126,18 @@ const tokens = {
   PAGE_TITLE: escapeHtml(content.site.pageTitle),
   SITE_DESCRIPTION: escapeHtml(content.site.description),
   THEME_COLOR: escapeHtml(content.site.themeColor),
+  STYLESHEET_URL: `styles/site.css?v=${styleVersion}`,
   CANONICAL_METADATA: canonicalMetadata,
   ELECTION_LABEL: escapeHtml(content.election.label),
   ELECTION_JURISDICTION: escapeHtml(content.election.jurisdiction),
   ELECTION_DATE_ISO: escapeHtml(content.election.dateIso),
   ELECTION_DATE_DISPLAY: escapeHtml(content.election.dateDisplay),
+  ELECTION_CALENDAR_PATH: escapeHtml(calendarPath),
+  ELECTION_CALENDAR_ARIA_LABEL: escapeHtml(calendar.ariaLabel),
   NAVIGATION_ITEMS: navigationItems,
   HERO_KICKER: escapeHtml(content.hero.kicker),
   HERO_HEADLINE: escapeHtml(content.hero.headline),
-  HERO_BODY: escapeHtml(content.hero.body),
+  HERO_BODY: emphasizeText(content.hero.body, content.hero.bodyEmphasis),
   DIRECTORY_HEADING: escapeHtml(content.directory.heading),
   SEARCH_LABEL: escapeHtml(content.directory.searchLabel),
   SEARCH_PLACEHOLDER: escapeHtml(content.directory.searchPlaceholder),
@@ -123,6 +189,11 @@ fs.mkdirSync(path.join(publicRoot, "data"), { recursive: true });
 fs.cpSync(path.join(sourceRoot, "site/styles"), path.join(publicRoot, "styles"), { recursive: true });
 fs.cpSync(path.join(sourceRoot, "site/scripts"), path.join(publicRoot, "scripts"), { recursive: true });
 fs.cpSync(path.join(sourceRoot, "site/assets"), path.join(publicRoot, "assets"), { recursive: true });
+const stylesheetEntryPath = path.join(publicRoot, "styles/site.css");
+const versionedStylesheetEntry = fs.readFileSync(stylesheetEntryPath, "utf8")
+  .replace(/\.css"\)/g, `.css?v=${styleVersion}")`);
+fs.writeFileSync(stylesheetEntryPath, versionedStylesheetEntry);
+fs.writeFileSync(path.join(publicRoot, calendarPath), calendarFile);
 fs.writeFileSync(path.join(publicRoot, "index.html"), html);
 fs.writeFileSync(path.join(publicRoot, "data/site-content.json"), `${JSON.stringify(content, null, 2)}\n`);
 fs.writeFileSync(path.join(publicRoot, "data/election-directory-2026.json"), `${JSON.stringify(publication, null, 2)}\n`);
