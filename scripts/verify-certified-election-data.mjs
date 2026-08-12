@@ -62,7 +62,7 @@ for (const value of duplicateValues(data.candidacies, (record) => `${record.cand
 const authoritativeSourceIds = new Set([
   "src-gage-electionware-2026-primary",
   "src-ne-votercheck",
-  "src-gage-county-filing-snapshot-2026-07-15",
+  "src-gage-county-filing-snapshot-2026-08-03",
   "src-gage-general-offices-notice-2026",
   "src-gage-primary-offices-notice-2026",
   "src-ne-general-filing-snapshot-2026-07-15",
@@ -70,7 +70,7 @@ const authoritativeSourceIds = new Set([
   "src-gage-primary-sample-ballots-2026"
 ]);
 const filingSourceIds = new Set([
-  "src-gage-county-filing-snapshot-2026-07-15",
+  "src-gage-county-filing-snapshot-2026-08-03",
   "src-ne-general-filing-snapshot-2026-07-15"
 ]);
 const expectedSourceIds = new Set(authoritativeSourceIds);
@@ -113,6 +113,7 @@ const allowedStatuses = new Set([
   "Advanced Without Contested Primary",
   "Advanced from Nonpartisan Primary",
   "Did Not Advance from Primary",
+  "Withdrew from General Election",
   "No Contested Primary Shown",
   "Won Republican Primary",
   "Won Democratic Primary",

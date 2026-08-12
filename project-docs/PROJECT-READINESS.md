@@ -6,7 +6,7 @@
 
 **Repository role:** Canonical civic knowledge source
 
-**Last reviewed:** July 16, 2026
+**Last reviewed:** August 12, 2026
 
 **Election schema:** 4.0.0
 
@@ -68,15 +68,16 @@ Runs validation, rebuilds the publication, and verifies the final repository bou
 - **Sources:** 8
 - **Jurisdictions:** 49
 - **Offices:** 69
-- **Unique candidates:** 151
-- **Candidate-office entries:** 152
-- **Current general-election entries:** 127
-- **Primary-history entries:** 25
-- **Verified affiliations:** 141
-- **Pending affiliation verification:** 10
-- **Open scope-review records:** 12
-- **Filing snapshot date:** July 15, 2026
-- **Filing window:** Open at the time of the current snapshot
+- **Unique candidates:** 160
+- **Candidate-office entries:** 161
+- **Current general-election entries:** 135
+- **Primary-history entries:** 26
+- **Verified affiliations:** 151
+- **Pending affiliation verification:** 9
+- **Open scope-review records:** 10
+- **County filing snapshot date:** August 3, 2026
+- **State filing snapshot date:** July 15, 2026
+- **County filing window:** Incumbent and nonincumbent deadlines passed; ballot certification and other candidate-access pathways remain separate closeout steps
 
 The project does not label a candidate or contest “unopposed in the general election” from an incomplete filing snapshot. Current and historical election stages remain explicitly separated.
 
@@ -135,9 +136,9 @@ The repository deploys the generated `public/` payload through GitHub Pages.
 
 These blockers apply to a trusted public election release. They do not invalidate the repository architecture.
 
-1. **Filing-window closeout:** Refresh county and state filing data after the filing window and other candidate-access pathways close.
-2. **Affiliation completion:** Resolve the 10 remaining `Verification Pending` affiliation records without inference.
-3. **Scope completion:** Resolve the 12 open scope-review items, including applicable multi-county district mapping.
+1. **State filing closeout:** Refresh the statewide filing source after remaining candidate-access pathways close; the county filing list is current through the August 3 local deadline.
+2. **Affiliation completion:** Resolve the 9 remaining `Verification Pending` affiliation records without inference.
+3. **Scope completion:** Resolve the 10 open scope-review items, including applicable multi-county district mapping.
 4. **Final ballot status:** Ingest an official final candidate list or sample ballot before using final contest-status language.
 5. **Publication ownership:** Confirm ongoing reviewer, update cadence, and correction-response responsibility.
 6. **Hosted accessibility QA:** Repeat browser and assistive-technology checks against the final GitHub Pages URL after deployment.
@@ -159,7 +160,7 @@ These blockers apply to a trusted public election release. They do not invalidat
 ## Next recommended work
 
 1. Verify the deployed `public/` site in multiple browsers and assistive technology.
-2. Refresh official filing sources after the relevant deadlines.
+2. Refresh the remaining statewide filing source after the relevant candidate-access deadlines.
 3. Resolve pending affiliation and scope-review records.
 4. Add a documented election-cycle rollover process before introducing the next cycle.
 5. Define the next civic knowledge domain only after its source, normalization, and validation contract is documented.

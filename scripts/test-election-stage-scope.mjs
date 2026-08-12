@@ -39,6 +39,7 @@ assertStage("office-nebraska-secretary-of-state", "Scott Petersen", "current-gen
 assertStage("office-nebraska-secretary-of-state", "Bob Evnen", "primary-history");
 assertStage("office-state-board-of-education-district-5", "Angie Eberspacher", "current-general-election");
 assertStage("office-state-board-of-education-district-5", "Lana Daws", "primary-history");
+assertStage("office-wymore-mayor", "Paul Borzekofski", "primary-history");
 
 for (const office of projection) {
   if (!office.filingSnapshotDate || !office.filingWindowStatus) errors.push(`${office.officeId} lacks filing-snapshot metadata`);
@@ -50,7 +51,9 @@ for (const office of projection) {
     if (candidate.electionStageGroup === "current-general-election" && !filingSourceId) {
       errors.push(`${candidate.candidateId} is current but lacks a filing-snapshot source`);
     }
-    if (candidate.electionStageGroup === "primary-history" && candidate.generalElectionStatus !== "Participated in the primary and did not advance to the general election.") {
+    const validPrimaryHistoryStatus = candidate.generalElectionStatus === "Participated in the primary and did not advance to the general election."
+      || /^Participated in the primary and withdrew from the general election on \d{4}-\d{2}-\d{2}\.$/.test(candidate.generalElectionStatus);
+    if (candidate.electionStageGroup === "primary-history" && !validPrimaryHistoryStatus) {
       errors.push(`${candidate.candidateId} has inconsistent primary-history status`);
     }
   }
@@ -60,6 +63,9 @@ for (const withdrawnName of ["Robert Paul Harrison", "Myron Schoen"]) {
   if (data.candidates.some((candidate) => candidate.displayName === withdrawnName)) {
     errors.push(`Withdrawn filing remains published: ${withdrawnName}`);
   }
+}
+if (data.candidates.some((candidate) => candidate.displayName === "Neil VanBoening")) {
+  errors.push("Neil VanBoening remains published after the official filing list records his withdrawal");
 }
 
 if (data.sources.some((source) => /gagecountygop/i.test(`${source.name} ${source.url}`))) {

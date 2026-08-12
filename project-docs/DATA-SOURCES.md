@@ -21,14 +21,14 @@ This inventory describes the external evidence used by the 2026 election referen
 - **Limitations:** Ambiguous name results remain pending; private voter details are not published.
 - **URL:** `https://www.votercheck.necvr.ne.gov/voterview/`
 
-## Gage County candidate filing snapshot
+## Gage County candidate filing list through the filing deadline
 
-- **Purpose:** Candidate and office filings currently listed for the general election.
-- **Coverage:** Gage County offices represented in the July 15, 2026 snapshot.
+- **Purpose:** Candidate and office filings listed for the general election, including withdrawals recorded by the county.
+- **Coverage:** Gage County offices and filings represented through the August 3, 2026 nonincumbent deadline.
 - **Authority:** Official county filing source.
-- **Update frequency:** Refresh after filing deadlines and whenever an official final list or sample ballot becomes available.
-- **Limitations:** The snapshot is time-bounded and does not establish final contest status while filing or other candidate-access pathways remain open.
-- **Archive:** `src/provenance/elections/2026/sources/gage-2026-general-filing-snapshot-2026-07-15.pdf`
+- **Update frequency:** Refresh when the county publishes a later candidate list, certified ballot, or sample ballot.
+- **Limitations:** The list establishes county filings through the deadline but does not independently establish final ballot certification or later candidate-access changes.
+- **Archive:** `src/provenance/elections/2026/sources/gage-2026-general-filing-snapshot-2026-08-03.pdf`
 
 ## Gage County offices-up-for-election notices
 

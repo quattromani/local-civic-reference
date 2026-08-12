@@ -2,10 +2,10 @@
 
 **Internal Working Document - Not for Publication**
 
-- **Date Generated:** July 16, 2026
+- **Date Generated:** August 12, 2026
 - **Total Offices:** 69
-- **Total Candidates:** 151 unique candidates
-- **Worksheet Entries:** 152 candidate-office entries
+- **Total Candidates:** 160 unique candidates
+- **Worksheet Entries:** 161 candidate-office entries
 - **Reviewer:** ________________________________________________
 - **Review Date:** _____________________________________________
 
@@ -51,7 +51,7 @@ Compare each project affiliation with Nebraska VoterCheck. If the displayed valu
 |---|---|---|---|---|---|
 | Jordan N. Freeman | Freeman Public Schools | Current General Candidate | Republican |  |  |
 | Kyle Dorn | Freeman Public Schools | Current General Candidate | Republican |  |  |
-| Shawn E. Mencl | Freeman Public Schools | Current General Candidate; Verification Pending | Verification Needed |  |  |
+| Shawn E. Mencl | Freeman Public Schools | Current General Candidate | Republican |  |  |
 | Theron Troxel | Freeman Public Schools | Current General Candidate | Republican |  |  |
 
 
@@ -71,6 +71,7 @@ Compare each project affiliation with Nebraska VoterCheck. If the displayed valu
 
 | Candidate | Office | Current Status | Current Affiliation (Project) | Manual Verification | Notes |
 |---|---|---|---|---|---|
+| Andy Buhr | Adams Village Board | Current General Candidate | Republican |  |  |
 | Chris Schiebur | Adams Village Board | Current General Candidate | Nonpartisan |  |  |
 | Steve Robeson | Adams Village Board | Current General Candidate | Republican |  |  |
 
@@ -150,6 +151,8 @@ Compare each project affiliation with Nebraska VoterCheck. If the displayed valu
 
 | Candidate | Office | Current Status | Current Affiliation (Project) | Manual Verification | Notes |
 |---|---|---|---|---|---|
+| Dennis Sedlacek | Liberty Village Board | Current General Candidate | Republican |  |  |
+| Donald Wade | Liberty Village Board | Current General Candidate | Republican |  |  |
 | Michael Tallant | Liberty Village Board | Current General Candidate | Republican |  |  |
 | Thomasena Wiles | Liberty Village Board | Current General Candidate | Nonpartisan |  |  |
 
@@ -159,6 +162,7 @@ Compare each project affiliation with Nebraska VoterCheck. If the displayed valu
 | Candidate | Office | Current Status | Current Affiliation (Project) | Manual Verification | Notes |
 |---|---|---|---|---|---|
 | Andrew W. Adam | Odell Village Board | Current General Candidate | Republican |  |  |
+| Travis A. Reiman | Odell Village Board | Current General Candidate | Republican |  |  |
 | Travus M. Snyder | Odell Village Board | Current General Candidate | Republican |  |  |
 
 
@@ -185,7 +189,6 @@ Compare each project affiliation with Nebraska VoterCheck. If the displayed valu
 | Curt M. Oblinger | Wymore City Council | Current General Candidate | Nonpartisan |  |  |
 | Isaac Bachmann | Wymore City Council | Current General Candidate | Democratic |  |  |
 | Lisa K. Munstermann | Wymore City Council | Current General Candidate | Democratic |  |  |
-| Neil VanBoening | Wymore City Council | Current General Candidate | Republican |  |  |
 
 
 ### Wymore Mayor
@@ -193,11 +196,11 @@ Compare each project affiliation with Nebraska VoterCheck. If the displayed valu
 | Candidate | Office | Current Status | Current Affiliation (Project) | Manual Verification | Notes |
 |---|---|---|---|---|---|
 | Max Manuilov | Wymore Mayor | Current General Candidate; Verification Pending | Verification Needed |  |  |
-| Paul Borzekofski | Wymore Mayor | Current General Candidate | Republican |  |  |
 | Jacob Harding | Wymore Mayor | Primary History | Libertarian |  |  |
 | Jeffrey D. Spier | Wymore Mayor | Primary History | Republican |  |  |
 | Kevin Sturm | Wymore Mayor | Primary History | Nonpartisan |  |  |
 | Milton Pike | Wymore Mayor | Primary History | Republican |  |  |
+| Paul Borzekofski | Wymore Mayor | Primary History | Republican |  |  |
 
 
 ## County Offices
@@ -412,7 +415,7 @@ Compare each project affiliation with Nebraska VoterCheck. If the displayed valu
 
 | Candidate | Office | Current Status | Current Affiliation (Project) | Manual Verification | Notes |
 |---|---|---|---|---|---|
-| No candidate currently listed | Blue Springs/Wymore Township Board | Verification Pending | Information Not Yet Available |  |  |
+| Larry Frerichs | Blue Springs/Wymore Township Board | Current General Candidate | Nonpartisan |  |  |
 
 
 ### Clatonia Township Board
@@ -467,13 +470,15 @@ Compare each project affiliation with Nebraska VoterCheck. If the displayed valu
 
 | Candidate | Office | Current Status | Current Affiliation (Project) | Manual Verification | Notes |
 |---|---|---|---|---|---|
-| No candidate currently listed | Highland Township Board | Verification Pending | Information Not Yet Available |  |  |
+| Anne DeVries | Highland Township Board | Current General Candidate | Democratic |  |  |
+| Nolan Pitcher | Highland Township Board | Current General Candidate | Democratic |  |  |
 
 
 ### Holt Township Board
 
 | Candidate | Office | Current Status | Current Affiliation (Project) | Manual Verification | Notes |
 |---|---|---|---|---|---|
+| John Busboom | Holt Township Board | Current General Candidate | Republican |  |  |
 | Jordan Busboom | Holt Township Board | Current General Candidate | Republican |  |  |
 
 
@@ -490,12 +495,14 @@ Compare each project affiliation with Nebraska VoterCheck. If the displayed valu
 |---|---|---|---|---|---|
 | Gregg F. Thomas | Island Grove Township Board | Current General Candidate | Nonpartisan |  |  |
 | Mark Wieden | Island Grove Township Board | Current General Candidate | Republican |  |  |
+| Robert L. Rhine | Island Grove Township Board | Current General Candidate | Republican |  |  |
 
 
 ### Liberty Township Board
 
 | Candidate | Office | Current Status | Current Affiliation (Project) | Manual Verification | Notes |
 |---|---|---|---|---|---|
+| Marc E. Hroch | Liberty Township Board | Current General Candidate | Republican |  |  |
 | Skip Barr | Liberty Township Board | Current General Candidate; Verification Pending | Verification Needed |  |  |
 | Tom McGuire | Liberty Township Board | Current General Candidate | Democratic |  |  |
 

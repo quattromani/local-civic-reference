@@ -2,6 +2,14 @@
 
 Meaningful data, architecture, governance, and publication milestones are recorded here. Routine implementation details are intentionally omitted.
 
+## 2026-08-12 — County filing-deadline roster update
+
+- Replaced the July 15 county filing snapshot with the official Gage County candidate list through the August 3 nonincumbent filing deadline.
+- Added 10 local candidates filed after the prior snapshot and regenerated the canonical and public directory projections.
+- Removed Neil VanBoening from the current Wymore City Council roster and retained Paul Borzekofski only as primary history after the county list recorded their withdrawals.
+- Verified all 10 newly added affiliations through unique Gage County Nebraska VoterCheck returns; the Andy Buhr filing was matched to the unique Andrew Ervin Buhr record in the Adams precinct.
+- Updated filing-window language, source provenance, category summaries, review materials, and regression checks without claiming final ballot certification.
+
 ## 2026-07-16 — Repository promotion
 
 - Activated focused GitHub Pages deployment of the generated `public/` publication while retaining `src/` as the only editing authority.

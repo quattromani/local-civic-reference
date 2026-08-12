@@ -1,6 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "reviewedDate": "2026-07-16",
+  "lastUpdated": "2026-08-12",
   "verificationSourceId": "src-ne-votercheck",
   "verified": [
     { "displayName": "Chad Omar", "affiliation": "Nonpartisan" },
@@ -53,7 +54,6 @@
     { "displayName": "Curt M. Oblinger", "affiliation": "Nonpartisan" },
     { "displayName": "Isaac Bachmann", "affiliation": "Democratic" },
     { "displayName": "Lisa K. Munstermann", "affiliation": "Democratic" },
-    { "displayName": "Neil VanBoening", "affiliation": "Republican" },
     { "displayName": "Paul Borzekofski", "affiliation": "Republican" },
     { "displayName": "Jacob Harding", "affiliation": "Libertarian" },
     { "displayName": "Jeffrey D. Spier", "affiliation": "Republican" },
@@ -113,7 +113,17 @@
     { "displayName": "Carla J. Loemker", "affiliation": "Republican" },
     { "displayName": "Duane W. Smith", "affiliation": "Republican" },
     { "displayName": "John D. Novotny", "affiliation": "Democratic" },
-    { "displayName": "Mark P. Kujath", "affiliation": "Republican" }
+    { "displayName": "Mark P. Kujath", "affiliation": "Republican" },
+    { "displayName": "Andy Buhr", "affiliation": "Republican", "reviewedDate": "2026-08-12", "matchedRegistrantName": "Andrew Ervin Buhr" },
+    { "displayName": "Anne DeVries", "affiliation": "Democratic", "reviewedDate": "2026-08-12" },
+    { "displayName": "Dennis Sedlacek", "affiliation": "Republican", "reviewedDate": "2026-08-12" },
+    { "displayName": "Donald Wade", "affiliation": "Republican", "reviewedDate": "2026-08-12" },
+    { "displayName": "John Busboom", "affiliation": "Republican", "reviewedDate": "2026-08-12" },
+    { "displayName": "Larry Frerichs", "affiliation": "Nonpartisan", "reviewedDate": "2026-08-12" },
+    { "displayName": "Marc E. Hroch", "affiliation": "Republican", "reviewedDate": "2026-08-12" },
+    { "displayName": "Nolan Pitcher", "affiliation": "Democratic", "reviewedDate": "2026-08-12" },
+    { "displayName": "Robert L. Rhine", "affiliation": "Republican", "reviewedDate": "2026-08-12" },
+    { "displayName": "Travis A. Reiman", "affiliation": "Republican", "reviewedDate": "2026-08-12" }
   ],
   "pending": [
     "Adam Engelman",

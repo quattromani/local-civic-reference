@@ -18,10 +18,10 @@ assert.deepEqual(rendered, expected, "rendered drawer summaries must match canon
 
 const expectedLabels = new Map([
   ["School Boards", "4 districts · 13 seats · 20 candidates"],
-  ["Cities & Villages", "15 offices · 42 candidates"],
+  ["Cities & Villages", "15 offices · 45 candidates"],
   ["County Offices", "12 offices · 15 candidates"],
   ["State Offices", "9 offices · 37 candidates"],
-  ["Township Boards", "24 townships · 72 seats · 32 candidates"],
+  ["Township Boards", "24 townships · 72 seats · 38 candidates"],
   ["Other Local Districts", "5 district seats · 6 candidates"]
 ]);
 for (const summary of expected) {
@@ -36,7 +36,7 @@ assert.equal(schoolSummary.candidateCount, 20);
 assert.equal(schoolSummary.candidateEntryCount, 20);
 
 const townshipSummary = expected.find((summary) => summary.category === "Township Boards");
-assert.equal(townshipSummary.officesWithoutCandidates, 11, "empty offices remain counted and auditable");
+assert.equal(townshipSummary.officesWithoutCandidates, 9, "empty offices remain counted and auditable");
 
 const deliberatelyWrong = structuredClone(rendered);
 deliberatelyWrong.find((summary) => summary.category === "School Boards").displayLabel = "4 offices · 20 candidates";

@@ -31,7 +31,7 @@ const manuallyVerifiedAffiliations = new Map();
 for (const record of manualAffiliationVerification.verified) {
   if (manuallyVerifiedAffiliations.has(record.displayName)) throw new Error(`Duplicate manual affiliation result for ${record.displayName}`);
   if (!allowedAffiliationLabels.has(record.affiliation)) throw new Error(`Invalid manual affiliation label for ${record.displayName}: ${record.affiliation}`);
-  manuallyVerifiedAffiliations.set(record.displayName, record.affiliation);
+  manuallyVerifiedAffiliations.set(record.displayName, record);
 }
 const manualPendingNames = new Set(manualAffiliationVerification.pending);
 for (const name of manualPendingNames) {
@@ -41,7 +41,7 @@ for (const name of manualPendingNames) {
 const sourceIds = {
   electionware: "src-gage-electionware-2026-primary",
   voterCheck: "src-ne-votercheck",
-  countyFiling: "src-gage-county-filing-snapshot-2026-07-15",
+  countyFiling: "src-gage-county-filing-snapshot-2026-08-03",
   countyOfficesNotice: "src-gage-general-offices-notice-2026",
   countyPrimaryOfficesNotice: "src-gage-primary-offices-notice-2026",
   stateFiling: "src-ne-general-filing-snapshot-2026-07-15",
@@ -54,14 +54,14 @@ if (manualAffiliationVerification.verificationSourceId !== sourceIds.voterCheck)
 }
 
 const resolveAffiliation = ({ candidateName, label, verificationState, basis, sourceId, verifiedDate }) => {
-  const manuallyVerifiedLabel = manuallyVerifiedAffiliations.get(candidateName);
-  if (manuallyVerifiedLabel) {
+  const manuallyVerifiedRecord = manuallyVerifiedAffiliations.get(candidateName);
+  if (manuallyVerifiedRecord) {
     return {
-      label: manuallyVerifiedLabel,
+      label: manuallyVerifiedRecord.affiliation,
       verificationState: "Verified",
       basis: "Official voter registration verification",
       sourceId: sourceIds.voterCheck,
-      verifiedDate: manualAffiliationVerification.reviewedDate
+      verifiedDate: manuallyVerifiedRecord.reviewedDate || manualAffiliationVerification.reviewedDate
     };
   }
   if (manualPendingNames.has(candidateName)) {
@@ -109,7 +109,7 @@ const sources = [
     url: "https://www.votercheck.necvr.ne.gov/voterview/",
     authorityTier: 1,
     sourceType: "Official voter registration verification",
-    reviewedDate: manualAffiliationVerification.reviewedDate
+    reviewedDate: manualAffiliationVerification.lastUpdated || manualAffiliationVerification.reviewedDate
   },
   ...filingSnapshots.sources
 ];
@@ -121,6 +121,12 @@ const stateGeneralCandidatesByOffice = new Map(
   ])
 );
 const stateOfficeSnapshotsById = new Map(filingSnapshots.stateOffices.map((office) => [office.officeId, office]));
+const withdrawalsByOfficeAndName = new Map(
+  (filingSnapshots.withdrawals || []).map((withdrawal) => [
+    `${withdrawal.officeId}:${withdrawal.name}`,
+    withdrawal
+  ])
+);
 
 const primaryOffices = new Map(electionware.offices.map((office) => [office.officeId, office]));
 const additionalContests = new Map(electionware.additionalReportedContests.map((contest) => [contest.contest, contest]));
@@ -322,6 +328,7 @@ for (const definition of officeDefinitions) {
     for (const sourceResult of sourceContest.primaryResults) {
       const candidateId = `cand-${slug(sourceResult.candidate)}`;
       const generalSnapshotCandidate = stateGeneralCandidatesByOffice.get(definition.officeId)?.get(sourceResult.candidate);
+      const withdrawal = withdrawalsByOfficeAndName.get(`${definition.officeId}:${sourceResult.candidate}`);
       if (!seenCandidates.has(candidateId)) {
         candidates.push({
           candidateId,
@@ -359,7 +366,11 @@ for (const definition of officeDefinitions) {
       let primaryStatus;
       let advancedToGeneral = null;
       let stageSourceId = sourceIds.electionware;
-      if (isLocalOutcome && definition.category === "Cities & Villages") {
+      if (withdrawal) {
+        primaryStatus = "Withdrew from General Election";
+        advancedToGeneral = false;
+        stageSourceId = sourceIds.countyFiling;
+      } else if (isLocalOutcome && definition.category === "Cities & Villages") {
         primaryStatus = sourceResult.placement <= 2 ? "Advanced from Nonpartisan Primary" : "Did Not Advance from Primary";
         advancedToGeneral = sourceResult.placement <= 2;
       } else if (isLocalOutcome && namedCandidateCount > 1) {
@@ -390,8 +401,10 @@ for (const definition of officeDefinitions) {
         advancedToGeneral,
         electionStageGroup,
         generalElectionStatus: advancedToGeneral
-          ? "Appears on the current general-election filing snapshot; contest status is not yet final."
-          : "Participated in the primary and did not advance to the general election.",
+          ? "Appears on the current general-election filing list; ballot status remains subject to official certification."
+          : withdrawal
+            ? `Participated in the primary and withdrew from the general election on ${withdrawal.withdrawalDate}.`
+            : "Participated in the primary and did not advance to the general election.",
         stageSourceId,
         filingSourceId: advancedToGeneral
           ? definition.category === "State Offices" ? sourceIds.stateFiling : sourceIds.countyFiling
@@ -399,7 +412,7 @@ for (const definition of officeDefinitions) {
         resultId,
         verificationSourceId: sourceIds.electionware,
         verificationDate: "2026-07-15",
-        recordStatus: "Active"
+        recordStatus: withdrawal ? `Withdrawn ${withdrawal.withdrawalDate}` : "Active"
       });
       officeCandidacies.push(candidacyId);
       results.push({
@@ -503,7 +516,7 @@ function addSnapshotOffice(filingOffice, filingSourceId, scopeSourceId) {
     officeId,
     electionType: "2026 General Election filing snapshot",
     ballotParty: null,
-    contestStatus: "Filing window open",
+    contestStatus: "County filing deadline passed; ballot status not yet final",
     voteFor: filingOffice.voteFor ?? null,
     totalVotesCast: null,
     writeInVotes: null,
@@ -517,7 +530,7 @@ function addSnapshotOffice(filingOffice, filingSourceId, scopeSourceId) {
       reviewId: `review-current-filing-${officeId.replace(/^office-/, "")}`,
       officeId,
       field: "currentGeneralElectionCandidates",
-      issue: "No candidate is listed in the July 15 filing snapshot. Recheck after the August 3 non-incumbent deadline.",
+      issue: "No candidate is listed in the county filing list through the August 3 deadline. Recheck against the certified ballot and any later candidate-access updates.",
       status: "Open"
     });
   }
@@ -583,7 +596,7 @@ function addSnapshotOffice(filingOffice, filingSourceId, scopeSourceId) {
       verificationSourceId: null,
       stageSourceId: isCountyPartisan ? sourceIds.countySampleBallots : filingSourceId,
       verificationDate: filingSnapshots.snapshotDate,
-      recordStatus: "Current official filing snapshot; filing window open"
+      recordStatus: "Current official county filing list through the August 3 deadline"
     });
 
     const candidateAffiliation = affiliations.find((affiliation) => affiliation.affiliationId === affiliationId);
@@ -618,9 +631,9 @@ for (const name of [...manuallyVerifiedAffiliations.keys(), ...manualPendingName
 const data = {
   schemaVersion: "4.0.0",
   datasetId: "local-ballot-information-2026-certified",
-  datasetStatus: "Scope correction in progress; current general-election filing snapshots are time-bounded through July 15, 2026 and primary history is retained separately",
-  lastValidated: "2026-07-15",
-  scope: "Gage County offices and candidates identified in official county and state filing snapshots, with current general-election listings separated from May 2026 primary history. Filing windows remain open and general-election contest status is not final.",
+  datasetStatus: "County candidate filings updated through the August 3, 2026 deadline; statewide filing data remains time-bounded through July 15, 2026 and primary history is retained separately",
+  lastValidated: "2026-08-12",
+  scope: "Gage County offices and candidates identified in official county and state filing sources, with current general-election listings separated from May 2026 primary history. County filing deadlines have passed; statewide candidate-access and ballot-certification closeout remain pending.",
   filingSnapshotDate: filingSnapshots.snapshotDate,
   filingWindowStatus: filingSnapshots.filingWindowStatus,
   orderingPolicy: {
