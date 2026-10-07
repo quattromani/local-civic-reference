@@ -53,3 +53,7 @@ Brief: preserve the approved category navigation while using a recognizable civi
 The supplied photos also show community college and natural resources district contests outside the current directory scope. Reordering does not silently add those races or establish completeness of the guide.
 
 Scope constraint confirmed by the user: ballot issues, initiatives, and constitutional amendments will not be added to this project. Ballot photographs are used only as office-order references.
+
+## October 6, 2026 — Neutral browser favicon
+
+Brief: identify the civic reference in browser tabs with a familiar voting symbol, legible at small sizes and independent of party colors. A simplified outlined ballot square with a checkmark uses charcoal on light browser themes and light gray on dark themes, with a transparent background. The SVG lives in authoritative site assets and is copied by the existing build; its relative URL works on both the repository Pages path and custom domain. No candidate or affiliation meaning is encoded in the mark.
