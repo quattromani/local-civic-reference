@@ -21,14 +21,14 @@ This inventory describes the external evidence used by the 2026 election referen
 - **Limitations:** Ambiguous name results remain pending; private voter details are not published.
 - **URL:** `https://www.votercheck.necvr.ne.gov/voterview/`
 
-## Gage County candidate filing list through the filing deadline
+## Gage County general-election candidate filing list
 
 - **Purpose:** Candidate and office filings listed for the general election, including withdrawals recorded by the county.
-- **Coverage:** Gage County offices and filings represented through the August 3, 2026 nonincumbent deadline.
+- **Coverage:** Gage County offices and filings represented through September 29, 2026, reviewed October 6.
 - **Authority:** Official county filing source.
 - **Update frequency:** Refresh when the county publishes a later candidate list, certified ballot, or sample ballot.
-- **Limitations:** The list establishes county filings through the deadline but does not independently establish final ballot certification or later candidate-access changes.
-- **Archive:** `src/provenance/elections/2026/sources/gage-2026-general-filing-snapshot-2026-08-03.pdf`
+- **Limitations:** The list establishes filings, petition access, withdrawals, and write-in declarations. It does not establish a certified printed ballot; write-in names must not be described as printed candidates.
+- **Archive:** `src/provenance/elections/2026/sources/gage-2026-general-filing-snapshot-2026-10-06.pdf`
 
 ## Gage County offices-up-for-election notices
 
@@ -39,14 +39,14 @@ This inventory describes the external evidence used by the 2026 election referen
 - **Limitations:** Establishes office metadata, not candidate affiliation or outcome.
 - **Archive:** `src/provenance/elections/2026/sources/gage-2026-general-offices-up-for-election.pdf`
 
-## Nebraska statewide candidate filing snapshot
+## Nebraska final statewide general-election candidate list
 
 - **Purpose:** Statewide and district candidate filings currently listed for the general election.
 - **Coverage:** State and multi-county offices applicable to the project’s current scope.
-- **Authority:** Official Nebraska Secretary of State filing workbook.
+- **Authority:** Official Nebraska Secretary of State final candidate list dated September 11, 2026.
 - **Update frequency:** Refresh after filing deadlines and upon publication of a final candidate list.
-- **Limitations:** A filing snapshot is not a final ballot and does not independently establish voter registration.
-- **Archive:** `src/provenance/elections/2026/sources/ne-2026-statewide-candidate-filing-list-2026-07-15.xlsx`
+- **Limitations:** The final list establishes listed general-election candidates and ballot-party labels, but does not independently establish voter registration. “By Petition” describes access, not affiliation.
+- **Archive:** `src/provenance/elections/2026/sources/ne-2026-final-general-candidate-list-2026-09-11.pdf`
 
 ## Nebraska Board of State Canvassers primary report
 
@@ -75,3 +75,7 @@ The build reads these maintained transcriptions:
 - `src/data/elections/2026/source-data/manual-affiliation-verification-2026-07-16.json`
 
 The archived documents remain the evidentiary sources. The transcriptions make their relevant facts reproducible and machine-readable; they do not increase the authority of the originals.
+
+## October 6, 2026 source refresh
+
+The current canonical source registry replaces the county August 3 snapshot with the October 6 archived download (filings through September 29), and the July statewide workbook with the final September 11 general-election PDF. Prior archives remain historical evidence. County write-in and petition access are preserved separately from political affiliation; the final state list controls current state/federal rosters. Earlier registration checks retain their original dates. See `audits/2026/general-election-review-2026-10-06.md` for reconciliation and limitations.

@@ -2,6 +2,14 @@
 
 Meaningful data, architecture, governance, and publication milestones are recorded here. Routine implementation details are intentionally omitted.
 
+## 2026-10-06 — General-election roster review
+
+- Rechecked the county list through its September 29 entry and the Secretary of State final September 11 list; archived both with source hashes.
+- Added 31 declared write-ins, one county petition candidate, and nine federal/state candidates; moved Cindy Burbank to primary history without inventing a withdrawal date.
+- Added governor ticket names, explicit write-in/petition status, and distinct final-state versus county-filing notices.
+- Updated the guide review date to October 6 while preserving earlier affiliation verification dates. New unsupported affiliations remain pending.
+- Added official-roster regression coverage and passed the complete release checks. Details: `audits/2026/general-election-review-2026-10-06.md`.
+
 ## 2026-08-12 — County filing-deadline roster update
 
 - Replaced the July 15 county filing snapshot with the official Gage County candidate list through the August 3 nonincumbent filing deadline.

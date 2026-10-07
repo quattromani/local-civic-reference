@@ -117,6 +117,12 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
         item.append(makeElement("p", "candidate-seat", candidate.seat));
       }
       item.append(electionStatus);
+      if (candidate.ballotName && candidate.ballotName !== candidate.name) {
+        item.append(makeElement("p", "candidate-seat", `Ticket: ${candidate.ballotName}`));
+      }
+      if (/Declared write-in|By-petition/.test(candidate.generalElectionStatus || "") || candidate.primaryOutcome === "Primary Nominee Not Listed in Final General List") {
+        item.append(makeElement("p", "candidate-election-status", candidate.generalElectionStatus));
+      }
       const notePresentation = candidateNotePresentation(candidate, electionStage);
       if (notePresentation.resultText) {
         const result = makeElement("div", "candidate-result");
@@ -188,7 +194,7 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       const currentContext = makeElement(
         "p",
         "candidate-section-context",
-        `${interfaceCopy.officeVerificationPrefix} ${office.filingSnapshotDate} · ${interfaceCopy.officeCandidateListNotice}`
+        `${interfaceCopy.officeVerificationPrefix} ${office.filingSnapshotDate} · ${office.candidateListNotice}`
       );
       currentSection.append(currentContext);
       if (currentCandidates.length) {

@@ -13,7 +13,7 @@
     "jurisdiction": "Gage County",
     "dateIso": "2026-11-03",
     "dateDisplay": "Tuesday, November 3, 2026",
-    "lastReviewed": "July 15, 2026",
+    "lastReviewed": "October 6, 2026",
     "calendar": {
       "fileName": "gage-county-election-day-2026.ics",
       "ariaLabel": "Add Tuesday, November 3, 2026 to your calendar with a one-day reminder",
@@ -26,9 +26,18 @@
     }
   },
   "navigation": [
-    { "label": "Candidates", "href": "#candidate-directory" },
-    { "label": "About this guide", "href": "#guide-notes" },
-    { "label": "FAQ", "href": "#faq" }
+    {
+      "label": "Candidates",
+      "href": "#candidate-directory"
+    },
+    {
+      "label": "About this guide",
+      "href": "#guide-notes"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
+    }
   ],
   "hero": {
     "kicker": "Local voter information",
@@ -39,9 +48,9 @@
   "directory": {
     "heading": "Candidate Directory",
     "searchLabel": "Search the directory",
-    "searchPlaceholder": "Candidate, office, city, or district…",
+    "searchPlaceholder": "Candidate, office, city, or district\u2026",
     "suggestionsLabel": "Directory suggestions",
-    "initialStatus": "Preparing candidate listings…",
+    "initialStatus": "Preparing candidate listings\u2026",
     "noScriptHeading": "Candidate listings require JavaScript",
     "noScriptBody": "This reference uses JavaScript to load the published civic data. Enable JavaScript to view the directory."
   },
@@ -68,7 +77,7 @@
   },
   "context": {
     "kicker": "Important context",
-    "heading": "What “nonpartisan” means here",
+    "heading": "What \u201cnonpartisan\u201d means here",
     "paragraphs": [
       "A nonpartisan race is one in which party labels do not appear beside candidate names on the ballot. A candidate may still have a publicly documented political affiliation.",
       "Affiliation is one piece of information, not a complete description of a candidate. It does not predict every decision, and local questions may not divide along conventional party lines.",
@@ -90,7 +99,10 @@
       {
         "question": "How was this information verified?",
         "answer": "See How information is verified for the source types and the facts each establishes.",
-        "answerLink": { "label": "How information is verified", "href": "#verification" }
+        "answerLink": {
+          "label": "How information is verified",
+          "href": "#verification"
+        }
       },
       {
         "question": "Why are some candidates listed under primary history?",
@@ -106,7 +118,7 @@
       },
       {
         "question": "Why might a voter consider this information relevant?",
-        "answer": "Some voters consider political affiliation alongside a candidate’s experience, qualifications, statements, and priorities when evaluating people who may make decisions about public budgets, services, or tax levies."
+        "answer": "Some voters consider political affiliation alongside a candidate\u2019s experience, qualifications, statements, and priorities when evaluating people who may make decisions about public budgets, services, or tax levies."
       },
       {
         "question": "How can an error be corrected?",
@@ -124,7 +136,7 @@
     }
   },
   "interfaceCopy": {
-    "viewSource": "Open cited source →",
+    "viewSource": "Open cited source \u2192",
     "sourceDetailsSummary": "Sources and review details",
     "candidateResultLabel": "Gage County Result",
     "officeVerificationPrefix": "Candidate filings verified as of",

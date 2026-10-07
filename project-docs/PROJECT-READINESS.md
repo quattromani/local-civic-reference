@@ -6,7 +6,7 @@
 
 **Repository role:** Canonical civic knowledge source
 
-**Last reviewed:** August 12, 2026
+**Last reviewed:** October 6, 2026
 
 **Election schema:** 4.0.0
 
@@ -68,16 +68,16 @@ Runs validation, rebuilds the publication, and verifies the final repository bou
 - **Sources:** 8
 - **Jurisdictions:** 49
 - **Offices:** 69
-- **Unique candidates:** 160
-- **Candidate-office entries:** 161
-- **Current general-election entries:** 135
-- **Primary-history entries:** 26
-- **Verified affiliations:** 151
-- **Pending affiliation verification:** 9
-- **Open scope-review records:** 10
-- **County filing snapshot date:** August 3, 2026
-- **State filing snapshot date:** July 15, 2026
-- **County filing window:** Incumbent and nonincumbent deadlines passed; ballot certification and other candidate-access pathways remain separate closeout steps
+- **Unique candidates:** 201
+- **Candidate-office entries:** 202
+- **Current general-election entries:** 175
+- **Primary-history entries:** 27
+- **Verified affiliations:** 158
+- **Pending affiliation verification:** 43
+- **Open scope-review records:** 1
+- **County filing snapshot date:** September 29, 2026 (reviewed October 6)
+- **State filing snapshot date:** September 11, 2026 final list (reviewed October 6)
+- **County filing scope:** Includes petition and declared write-in candidates; not a certified sample ballot
 
 The project does not label a candidate or contest “unopposed in the general election” from an incomplete filing snapshot. Current and historical election stages remain explicitly separated.
 

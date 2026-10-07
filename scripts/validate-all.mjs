@@ -10,6 +10,7 @@ const checks = [
   ["Proof Gate 3 — ordering", "scripts/test-ordering-policy.mjs"],
   ["Proof Gate 4 — accessibility", "scripts/test-accessibility.mjs"],
   ["Election-stage scope", "scripts/test-election-stage-scope.mjs"],
+  ["Reviewed official roster", "scripts/test-reviewed-roster.mjs"],
   ["Category summary counts", "scripts/test-category-summary-counts.mjs"],
   ["Publication safety", "scripts/validate-publication-safety.mjs"],
   ["Deterministic build", "scripts/test-deterministic-build.mjs"]

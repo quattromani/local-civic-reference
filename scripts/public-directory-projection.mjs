@@ -192,6 +192,7 @@ export function createPublicDirectoryProjection(data) {
         filingWindowStatus: office.filingWindowStatus || data.filingWindowStatus,
         generalElectionStatus: office.generalElectionStatus
       },
+      candidateListNotice: office.candidateListNotice || "General-election candidate list is not yet final.",
       candidates: []
     };
 

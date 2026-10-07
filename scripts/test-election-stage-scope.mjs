@@ -51,7 +51,8 @@ for (const office of projection) {
     if (candidate.electionStageGroup === "current-general-election" && !filingSourceId) {
       errors.push(`${candidate.candidateId} is current but lacks a filing-snapshot source`);
     }
-    const validPrimaryHistoryStatus = candidate.generalElectionStatus === "Participated in the primary and did not advance to the general election."
+    const validPrimaryHistoryStatus = candidate.generalElectionStatus === "Participated in the primary; not listed in the final statewide general-election candidate list."
+      || candidate.generalElectionStatus === "Participated in the primary and did not advance to the general election."
       || /^Participated in the primary and withdrew from the general election on \d{4}-\d{2}-\d{2}\.$/.test(candidate.generalElectionStatus);
     if (candidate.electionStageGroup === "primary-history" && !validPrimaryHistoryStatus) {
       errors.push(`${candidate.candidateId} has inconsistent primary-history status`);

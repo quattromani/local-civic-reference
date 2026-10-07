@@ -10,7 +10,7 @@ export const publicMethodology = Object.freeze({
   introduction: "Different sources establish different facts. Candidate cards identify the source used for each displayed claim.",
   registrationVerification: "When available, Nebraska VoterCheck confirms a candidate’s voter-registration affiliation.",
   primaryParticipation: "A named partisan primary in the Gage County Electionware report confirms participation in that party’s primary contest. It does not confirm voter registration.",
-  filingInformation: "Official county and state filing snapshots identify candidates currently listed for the general election. Filing remains open, so these snapshots do not establish a final contest.",
+  filingInformation: "The county filing list identifies regular filings, petition candidacies, and declared write-ins; a write-in declaration does not mean the name is printed on the ballot. State and federal races use the final statewide general-election candidate list.",
   electionOutcomes: "Gage County vote totals come from its Electionware report, which is labeled UNOFFICIAL RESULTS and covers Gage County reporting only. The official state canvass establishes statewide and multi-county primary nominees.",
   stageSeparation: "Current listings and primary history are shown separately so candidates who did not advance are not mistaken for current candidates.",
   missingVerification: "When an affiliation source has not been confirmed, the directory says “Verification Pending” or “Not Yet Confirmed.” No affiliation is inferred."
