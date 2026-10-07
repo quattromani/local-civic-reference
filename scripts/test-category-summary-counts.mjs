@@ -20,7 +20,7 @@ const expectedLabels = new Map([
   ["School Boards", "4 districts · 13 seats · 20 candidates"],
   ["Cities & Villages", "15 offices · 47 candidates"],
   ["County Offices", "12 offices · 15 candidates"],
-  ["State Offices", "9 offices · 46 candidates"],
+  ["State & Federal Offices", "9 offices · 46 candidates"],
   ["Township Boards", "24 townships · 72 seats · 68 candidates"],
   ["Other Local Districts", "5 district seats · 6 candidates"]
 ]);

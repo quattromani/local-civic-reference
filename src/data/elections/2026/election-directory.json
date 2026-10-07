@@ -10,34 +10,34 @@
     "topLevelOrder": "explicit",
     "categories": [
       {
-        "category": "School Boards",
+        "category": "Cities & Villages",
         "categoryPosition": 0,
         "officeOrder": "alphabetical"
       },
       {
-        "category": "Cities & Villages",
+        "category": "Township Boards",
         "categoryPosition": 1,
         "officeOrder": "alphabetical"
       },
       {
-        "category": "County Offices",
+        "category": "School Boards",
         "categoryPosition": 2,
-        "officeOrder": "government-hierarchy"
+        "officeOrder": "alphabetical"
       },
       {
-        "category": "State Offices",
+        "category": "County Offices",
         "categoryPosition": 3,
         "officeOrder": "government-hierarchy"
       },
       {
-        "category": "Township Boards",
+        "category": "State & Federal Offices",
         "categoryPosition": 4,
-        "officeOrder": "alphabetical"
+        "officeOrder": "government-hierarchy"
       },
       {
         "category": "Other Local Districts",
         "categoryPosition": 5,
-        "officeOrder": "alphabetical"
+        "officeOrder": "government-hierarchy"
       }
     ]
   },
@@ -396,43 +396,7 @@
     {
       "officeId": "office-us-senator",
       "officeName": "United States Senate",
-      "category": "State Offices",
-      "jurisdictionId": "jur-nebraska",
-      "district": null,
-      "electionType": "2026 General Election with primary history",
-      "partisanStatus": "Partisan",
-      "seatsAvailable": 1,
-      "voteFor": 1,
-      "contestStatus": "Final statewide general-election candidate list",
-      "generalElectionStatus": "Candidates checked against the final statewide general-election candidate list.",
-      "filingSnapshotDate": "2026-09-11",
-      "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
-      "displayOrder": 7,
-      "candidateOrder": "alphabetical",
-      "candidateListNotice": "Final statewide general-election candidate list."
-    },
-    {
-      "officeId": "office-us-house-district-3",
-      "officeName": "United States House - District 3",
-      "category": "State Offices",
-      "jurisdictionId": "jur-nebraska-congressional-district-3",
-      "district": "District 3",
-      "electionType": "2026 General Election with primary history",
-      "partisanStatus": "Partisan",
-      "seatsAvailable": 1,
-      "voteFor": 1,
-      "contestStatus": "Final statewide general-election candidate list",
-      "generalElectionStatus": "Candidates checked against the final statewide general-election candidate list.",
-      "filingSnapshotDate": "2026-09-11",
-      "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
-      "displayOrder": 8,
-      "candidateOrder": "alphabetical",
-      "candidateListNotice": "Final statewide general-election candidate list."
-    },
-    {
-      "officeId": "office-nebraska-governor",
-      "officeName": "Nebraska Governor and Lieutenant Governor",
-      "category": "State Offices",
+      "category": "State & Federal Offices",
       "jurisdictionId": "jur-nebraska",
       "district": null,
       "electionType": "2026 General Election with primary history",
@@ -448,11 +412,11 @@
       "candidateListNotice": "Final statewide general-election candidate list."
     },
     {
-      "officeId": "office-nebraska-secretary-of-state",
-      "officeName": "Nebraska Secretary of State",
-      "category": "State Offices",
-      "jurisdictionId": "jur-nebraska",
-      "district": null,
+      "officeId": "office-us-house-district-3",
+      "officeName": "United States House - District 3",
+      "category": "State & Federal Offices",
+      "jurisdictionId": "jur-nebraska-congressional-district-3",
+      "district": "District 3",
       "electionType": "2026 General Election with primary history",
       "partisanStatus": "Partisan",
       "seatsAvailable": 1,
@@ -466,9 +430,9 @@
       "candidateListNotice": "Final statewide general-election candidate list."
     },
     {
-      "officeId": "office-nebraska-state-treasurer",
-      "officeName": "Nebraska State Treasurer",
-      "category": "State Offices",
+      "officeId": "office-nebraska-governor",
+      "officeName": "Nebraska Governor and Lieutenant Governor",
+      "category": "State & Federal Offices",
       "jurisdictionId": "jur-nebraska",
       "district": null,
       "electionType": "2026 General Election with primary history",
@@ -484,9 +448,9 @@
       "candidateListNotice": "Final statewide general-election candidate list."
     },
     {
-      "officeId": "office-nebraska-attorney-general",
-      "officeName": "Nebraska Attorney General",
-      "category": "State Offices",
+      "officeId": "office-nebraska-secretary-of-state",
+      "officeName": "Nebraska Secretary of State",
+      "category": "State & Federal Offices",
       "jurisdictionId": "jur-nebraska",
       "district": null,
       "electionType": "2026 General Election with primary history",
@@ -502,9 +466,9 @@
       "candidateListNotice": "Final statewide general-election candidate list."
     },
     {
-      "officeId": "office-nebraska-state-auditor",
-      "officeName": "Nebraska State Auditor",
-      "category": "State Offices",
+      "officeId": "office-nebraska-state-treasurer",
+      "officeName": "Nebraska State Treasurer",
+      "category": "State & Federal Offices",
       "jurisdictionId": "jur-nebraska",
       "district": null,
       "electionType": "2026 General Election with primary history",
@@ -520,13 +484,13 @@
       "candidateListNotice": "Final statewide general-election candidate list."
     },
     {
-      "officeId": "office-nebraska-legislature-district-30",
-      "officeName": "Nebraska Legislature - District 30",
-      "category": "State Offices",
-      "jurisdictionId": "jur-nebraska-legislative-district-30",
-      "district": "District 30",
+      "officeId": "office-nebraska-attorney-general",
+      "officeName": "Nebraska Attorney General",
+      "category": "State & Federal Offices",
+      "jurisdictionId": "jur-nebraska",
+      "district": null,
       "electionType": "2026 General Election with primary history",
-      "partisanStatus": "Nonpartisan",
+      "partisanStatus": "Partisan",
       "seatsAvailable": 1,
       "voteFor": 1,
       "contestStatus": "Final statewide general-election candidate list",
@@ -538,9 +502,45 @@
       "candidateListNotice": "Final statewide general-election candidate list."
     },
     {
+      "officeId": "office-nebraska-state-auditor",
+      "officeName": "Nebraska State Auditor",
+      "category": "State & Federal Offices",
+      "jurisdictionId": "jur-nebraska",
+      "district": null,
+      "electionType": "2026 General Election with primary history",
+      "partisanStatus": "Partisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Final statewide general-election candidate list",
+      "generalElectionStatus": "Candidates checked against the final statewide general-election candidate list.",
+      "filingSnapshotDate": "2026-09-11",
+      "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
+      "displayOrder": 6,
+      "candidateOrder": "alphabetical",
+      "candidateListNotice": "Final statewide general-election candidate list."
+    },
+    {
+      "officeId": "office-nebraska-legislature-district-30",
+      "officeName": "Nebraska Legislature - District 30",
+      "category": "State & Federal Offices",
+      "jurisdictionId": "jur-nebraska-legislative-district-30",
+      "district": "District 30",
+      "electionType": "2026 General Election with primary history",
+      "partisanStatus": "Nonpartisan",
+      "seatsAvailable": 1,
+      "voteFor": 1,
+      "contestStatus": "Final statewide general-election candidate list",
+      "generalElectionStatus": "Candidates checked against the final statewide general-election candidate list.",
+      "filingSnapshotDate": "2026-09-11",
+      "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
+      "displayOrder": 7,
+      "candidateOrder": "alphabetical",
+      "candidateListNotice": "Final statewide general-election candidate list."
+    },
+    {
       "officeId": "office-state-board-of-education-district-5",
       "officeName": "State Board of Education - District 5",
-      "category": "State Offices",
+      "category": "State & Federal Offices",
       "jurisdictionId": "jur-nebraska-state-board-district-5",
       "district": "District 5",
       "electionType": "2026 General Election with primary history",
@@ -551,7 +551,7 @@
       "generalElectionStatus": "Candidates checked against the final statewide general-election candidate list.",
       "filingSnapshotDate": "2026-09-11",
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
-      "displayOrder": 6,
+      "displayOrder": 8,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "Final statewide general-election candidate list."
     },
@@ -569,7 +569,7 @@
       "generalElectionStatus": "Only candidate currently listed; general-election contest status is not yet final.",
       "filingSnapshotDate": "2026-09-29",
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
-      "displayOrder": 6,
+      "displayOrder": 5,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "County filing list includes declared write-ins; consult official ballots for printed names."
     },
@@ -643,7 +643,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": 0,
+      "displayOrder": 2,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "County filing list includes declared write-ins; consult official ballots for printed names."
     },
@@ -723,7 +723,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": 3,
+      "displayOrder": 4,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "County filing list includes declared write-ins; consult official ballots for printed names."
     },
@@ -743,7 +743,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": 2,
+      "displayOrder": 7,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "County filing list includes declared write-ins; consult official ballots for printed names."
     },
@@ -763,7 +763,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": 1,
+      "displayOrder": 3,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "County filing list includes declared write-ins; consult official ballots for printed names."
     },
@@ -783,7 +783,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": 5,
+      "displayOrder": 1,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "County filing list includes declared write-ins; consult official ballots for printed names."
     },
@@ -803,7 +803,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": 4,
+      "displayOrder": 0,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "County filing list includes declared write-ins; consult official ballots for printed names."
     },
@@ -823,7 +823,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": 7,
+      "displayOrder": 6,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "County filing list includes declared write-ins; consult official ballots for printed names."
     },
@@ -1663,7 +1663,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": null,
+      "displayOrder": 0,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "Final statewide general-election candidate list."
     },
@@ -1683,7 +1683,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": null,
+      "displayOrder": 1,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "Final statewide general-election candidate list."
     },
@@ -1703,7 +1703,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": null,
+      "displayOrder": 2,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "Final statewide general-election candidate list."
     },
@@ -1723,7 +1723,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": null,
+      "displayOrder": 3,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "Final statewide general-election candidate list."
     },
@@ -1743,7 +1743,7 @@
       "filingWindowStatus": "County list includes petition and declared write-in filings through September 29, 2026; statewide races checked against the September 11 final general-election candidate list. County filing list is not a certified sample ballot.",
       "scopeSourceId": "src-gage-general-offices-notice-2026",
       "seatSourceId": "src-gage-general-offices-notice-2026",
-      "displayOrder": null,
+      "displayOrder": 4,
       "candidateOrder": "alphabetical",
       "candidateListNotice": "Final statewide general-election candidate list."
     }

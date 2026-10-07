@@ -60,7 +60,7 @@
     {
       "officeId": "rep-governor",
       "officeName": "Nebraska Governor",
-      "category": "State Offices",
+      "category": "State & Federal Offices",
       "jurisdiction": "Nebraska - Gage County reporting portion",
       "electionType": "Republican Primary",
       "partisanStatus": "Partisan",
@@ -81,7 +81,7 @@
     {
       "officeId": "rep-secretary-of-state",
       "officeName": "Nebraska Secretary of State",
-      "category": "State Offices",
+      "category": "State & Federal Offices",
       "jurisdiction": "Nebraska - Gage County reporting portion",
       "electionType": "Republican Primary",
       "partisanStatus": "Partisan",
@@ -98,7 +98,7 @@
     {
       "officeId": "rep-state-treasurer",
       "officeName": "Nebraska State Treasurer",
-      "category": "State Offices",
+      "category": "State & Federal Offices",
       "jurisdiction": "Nebraska - Gage County reporting portion",
       "electionType": "Republican Primary",
       "partisanStatus": "Partisan",
@@ -114,7 +114,7 @@
     {
       "officeId": "rep-attorney-general",
       "officeName": "Nebraska Attorney General",
-      "category": "State Offices",
+      "category": "State & Federal Offices",
       "jurisdiction": "Nebraska - Gage County reporting portion",
       "electionType": "Republican Primary",
       "partisanStatus": "Partisan",
@@ -130,7 +130,7 @@
     {
       "officeId": "rep-state-auditor",
       "officeName": "Nebraska State Auditor",
-      "category": "State Offices",
+      "category": "State & Federal Offices",
       "jurisdiction": "Nebraska - Gage County reporting portion",
       "electionType": "Republican Primary",
       "partisanStatus": "Partisan",
@@ -182,7 +182,7 @@
     {
       "officeId": "legislature-district-30",
       "officeName": "Nebraska Legislature",
-      "category": "State Offices",
+      "category": "State & Federal Offices",
       "jurisdiction": "Legislative District 30 - Gage County reporting portion",
       "district": "District 30",
       "electionType": "Nonpartisan Primary",
@@ -200,7 +200,7 @@
     {
       "officeId": "state-board-of-education-district-5",
       "officeName": "Nebraska State Board of Education",
-      "category": "State Offices",
+      "category": "State & Federal Offices",
       "jurisdiction": "State Board District 5 - Gage County reporting portion",
       "district": "District 5",
       "electionType": "Nonpartisan Primary",

@@ -41,3 +41,15 @@ Merriweather and Source Sans 3 are stored locally in the repository using only t
 ## ADR-010 — GitHub Pages publishes the generated `public/` payload
 
 The public site is deployed to GitHub Pages from the generated `public/` directory. Because GitHub Pages branch-based settings do not expose `/public` as a selectable folder, a focused GitHub Actions workflow uploads `public/` unchanged. The workflow is publication transport only and does not rebuild or redefine canonical knowledge. The current Pages address is temporary, so canonical and Open Graph URLs remain absent until a permanent public home is approved.
+
+## October 6, 2026 — Directory category sequence
+
+Brief: make the directory easier to scan by keeping community institutions together before county and broader government races. The user-approved order is Cities & Villages, Township Boards, School Boards, County Offices, State & Federal Offices, then Other Local Districts. The broader-government label explicitly includes federal races. Other Local Districts remains last, including ESU boards. This is an editorial navigation sequence, not a ranking of candidates or offices. Canonical ordering policy drives all generated presentations; office and candidate ordering within each category is unchanged.
+
+## October 6, 2026 — Office sequence informed by ballot photographs
+
+Brief: preserve the approved category navigation while using a recognizable civic office sequence within categories. User-supplied photographs of the November 3 general-election ballot for NW Quad Area 05 show Senate, House, governor, secretary of state, treasurer, attorney general, auditor, legislature, and state board of education. State & Federal Offices now follows that sequence. County offices follow the photographed sequence: assessor, attorney, clerk, district court clerk, register of deeds, sheriff, surveyor, treasurer. Supervisor districts are appended in district-number order because this ballot does not show them. Other Local Districts places public power before ESU, as photographed; ESU offices are then ordered by unit and district number. These are explicit editorial rules informed by one ballot style, not a claim to reproduce every county ballot. Communities, school districts, and townships remain alphabetical, as do candidates.
+
+The supplied photos also show community college and natural resources district contests outside the current directory scope. Reordering does not silently add those races or establish completeness of the guide.
+
+Scope constraint confirmed by the user: ballot issues, initiatives, and constitutional amendments will not be added to this project. Ballot photographs are used only as office-order references.

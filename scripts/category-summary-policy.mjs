@@ -2,7 +2,7 @@ export const categorySummaryPolicy = Object.freeze([
   { category: "School Boards", primaryMetric: "jurisdictions", unit: "district", includeSeatCount: true },
   { category: "Cities & Villages", primaryMetric: "officeRecords", unit: "office", includeSeatCount: false },
   { category: "County Offices", primaryMetric: "officeRecords", unit: "office", includeSeatCount: false },
-  { category: "State Offices", primaryMetric: "officeRecords", unit: "office", includeSeatCount: false },
+  { category: "State & Federal Offices", primaryMetric: "officeRecords", unit: "office", includeSeatCount: false },
   { category: "Township Boards", primaryMetric: "jurisdictions", unit: "township", includeSeatCount: true },
   { category: "Other Local Districts", primaryMetric: "officeRecords", unit: "district seat", includeSeatCount: false }
 ]);

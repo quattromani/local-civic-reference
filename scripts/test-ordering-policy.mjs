@@ -39,12 +39,12 @@ if (JSON.stringify(placementMutationOrder) !== JSON.stringify(baselineOrder)) {
   throw new Error("Changing placement changed rendered ordering");
 }
 
-const expectedCategories = ["School Boards", "Cities & Villages", "County Offices", "State Offices", "Township Boards", "Other Local Districts"];
+const expectedCategories = ["Cities & Villages", "Township Boards", "School Boards", "County Offices", "State & Federal Offices", "Other Local Districts"];
 if (JSON.stringify(baselineOrder.categories) !== JSON.stringify(expectedCategories)) {
   throw new Error(`Top-level category order changed: ${baselineOrder.categories.join(", ")}`);
 }
 
-for (const category of ["School Boards", "Cities & Villages", "Township Boards", "Other Local Districts"]) {
+for (const category of ["School Boards", "Cities & Villages", "Township Boards"]) {
   const officeNames = baselineProjection.filter((office) => office.category === category).map((office) => office.office);
   const alphabetical = [...officeNames].sort((a, b) => a.localeCompare(b));
   if (JSON.stringify(officeNames) !== JSON.stringify(alphabetical)) {
@@ -54,29 +54,36 @@ for (const category of ["School Boards", "Cities & Villages", "Township Boards",
 
 const expectedGovernmentHierarchy = {
   "County Offices": [
-    "office-gage-county-clerk",
-    "office-gage-county-clerk-of-district-court",
-    "office-gage-county-treasurer",
-    "office-gage-county-register-of-deeds",
     "office-gage-county-assessor",
     "office-gage-county-attorney",
+    "office-gage-county-clerk",
+    "office-gage-county-clerk-of-district-court",
+    "office-gage-county-register-of-deeds",
     "office-gage-county-sheriff",
     "office-gage-county-surveyor",
+    "office-gage-county-treasurer",
     "office-gage-county-supervisor-district-1",
     "office-gage-county-supervisor-district-3",
     "office-gage-county-supervisor-district-5",
     "office-gage-county-supervisor-district-7"
   ],
-  "State Offices": [
+  "State & Federal Offices": [
+    "office-us-senator",
+    "office-us-house-district-3",
     "office-nebraska-governor",
     "office-nebraska-secretary-of-state",
     "office-nebraska-state-treasurer",
     "office-nebraska-attorney-general",
     "office-nebraska-state-auditor",
     "office-nebraska-legislature-district-30",
-    "office-state-board-of-education-district-5",
-    "office-us-senator",
-    "office-us-house-district-3"
+    "office-state-board-of-education-district-5"
+  ],
+  "Other Local Districts": [
+    "office-norris-public-power-district-subdivision-4",
+    "office-esu-4-district-3",
+    "office-esu-5-district-5",
+    "office-esu-5-district-7",
+    "office-esu-6-district-5"
   ]
 };
 for (const [category, expectedOfficeIds] of Object.entries(expectedGovernmentHierarchy)) {
@@ -120,8 +127,8 @@ if (usedOutcomeInputs.length) {
 process.stdout.write(`${JSON.stringify({
   valid: true,
   topLevelCategoriesPreserved: true,
-  alphabeticalOfficeCategories: ["School Boards", "Cities & Villages", "Township Boards", "Other Local Districts"],
-  governmentHierarchyCategories: ["County Offices", "State Offices"],
+  alphabeticalOfficeCategories: ["School Boards", "Cities & Villages", "Township Boards"],
+  governmentHierarchyCategories: ["County Offices", "State & Federal Offices", "Other Local Districts"],
   candidatePolicy: "alphabetical",
   voteChangesDoNotAffectOrder: true,
   placementChangesDoNotAffectOrder: true,

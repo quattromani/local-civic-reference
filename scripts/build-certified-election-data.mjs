@@ -135,7 +135,7 @@ const officeDefinitions = [
   {
     officeId: "office-us-senator",
     officeName: "United States Senate",
-    category: "State Offices",
+    category: "State & Federal Offices",
     jurisdiction: "Nebraska",
     jurisdictionType: "State",
     district: null,
@@ -149,7 +149,7 @@ const officeDefinitions = [
   {
     officeId: "office-us-house-district-3",
     officeName: "United States House - District 3",
-    category: "State Offices",
+    category: "State & Federal Offices",
     jurisdiction: "Nebraska Congressional District 3",
     jurisdictionType: "Congressional district",
     district: "District 3",
@@ -163,7 +163,7 @@ const officeDefinitions = [
   {
     officeId: "office-nebraska-governor",
     officeName: "Nebraska Governor",
-    category: "State Offices",
+    category: "State & Federal Offices",
     jurisdiction: "Nebraska",
     jurisdictionType: "State",
     district: null,
@@ -177,7 +177,7 @@ const officeDefinitions = [
   {
     officeId: "office-nebraska-secretary-of-state",
     officeName: "Nebraska Secretary of State",
-    category: "State Offices",
+    category: "State & Federal Offices",
     jurisdiction: "Nebraska",
     jurisdictionType: "State",
     district: null,
@@ -190,7 +190,7 @@ const officeDefinitions = [
   {
     officeId: "office-nebraska-state-treasurer",
     officeName: "Nebraska State Treasurer",
-    category: "State Offices",
+    category: "State & Federal Offices",
     jurisdiction: "Nebraska",
     jurisdictionType: "State",
     district: null,
@@ -203,7 +203,7 @@ const officeDefinitions = [
   {
     officeId: "office-nebraska-attorney-general",
     officeName: "Nebraska Attorney General",
-    category: "State Offices",
+    category: "State & Federal Offices",
     jurisdiction: "Nebraska",
     jurisdictionType: "State",
     district: null,
@@ -216,7 +216,7 @@ const officeDefinitions = [
   {
     officeId: "office-nebraska-state-auditor",
     officeName: "Nebraska State Auditor",
-    category: "State Offices",
+    category: "State & Federal Offices",
     jurisdiction: "Nebraska",
     jurisdictionType: "State",
     district: null,
@@ -226,7 +226,7 @@ const officeDefinitions = [
   {
     officeId: "office-nebraska-legislature-district-30",
     officeName: "Nebraska Legislature - District 30",
-    category: "State Offices",
+    category: "State & Federal Offices",
     jurisdiction: "Nebraska Legislative District 30",
     jurisdictionType: "Legislative district",
     district: "District 30",
@@ -236,7 +236,7 @@ const officeDefinitions = [
   {
     officeId: "office-state-board-of-education-district-5",
     officeName: "State Board of Education - District 5",
-    category: "State Offices",
+    category: "State & Federal Offices",
     jurisdiction: "Nebraska State Board District 5",
     jurisdictionType: "State board district",
     district: "District 5",
@@ -404,12 +404,12 @@ for (const definition of officeDefinitions) {
           ? "Appears on the current general-election filing list; ballot status remains subject to official certification."
           : withdrawal
             ? `Participated in the primary and withdrew from the general election on ${withdrawal.withdrawalDate}.`
-            : generalSnapshotCandidate == null && definition.category === "State Offices"
+            : generalSnapshotCandidate == null && definition.category === "State & Federal Offices"
               ? "Participated in the primary; not listed in the final statewide general-election candidate list."
               : "Participated in the primary and did not advance to the general election.",
         stageSourceId,
         filingSourceId: advancedToGeneral
-          ? definition.category === "State Offices" ? sourceIds.stateFiling : sourceIds.countyFiling
+          ? definition.category === "State & Federal Offices" ? sourceIds.stateFiling : sourceIds.countyFiling
           : null,
         resultId,
         verificationSourceId: sourceIds.electionware,
@@ -644,7 +644,7 @@ for (const snapshot of filingSnapshots.stateOffices) {
 }
 
 for (const office of offices) {
-  const isState = office.category === "State Offices" || filingSnapshots.stateFiledLocalDistricts.some((record) => record.officeId === office.officeId);
+  const isState = office.category === "State & Federal Offices" || filingSnapshots.stateFiledLocalDistricts.some((record) => record.officeId === office.officeId);
   office.filingSnapshotDate = isState ? filingSnapshots.stateSnapshotDate : filingSnapshots.snapshotDate;
   office.candidateListNotice = isState ? "Final statewide general-election candidate list." : "County filing list includes declared write-ins; consult official ballots for printed names.";
   if (isState) {
