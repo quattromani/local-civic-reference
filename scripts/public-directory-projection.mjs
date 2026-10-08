@@ -43,7 +43,7 @@ const sourceDescriptionFor = ({ roles, sourceId, contest, source }) => {
     }
   }
   if (roles.includes("filing")) {
-    descriptions.add("Lists the candidate for this office as of the snapshot date; filing remains open.");
+    descriptions.add("Lists the candidate for this office in the cited general-election candidate list.");
   }
   if (sourceId === "src-gage-electionware-2026-primary") {
     descriptions.add("This guide uses it as the authoritative source for Gage County primary reporting. Labeled UNOFFICIAL RESULTS; county totals alone do not establish final statewide or multi-county district outcomes.");
@@ -112,10 +112,10 @@ const createSourceEntries = ({
       sourceId: null,
       roles: ["affiliation"],
       roleLabels: [roleLabels.affiliation],
-      sourceLabel: affiliation.verificationState === "Pending Verification" ? "Verification Pending" : "Not Yet Confirmed",
+      sourceLabel: "Affiliation not yet verified",
       sourceDescription: "No affiliation source is currently confirmed.",
       sourceUrl: null,
-      sourceStatus: affiliation.verificationState,
+      sourceStatus: "Affiliation not yet verified",
       sourceDate: null,
       roleDates: { affiliation: null }
     });
@@ -180,6 +180,7 @@ export function createPublicDirectoryProjection(data) {
       electionDate: "November 3, 2026 general election",
       filingSnapshotDate: formatDate(office.filingSnapshotDate || data.filingSnapshotDate),
       filingWindowStatus: office.filingWindowStatus || data.filingWindowStatus,
+      filingReviewedDate: formatDate(sources.get(officeCandidacies.find(c => c.filingSourceId)?.filingSourceId)?.reviewedDate),
       generalElectionStatus: office.generalElectionStatus,
       officeMetadata: {
         electionType: office.electionType,
@@ -222,7 +223,8 @@ export function createPublicDirectoryProjection(data) {
         name: candidate.displayName,
         ballotName: candidate.ballotName,
         seat: candidacy.seat || office.district || "",
-        affiliation: affiliation.label,
+        affiliation: affiliation.sourceId ? affiliation.label : "Affiliation not yet verified",
+        affiliationEvidenceLabel: !affiliation.sourceId ? null : affiliation.sourceId === "src-ne-votercheck" ? "Registered affiliation" : affiliation.sourceId.includes("filing") ? "Ballot party" : "Primary participation",
         affiliationVerificationState: affiliation.verificationState,
         electionStageGroup: candidacy.electionStageGroup,
         primaryOutcome: candidacy.primaryStatus,

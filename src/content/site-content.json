@@ -3,10 +3,10 @@
   "site": {
     "title": "Local Civic Reference",
     "pageTitle": "Gage County Candidate Directory | Local Civic Reference",
-    "description": "A neutral candidate reference based on cited public sources for selected 2026 races appearing in Gage County.",
+    "description": "Candidates and documented political affiliations for selected 2026 races in Gage County. Published by the Gage County GOP.",
     "language": "en",
     "themeColor": "#244d46",
-    "canonicalUrl": null
+    "canonicalUrl": "https://partyreveal.com/"
   },
   "election": {
     "label": "Election Day",
@@ -18,8 +18,8 @@
       "fileName": "gage-county-election-day-2026.ics",
       "ariaLabel": "Add Tuesday, November 3, 2026 to your calendar with a one-day reminder",
       "eventTitle": "Election Day - Gage County",
-      "eventDescription": "Election Day in Gage County, Nebraska. Review local candidates at https://quattromani.github.io/local-civic-reference/",
-      "eventUrl": "https://quattromani.github.io/local-civic-reference/",
+      "eventDescription": "Election Day in Gage County, Nebraska. Review selected races and candidates at https://partyreveal.com/",
+      "eventUrl": "https://partyreveal.com/",
       "reminderDescription": "Election Day is tomorrow in Gage County.",
       "reminderDaysBefore": 1,
       "stampUtc": "20260715T000000Z"
@@ -40,26 +40,26 @@
     }
   ],
   "hero": {
-    "kicker": "Local voter information",
+    "kicker": "Local Civic Reference",
     "headline": "Not every local race lists party affiliation on the ballot.",
-    "body": "This guide brings together candidates appearing on ballots across Gage County, along with publicly documented affiliation information and the sources used to verify it. Browse by office, community, or candidate below.",
+    "body": "Selected 2026 races across Gage County, including declared write-in candidates, with documented political affiliations and cited sources. The races on your ballot depend on where you live.",
     "bodyEmphasis": "Gage County"
   },
   "directory": {
     "heading": "Candidate Directory",
     "searchLabel": "Search the directory",
-    "searchPlaceholder": "Candidate, office, city, or district\u2026",
+    "searchPlaceholder": "Candidate, office, city, or district…",
     "suggestionsLabel": "Directory suggestions",
-    "initialStatus": "Preparing candidate listings\u2026",
+    "initialStatus": "Preparing candidate listings…",
     "noScriptHeading": "Candidate listings require JavaScript",
     "noScriptBody": "This reference uses JavaScript to load the published civic data. Enable JavaScript to view the directory."
   },
   "guide": {
     "kicker": "About this guide",
     "heading": "How to read this directory",
-    "introduction": "Purpose, sourcing, review dates, and corrections are collected here for readers who want more context.",
+    "introduction": "Published by the Gage County GOP. The directory covers selected races, not every contest on your ballot.",
     "noticeHeading": "Information, not endorsement",
-    "noticeBody": "This guide presents factual candidate information using a consistent editorial standard. Appearance in the directory is not an endorsement, recommendation, ranking, or evaluation of any candidate.",
+    "noticeBody": "Candidates receive the same sourcing and presentation standards. Inclusion in this directory does not indicate a Gage County GOP endorsement.",
     "verificationHeading": "How information is verified",
     "verificationIntroduction": "Different sources establish different facts. Candidate cards identify the source used for each displayed claim.",
     "methodologyLabels": {
@@ -71,17 +71,17 @@
       "missingVerification": "Pending verification"
     },
     "correctionHeading": "Sources, review, and corrections",
-    "correctionIntroduction": "Candidate cards link each displayed fact to its source and show the source review date.",
+    "correctionIntroduction": "Source links and review dates appear on each candidate card.",
     "correctionPrompt": "If an entry appears inaccurate or outdated, send a supporting public source to:",
     "correctionEmail": "gagecountygop.media@gmail.com"
   },
   "context": {
     "kicker": "Important context",
-    "heading": "What \u201cnonpartisan\u201d means here",
+    "heading": "What “nonpartisan” means here",
     "paragraphs": [
       "A nonpartisan race is one in which party labels do not appear beside candidate names on the ballot. A candidate may still have a publicly documented political affiliation.",
-      "Affiliation is one piece of information, not a complete description of a candidate. It does not predict every decision, and local questions may not divide along conventional party lines.",
-      "The county and state drawers include supplemental races that may use different ballot rules. Their inclusion does not mean every race in this directory is officially nonpartisan."
+      "Registered affiliation, ballot party, and participation in a party primary are different facts. Each affiliation label identifies which evidence supports it.",
+      "County, state, and federal sections also include partisan races. Consult official election materials for the contests on your ballot."
     ]
   },
   "faq": {
@@ -89,8 +89,8 @@
     "heading": "Questions about this reference",
     "items": [
       {
-        "question": "Why are these races called nonpartisan?",
-        "answer": "Party labels do not appear beside candidate names on the ballot. Rules vary by office and jurisdiction."
+        "question": "Are all races in this directory nonpartisan?",
+        "answer": "No. In a nonpartisan race, party labels do not appear beside candidate names on the ballot. This directory also includes partisan county, state, and federal races."
       },
       {
         "question": "Does a listed affiliation mean the candidate is officially running as a party nominee?",
@@ -98,7 +98,7 @@
       },
       {
         "question": "How was this information verified?",
-        "answer": "See How information is verified for the source types and the facts each establishes.",
+        "answer": "Registered affiliation, ballot party, primary participation, and election results are supported by different sources.",
         "answerLink": {
           "label": "How information is verified",
           "href": "#verification"
@@ -106,7 +106,7 @@
       },
       {
         "question": "Why are some candidates listed under primary history?",
-        "answer": "They participated in the primary but did not advance. They remain visible as election history, separate from current listings."
+        "answer": "These candidates participated in the primary and are not currently listed for the general election. The card identifies non-advancement, withdrawal, or absence from the final list when supported by a source."
       },
       {
         "question": "What happens if an affiliation changes?",
@@ -114,11 +114,11 @@
       },
       {
         "question": "Does this site endorse candidates?",
-        "answer": "No. Appearance in the directory is not an endorsement, recommendation, ranking, or evaluation."
+        "answer": "Inclusion in this directory does not indicate a Gage County GOP endorsement. Candidates receive the same sourcing and presentation standards."
       },
       {
         "question": "Why might a voter consider this information relevant?",
-        "answer": "Some voters consider political affiliation alongside a candidate\u2019s experience, qualifications, statements, and priorities when evaluating people who may make decisions about public budgets, services, or tax levies."
+        "answer": "Some voters consider political affiliation alongside a candidate’s experience, qualifications, statements, and priorities when evaluating people who may make decisions about public budgets, services, or tax levies."
       },
       {
         "question": "How can an error be corrected?",
@@ -128,18 +128,18 @@
   },
   "footer": {
     "heading": "Local Civic Reference",
-    "purpose": "An independent candidate reference. This resource is not an official election authority.",
+    "purpose": "A candidate reference published by the Gage County GOP. This resource is not an official election authority.",
     "authorityNotice": "Consult the appropriate official election authority for ballot details, polling information, deadlines, and final candidate lists.",
-    "repositoryLink": {
-      "label": "Project source and documentation available on GitHub.",
-      "url": "https://github.com/quattromani/local-civic-reference"
+    "sponsorLink": {
+      "label": "Paid for by the Gage County GOP",
+      "url": "https://www.gagecountygop.org/"
     }
   },
   "interfaceCopy": {
-    "viewSource": "Open cited source \u2192",
+    "viewSource": "Open cited source →",
     "sourceDetailsSummary": "Sources and review details",
-    "candidateResultLabel": "Gage County Result",
-    "officeVerificationPrefix": "Candidate filings verified as of",
+    "candidateResultLabel": "May 2026 primary · Gage County totals",
+    "officeVerificationPrefix": "Candidate list dated",
     "officeCandidateListNotice": "General-election candidate list is not yet final.",
     "reviewedPrefix": "Reviewed",
     "clearSearchLabel": "Clear directory search",

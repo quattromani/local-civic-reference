@@ -57,3 +57,13 @@ Scope constraint confirmed by the user: ballot issues, initiatives, and constitu
 ## October 6, 2026 — Neutral browser favicon
 
 Brief: identify the civic reference in browser tabs with a familiar voting symbol, legible at small sizes and independent of party colors. A simplified outlined ballot square with a checkmark uses charcoal on light browser themes and light gray on dark themes, with a transparent background. The SVG lives in authoritative site assets and is copied by the existing build; its relative URL works on both the repository Pages path and custom domain. No candidate or affiliation meaning is encoded in the mark.
+
+## October 7, 2026 — Editorial hierarchy and publisher transparency
+
+Brief: help voters find a current candidate and understand the evidence without mistaking selected coverage for a complete ballot. Preserve the existing restrained typography, alphabetical candidate treatment, category sequence, and accessible disclosures. Reduce introductory space and repeated explanation; make current candidacy, affiliation evidence, and dated sources explicit on desktop and mobile.
+
+The user confirms this is a Gage County GOP product. The footer credits “Paid for by the Gage County GOP” and links to its official website, replacing the personal GitHub attribution. About and footer copy identify the publisher without claiming organizational independence. Inclusion does not imply an endorsement; equal sourcing and presentation remain the directory convention.
+
+Publication labels distinguish registered affiliation, ballot party, and primary participation using canonical source bindings. Unsourced affiliations use one public label: “Affiliation not yet verified.” Canonical verification states remain intact. Current listings lead with general-election or petition/write-in status; primary outcomes and Gage County-only primary totals remain secondary. Primary history includes withdrawals and nominees absent from the final list, not only candidates who failed to advance. Counts foreground current unique candidates; historical records remain searchable and separately disclosed. Source dates and review dates are separate, and filing descriptions do not assert open filing windows without evidence.
+
+The approved permanent home is https://partyreveal.com/. Canonical metadata and calendar links now use it. This pass changes presentation and editorial clarity, not candidate rosters, affiliation evidence, review dates, or scope. Ballot issues remain excluded.

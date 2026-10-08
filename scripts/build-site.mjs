@@ -167,8 +167,8 @@ const tokens = {
   FOOTER_HEADING: escapeHtml(content.footer.heading),
   FOOTER_PURPOSE: escapeHtml(content.footer.purpose),
   FOOTER_AUTHORITY_NOTICE: escapeHtml(content.footer.authorityNotice),
-  FOOTER_REPOSITORY_LABEL: escapeHtml(content.footer.repositoryLink.label),
-  FOOTER_REPOSITORY_URL: escapeHtml(content.footer.repositoryLink.url)
+  FOOTER_SPONSOR_LABEL: escapeHtml(content.footer.sponsorLink.label),
+  FOOTER_SPONSOR_URL: escapeHtml(content.footer.sponsorLink.url)
 };
 
 let html = fs.readFileSync(templatePath, "utf8");

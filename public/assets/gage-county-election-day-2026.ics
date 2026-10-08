@@ -9,9 +9,9 @@ DTSTAMP:20260715T000000Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Election Day - Gage County
-DESCRIPTION:Election Day in Gage County\, Nebraska. Review local candidat
- es at https://quattromani.github.io/local-civic-reference/
-URL:https://quattromani.github.io/local-civic-reference/
+DESCRIPTION:Election Day in Gage County\, Nebraska. Review selected races
+  and candidates at https://partyreveal.com/
+URL:https://partyreveal.com/
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 TRIGGER:-P1D

@@ -15,9 +15,8 @@ const pluralize = (count, singular) => `${count} ${count === 1 ? singular : `${s
  * - a district or township is one represented jurisdiction;
  * - a seat is one supported position to be filled, summed only when every
  *   office in the category has a sourced seatsAvailable value;
- * - candidates are unique people in the category, across current and primary
- *   history records. Candidate-entry and stage counts remain available for
- *   validation but are not repeated in the compact public label.
+ * - public candidate counts are unique current people in the category;
+ *   total and primary-history counts remain available for audit.
  */
 export function createCategorySummaryData(data) {
   const sources = new Set(data.sources.map((source) => source.sourceId));
@@ -40,6 +39,7 @@ export function createCategorySummaryData(data) {
     const officeRecordCount = offices.length;
     const candidateEntryCount = officeCandidacies.length;
     const candidateCount = new Set(officeCandidacies.map((candidacy) => candidacy.candidateId)).size;
+    const currentCandidateCount = new Set(officeCandidacies.filter((candidacy) => candidacy.electionStageGroup === "current-general-election").map((candidacy) => candidacy.candidateId)).size;
     const currentCandidateEntryCount = officeCandidacies.filter((candidacy) => candidacy.electionStageGroup === "current-general-election").length;
     const primaryHistoryCandidateEntryCount = officeCandidacies.filter((candidacy) => candidacy.electionStageGroup === "primary-history").length;
     const officesWithoutCandidates = offices.filter((office) => !(candidaciesByOffice.get(office.officeId) || []).length).length;
@@ -60,7 +60,7 @@ export function createCategorySummaryData(data) {
 
     const parts = [pluralize(primaryCount, policy.unit)];
     if (seatCount !== null) parts.push(pluralize(seatCount, "seat"));
-    parts.push(pluralize(candidateCount, "candidate"));
+    parts.push(pluralize(currentCandidateCount, "current candidate"));
 
     return {
       category,
@@ -72,6 +72,7 @@ export function createCategorySummaryData(data) {
       seatCount,
       candidateCount,
       candidateEntryCount,
+      currentCandidateCount,
       currentCandidateEntryCount,
       primaryHistoryCandidateEntryCount,
       officesWithoutCandidates,

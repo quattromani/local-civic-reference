@@ -81,7 +81,7 @@ if (!searchLabelMatch || !searchLabelText) {
   errors.push("Search input lacks its associated accessible label");
 }
 if (!html.includes('id="directory-search"') || !html.includes('role="combobox"')) errors.push("Search combobox semantics are missing");
-if (!/<ul class="directory-stats" aria-label="Directory summary">[\s\S]*?data-directory-office-count[\s\S]*?>Offices<[\s\S]*?data-directory-candidate-count[\s\S]*?>Candidates<[\s\S]*?data-directory-category-count[\s\S]*?>Categories<[\s\S]*?<\/ul>/.test(html)) {
+if (!/<ul class="directory-stats" aria-label="Directory summary">[\s\S]*?data-directory-office-count[\s\S]*?>Offices<[\s\S]*?data-directory-candidate-count[\s\S]*?>Current candidates<[\s\S]*?data-directory-category-count[\s\S]*?>Categories<[\s\S]*?<\/ul>/.test(html)) {
   errors.push("Directory statistics lack semantic list structure or number-first reading order");
 }
 if (content.interfaceCopy.clearSearchLabel !== "Clear directory search"

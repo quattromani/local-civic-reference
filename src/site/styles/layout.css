@@ -83,7 +83,7 @@
     }
 
 .hero {
-      padding-block: clamp(3rem, 6vw, 4.75rem);
+      padding-block: clamp(2rem, 4vw, 3rem);
       background:
         linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(36, 77, 70, 0.065) calc(100% - 1px)),
         var(--paper);

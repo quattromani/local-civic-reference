@@ -17,12 +17,12 @@ const rendered = publication.categorySummaries;
 assert.deepEqual(rendered, expected, "rendered drawer summaries must match canonical data");
 
 const expectedLabels = new Map([
-  ["School Boards", "4 districts · 13 seats · 20 candidates"],
-  ["Cities & Villages", "15 offices · 47 candidates"],
-  ["County Offices", "12 offices · 15 candidates"],
-  ["State & Federal Offices", "9 offices · 46 candidates"],
-  ["Township Boards", "24 townships · 72 seats · 68 candidates"],
-  ["Other Local Districts", "5 district seats · 6 candidates"]
+  ["School Boards", "4 districts · 13 seats · 20 current candidates"],
+  ["Cities & Villages", "15 offices · 41 current candidates"],
+  ["County Offices", "12 offices · 12 current candidates"],
+  ["State & Federal Offices", "9 offices · 28 current candidates"],
+  ["Township Boards", "24 townships · 72 seats · 68 current candidates"],
+  ["Other Local Districts", "5 district seats · 6 current candidates"]
 ]);
 for (const summary of expected) {
   assert.equal(summary.displayLabel, expectedLabels.get(summary.category), `${summary.category} uses the approved counting unit`);

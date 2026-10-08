@@ -86,9 +86,7 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
 
       return {
         resultText,
-        methodologyText: electionStage === "primary-history" || !candidate.note.includes(methodologyText)
-          ? ""
-          : methodologyText
+        methodologyText: ""
       };
     }
 
@@ -97,15 +95,21 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       const header = makeElement("div", "candidate-card-header");
       const name = makeElement("h6", "candidate-name", candidate.name);
       name.id = `${candidate.candidateId}-heading`;
-      const affiliation = makeElement("span", "affiliation-badge", candidate.affiliation || "Not confirmed");
-      affiliation.classList.add(affiliationBadgeClass(affiliation.textContent));
+      const affiliationText = candidate.affiliationEvidenceLabel ? `${candidate.affiliationEvidenceLabel}: ${candidate.affiliation}` : "Affiliation not yet verified";
+      const affiliation = makeElement("span", "affiliation-badge", affiliationText);
+      affiliation.classList.add(affiliationBadgeClass(candidate.affiliation || ""));
       affiliation.setAttribute(
         "aria-label",
         `Political affiliation: ${affiliation.textContent}. Verification status: ${candidate.affiliationVerificationState}.`
       );
       header.append(name, affiliation);
 
-      const electionStatus = makeElement("p", "candidate-election-status", candidate.primaryOutcome);
+      const currentStatus = /Declared write-in/.test(candidate.generalElectionStatus || "")
+        ? "Declared write-in candidate"
+        : /By-petition/.test(candidate.generalElectionStatus || "")
+          ? "Filed by petition"
+          : "Listed for the general election";
+      const electionStatus = makeElement("p", "candidate-election-status", electionStage === "primary-history" ? candidate.generalElectionStatus : currentStatus);
       const sources = makeElement("details", "candidate-sources");
       const sourceSummary = makeElement("summary", "candidate-sources-summary", interfaceCopy.sourceDetailsSummary);
       const sourceList = makeElement("div", "candidate-source-list");
@@ -120,12 +124,13 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       if (candidate.ballotName && candidate.ballotName !== candidate.name) {
         item.append(makeElement("p", "candidate-seat", `Ticket: ${candidate.ballotName}`));
       }
-      if (/Declared write-in|By-petition/.test(candidate.generalElectionStatus || "") || candidate.primaryOutcome === "Primary Nominee Not Listed in Final General List") {
-        item.append(makeElement("p", "candidate-election-status", candidate.generalElectionStatus));
+      if (electionStage !== "primary-history" && currentStatus === "Declared write-in candidate") {
+        item.append(makeElement("p", "candidate-note", "A declaration does not establish that the name is printed on the ballot."));
       }
       const notePresentation = candidateNotePresentation(candidate, electionStage);
       if (notePresentation.resultText) {
         const result = makeElement("div", "candidate-result");
+        if (candidate.primaryOutcome !== "No Primary Recorded") result.append(makeElement("p", "candidate-note", candidate.primaryOutcome));
         result.append(
           makeElement("p", "candidate-result-label", interfaceCopy.candidateResultLabel),
           makeElement("p", "candidate-result-value", notePresentation.resultText)
@@ -173,8 +178,8 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
         summaryMain.append(makeElement("span", "office-summary-jurisdiction", office.jurisdiction));
       }
       const currentMeta = [
-        office.officeMetadata.voteFor ? `Vote for ${office.officeMetadata.voteFor}` : null,
-        `${currentCandidates.length} Current`
+        office.officeMetadata.voteFor ? (office.officeMetadata.voteFor === 1 ? "Vote for 1" : `Vote for up to ${office.officeMetadata.voteFor}`) : null,
+        `${currentCandidates.length} current ${currentCandidates.length === 1 ? "candidate" : "candidates"}`
       ].filter(Boolean).join(" · ");
       const metadata = makeElement("span", "office-summary-metadata");
       metadata.append(makeElement("span", "office-summary-meta office-summary-meta--current", currentMeta));
@@ -194,7 +199,7 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       const currentContext = makeElement(
         "p",
         "candidate-section-context",
-        `${interfaceCopy.officeVerificationPrefix} ${office.filingSnapshotDate} · ${office.candidateListNotice}`
+        `${interfaceCopy.officeVerificationPrefix} ${office.filingSnapshotDate}${office.filingReviewedDate ? ` · Reviewed ${office.filingReviewedDate}` : ""} · ${office.candidateListNotice}`
       );
       currentSection.append(currentContext);
       if (currentCandidates.length) {
@@ -218,7 +223,7 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
         const historyPrompt = makeElement(
           "span",
           "primary-history-prompt",
-          "Expand to review candidates who participated in the primary but did not advance."
+          "Primary candidates not currently listed for the general election."
         );
         historySummary.append(historyHeading, historyCount, historyPrompt);
         const historyContent = makeElement("div", "primary-history-content");
@@ -319,7 +324,7 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       });
       directory.replaceChildren(fragment);
 
-      const candidateCount = new Set(electionData.flatMap((office) => office.candidates.map((candidate) => candidate.candidateId))).size;
+      const candidateCount = new Set(electionData.flatMap((office) => office.candidates.filter((candidate) => candidate.electionStageGroup === "current-general-election").map((candidate) => candidate.candidateId))).size;
       document.querySelector("[data-directory-office-count]").textContent = String(electionData.length);
       document.querySelector("[data-directory-candidate-count]").textContent = String(candidateCount);
       document.querySelector("[data-directory-category-count]").textContent = String(groupedOffices.size);
