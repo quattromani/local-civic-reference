@@ -42,7 +42,7 @@
   "hero": {
     "kicker": "Local Civic Reference",
     "headline": "Not every local race lists party affiliation on the ballot.",
-    "body": "Selected 2026 races across Gage County, including declared write-in candidates, with documented political affiliations and cited sources. The races on your ballot depend on where you live.",
+    "body": "Selected 2026 races across Gage County, including declared write-in candidates, with documented political affiliations and cited sources. Some voters consider political affiliation alongside a candidate’s experience, qualifications, statements, and priorities when evaluating people who may make decisions about public budgets, services, or tax levies. The races on your ballot depend on where you live.",
     "bodyEmphasis": "Gage County"
   },
   "directory": {
@@ -115,10 +115,6 @@
       {
         "question": "Does this site endorse candidates?",
         "answer": "Inclusion in this directory does not indicate a Gage County GOP endorsement. Candidates receive the same sourcing and presentation standards."
-      },
-      {
-        "question": "Why might a voter consider this information relevant?",
-        "answer": "Some voters consider political affiliation alongside a candidate’s experience, qualifications, statements, and priorities when evaluating people who may make decisions about public budgets, services, or tax levies."
       },
       {
         "question": "How can an error be corrected?",
