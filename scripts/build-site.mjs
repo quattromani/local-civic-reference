@@ -16,6 +16,7 @@ const canonicalBytes = fs.readFileSync(canonicalPath);
 const content = JSON.parse(contentBytes.toString("utf8"));
 const canonical = JSON.parse(canonicalBytes.toString("utf8"));
 const sha256 = (value) => crypto.createHash("sha256").update(value).digest("hex");
+const iconVersion = sha256(Buffer.concat(["favicon.svg", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"].map(file => fs.readFileSync(path.join(sourceRoot, "site/assets", file))))).slice(0, 12);
 const stylesRoot = path.join(sourceRoot, "site/styles");
 const styleVersion = sha256(fs.readdirSync(stylesRoot)
   .filter((file) => file.endsWith(".css"))
@@ -122,6 +123,8 @@ const canonicalMetadata = content.site.canonicalUrl
   : "";
 
 const tokens = {
+  ICON_VERSION: iconVersion,
+  SITE_TITLE: escapeHtml(content.site.title),
   SITE_LANGUAGE: escapeHtml(content.site.language),
   PAGE_TITLE: escapeHtml(content.site.pageTitle),
   SITE_DESCRIPTION: escapeHtml(content.site.description),
@@ -189,6 +192,10 @@ fs.mkdirSync(path.join(publicRoot, "data"), { recursive: true });
 fs.cpSync(path.join(sourceRoot, "site/styles"), path.join(publicRoot, "styles"), { recursive: true });
 fs.cpSync(path.join(sourceRoot, "site/scripts"), path.join(publicRoot, "scripts"), { recursive: true });
 fs.cpSync(path.join(sourceRoot, "site/assets"), path.join(publicRoot, "assets"), { recursive: true });
+// Root aliases support browsers that discover icons without reading link metadata.
+for (const icon of ["favicon.ico", "apple-touch-icon.png"]) {
+  fs.copyFileSync(path.join(publicRoot, "assets", icon), path.join(publicRoot, icon));
+}
 const stylesheetEntryPath = path.join(publicRoot, "styles/site.css");
 const versionedStylesheetEntry = fs.readFileSync(stylesheetEntryPath, "utf8")
   .replace(/\.css"\)/g, `.css?v=${styleVersion}")`);

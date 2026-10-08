@@ -6,7 +6,11 @@
   <title>{{PAGE_TITLE}}</title>
   <meta name="description" content="{{SITE_DESCRIPTION}}">
   <meta name="theme-color" content="{{THEME_COLOR}}">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.ico?v={{ICON_VERSION}}" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="assets/favicon-32.png?v={{ICON_VERSION}}" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/favicon.svg?v={{ICON_VERSION}}" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v={{ICON_VERSION}}" sizes="180x180">
+  <meta name="apple-mobile-web-app-title" content="{{SITE_TITLE}}">
   <meta property="og:title" content="{{PAGE_TITLE}}">
   <meta property="og:description" content="{{SITE_DESCRIPTION}}">
 {{CANONICAL_METADATA}}

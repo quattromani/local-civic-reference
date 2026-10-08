@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
   "site": {
-    "title": "Local Civic Reference",
-    "pageTitle": "Gage County Candidate Directory | Local Civic Reference",
-    "description": "Candidates and documented political affiliations for selected 2026 races in Gage County. Published by the Gage County GOP.",
+    "title": "Party Reveal",
+    "pageTitle": "Party Reveal | Know Your Gage County Candidates",
+    "description": "Who’s running? See candidates, political affiliations, and public sources for selected 2026 races in Gage County.",
     "language": "en",
     "themeColor": "#244d46",
     "canonicalUrl": "https://partyreveal.com/"
