@@ -23,7 +23,7 @@ export function createCategorySummaryData(data) {
   const categoryOrder = [...data.orderingPolicy.categories]
     .sort((a, b) => a.categoryPosition - b.categoryPosition)
     .map((entry) => entry.category);
-  const policies = new Map(categorySummaryPolicy.map((policy) => [policy.category, policy]));
+  const policies = new Map((data.categorySummaryPolicy || categorySummaryPolicy).map((policy) => [policy.category, policy]));
   const candidaciesByOffice = new Map();
   for (const candidacy of data.candidacies) {
     if (!candidaciesByOffice.has(candidacy.officeId)) candidaciesByOffice.set(candidacy.officeId, []);
@@ -76,7 +76,7 @@ export function createCategorySummaryData(data) {
       currentCandidateEntryCount,
       primaryHistoryCandidateEntryCount,
       officesWithoutCandidates,
-      displayLabel: parts.join(" · ")
+      displayLabel: parts.join(", ")
     };
   });
 }

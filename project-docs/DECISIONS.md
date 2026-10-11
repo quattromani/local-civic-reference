@@ -1,6 +1,6 @@
 # Architectural Decisions
 
-This document preserves why the project is structured as it is. Implementation details belong in code; operational status belongs in `PROJECT-READINESS.md`.
+The document records the reasons for the project structure. Code contains implementation details, and `PROJECT-READINESS.md` records operational status.
 
 ## ADR-001 — The repository is the product
 
@@ -73,3 +73,37 @@ The approved permanent home is https://partyreveal.com/. Canonical metadata and 
 Brief: make browser previews inviting and recognizable without changing the directory’s factual scope. The user approved “Party Reveal | Know Your Gage County Candidates” and a short preview description. Keep the existing neutral checkmark artwork as the sole icon design.
 
 Browser PNG (32px), multi-size ICO (16/32/48px), and Apple touch PNG (180px) are generated from the canonical SVG by scripts/generate-site-icons.mjs using sharp. Raster variants use charcoal on an opaque off-white background so they remain visible when a browser cannot adapt SVG colors. Root favicon.ico and apple-touch-icon.png aliases aid discovery. Explicit icon links use a content-derived version URL, changing automatically whenever icon bytes change; existing browser caches cannot be forcibly cleared by the site. The Apple saved-site title is Party Reveal. No application mode or service worker is introduced.
+
+## October 11, 2026: Local plain-writing review
+
+The accepted writing review simplifies public prose and source descriptions while retaining names, dates, evidence roles, vote totals, publisher disclosures, and selected-race coverage. Page and interface wording is maintained in `src/content/site-content.json`; methodology and repeated source descriptions are maintained in `src/content/source-copy.json`. Scripts implement source policy and interpolate the editorial content. Generated `public/` files remain derived from source.
+
+Search counts use "candidate entries" because they include both current and historical cards. Source-entry dates are review or verification dates derived from role records, so the "Reviewed" label remains accurate; filing snapshot dates remain separately labeled. Living hosting and readiness sections are reconciled against repository evidence. Historical decisions, audits, archived documents, and retired GOP publications remain records. The changes are local review work and are not a published release.
+
+## October 11, 2026: Nonpartisan race introduction and affiliation key
+
+The opening names the nonpartisan race types covered by the existing directory. Official Nebraska guidance and statutes support school boards, township boards, city and village offices subject to local exceptions, Legislature, State Board of Education, public power, and educational service units. The city and village statement is limited to the nonpartisan races covered here. See `project-docs/audits/2026/nonpartisan-race-copy-review-2026-10-11.md` for sources. Candidate data and election-review dates are unchanged.
+
+The affiliation key uses the same badge labels and colors as candidate cards. All represented affiliations are included, grouped by evidence type and alphabetized within each group. Buttons select one exact evidence-and-affiliation pair, combine with text search, announce results, and can be toggled off or reset. Primary history remains separately identified and is expanded when a filter matches it. No affiliation is inferred from registration gaps or primary participation. The guide describes selected races rather than one universal ballot. Changes remain local and uncommitted.
+
+The affiliation-key layout keeps registered affiliation visible and places ballot party, primary participation, and unverified affiliation in initially collapsed native drawers. Muted summary text and light rules reduce their visual prominence without removing the evidence distinctions or filtering controls.
+
+Opening references to covered races link to their matching category or office. Activating a link clears directory search and affiliation filters, opens the target and its containing drawers, updates the fragment, scrolls to the target, and moves keyboard focus there. Direct fragment URLs also reveal their destination. Link labels and targets are maintained in the canonical hero content.
+
+## October 11, 2026: Sample-ballot header illustration
+
+The full-width header uses a generated warm desk illustration based on the user-supplied Gage County official sample-ballot screenshot. The scene includes an unmarked ballot, unused pencil, and coffee. The ballot retains its sample heading, and an HTML SAMPLE label remains visible across responsive crops. The photograph is decorative, not an authoritative ballot reproduction or candidate source. Its fine print must not be used to establish election facts.
+
+The supplied page contains district-specific races, including county supervisor districts and legislative and district-board offices. The linked paragraph retains location-dependent ballot scope. The page title is white HTML text over a dark gradient and shadow; its School boards link is removed while the paragraph links remain. On small screens the title and image fit a compact banner. Print output omits the decorative photo and renders the heading in black. Changes remain local and uncommitted.
+
+## October 11, 2026: Nonpartisan office labels and race filter
+
+Qualifying office summaries show "Nonpartisan race" and "Party labels do not appear on the ballot." The label uses the office's canonical partisanStatus, independently of candidate affiliation. A second toggle beside Show all affiliations filters to nonpartisan offices and combines with search and evidence-specific affiliation filters. Directory totals retain their full-guide meaning. Contextual race links clear all filters before revealing their destination. No office ballot type or candidate fact is inferred or changed.
+
+Directory summary numbers now follow search, affiliation, and race-type filters. Offices and categories count matching records; current candidates count distinct matching candidate IDs in current general-election entries. Primary history is excluded from that figure and identified separately in the result announcement. Clearing all filters restores the complete directory totals.
+
+## October 11, 2026: Public usability refinements
+
+The accepted UX review adds a prominent Find candidates action, shorter opening and instructions, a publisher byline, and less space before search. Display labels use everyday wording while the underlying registration, ballot-party, and primary-participation identifiers remain distinct. Sources use Last checked only for dates derived from review or verification records. Primary vote totals appear in May primary results disclosures.
+
+Active filter chips near search can remove one filter while preserving the others, and Clear all filters resets search, affiliation, and race type together. The race toggle has a visible checkmark when active. Filtered category summaries count matching offices and unique current candidates; their original source-supported jurisdiction and seat totals return when filters are cleared. Candidate identities, ordering, results, dates, and evidence bindings are preserved. The work remains a local proposal pending user review; no public usability study has been performed.

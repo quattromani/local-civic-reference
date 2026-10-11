@@ -4,6 +4,9 @@ import path from "node:path";
 import { projectRoot } from "./project-paths.mjs";
 
 const checks = [
+  ["Rendered HTML and accessibility", "scripts/test-html-accessibility.mjs"],
+  ["Election contract and reuse", "scripts/test-election-reuse.mjs"],
+  ["GA4 production tracking", "scripts/test-analytics.mjs"],
   ["Canonical validation", "scripts/verify-certified-election-data.mjs"],
   ["Proof Gate 1 — provenance", "scripts/test-public-provenance.mjs"],
   ["Proof Gate 2 — source certainty", "scripts/test-source-certainty.mjs"],

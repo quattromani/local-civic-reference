@@ -1,3 +1,4 @@
+import { categorySummaryPolicy } from "./category-summary-policy.mjs";
 import fs from "node:fs";
 import path from "node:path";
 import { electionwarePolicy, publicMethodology } from "./source-certainty-policy.mjs";
@@ -703,6 +704,27 @@ const data = {
   ]
 };
 
+data.categorySummaryPolicy = categorySummaryPolicy;
+data.contractVersion = "1.0.0";
+data.electionId = "2026-general-election-gage-county";
+data.election = { dateIso: "2026-11-03", type: "general", jurisdiction: "Gage County" };
+for (const source of data.sources) {
+  source.evidenceKind = source.sourceId === sourceIds.voterCheck ? "registration"
+    : source.sourceId === sourceIds.electionware ? "primary-results"
+    : source.sourceId === sourceIds.stateCanvass ? "official-nominee"
+    : source.sourceId === sourceIds.countySampleBallots ? "uncontested-primary" : "filing";
+}
+for (const affiliation of data.affiliations) {
+  affiliation.evidenceType = !affiliation.sourceId ? null : affiliation.sourceId === sourceIds.voterCheck
+    ? "registration" : affiliation.sourceId.includes("filing") ? "ballot-party" : "primary-participation";
+}
+for (const result of data.results) {
+  const candidacy = data.candidacies.find(c => c.candidacyId === result.candidacyId);
+  const office = data.offices.find(o => o.officeId === candidacy.officeId);
+  result.publicNote = ["Cities & Villages", "County Offices"].includes(office.category)
+    ? `Gage County primary result: ${result.votes.toLocaleString("en-US")} votes (${result.percentage.toFixed(2)}%).`
+    : `Gage County reporting portion: ${result.votes.toLocaleString("en-US")} votes (${result.percentage.toFixed(2)}%). Statewide or districtwide advancement is established separately by the official state canvass.`;
+}
 const serialized = process.argv.includes("--compact") ? JSON.stringify(data) : JSON.stringify(data, null, 2);
 if (process.argv.includes("--write")) {
   fs.writeFileSync(path.join(electionDataRoot, "election-directory.json"), `${serialized}\n`);

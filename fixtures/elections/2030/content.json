@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0.0",
+  "site": {
+    "title": "Synthetic election fixture",
+    "pageTitle": "Synthetic election fixture | Example County",
+    "description": "See candidates, political affiliations, and public sources for selected 2030 races in Example County.",
+    "language": "en",
+    "themeColor": "#244d46",
+    "canonicalUrl": "https://example.org/"
+  },
+  "election": {
+    "label": "Election Day",
+    "jurisdiction": "Example County",
+    "dateIso": "2030-11-05",
+    "dateDisplay": "Tuesday, November 5, 2030",
+    "lastReviewed": "October 1, 2030",
+    "calendar": {
+      "fileName": "example-election-2030.ics",
+      "ariaLabel": "Add November 5, 2030 to your calendar",
+      "eventTitle": "Election Day - Example County",
+      "eventDescription": "Election Day in Example County, Nebraska. Review selected races and candidates at https://example.org/",
+      "eventUrl": "https://example.org/",
+      "reminderDescription": "Election Day is tomorrow in Example County.",
+      "reminderDaysBefore": 1,
+      "stampUtc": "20301001T000000Z"
+    }
+  },
+  "navigation": [
+    {
+      "label": "Find candidates",
+      "href": "#candidate-directory"
+    },
+    {
+      "label": "About this guide",
+      "href": "#guide-notes"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
+    }
+  ],
+  "hero": {
+    "kicker": "Synthetic test fixture",
+    "headline": "School boards and many local races do not list party labels on the ballot.",
+    "body": "Synthetic test data only, not real election information.",
+    "bodyEmphasis": "Synthetic test data",
+    "links": [
+      {
+        "text": "Example School Board",
+        "href": "#office-example-school"
+      }
+    ],
+    "image": {
+      "path": "assets/fixture-header.svg",
+      "width": 2172,
+      "height": 724,
+      "sampleLabel": "SAMPLE"
+    },
+    "raceIntroduction": "Example School Board uses a nonpartisan ballot."
+  },
+  "directory": {
+    "heading": "Search the candidate directory",
+    "searchLabel": "Search the directory",
+    "searchPlaceholder": "Candidate, office, city, or district",
+    "suggestionsLabel": "Directory suggestions",
+    "initialStatus": "Loading candidate listings.",
+    "noScriptHeading": "Browse the candidate directory",
+    "noScriptBody": "Open the race drawers below to view candidates and sources. Search and filters require JavaScript."
+  },
+  "guide": {
+    "kicker": "About this guide",
+    "heading": "How to read this directory",
+    "introduction": "Synthetic test data only, not real election information.",
+    "noticeHeading": "Candidate inclusion and endorsements",
+    "noticeBody": "The Example County GOP uses the same sourcing and presentation standards for candidates in the directory. Inclusion does not indicate a Example County GOP endorsement.",
+    "verificationHeading": "How information is verified",
+    "methodologyLabels": {
+      "registrationVerification": "Party registration",
+      "primaryParticipation": "Primary participation",
+      "filingInformation": "Current filings",
+      "electionOutcomes": "Election results",
+      "stageSeparation": "Election stage",
+      "missingVerification": "Pending verification"
+    },
+    "correctionHeading": "Sources, review, and corrections",
+    "correctionIntroduction": "Each candidate card includes source links and review dates.",
+    "correctionPrompt": "To report an inaccurate or outdated entry, send a supporting public source to the correction contact.",
+    "correctionEmail": "fixture@example.org",
+    "publisher": "Example County GOP"
+  },
+  "context": {
+    "kicker": "Ballot and affiliation information",
+    "heading": "What \"nonpartisan\" means here",
+    "paragraphs": [
+      "In a nonpartisan race, party labels do not appear beside candidate names on the ballot. A candidate may still have a publicly documented political affiliation.",
+      "Voter-registration affiliation, ballot party, and participation in a party primary are different facts. Each affiliation label identifies the evidence that supports it.",
+      "County, state, and federal sections also include partisan races. Consult official election materials for the contests on your ballot."
+    ]
+  },
+  "faq": {
+    "kicker": "Frequently asked questions",
+    "heading": "Questions about the directory",
+    "items": [
+      {
+        "question": "Are all races in this directory nonpartisan?",
+        "answer": "No. Party labels do not appear beside candidate names in nonpartisan races, and the directory also includes partisan county, state, and federal races."
+      },
+      {
+        "question": "Does a listed affiliation mean the candidate is officially running as a party nominee?",
+        "answer": "Not necessarily. The directory includes races with different ballot rules. A publicly documented political affiliation does not establish nomination status, so consult official election materials for the specific race."
+      },
+      {
+        "question": "How was this information verified?",
+        "answer": "Registered affiliation, ballot party, primary participation, and election results are supported by different sources.",
+        "answerLink": {
+          "label": "How information is verified",
+          "href": "#verification"
+        }
+      },
+      {
+        "question": "Why are some candidates listed under primary history?",
+        "answer": "Candidates in primary history participated in the primary and are not currently listed for the general election. Each card identifies non-advancement, withdrawal, or absence from the final list when a source supports the status."
+      },
+      {
+        "question": "What happens if an affiliation changes?",
+        "answer": "An entry should be updated when a reliable public source documents an affiliation change. Each card shows when its source was reviewed."
+      },
+      {
+        "question": "Does this site endorse candidates?",
+        "answer": "Inclusion in this directory does not indicate a Example County GOP endorsement. Candidates receive the same sourcing and presentation standards."
+      },
+      {
+        "question": "How can an error be corrected?",
+        "answer": "Send a supporting public source to the correction contact listed under \"Sources, review, and corrections\"."
+      }
+    ]
+  },
+  "footer": {
+    "heading": "Local Civic Reference",
+    "purpose": "The Example County GOP publishes the candidate reference. The reference is not an official election authority.",
+    "authorityNotice": "Consult the appropriate official election authority for ballot details, polling information, deadlines, and final candidate lists.",
+    "sponsorLink": {
+      "label": "Paid for by the Example County GOP",
+      "url": "https://example.org/"
+    }
+  },
+  "interfaceCopy": {
+    "viewSource": "Open cited source",
+    "sourceDetailsSummary": "Sources and last checked",
+    "candidateResultLabel": "2030 synthetic primary totals",
+    "officeVerificationPrefix": "Candidate list dated",
+    "officeCandidateListNotice": "General-election candidate list is not yet final.",
+    "reviewedPrefix": "Last checked",
+    "clearSearchLabel": "Clear directory search",
+    "emptyDirectory": "No candidate entries are currently available.",
+    "directoryError": "The candidate directory could not be displayed. Reload the page, or contact the site administrator if the problem continues.",
+    "primaryHistoryHeading": "Primary election history",
+    "primaryHistoryPrompt": "Candidates listed here participated in the primary and are not currently listed for the general election.",
+    "primaryHistoryContext": "Synthetic primary totals for testing.",
+    "writeInNotice": "A write-in declaration does not establish that the candidate's name is printed on the ballot.",
+    "viewCandidates": "View candidates",
+    "hideCandidates": "Hide candidates",
+    "unverifiedAffiliation": "Affiliation not confirmed",
+    "declaredWriteInStatus": "Declared write-in candidate",
+    "petitionStatus": "Filed by petition",
+    "listedStatus": "General election candidate",
+    "noMatches": "No matches for \"{query}\".",
+    "reviewDateSentence": "The guide was reviewed on {date}.",
+    "affiliationFilterStatus": "Affiliation filter: {label}.",
+    "emptyAffiliationResults": "No candidate entries match the selected filters and search.",
+    "nonpartisanRaceLabel": "Nonpartisan race",
+    "nonpartisanRaceExplanation": "Party labels do not appear on the ballot.",
+    "showNonpartisanRaces": "Only nonpartisan races",
+    "nonpartisanRaceFilterStatus": "Showing nonpartisan races only.",
+    "filteredHistoryNotice": "Includes {count} primary history {unit}.",
+    "primaryResultsSummary": "May primary results",
+    "filtersLabel": "Active filters",
+    "clearAllFilters": "Clear all filters",
+    "removeFilter": "Remove {label} filter",
+    "searchFilterLabel": "Search: {query}",
+    "countsExplanation": "Counts update with your search and filters. Current candidates exclude primary history.",
+    "matchingOfficeUnit": "matching office",
+    "currentCandidateUnit": "current candidate",
+    "evidenceLabels": {
+      "Registered affiliation": "Voter registration",
+      "Ballot party": "Party listed for the race",
+      "Primary participation": "Party primary participation"
+    }
+  },
+  "affiliationGuide": {
+    "heading": "What the labels mean",
+    "introduction": "Each label identifies the affiliation and the evidence behind it. Choose one label to narrow the list. Choose it again to remove that filter.",
+    "showAll": "Show all affiliations",
+    "groups": [
+      {
+        "evidence": "Registered affiliation",
+        "heading": "Voter registration",
+        "description": "Checked voter-registration information. A nonpartisan registration is different from a nonpartisan race."
+      },
+      {
+        "evidence": "Ballot party",
+        "heading": "Party listed for the race",
+        "description": "Party label in the official candidate filing list. It does not verify voter registration."
+      },
+      {
+        "evidence": "Primary participation",
+        "heading": "Party primary participation",
+        "description": "Participation in a named party primary. It does not verify voter registration."
+      },
+      {
+        "evidence": null,
+        "heading": "Affiliation not confirmed",
+        "description": "No affiliation source has been confirmed. No party is inferred."
+      }
+    ],
+    "instructionEmphasis": "Choose one label to narrow the list. Choose it again to remove that filter."
+  }
+}

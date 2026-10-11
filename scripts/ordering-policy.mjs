@@ -82,7 +82,7 @@ export function sortCandidaciesByPolicy({ candidacies, office, candidates }) {
   throw new Error(`Unknown candidate ordering policy for ${office.officeId}: ${office.candidateOrder}`);
 }
 
-export function validateOrderingPolicy(data) {
+export function validateOrderingPolicy(data, { approvedPolicy = approvedOrderingPolicy } = {}) {
   const errors = [];
   const policy = data.orderingPolicy;
   if (!policy || policy.topLevelOrder !== "explicit" || !Array.isArray(policy.categories)) {
@@ -106,10 +106,11 @@ export function validateOrderingPolicy(data) {
     }
   }
 
-  if (policy.categories.length !== approvedOrderingPolicy.categories.length) {
-    errors.push(`Expected ${approvedOrderingPolicy.categories.length} approved category ordering policies; found ${policy.categories.length}`);
+  if (approvedPolicy) {
+  if (policy.categories.length !== approvedPolicy.categories.length) {
+    errors.push(`Expected ${approvedPolicy.categories.length} approved category ordering policies; found ${policy.categories.length}`);
   }
-  for (const approvedCategory of approvedOrderingPolicy.categories) {
+  for (const approvedCategory of approvedPolicy.categories) {
     const declaredCategory = categories.get(approvedCategory.category);
     if (!declaredCategory) {
       errors.push(`Missing approved ordering policy for category ${approvedCategory.category}`);
@@ -121,13 +122,15 @@ export function validateOrderingPolicy(data) {
     }
   }
 
+  }
+
   const officesByCategory = new Map();
   for (const office of data.offices) {
     const categoryPolicy = categories.get(office.category);
     if (!categoryPolicy) errors.push(`Office ${office.officeId} belongs to category without an ordering policy: ${office.category}`);
     if (!validCandidateOrderPolicies.has(office.candidateOrder)) {
       errors.push(`Office ${office.officeId} has unknown candidate ordering policy ${office.candidateOrder}`);
-    } else if (office.candidateOrder !== approvedOrderingPolicy.defaultCandidateOrder) {
+    } else if (approvedPolicy && office.candidateOrder !== approvedPolicy.defaultCandidateOrder) {
       errors.push(`Office ${office.officeId} differs from the approved candidate ordering policy`);
     }
     if (!officesByCategory.has(office.category)) officesByCategory.set(office.category, []);
@@ -146,7 +149,7 @@ export function validateOrderingPolicy(data) {
           errors.push(`Category ${categoryName} has duplicate office displayOrder ${office.displayOrder}`);
         }
         positions.add(office.displayOrder);
-        if (office.displayOrder !== approvedOrderingPolicy.officeHierarchy[office.officeId]) {
+        if (approvedPolicy && office.displayOrder !== approvedPolicy.officeHierarchy[office.officeId]) {
           errors.push(`Office ${office.officeId} differs from the approved governmental hierarchy`);
         }
       }

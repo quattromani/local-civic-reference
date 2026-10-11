@@ -3,7 +3,7 @@
   "site": {
     "title": "Party Reveal",
     "pageTitle": "Party Reveal | Know Your Gage County Candidates",
-    "description": "Who’s running? See candidates, political affiliations, and public sources for selected 2026 races in Gage County.",
+    "description": "See candidates, political affiliations, and public sources for selected 2026 races in Gage County.",
     "language": "en",
     "themeColor": "#244d46",
     "canonicalUrl": "https://partyreveal.com/"
@@ -27,7 +27,7 @@
   },
   "navigation": [
     {
-      "label": "Candidates",
+      "label": "Find candidates",
       "href": "#candidate-directory"
     },
     {
@@ -40,28 +40,68 @@
     }
   ],
   "hero": {
-    "kicker": "Local Civic Reference",
-    "headline": "Not every local race lists party affiliation on the ballot.",
-    "body": "Some voters consider a candidate’s political affiliation along with their experience, qualifications, views, and plans. The people elected may make decisions about public services, spending, and taxes. This guide covers selected 2026 races in Gage County, including declared write-in candidates, and links to the sources used to check political affiliation. The races on your ballot depend on where you live.",
-    "bodyEmphasis": "Gage County"
+    "kicker": "Did you know?",
+    "headline": "School boards and many local races do not list party labels on the ballot.",
+    "body": "Explore selected 2026 races in Gage County, including declared write-in candidates. Your ballot's contests depend on where you live.",
+    "bodyEmphasis": "Gage County",
+    "links": [
+      {
+        "text": "School boards",
+        "href": "#category-school-boards"
+      },
+      {
+        "text": "township boards",
+        "href": "#category-township-boards"
+      },
+      {
+        "text": "city and village races",
+        "href": "#category-cities-villages"
+      },
+      {
+        "text": "Nebraska Legislature",
+        "href": "#office-nebraska-legislature-district-30"
+      },
+      {
+        "text": "State Board of Education",
+        "href": "#office-state-board-of-education-district-5"
+      },
+      {
+        "text": "public power district",
+        "href": "#office-norris-public-power-district-subdivision-4"
+      },
+      {
+        "text": "educational service unit races",
+        "href": "#category-other-local-districts"
+      },
+      {
+        "text": "cited affiliation evidence",
+        "href": "#verification"
+      }
+    ],
+    "image": {
+      "path": "assets/sample-ballot-desk-header.jpg",
+      "width": 2172,
+      "height": 724,
+      "sampleLabel": "SAMPLE"
+    },
+    "raceIntroduction": "School boards, township boards, and city and village races covered here use nonpartisan ballots. So do the Nebraska Legislature, State Board of Education, public power district, and educational service unit races in this guide."
   },
   "directory": {
-    "heading": "Candidate Directory",
+    "heading": "Search the candidate directory",
     "searchLabel": "Search the directory",
-    "searchPlaceholder": "Candidate, office, city, or district…",
+    "searchPlaceholder": "Candidate, office, city, or district",
     "suggestionsLabel": "Directory suggestions",
-    "initialStatus": "Preparing candidate listings…",
-    "noScriptHeading": "Candidate listings require JavaScript",
-    "noScriptBody": "This reference uses JavaScript to load the published civic data. Enable JavaScript to view the directory."
+    "initialStatus": "Loading candidate listings.",
+    "noScriptHeading": "Browse the candidate directory",
+    "noScriptBody": "Open the race drawers below to view candidates and sources. Search and filters require JavaScript."
   },
   "guide": {
     "kicker": "About this guide",
     "heading": "How to read this directory",
-    "introduction": "Published by the Gage County GOP. The directory covers selected races, not every contest on your ballot.",
-    "noticeHeading": "Information, not endorsement",
-    "noticeBody": "Candidates receive the same sourcing and presentation standards. Inclusion in this directory does not indicate a Gage County GOP endorsement.",
+    "introduction": "The Gage County GOP publishes the directory, which covers selected 2026 races in Gage County. The directory does not include every contest on your ballot.",
+    "noticeHeading": "Candidate inclusion and endorsements",
+    "noticeBody": "The Gage County GOP uses the same sourcing and presentation standards for candidates in the directory. Inclusion does not indicate a Gage County GOP endorsement.",
     "verificationHeading": "How information is verified",
-    "verificationIntroduction": "Different sources establish different facts. Candidate cards identify the source used for each displayed claim.",
     "methodologyLabels": {
       "registrationVerification": "Party registration",
       "primaryParticipation": "Primary participation",
@@ -71,30 +111,31 @@
       "missingVerification": "Pending verification"
     },
     "correctionHeading": "Sources, review, and corrections",
-    "correctionIntroduction": "Source links and review dates appear on each candidate card.",
-    "correctionPrompt": "If an entry appears inaccurate or outdated, send a supporting public source to:",
-    "correctionEmail": "gagecountygop.media@gmail.com"
+    "correctionIntroduction": "Each candidate card includes source links and review dates.",
+    "correctionPrompt": "To report an inaccurate or outdated entry, send a supporting public source to the correction contact.",
+    "correctionEmail": "gagecountygop.media@gmail.com",
+    "publisher": "Gage County GOP"
   },
   "context": {
-    "kicker": "Important context",
-    "heading": "What “nonpartisan” means here",
+    "kicker": "Ballot and affiliation information",
+    "heading": "What \"nonpartisan\" means here",
     "paragraphs": [
-      "A nonpartisan race is one in which party labels do not appear beside candidate names on the ballot. A candidate may still have a publicly documented political affiliation.",
-      "Registered affiliation, ballot party, and participation in a party primary are different facts. Each affiliation label identifies which evidence supports it.",
+      "In a nonpartisan race, party labels do not appear beside candidate names on the ballot. A candidate may still have a publicly documented political affiliation.",
+      "Voter-registration affiliation, ballot party, and participation in a party primary are different facts. Each affiliation label identifies the evidence that supports it.",
       "County, state, and federal sections also include partisan races. Consult official election materials for the contests on your ballot."
     ]
   },
   "faq": {
     "kicker": "Frequently asked questions",
-    "heading": "Questions about this reference",
+    "heading": "Questions about the directory",
     "items": [
       {
         "question": "Are all races in this directory nonpartisan?",
-        "answer": "No. In a nonpartisan race, party labels do not appear beside candidate names on the ballot. This directory also includes partisan county, state, and federal races."
+        "answer": "No. Party labels do not appear beside candidate names in nonpartisan races, and the directory also includes partisan county, state, and federal races."
       },
       {
         "question": "Does a listed affiliation mean the candidate is officially running as a party nominee?",
-        "answer": "Not necessarily. The directory includes races with different ballot rules. A publicly documented political affiliation should not be treated as proof of nomination status; consult official election materials for the specific race."
+        "answer": "Not necessarily. The directory includes races with different ballot rules. A publicly documented political affiliation does not establish nomination status, so consult official election materials for the specific race."
       },
       {
         "question": "How was this information verified?",
@@ -106,11 +147,11 @@
       },
       {
         "question": "Why are some candidates listed under primary history?",
-        "answer": "These candidates participated in the primary and are not currently listed for the general election. The card identifies non-advancement, withdrawal, or absence from the final list when supported by a source."
+        "answer": "Candidates in primary history participated in the primary and are not currently listed for the general election. Each card identifies non-advancement, withdrawal, or absence from the final list when a source supports the status."
       },
       {
         "question": "What happens if an affiliation changes?",
-        "answer": "The entry should be updated when a reliable public source documents the change. Each card shows when its source was reviewed."
+        "answer": "An entry should be updated when a reliable public source documents an affiliation change. Each card shows when its source was reviewed."
       },
       {
         "question": "Does this site endorse candidates?",
@@ -118,13 +159,13 @@
       },
       {
         "question": "How can an error be corrected?",
-        "answer": "Send a supporting public source to the correction contact shown in this guide."
+        "answer": "Send a supporting public source to the correction contact listed under \"Sources, review, and corrections\"."
       }
     ]
   },
   "footer": {
     "heading": "Local Civic Reference",
-    "purpose": "A candidate reference published by the Gage County GOP. This resource is not an official election authority.",
+    "purpose": "The Gage County GOP publishes the candidate reference. The reference is not an official election authority.",
     "authorityNotice": "Consult the appropriate official election authority for ballot details, polling information, deadlines, and final candidate lists.",
     "sponsorLink": {
       "label": "Paid for by the Gage County GOP",
@@ -132,14 +173,74 @@
     }
   },
   "interfaceCopy": {
-    "viewSource": "Open cited source →",
-    "sourceDetailsSummary": "Sources and review details",
-    "candidateResultLabel": "May 2026 primary · Gage County totals",
+    "viewSource": "Open cited source",
+    "sourceDetailsSummary": "Sources and last checked",
+    "candidateResultLabel": "May 2026 primary, Gage County totals",
     "officeVerificationPrefix": "Candidate list dated",
     "officeCandidateListNotice": "General-election candidate list is not yet final.",
-    "reviewedPrefix": "Reviewed",
+    "reviewedPrefix": "Last checked",
     "clearSearchLabel": "Clear directory search",
     "emptyDirectory": "No candidate entries are currently available.",
-    "directoryError": "The candidate directory could not be displayed. Reload the page or contact the site administrator if the problem continues."
+    "directoryError": "The candidate directory could not be displayed. Reload the page, or contact the site administrator if the problem continues.",
+    "primaryHistoryHeading": "Primary election history",
+    "primaryHistoryPrompt": "Candidates listed here participated in the primary and are not currently listed for the general election.",
+    "primaryHistoryContext": "Vote totals come from the Gage County primary report. Totals for statewide or multi-county contests include only Gage County's reporting portion and do not establish the final contest result.",
+    "writeInNotice": "A write-in declaration does not establish that the candidate's name is printed on the ballot.",
+    "viewCandidates": "View candidates",
+    "hideCandidates": "Hide candidates",
+    "unverifiedAffiliation": "Affiliation not confirmed",
+    "declaredWriteInStatus": "Declared write-in candidate",
+    "petitionStatus": "Filed by petition",
+    "listedStatus": "General election candidate",
+    "noMatches": "No matches for \"{query}\".",
+    "reviewDateSentence": "The guide was reviewed on {date}.",
+    "affiliationFilterStatus": "Affiliation filter: {label}.",
+    "emptyAffiliationResults": "No candidate entries match the selected filters and search.",
+    "nonpartisanRaceLabel": "Nonpartisan race",
+    "nonpartisanRaceExplanation": "Party labels do not appear on the ballot.",
+    "showNonpartisanRaces": "Only nonpartisan races",
+    "nonpartisanRaceFilterStatus": "Showing nonpartisan races only.",
+    "filteredHistoryNotice": "Includes {count} primary history {unit}.",
+    "primaryResultsSummary": "May primary results",
+    "filtersLabel": "Active filters",
+    "clearAllFilters": "Clear all filters",
+    "removeFilter": "Remove {label} filter",
+    "searchFilterLabel": "Search: {query}",
+    "countsExplanation": "Counts update with your search and filters. Current candidates exclude primary history.",
+    "matchingOfficeUnit": "matching office",
+    "currentCandidateUnit": "current candidate",
+    "evidenceLabels": {
+      "Registered affiliation": "Voter registration",
+      "Ballot party": "Party listed for the race",
+      "Primary participation": "Party primary participation"
+    }
+  },
+  "affiliationGuide": {
+    "heading": "What the labels mean",
+    "introduction": "Each label identifies the affiliation and the evidence behind it. Choose one label to narrow the list. Choose it again to remove that filter.",
+    "showAll": "Show all affiliations",
+    "groups": [
+      {
+        "evidence": "Registered affiliation",
+        "heading": "Voter registration",
+        "description": "Checked voter-registration information. A nonpartisan registration is different from a nonpartisan race."
+      },
+      {
+        "evidence": "Ballot party",
+        "heading": "Party listed for the race",
+        "description": "Party label in the official candidate filing list. It does not verify voter registration."
+      },
+      {
+        "evidence": "Primary participation",
+        "heading": "Party primary participation",
+        "description": "Participation in a named party primary. It does not verify voter registration."
+      },
+      {
+        "evidence": null,
+        "heading": "Affiliation not confirmed",
+        "description": "No affiliation source has been confirmed. No party is inferred."
+      }
+    ],
+    "instructionEmphasis": "Choose one label to narrow the list. Choose it again to remove that filter."
   }
 }

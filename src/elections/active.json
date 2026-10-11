@@ -1,0 +1,20 @@
+{
+  "configVersion": "1.0.0",
+  "electionId": "2026-general-election-gage-county",
+  "dateIso": "2026-11-03",
+  "timeZone": "America/Chicago",
+  "jurisdiction": "Gage County",
+  "electionType": "general",
+  "coverage": "Selected Gage County races; precinct applicability varies.",
+  "dataset": "src/data/elections/2026/election-directory.json",
+  "content": "src/content/site-content.json",
+  "sourceCopy": "src/content/source-copy.json",
+  "publicDataFile": "election-directory-2026.json",
+  "calendarUid": "2026-general-election-gage-county@local-civic-reference",
+  "sourceAdapter": "scripts/build-certified-election-data.mjs",
+  "isFixture": false,
+  "analytics": {
+    "measurementId": "G-D28Q74TJYD",
+    "allowedHost": "partyreveal.com"
+  }
+}

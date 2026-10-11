@@ -18,7 +18,8 @@ export function showFatalApplicationError(error) {
   const status = document.querySelector("#directory-status");
   if (status) {
     status.textContent = "The civic reference could not be loaded. Reload the page or contact the site administrator if the problem continues.";
-    status.classList.add("directory-error");
+    status.classList.remove("visually-hidden");
+      status.classList.add("directory-error");
     status.setAttribute("role", "alert");
     status.setAttribute("aria-live", "assertive");
     status.tabIndex = 0;

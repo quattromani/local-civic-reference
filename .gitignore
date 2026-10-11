@@ -8,3 +8,6 @@ tmp/
 
 # Source files and public/ are both versioned. public/ is the reproducible
 # GitHub Pages output and must remain reviewable in release commits.
+
+# Isolated election previews and temporary build artifacts.
+work/

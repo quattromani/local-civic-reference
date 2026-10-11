@@ -74,7 +74,7 @@ The build reads these maintained transcriptions:
 - `src/data/elections/2026/source-data/official-filing-snapshots-2026.json`
 - `src/data/elections/2026/source-data/manual-affiliation-verification-2026-07-16.json`
 
-The archived documents remain the evidentiary sources. The transcriptions make their relevant facts reproducible and machine-readable; they do not increase the authority of the originals.
+The archived documents are the sources of evidence. The transcriptions preserve relevant facts in a reproducible format that software can read, and they do not increase the authority of the originals.
 
 ## October 6, 2026 source refresh
 

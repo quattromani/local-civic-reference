@@ -15,6 +15,7 @@
   <meta property="og:description" content="{{SITE_DESCRIPTION}}">
 {{CANONICAL_METADATA}}
   <link rel="stylesheet" href="{{STYLESHEET_URL}}">
+{{ANALYTICS_TAG}}
 </head>
 
 <body>
@@ -37,11 +38,31 @@
 
   <main id="top">
     <section class="hero" aria-labelledby="page-title">
-      <div class="container">
-        <div class="hero-introduction">
+      <div class="hero-banner">
+        <picture>
+{{HERO_IMAGE_SOURCES}}
+        <img class="hero-image" src="{{HERO_IMAGE_PATH}}" width="{{HERO_IMAGE_WIDTH}}" height="{{HERO_IMAGE_HEIGHT}}" alt="" fetchpriority="high">
+        </picture>
+        <span class="hero-sample-label">{{HERO_SAMPLE_LABEL}}</span>
+        <div class="container hero-banner-content">
           <p class="kicker">{{HERO_KICKER}}</p>
           <h1 id="page-title" tabindex="-1">{{HERO_HEADLINE}}</h1>
-          <p class="hero-copy">{{HERO_BODY}}</p>
+        </div>
+      </div>
+      <div class="container hero-introduction">
+        <p class="hero-copy">{{HERO_BODY}}</p>
+        <p class="hero-race-links">{{HERO_RACE_INTRODUCTION}}</p>
+      </div>
+    </section>
+
+    <section id="affiliation-guide" aria-labelledby="affiliation-guide-heading" hidden>
+      <div class="container">
+        <h2 id="affiliation-guide-heading">{{AFFILIATION_GUIDE_HEADING}}</h2>
+        <p class="affiliation-guide-introduction">{{AFFILIATION_GUIDE_INTRODUCTION}}</p>
+        <div id="affiliation-guide-groups" class="affiliation-guide-groups"></div>
+        <div class="affiliation-guide-actions">
+          <button id="affiliation-guide-reset" class="affiliation-guide-reset" type="button" disabled>{{AFFILIATION_GUIDE_RESET}}</button>
+          <button id="nonpartisan-race-filter" class="affiliation-guide-reset" type="button" aria-pressed="false" aria-controls="directory-content"><span aria-hidden="true" class="race-filter-check">✓ </span>{{NONPARTISAN_RACE_FILTER}}</button>
         </div>
       </div>
     </section>
@@ -58,7 +79,7 @@
             <div class="search-control">
               <div class="typeahead" id="directory-typeahead">
                 <input
-                  id="directory-search"
+                  id="directory-search" disabled
                   type="search"
                   role="combobox"
                   placeholder="{{SEARCH_PLACEHOLDER}}"
@@ -81,6 +102,11 @@
             </div>
           </div>
 
+          <div id="active-filters" role="group" class="active-filters" hidden>
+            <span class="active-filters-label">{{ACTIVE_FILTERS_LABEL}}</span>
+            <div id="active-filter-list" class="active-filter-list"></div>
+            <button id="clear-all-filters" class="clear-all-filters" type="button">{{CLEAR_ALL_FILTERS}}</button>
+          </div>
           <ul class="directory-stats" aria-label="Directory summary">
             <li class="directory-stat">
               <span class="directory-stat-number" data-directory-office-count>—</span>
@@ -95,6 +121,7 @@
               <span class="directory-stat-label">Categories</span>
             </li>
           </ul>
+          <p class="directory-count-explanation">{{COUNTS_EXPLANATION}}</p>
         </div>
 
         <noscript>
@@ -122,7 +149,7 @@
           <p>{{NOTICE_BODY}}</p>
         </aside>
 
-        <div id="verification" class="guide-methodology" aria-labelledby="verification-heading">
+        <div id="verification" role="region" class="guide-methodology" aria-labelledby="verification-heading">
           <div class="guide-methodology-main">
             <h3 id="verification-heading">{{VERIFICATION_HEADING}}</h3>
             <p>{{VERIFICATION_INTRODUCTION}}</p>
@@ -133,7 +160,7 @@
 
           <aside class="policy-card" aria-labelledby="correction-heading">
             <h3 id="correction-heading">{{CORRECTION_HEADING}}</h3>
-            <p>{{CORRECTION_INTRODUCTION}} The guide-level review date is {{LAST_REVIEWED}}.</p>
+            <p>{{CORRECTION_INTRODUCTION}} {{GUIDE_REVIEW_SENTENCE}}</p>
             <p>{{CORRECTION_PROMPT}}</p>
             <a class="correction-contact" href="mailto:{{CORRECTION_EMAIL}}">{{CORRECTION_EMAIL}}</a>
           </aside>
@@ -181,6 +208,6 @@
     </div>
   </footer>
 
-  <script type="module" src="scripts/app.js"></script>
+  <script type="module" src="{{APPLICATION_SCRIPT_URL}}"></script>
 </body>
 </html>

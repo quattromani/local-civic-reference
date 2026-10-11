@@ -1,0 +1,45 @@
+{
+  "electionDate": "2026-11-03",
+  "timeZone": "America/Chicago",
+  "reviewedDate": "2026-09-26",
+  "source": {
+    "title": "Nebraska Secretary of State 2026 Official Election Calendar",
+    "url": "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/2026_Election_Calendar.pdf",
+    "pages": [
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "milestones": [
+    {
+      "date": "2026-09-28",
+      "label": "SEPTEMBER 28",
+      "description": "Early voting ballots start going out by mail."
+    },
+    {
+      "date": "2026-10-05",
+      "label": "OCTOBER 5",
+      "description": "Early in-person voting begins at the County Election Office."
+    },
+    {
+      "date": "2026-10-16",
+      "label": "OCTOBER 16",
+      "description": "Register online before midnight. Mailed registrations must be postmarked by Oct. 16."
+    },
+    {
+      "date": "2026-10-23",
+      "label": "OCTOBER 23",
+      "deadline": "18:00",
+      "description": "Register in person at the county office by 6 PM. Mail-ballot requests must arrive by 6 PM."
+    },
+    {
+      "date": "2026-11-03",
+      "label": "NOVEMBER 3",
+      "pollsOpen": "08:00",
+      "pollsClose": "20:00",
+      "description": "Election Day\nPolls: 8 AM to 8 PM.\nEarly ballots must be received by 8 PM."
+    }
+  ]
+}

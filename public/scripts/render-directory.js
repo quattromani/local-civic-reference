@@ -1,6 +1,7 @@
-import { setupDirectorySearch } from "./search.js";
+import { affiliationBadgeClass, affiliationIdentity, affiliationLabel } from "./affiliation-guide.js?v=6ce67c045de6";
+import { setupDirectorySearch } from "./search.js?v=6ce67c045de6";
 
-export function initializeDirectory({ siteConfig, interfaceCopy, electionData, categorySummaryData }) {
+export function initializeDirectory({ siteConfig, interfaceCopy, affiliationGuide, electionData, categorySummaryData, renderOnly = false }) {
     /* Rendering logic below consumes siteConfig and the generated electionData projection. */
     const directory = document.querySelector("#directory-content");
     const status = document.querySelector("#directory-status");
@@ -29,37 +30,27 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       if (roles.has("participation") || roles.has("result")) labels.push("Primary participation and result");
       else if ((roles.has("status") || roles.has("stage")) && !roles.has("filing")) labels.push("Election status");
       if (!labels.length && roles.has("candidateName")) labels.push("Candidate name");
-      return labels.join(" · ") || source.roleLabels.join(", ");
+      return labels.join(", ") || source.roleLabels.join(", ");
     }
 
     function makeSourceEntry(candidate, source) {
       const entry = makeElement("div", "candidate-source-entry");
       const roleText = sourceRoleHeading(source);
       const role = makeElement("p", "candidate-source-role", roleText);
-      const sourceName = makeElement("p", "candidate-source-name", source.sourceLabel);
+      const sourceName = makeElement("p", "candidate-source-name", source.sourceId ? source.sourceLabel : interfaceCopy.unverifiedAffiliation);
       const sourceRow = makeElement("div", "candidate-source-row");
       const metadata = [
         source.sourceStatus,
         source.sourceDate && !source.sourceStatus?.includes(source.sourceDate)
           ? `${interfaceCopy.reviewedPrefix} ${source.sourceDate}`
           : null
-      ].filter(Boolean).join(" · ");
+      ].filter(Boolean).join(", ");
       if (source.sourceUrl) sourceRow.append(makeSourceLink(candidate, source));
       sourceRow.append(makeElement("span", "candidate-reviewed", metadata));
       entry.append(role, sourceName);
       if (source.sourceDescription) entry.append(makeElement("p", "source-detail", source.sourceDescription));
       entry.append(sourceRow);
       return entry;
-    }
-
-    function affiliationBadgeClass(label) {
-      const normalized = label.toLowerCase();
-      if (normalized.startsWith("republican")) return "affiliation-badge--republican";
-      if (normalized.startsWith("democratic")) return "affiliation-badge--democratic";
-      if (normalized.startsWith("libertarian")) return "affiliation-badge--libertarian";
-      if (normalized.startsWith("nonpartisan")) return "affiliation-badge--nonpartisan";
-      if (normalized.startsWith("unaffiliated")) return "affiliation-badge--unaffiliated";
-      return "affiliation-badge--unknown";
     }
 
     function historyNote(candidate) {
@@ -93,11 +84,12 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
     function makeCandidateCard(candidate, office, electionStage = "current-general-election") {
       const item = makeElement("li", "candidate-card");
       const header = makeElement("div", "candidate-card-header");
-      const name = makeElement("h6", "candidate-name", candidate.name);
-      name.id = `${candidate.candidateId}-heading`;
-      const affiliationText = candidate.affiliationEvidenceLabel ? `${candidate.affiliationEvidenceLabel}: ${candidate.affiliation}` : "Affiliation not yet verified";
+      const name = makeElement(electionStage === "primary-history" ? "h6" : "h5", "candidate-name", candidate.name);
+      name.id = `${office.officeId}-${candidate.candidateId}-${electionStage}-heading`;
+      const affiliationText = affiliationLabel(candidate, interfaceCopy);
       const affiliation = makeElement("span", "affiliation-badge", affiliationText);
       affiliation.classList.add(affiliationBadgeClass(candidate.affiliation || ""));
+      affiliation.setAttribute("role", "group");
       affiliation.setAttribute(
         "aria-label",
         `Political affiliation: ${affiliation.textContent}. Verification status: ${candidate.affiliationVerificationState}.`
@@ -105,10 +97,10 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       header.append(name, affiliation);
 
       const currentStatus = /Declared write-in/.test(candidate.generalElectionStatus || "")
-        ? "Declared write-in candidate"
+        ? interfaceCopy.declaredWriteInStatus
         : /By-petition/.test(candidate.generalElectionStatus || "")
-          ? "Filed by petition"
-          : "Listed for the general election";
+          ? interfaceCopy.petitionStatus
+          : interfaceCopy.listedStatus;
       const electionStatus = makeElement("p", "candidate-election-status", electionStage === "primary-history" ? candidate.generalElectionStatus : currentStatus);
       const sources = makeElement("details", "candidate-sources");
       const sourceSummary = makeElement("summary", "candidate-sources-summary", interfaceCopy.sourceDetailsSummary);
@@ -124,8 +116,8 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       if (candidate.ballotName && candidate.ballotName !== candidate.name) {
         item.append(makeElement("p", "candidate-seat", `Ticket: ${candidate.ballotName}`));
       }
-      if (electionStage !== "primary-history" && currentStatus === "Declared write-in candidate") {
-        item.append(makeElement("p", "candidate-note", "A declaration does not establish that the name is printed on the ballot."));
+      if (electionStage !== "primary-history" && currentStatus === interfaceCopy.declaredWriteInStatus) {
+        item.append(makeElement("p", "candidate-note", interfaceCopy.writeInNotice));
       }
       const notePresentation = candidateNotePresentation(candidate, electionStage);
       if (notePresentation.resultText) {
@@ -135,7 +127,9 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
           makeElement("p", "candidate-result-label", interfaceCopy.candidateResultLabel),
           makeElement("p", "candidate-result-value", notePresentation.resultText)
         );
-        item.append(result);
+        const resultDisclosure = makeElement("details", "candidate-primary-results");
+        resultDisclosure.append(makeElement("summary", "candidate-primary-results-summary", interfaceCopy.primaryResultsSummary), result);
+        item.append(resultDisclosure);
       }
       if (notePresentation.methodologyText) {
         item.append(makeElement("p", "candidate-methodology-note", notePresentation.methodologyText));
@@ -145,9 +139,12 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       }
       item.append(sources);
 
+      item.dataset.candidateId = candidate.candidateId;
       item.dataset.electionStage = electionStage;
+      item.dataset.affiliationIdentity = affiliationIdentity(candidate);
 
       item.dataset.searchText = [
+        affiliation.textContent,
         candidate.name,
         candidate.affiliation,
         candidate.affiliationVerificationState,
@@ -168,9 +165,9 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
     function renderOffice(office, index) {
       const disclosure = makeElement("details", "office-disclosure");
       const summary = makeElement("summary", "office-summary");
-      const summaryMain = makeElement("span", "office-summary-main");
-      const title = makeElement("h4", "office-title", office.office);
-      title.id = `${office.officeId}-heading`;
+      const summaryMain = makeElement("h4", "office-summary-main");
+      const title = makeElement("span", "office-title", office.office);
+      summaryMain.id = `${office.officeId}-heading`;
 
       const currentCandidates = office.candidates.filter((candidate) => candidate.electionStageGroup === "current-general-election");
       const primaryHistory = office.candidates.filter((candidate) => candidate.electionStageGroup === "primary-history");
@@ -180,18 +177,26 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       const currentMeta = [
         office.officeMetadata.voteFor ? (office.officeMetadata.voteFor === 1 ? "Vote for 1" : `Vote for up to ${office.officeMetadata.voteFor}`) : null,
         `${currentCandidates.length} current ${currentCandidates.length === 1 ? "candidate" : "candidates"}`
-      ].filter(Boolean).join(" · ");
+      ].filter(Boolean).join(", ");
       const metadata = makeElement("span", "office-summary-metadata");
       metadata.append(makeElement("span", "office-summary-meta office-summary-meta--current", currentMeta));
       if (primaryHistory.length) {
         metadata.append(makeElement(
           "span",
           "office-summary-meta office-summary-meta--history",
-          `${primaryHistory.length} Primary History`
+          `${primaryHistory.length} primary history ${primaryHistory.length === 1 ? "entry" : "entries"}`
         ));
       }
       summaryMain.prepend(title);
       summaryMain.append(metadata);
+      if (office.officeMetadata.partisanStatus === "Nonpartisan") {
+        const ballotType = makeElement("span", "office-ballot-type");
+        ballotType.append(
+          makeElement("span", "nonpartisan-race-badge", interfaceCopy.nonpartisanRaceLabel),
+          makeElement("span", "nonpartisan-race-explanation", interfaceCopy.nonpartisanRaceExplanation)
+        );
+        summaryMain.append(ballotType);
+      }
       summary.append(summaryMain);
 
       const candidateContent = makeElement("div", "office-candidate-content");
@@ -199,7 +204,7 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       const currentContext = makeElement(
         "p",
         "candidate-section-context",
-        `${interfaceCopy.officeVerificationPrefix} ${office.filingSnapshotDate}${office.filingReviewedDate ? ` · Reviewed ${office.filingReviewedDate}` : ""} · ${office.candidateListNotice}`
+        `${interfaceCopy.officeVerificationPrefix} ${office.filingSnapshotDate}.${office.filingReviewedDate ? ` Last checked ${office.filingReviewedDate}.` : ""} ${office.candidateListNotice}`
       );
       currentSection.append(currentContext);
       if (currentCandidates.length) {
@@ -213,7 +218,7 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       if (primaryHistory.length) {
         const historySection = makeElement("details", "office-candidate-section primary-history-disclosure");
         const historySummary = makeElement("summary", "primary-history-summary");
-        const historyHeading = makeElement("h5", "primary-history-heading", "Primary Election History");
+        const historyHeading = makeElement("h5", "primary-history-heading", interfaceCopy.primaryHistoryHeading);
         historyHeading.id = `${office.officeId}-primary-history`;
         const historyCount = makeElement(
           "span",
@@ -223,14 +228,14 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
         const historyPrompt = makeElement(
           "span",
           "primary-history-prompt",
-          "Primary candidates not currently listed for the general election."
+          interfaceCopy.primaryHistoryPrompt
         );
         historySummary.append(historyHeading, historyCount, historyPrompt);
         const historyContent = makeElement("div", "primary-history-content");
         historyContent.append(makeElement(
           "p",
           "primary-history-context",
-          "Vote totals reflect the Gage County primary report. For statewide or multi-county contests, they show only Gage County’s reporting portion and do not establish the final contest result."
+          interfaceCopy.primaryHistoryContext
         ));
         const historyList = makeElement("ul", "candidate-list");
         historyList.setAttribute("aria-label", `${office.office} primary history`);
@@ -240,7 +245,10 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
         candidateContent.append(historySection);
       }
 
+      disclosure.dataset.currentCandidateCount = String(currentCandidates.length);
+      summaryMain.querySelectorAll(".office-summary-meta").forEach((meta) => { meta.dataset.completeMetadata = meta.textContent; });
       disclosure.dataset.officeIndex = String(index);
+      disclosure.dataset.partisanStatus = office.officeMetadata.partisanStatus;
       disclosure.id = office.officeId;
       disclosure.dataset.officeText = [
         office.office,
@@ -255,10 +263,10 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
     function renderCategory(category, offices, startIndex) {
       const disclosure = makeElement("details", "directory-category");
       const summary = makeElement("summary", "category-summary");
-      const summaryText = makeElement("span", "category-summary-text");
+      const summaryText = makeElement("h3", "category-summary-text");
       const categoryId = `category-${category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
-      const title = makeElement("h3", "category-title", category);
-      title.id = `${categoryId}-heading`;
+      const title = makeElement("span", "category-title", category);
+      summaryText.id = `${categoryId}-heading`;
 
       const categorySummary = categorySummaryData.find((entry) => entry.category === category);
       if (!categorySummary) throw new Error(`Missing category summary metadata for ${category}`);
@@ -270,8 +278,8 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       const summaryUtility = makeElement("span", "category-summary-utility");
       const affordance = makeElement("span", "category-affordance");
       affordance.append(
-        makeElement("span", "category-affordance-label category-affordance-label--closed", "View candidates"),
-        makeElement("span", "category-affordance-label category-affordance-label--open", "Hide candidates")
+        makeElement("span", "category-affordance-label category-affordance-label--closed", interfaceCopy.viewCandidates),
+        makeElement("span", "category-affordance-label category-affordance-label--open", interfaceCopy.hideCandidates)
       );
       summaryUtility.append(count, affordance);
       summaryText.append(title, summaryUtility);
@@ -281,6 +289,7 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       offices.forEach((office, offset) => officeWrap.append(renderOffice(office, startIndex + offset)));
 
       disclosure.dataset.categoryText = category.toLowerCase();
+      count.dataset.completeSummary = count.textContent;
       disclosure.id = categoryId;
       disclosure.append(summary, officeWrap);
       return disclosure;
@@ -336,7 +345,8 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
       if (directory) directory.replaceChildren();
       if (status) {
         status.textContent = message;
-        status.classList.add("directory-error");
+        status.classList.remove("visually-hidden");
+      status.classList.add("directory-error");
         status.setAttribute("role", "alert");
         status.setAttribute("aria-live", "assertive");
         status.tabIndex = 0;
@@ -347,7 +357,10 @@ export function initializeDirectory({ siteConfig, interfaceCopy, electionData, c
     try {
       applySiteConfig();
       renderDirectory();
-      setupDirectorySearch({ directory, status, electionData, interfaceCopy });
+      if (!renderOnly) {
+        document.querySelector("#directory-search").disabled = false;
+        setupDirectorySearch({ directory, status, electionData, interfaceCopy, affiliationGuide });
+      }
     } catch (error) {
       showDirectoryError(error);
     }

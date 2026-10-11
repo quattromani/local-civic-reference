@@ -28,8 +28,8 @@ for (const entry of electionwareEntries) {
     throw new Error(`Electionware rendered with incorrect status: ${entry.sourceStatus}`);
   }
   if (!entry.sourceDescription.includes(electionwarePolicy.reportStatus)
-    || !entry.sourceDescription.includes("authoritative source")
-    || !entry.sourceDescription.includes("county totals alone do not establish final statewide or multi-county district outcomes")) {
+    || !entry.sourceDescription.includes("supplies the county primary totals shown here")
+    || !entry.sourceDescription.toLowerCase().includes("county totals alone do not establish final statewide or multi-county district outcomes")) {
     throw new Error("Electionware rendered description does not state status, project authority, and county-reporting limits");
   }
 }

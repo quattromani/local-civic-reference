@@ -17,12 +17,12 @@ const rendered = publication.categorySummaries;
 assert.deepEqual(rendered, expected, "rendered drawer summaries must match canonical data");
 
 const expectedLabels = new Map([
-  ["School Boards", "4 districts · 13 seats · 20 current candidates"],
-  ["Cities & Villages", "15 offices · 41 current candidates"],
-  ["County Offices", "12 offices · 12 current candidates"],
-  ["State & Federal Offices", "9 offices · 28 current candidates"],
-  ["Township Boards", "24 townships · 72 seats · 68 current candidates"],
-  ["Other Local Districts", "5 district seats · 6 current candidates"]
+  ["School Boards", "4 districts, 13 seats, 20 current candidates"],
+  ["Cities & Villages", "15 offices, 41 current candidates"],
+  ["County Offices", "12 offices, 12 current candidates"],
+  ["State & Federal Offices", "9 offices, 28 current candidates"],
+  ["Township Boards", "24 townships, 72 seats, 68 current candidates"],
+  ["Other Local Districts", "5 district seats, 6 current candidates"]
 ]);
 for (const summary of expected) {
   assert.equal(summary.displayLabel, expectedLabels.get(summary.category), `${summary.category} uses the approved counting unit`);
@@ -39,7 +39,7 @@ const townshipSummary = expected.find((summary) => summary.category === "Townshi
 assert.equal(townshipSummary.officesWithoutCandidates, 1, "empty offices remain counted and auditable");
 
 const deliberatelyWrong = structuredClone(rendered);
-deliberatelyWrong.find((summary) => summary.category === "School Boards").displayLabel = "4 offices · 20 candidates";
+deliberatelyWrong.find((summary) => summary.category === "School Boards").displayLabel = "4 offices, 20 candidates";
 assert.ok(compareCategorySummaryData(expected, deliberatelyWrong).length, "a stale or hard-coded rendered label must fail validation");
 
 assert.match(renderer, /categorySummary\.displayLabel/, "renderer must consume generated summary metadata");

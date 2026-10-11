@@ -55,16 +55,16 @@ for (const landmark of ["<header", "<main", "<nav", "<footer"]) {
 }
 if (!html.includes('<nav class="utility-nav" aria-label="Page navigation">')) errors.push("Page navigation landmark lacks a unique accessible label");
 
-const staticIds = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+const staticIds = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
 const duplicateStaticIds = [...new Set(staticIds.filter((id, index) => staticIds.indexOf(id) !== index))];
 if (duplicateStaticIds.length) errors.push(`Duplicate static IDs: ${duplicateStaticIds.join(", ")}`);
 
 if (/role=["']heading["']|aria-level=/i.test(html)) errors.push("Generic ARIA headings remain in the page");
 for (const nativeHeadingGenerator of [
-  'makeElement("h3", "category-title"',
-  'makeElement("h4", "office-title"',
+  'makeElement("h3", "category-summary-text"',
+  'makeElement("h4", "office-summary-main"',
   'makeElement("h5", "primary-history-heading"',
-  'makeElement("h6", "candidate-name"'
+  'makeElement(electionStage === "primary-history" ? "h6" : "h5", "candidate-name"'
 ]) {
   if (!sourceText.includes(nativeHeadingGenerator)) errors.push(`Missing native generated heading: ${nativeHeadingGenerator}`);
 }
@@ -89,7 +89,7 @@ if (content.interfaceCopy.clearSearchLabel !== "Clear directory search"
   errors.push("Search clear control lacks a centralized, specific accessible name");
 }
 
-if (html.includes("Browse the candidate directory")) errors.push("Redundant hero directory button remains");
+if ((html.match(/<section class="hero"[\s\S]*?<\/section>/)?.[0] || "").includes("Browse the candidate directory")) errors.push("Redundant hero directory button remains");
 const calendarPath = path.join(root, "public", "assets", content.election.calendar.fileName);
 const calendarFile = fs.existsSync(calendarPath) ? fs.readFileSync(calendarPath, "utf8") : "";
 if (!html.includes('<time class="masthead-date" datetime="2026-11-03">Tuesday, November 3, 2026</time>')

@@ -1,3 +1,8 @@
+import sharp from "sharp";
+import { renderStaticDirectory } from "./render-static-directory.mjs";
+import { electionConfig } from "./election-config.mjs";
+import { publicRoot, canonicalDataPath, siteContentPath } from "./project-paths.mjs";
+import { validateElectionContract } from "./election-contract.mjs";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
@@ -6,15 +11,15 @@ import { createPublicDirectoryProjection } from "./public-directory-projection.m
 
 const root = path.resolve(import.meta.dirname, "..");
 const sourceRoot = path.join(root, "src");
-const publicRoot = path.join(root, "public");
-const contentPath = path.join(sourceRoot, "content/site-content.json");
-const canonicalPath = path.join(sourceRoot, "data/elections/2026/election-directory.json");
+const contentPath = siteContentPath;
+const canonicalPath = canonicalDataPath;
 const templatePath = path.join(sourceRoot, "site/index.template.html");
 
 const contentBytes = fs.readFileSync(contentPath);
 const canonicalBytes = fs.readFileSync(canonicalPath);
 const content = JSON.parse(contentBytes.toString("utf8"));
 const canonical = JSON.parse(canonicalBytes.toString("utf8"));
+validateElectionContract(canonical, content, electionConfig);
 const sha256 = (value) => crypto.createHash("sha256").update(value).digest("hex");
 const iconVersion = sha256(Buffer.concat(["favicon.svg", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"].map(file => fs.readFileSync(path.join(sourceRoot, "site/assets", file))))).slice(0, 12);
 const stylesRoot = path.join(sourceRoot, "site/styles");
@@ -23,6 +28,10 @@ const styleVersion = sha256(fs.readdirSync(stylesRoot)
   .sort()
   .map((file) => `${file}\n${fs.readFileSync(path.join(stylesRoot, file), "utf8")}`)
   .join("\n")).slice(0, 12);
+
+const scriptsRoot = path.join(sourceRoot, "site/scripts");
+const scriptFiles = fs.readdirSync(scriptsRoot).filter((file) => file.endsWith(".js")).sort();
+const scriptVersion = sha256(scriptFiles.map((file) => `${file}\n${fs.readFileSync(path.join(scriptsRoot, file), "utf8")}`).join("\n")).slice(0, 12);
 
 const escapeHtml = (value) => String(value)
   .replaceAll("&", "&amp;")
@@ -37,6 +46,15 @@ const emphasizeText = (value, emphasis) => {
     throw new Error("Hero body emphasis must match text in the hero body");
   }
   return text.replace(label, `<strong>${label}</strong>`);
+};
+
+const linkHeroText = (html) => {
+  for (const link of content.hero.links || []) {
+    if (!/^#[a-z0-9-]+$/.test(link.href)) throw new Error(`Invalid hero link target: ${link.href}`);
+    const label = escapeHtml(link.text);
+    html = html.replace(label, `<a class="hero-directory-link" href="${escapeHtml(link.href)}">${label}</a>`);
+  }
+  return html;
 };
 
 const replaceToken = (html, token, value) => {
@@ -75,7 +93,7 @@ const calendarLines = [
   "CALSCALE:GREGORIAN",
   "METHOD:PUBLISH",
   "BEGIN:VEVENT",
-  "UID:2026-general-election-gage-county@local-civic-reference",
+  `UID:${electionConfig.calendarUid}`,
   `DTSTAMP:${calendar.stampUtc}`,
   `DTSTART;VALUE=DATE:${dateToBasic(content.election.dateIso)}`,
   `DTEND;VALUE=DATE:${dateToBasic(addDays(content.election.dateIso, 1))}`,
@@ -94,7 +112,7 @@ const calendarLines = [
 const calendarFile = `${calendarLines.map(foldCalendarLine).join("\r\n")}\r\n`;
 
 const navigationItems = content.navigation
-  .map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`)
+  .map((item) => `<a${item.href === "#candidate-directory" ? ' class="find-candidates-link"' : ""} href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`)
   .join("\n        ");
 
 const methodologyItems = Object.entries(content.guide.methodologyLabels)
@@ -122,7 +140,14 @@ const canonicalMetadata = content.site.canonicalUrl
   ? `<link rel="canonical" href="${escapeHtml(content.site.canonicalUrl)}">\n  <meta property="og:url" content="${escapeHtml(content.site.canonicalUrl)}">`
   : "";
 
+const analytics = electionConfig.isFixture ? null : electionConfig.analytics;
+if (analytics && (!/^G-[A-Z0-9]+$/.test(analytics.measurementId) || analytics.allowedHost !== new URL(content.site.canonicalUrl).hostname)) throw new Error("Invalid GA4 configuration or production host");
+const optimizedHero = /\.jpe?g$/i.test(content.hero.image.path);
+const heroWidths = [800, 1400, content.hero.image.width].filter((width, index, widths) => widths.indexOf(width) === index);
+const heroVariant = width => content.hero.image.path.replace(/\.jpe?g$/i, `-${width}.webp`);
 const tokens = {
+  HERO_IMAGE_SOURCES: optimizedHero ? `<source type="image/webp" srcset="${heroWidths.map(width => `${heroVariant(width)} ${width}w`).join(", ")}" sizes="100vw">` : "",
+  ANALYTICS_TAG: analytics ? `<script type="module" src="scripts/analytics.js?v=${scriptVersion}" data-measurement-id="${escapeHtml(analytics.measurementId)}" data-allowed-host="${escapeHtml(analytics.allowedHost)}"></script>` : "",
   ICON_VERSION: iconVersion,
   SITE_TITLE: escapeHtml(content.site.title),
   SITE_LANGUAGE: escapeHtml(content.site.language),
@@ -138,9 +163,22 @@ const tokens = {
   ELECTION_CALENDAR_PATH: escapeHtml(calendarPath),
   ELECTION_CALENDAR_ARIA_LABEL: escapeHtml(calendar.ariaLabel),
   NAVIGATION_ITEMS: navigationItems,
+  HERO_IMAGE_PATH: escapeHtml(content.hero.image.path),
+  HERO_IMAGE_WIDTH: String(content.hero.image.width),
+  HERO_IMAGE_HEIGHT: String(content.hero.image.height),
+  HERO_SAMPLE_LABEL: escapeHtml(content.hero.image.sampleLabel),
   HERO_KICKER: escapeHtml(content.hero.kicker),
+  APPLICATION_SCRIPT_URL: `scripts/app.js?v=${scriptVersion}`,
   HERO_HEADLINE: escapeHtml(content.hero.headline),
-  HERO_BODY: emphasizeText(content.hero.body, content.hero.bodyEmphasis),
+  HERO_RACE_INTRODUCTION: linkHeroText(escapeHtml(content.hero.raceIntroduction)),
+  ACTIVE_FILTERS_LABEL: escapeHtml(content.interfaceCopy.filtersLabel),
+  CLEAR_ALL_FILTERS: escapeHtml(content.interfaceCopy.clearAllFilters),
+  COUNTS_EXPLANATION: escapeHtml(content.interfaceCopy.countsExplanation),
+  HERO_BODY: linkHeroText(emphasizeText(content.hero.body, content.hero.bodyEmphasis)),
+  AFFILIATION_GUIDE_HEADING: escapeHtml(content.affiliationGuide.heading),
+  AFFILIATION_GUIDE_INTRODUCTION: emphasizeText(content.affiliationGuide.introduction, content.affiliationGuide.instructionEmphasis),
+  NONPARTISAN_RACE_FILTER: escapeHtml(content.interfaceCopy.showNonpartisanRaces),
+  AFFILIATION_GUIDE_RESET: escapeHtml(content.affiliationGuide.showAll),
   DIRECTORY_HEADING: escapeHtml(content.directory.heading),
   SEARCH_LABEL: escapeHtml(content.directory.searchLabel),
   SEARCH_PLACEHOLDER: escapeHtml(content.directory.searchPlaceholder),
@@ -154,12 +192,13 @@ const tokens = {
   NOTICE_HEADING: escapeHtml(content.guide.noticeHeading),
   NOTICE_BODY: escapeHtml(content.guide.noticeBody),
   VERIFICATION_HEADING: escapeHtml(content.guide.verificationHeading),
-  VERIFICATION_INTRODUCTION: escapeHtml(canonical.publicMethodology.introduction || content.guide.verificationIntroduction),
+  VERIFICATION_INTRODUCTION: escapeHtml(canonical.publicMethodology.introduction),
   METHODOLOGY_ITEMS: methodologyItems,
   CORRECTION_HEADING: escapeHtml(content.guide.correctionHeading),
   CORRECTION_INTRODUCTION: escapeHtml(content.guide.correctionIntroduction),
   CORRECTION_PROMPT: escapeHtml(content.guide.correctionPrompt),
   CORRECTION_EMAIL: escapeHtml(content.guide.correctionEmail),
+  GUIDE_REVIEW_SENTENCE: escapeHtml(content.interfaceCopy.reviewDateSentence.replace("{date}", content.election.lastReviewed)),
   LAST_REVIEWED: escapeHtml(content.election.lastReviewed),
   CONTEXT_KICKER: escapeHtml(content.context.kicker),
   CONTEXT_HEADING: escapeHtml(content.context.heading),
@@ -182,16 +221,26 @@ if (unresolved.length) throw new Error(`Unresolved template tokens: ${unresolved
 const publication = {
   schemaVersion: canonical.schemaVersion,
   electionId: canonical.electionId,
-  generatedFrom: "src/data/elections/2026/election-directory.json",
+  generatedFrom: electionConfig.dataset,
+  contractVersion: canonical.contractVersion,
   offices: createPublicDirectoryProjection(canonical),
   categorySummaries: createCategorySummaryData(canonical)
 };
 
+html = renderStaticDirectory(html, content, publication);
 fs.rmSync(publicRoot, { recursive: true, force: true });
 fs.mkdirSync(path.join(publicRoot, "data"), { recursive: true });
 fs.cpSync(path.join(sourceRoot, "site/styles"), path.join(publicRoot, "styles"), { recursive: true });
 fs.cpSync(path.join(sourceRoot, "site/scripts"), path.join(publicRoot, "scripts"), { recursive: true });
+for (const file of scriptFiles) {
+  const scriptPath = path.join(publicRoot, "scripts", file);
+  const script = fs.readFileSync(scriptPath, "utf8").replace(/(from\s+["'])(\.\/[^"']+\.js)(["'])/g, `$1$2?v=${scriptVersion}$3`);
+  fs.writeFileSync(scriptPath, script);
+}
 fs.cpSync(path.join(sourceRoot, "site/assets"), path.join(publicRoot, "assets"), { recursive: true });
+if (optimizedHero) for (const width of heroWidths) {
+  await sharp(path.join(sourceRoot, "site", content.hero.image.path)).resize({ width, withoutEnlargement: true }).webp({ quality: 82 }).toFile(path.join(publicRoot, heroVariant(width)));
+}
 // Root aliases support browsers that discover icons without reading link metadata.
 for (const icon of ["favicon.ico", "apple-touch-icon.png"]) {
   fs.copyFileSync(path.join(publicRoot, "assets", icon), path.join(publicRoot, icon));
@@ -203,7 +252,8 @@ fs.writeFileSync(stylesheetEntryPath, versionedStylesheetEntry);
 fs.writeFileSync(path.join(publicRoot, calendarPath), calendarFile);
 fs.writeFileSync(path.join(publicRoot, "index.html"), html);
 fs.writeFileSync(path.join(publicRoot, "data/site-content.json"), `${JSON.stringify(content, null, 2)}\n`);
-fs.writeFileSync(path.join(publicRoot, "data/election-directory-2026.json"), `${JSON.stringify(publication, null, 2)}\n`);
+fs.writeFileSync(path.join(publicRoot, `data/${electionConfig.publicDataFile}`), `${JSON.stringify(publication)}\n`);
+fs.writeFileSync(path.join(publicRoot, "data/election-config.json"), `${JSON.stringify({ electionId: electionConfig.electionId, contractVersion: canonical.contractVersion, directoryFile: electionConfig.publicDataFile, isFixture: electionConfig.isFixture }, null, 2)}\n`);
 fs.writeFileSync(path.join(publicRoot, ".nojekyll"), "");
 
 const manifest = {
@@ -211,7 +261,7 @@ const manifest = {
   contentSchemaVersion: content.schemaVersion,
   canonicalDatasetSha256: sha256(canonicalBytes),
   contentSha256: sha256(contentBytes),
-  publishedDirectorySha256: sha256(fs.readFileSync(path.join(publicRoot, "data/election-directory-2026.json"))),
+  publishedDirectorySha256: sha256(fs.readFileSync(path.join(publicRoot, `data/${electionConfig.publicDataFile}`))),
   publicationTarget: "GitHub Pages /public"
 };
 fs.writeFileSync(path.join(publicRoot, "build-manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);

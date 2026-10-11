@@ -203,3 +203,22 @@
       padding: 0 0 var(--space-4) 1.15rem;
       color: var(--ink-soft);
     }
+
+.hero-directory-link { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+.hero-directory-link:hover { text-decoration-thickness: 2px; }
+.directory-category, .office-disclosure, #verification { scroll-margin-top: 7rem; }
+
+.utility-nav .find-candidates-link { display: inline-flex; min-height: 2.75rem; padding: 0.4rem 0.8rem; align-items: center; border-radius: var(--radius); background: var(--accent); color: #ffffff; text-decoration: none; }
+.utility-nav .find-candidates-link:hover { background: #193f39; color: #ffffff; }
+.hero-publisher { color: var(--ink-soft); font-size: var(--text-small); }
+.hero-race-links { max-width: 45rem; margin-top: var(--space-2); color: var(--ink-soft); font-size: var(--text-small); }
+.candidate-primary-results { margin-top: var(--space-3); color: var(--ink-soft); }
+.candidate-primary-results-summary { min-height: 2.75rem; padding-block: 0.6rem; cursor: pointer; font-size: var(--text-small); }
+.candidate-primary-results .candidate-result { margin-top: var(--space-1); }
+
+#candidate-directory { scroll-margin-top: 7rem; }
+@media (max-width: 48rem) {
+  #candidate-directory, .directory-category, .office-disclosure, #verification { scroll-margin-top: 11rem; }
+}
+
+@media (max-width: 40rem) { .utility-nav { gap: var(--space-2); } }

@@ -5,11 +5,19 @@
   "description": "A knowledge-first civic reference repository with a generated public website.",
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-certified-election-data.mjs --write && node scripts/build-site.mjs",
+    "build": "node scripts/build-election.mjs",
     "validate": "npm run build && node scripts/validate-all.mjs",
-    "release": "npm run validate && npm run build && node scripts/check-release.mjs"
+    "release": "npm run validate && npm run build && node scripts/check-release.mjs",
+    "build:fixture": "ELECTION_CONFIG=fixtures/elections/2030/config.json ELECTION_OUTPUT=work/fixture-public node scripts/build-election.mjs",
+    "test:reuse": "node scripts/test-election-reuse.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.0",
+    "html-validate": "^11.16.2",
+    "jsdom": "^30.1.2",
+    "sharp": "^0.35.5"
   }
 }

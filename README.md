@@ -1,16 +1,16 @@
 # Local Civic Reference
 
-Local Civic Reference is an enduring repository of structured civic knowledge for Gage County, Nebraska. Its first publication is a candidate directory, but the repository is intentionally broader than one election, one webpage, or one delivery format.
+Local Civic Reference stores structured civic information for Gage County, Nebraska. The first publication is a candidate directory, and later publications can use the same records for other elections or formats.
 
-The central principle is simple: **the repository is the product; the website is one presentation of its knowledge.**
+The repository contains the authoritative data, source evidence, and review records. The website is generated from the repository.
 
-Facts are maintained in normalized, traceable, version-controlled records so the same underlying truth can support people reading a website, assistive technology, print publications, PDFs, future civic tools, conversational retrieval, and later election cycles. Human understanding remains the primary purpose. Reuse is a consequence of preserving knowledge well.
+Maintainers preserve facts in structured records with source references and version history, so readers and future maintainers can trace each claim. The same records can support websites, assistive technology, print publications, PDFs, and future civic tools.
 
 ## What lives here
 
 ```text
 src/
-  content/                    Editorial and interface content
+  content/                    Site copy, interface copy, methodology, and source descriptions
   data/                       Canonical normalized civic data
   provenance/                 Archived source evidence
   site/                       Editable website templates, styles, scripts, and assets
@@ -20,9 +20,11 @@ scripts/                      Build, validation, proof-gate, and release checks
 project-docs/                 Governance, decisions, provenance notes, audits, and history
 ```
 
+`src/content/site-content.json` owns page and interface wording. `src/content/source-copy.json` owns public methodology and repeated source descriptions. Rendering scripts interpolate values without becoming separate prose authorities. Filing-source descriptions remain in their source records.
+
 `src/` is authoritative. `public/` is generated and must not become a second editing surface. A future publication should derive from the same canonical records rather than restating or reinterpreting them independently.
 
-## Knowledge-first publishing
+## Data and publication
 
 The 2026 election directory separates candidates, candidacies, offices, jurisdictions, affiliations, contests, results, sources, filing snapshots, election stages, and review states. Stable IDs preserve relationships without duplicating facts. Source roles distinguish what a filing list, voter-registration lookup, county report, or state canvass can actually establish.
 
@@ -69,11 +71,11 @@ These are architectural guarantees, not optional presentation preferences.
 
 GitHub Pages publishes the generated contents of `public/` through `.github/workflows/deploy-pages.yml`. GitHub Pages does not offer `/public` as a branch-folder selector, so the focused workflow uploads `public/` as the Pages artifact. The workflow is publication transport only; it does not rebuild or redefine canonical knowledge.
 
-The current Pages address is temporary. No canonical URL is emitted until a permanent public home is approved and recorded in `src/content/site-content.json`.
+The approved public home is https://partyreveal.com/. The build reads the canonical URL and calendar links from `src/content/site-content.json`.
 
 ## Extending the reference
 
-Future resources—governmental structure, board information, taxation explainers, civic education, and other local references—should receive their own normalized data and provenance under `src/`. The website may expand to present them, but no interface should become the sole keeper of an important fact.
+Store future civic resources, e.g., government structure, board information, taxation explainers, and civic education, as structured data with source evidence under `src/`. Generate website content from the records so important facts remain recoverable outside the website.
 
 Before adding a new subject area, document:
 
@@ -87,4 +89,4 @@ Before adding a new subject area, document:
 
 Project status and blockers are tracked in [PROJECT-READINESS.md](project-docs/PROJECT-READINESS.md). Architectural reasoning is recorded in [DECISIONS.md](project-docs/DECISIONS.md). Source roles are inventoried in [DATA-SOURCES.md](project-docs/DATA-SOURCES.md), and meaningful milestones are recorded in [CHANGELOG.md](project-docs/CHANGELOG.md).
 
-This project earns trust through consistent treatment, traceable evidence, accessible presentation, and careful limits on what each source is allowed to claim.
+Maintainers apply the same standards to comparable records, cite evidence for each claim, and provide accessible presentations. Each source supports only the facts its evidence establishes.

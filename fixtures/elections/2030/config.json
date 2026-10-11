@@ -1,0 +1,16 @@
+{
+  "configVersion": "1.0.0",
+  "electionId": "2030-example-general",
+  "dateIso": "2030-11-05",
+  "timeZone": "America/Chicago",
+  "jurisdiction": "Example County",
+  "electionType": "general",
+  "coverage": "Synthetic test data only, not real election information.",
+  "dataset": "fixtures/elections/2030/directory.json",
+  "content": "fixtures/elections/2030/content.json",
+  "sourceCopy": "fixtures/elections/2030/source-copy.json",
+  "publicDataFile": "election-directory-2030.json",
+  "calendarUid": "2030-example-general@local-civic-reference",
+  "sourceAdapter": null,
+  "isFixture": true
+}

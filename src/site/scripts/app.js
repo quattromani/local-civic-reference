@@ -1,5 +1,6 @@
 import { setupPrintDisclosures, showFatalApplicationError } from "./accessibility.js";
 import { loadPublicationData } from "./data-loader.js";
+import { setupDirectoryLinks } from "./directory-links.js";
 import { initializeDirectory } from "./render-directory.js";
 
 async function initializeApplication() {
@@ -13,9 +14,11 @@ async function initializeApplication() {
   initializeDirectory({
     siteConfig,
     interfaceCopy: content.interfaceCopy,
+    affiliationGuide: content.affiliationGuide,
     electionData: directory.offices,
     categorySummaryData: directory.categorySummaries
   });
+  setupDirectoryLinks();
   setupPrintDisclosures();
 }
 

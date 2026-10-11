@@ -2,6 +2,14 @@
 
 Meaningful data, architecture, governance, and publication milestones are recorded here. Routine implementation details are intentionally omitted.
 
+## 2026-10-11 — Directory usability, election reuse, and analytics
+
+- Refined the opening copy, sample-ballot header, affiliation guide, race links, search controls, and dynamic counts while preserving evidence distinctions and neutral presentation.
+- Added election configuration, the versioned publication contract, and an isolated synthetic election fixture.
+- Added standard GA4 for the production hostname and general interaction events that omit candidate names, search text, and selected party affiliations.
+- Rendered the directory into initial HTML, corrected heading structure and IDs, added HTML and accessibility scans, and optimized images and generated JSON.
+- Kept historical publication downloads outside the active build. Validation and review details appear in the election-reuse and accessibility-performance-analytics documents.
+
 ## 2026-10-06 — General-election roster review
 
 - Rechecked the county list through its September 29 entry and the Secretary of State final September 11 list; archived both with source hashes.

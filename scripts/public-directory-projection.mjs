@@ -1,3 +1,4 @@
+import { sourceCopy } from "./source-copy.mjs";
 import { sortCandidaciesByPolicy, sortOfficesByPolicy } from "./ordering-policy.mjs";
 
 const roleLabels = {
@@ -34,23 +35,23 @@ const requireRecord = (records, id, recordType, ownerId) => {
 const sourceDescriptionFor = ({ roles, sourceId, contest, source }) => {
   const descriptions = new Set();
   if (roles.includes("affiliation")) {
-    if (sourceId === "src-ne-votercheck") {
-      descriptions.add("Confirms voter-registration affiliation.");
+    if (source.evidenceKind === "registration") {
+      descriptions.add(sourceCopy.sourceDescriptions.registration);
     } else if (roles.includes("filing")) {
-      descriptions.add("Lists the ballot-party label shown in the official filing snapshot; this is not voter-registration verification.");
+      descriptions.add(sourceCopy.sourceDescriptions.ballotPartyAndFiling);
     } else {
-      descriptions.add(`The ${contest.electionType} confirms participation in the named party contest; it does not verify voter registration.`);
+      descriptions.add(sourceCopy.sourceDescriptions.primaryParticipation.replace("{contest}", contest.electionType));
     }
   }
-  if (roles.includes("filing")) {
-    descriptions.add("Lists the candidate for this office in the cited general-election candidate list.");
+  if (roles.includes("filing") && !roles.includes("affiliation")) {
+    descriptions.add(sourceCopy.sourceDescriptions.filing);
   }
-  if (sourceId === "src-gage-electionware-2026-primary") {
-    descriptions.add("This guide uses it as the authoritative source for Gage County primary reporting. Labeled UNOFFICIAL RESULTS; county totals alone do not establish final statewide or multi-county district outcomes.");
-  } else if (sourceId === "src-ne-primary-canvass-2026") {
-    descriptions.add("Establishes the official statewide or multi-county primary nominee.");
-  } else if (sourceId === "src-gage-primary-sample-ballots-2026") {
-    descriptions.add("Explains advancement without a contested primary.");
+  if (source.evidenceKind === "primary-results") {
+    descriptions.add(sourceCopy.sourceDescriptions.countyPrimaryResults);
+  } else if (source.evidenceKind === "official-nominee") {
+    descriptions.add(sourceCopy.sourceDescriptions.officialNominee);
+  } else if (source.evidenceKind === "uncontested-primary") {
+    descriptions.add(sourceCopy.sourceDescriptions.uncontestedPrimary);
   } else if (!descriptions.size && source.publicDescription) {
     descriptions.add(source.publicDescription);
   }
@@ -113,7 +114,7 @@ const createSourceEntries = ({
       roles: ["affiliation"],
       roleLabels: [roleLabels.affiliation],
       sourceLabel: "Affiliation not yet verified",
-      sourceDescription: "No affiliation source is currently confirmed.",
+      sourceDescription: sourceCopy.sourceDescriptions.missingAffiliation,
       sourceUrl: null,
       sourceStatus: "Affiliation not yet verified",
       sourceDate: null,
@@ -177,7 +178,7 @@ export function createPublicDirectoryProjection(data) {
       jurisdiction: jurisdiction.name,
       district: office.district,
       seat: office.district || (office.voteFor ? `Vote for ${office.voteFor}` : "Seat information pending official confirmation"),
-      electionDate: "November 3, 2026 general election",
+      electionDate: `${formatDate(data.election.dateIso)} ${data.election.type} election`,
       filingSnapshotDate: formatDate(office.filingSnapshotDate || data.filingSnapshotDate),
       filingWindowStatus: office.filingWindowStatus || data.filingWindowStatus,
       filingReviewedDate: formatDate(sources.get(officeCandidacies.find(c => c.filingSourceId)?.filingSourceId)?.reviewedDate),
@@ -202,13 +203,7 @@ export function createPublicDirectoryProjection(data) {
       const affiliation = requireRecord(affiliations, candidacy.affiliationId, "affiliation", candidacy.candidacyId);
       const contest = requireRecord(contests, candidacy.contestId, "contest", candidacy.candidacyId);
       const result = candidacy.resultId ? requireRecord(results, candidacy.resultId, "result", candidacy.candidacyId) : null;
-      const isLocal = ["Cities & Villages", "County Offices"].includes(office.category);
-      const resultNote = !result
-        ? null
-        : isLocal
-          ? `Gage County primary result: ${result.votes.toLocaleString("en-US")} votes (${result.percentage.toFixed(2)}%).`
-          : `Gage County reporting portion: ${result.votes.toLocaleString("en-US")} votes (${result.percentage.toFixed(2)}%). Statewide or districtwide advancement is established separately by the official state canvass.`;
-      const note = resultNote;
+      const note = result?.publicNote || null;
       const { sourceBindings, sourceEntries } = createSourceEntries({
         candidate,
         candidacy,
@@ -224,7 +219,7 @@ export function createPublicDirectoryProjection(data) {
         ballotName: candidate.ballotName,
         seat: candidacy.seat || office.district || "",
         affiliation: affiliation.sourceId ? affiliation.label : "Affiliation not yet verified",
-        affiliationEvidenceLabel: !affiliation.sourceId ? null : affiliation.sourceId === "src-ne-votercheck" ? "Registered affiliation" : affiliation.sourceId.includes("filing") ? "Ballot party" : "Primary participation",
+        affiliationEvidenceLabel: !affiliation.sourceId ? null : ({ registration: "Registered affiliation", "ballot-party": "Ballot party", "primary-participation": "Primary participation" })[affiliation.evidenceType],
         affiliationVerificationState: affiliation.verificationState,
         electionStageGroup: candidacy.electionStageGroup,
         primaryOutcome: candidacy.primaryStatus,

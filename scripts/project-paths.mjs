@@ -1,8 +1,11 @@
 import path from "node:path";
-
-export const projectRoot = path.resolve(import.meta.dirname, "..");
-export const canonicalDataPath = path.join(projectRoot, "src/data/elections/2026/election-directory.json");
-export const siteContentPath = path.join(projectRoot, "src/content/site-content.json");
-export const publicHtmlPath = path.join(projectRoot, "public/index.html");
-export const publicDirectoryPath = path.join(projectRoot, "public/data/election-directory-2026.json");
-export const publicContentPath = path.join(projectRoot, "public/data/site-content.json");
+import { electionConfig, projectRoot, resolveProjectPath } from "./election-config.mjs";
+export { projectRoot };
+export const canonicalDataPath = resolveProjectPath(electionConfig.dataset);
+export const siteContentPath = resolveProjectPath(electionConfig.content);
+export const publicRoot = process.env.ELECTION_OUTPUT ? resolveProjectPath(process.env.ELECTION_OUTPUT) : path.join(projectRoot, "public");
+if (electionConfig.isFixture && (!process.env.ELECTION_OUTPUT || publicRoot === path.join(projectRoot, "public"))) throw new Error("Fixture output must be isolated from public");
+if (publicRoot !== path.join(projectRoot, "public") && !publicRoot.startsWith(path.join(projectRoot, "work") + path.sep)) throw new Error("Alternate output must be inside work/");
+export const publicHtmlPath = path.join(publicRoot, "index.html");
+export const publicDirectoryPath = path.join(publicRoot, "data", electionConfig.publicDataFile);
+export const publicContentPath = path.join(publicRoot, "data/site-content.json");

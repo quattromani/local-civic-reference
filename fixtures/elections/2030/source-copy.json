@@ -1,0 +1,21 @@
+{
+  "publicMethodology": {
+    "introduction": "Synthetic methodology for architecture testing only.",
+    "registrationVerification": "Synthetic methodology for architecture testing only.",
+    "primaryParticipation": "Synthetic methodology for architecture testing only.",
+    "filingInformation": "Synthetic methodology for architecture testing only.",
+    "electionOutcomes": "Synthetic methodology for architecture testing only.",
+    "stageSeparation": "Synthetic methodology for architecture testing only.",
+    "missingVerification": "Synthetic methodology for architecture testing only."
+  },
+  "sourceDescriptions": {
+    "countyPrimaryResults": "Synthetic primary results, not real election information.",
+    "ballotPartyAndFiling": "The official general-election candidate list identifies the candidate for the office and gives the ballot-party label. A ballot-party label does not verify voter registration.",
+    "missingAffiliation": "Reviewers have not confirmed a source for political affiliation.",
+    "registration": "Confirms voter-registration affiliation.",
+    "filing": "Lists the candidate for this office in the cited general-election candidate list.",
+    "officialNominee": "Establishes the official statewide or multi-county primary nominee.",
+    "uncontestedPrimary": "Explains advancement without a contested primary.",
+    "primaryParticipation": "The {contest} confirms participation in the named party contest, and participation does not verify voter registration."
+  }
+}

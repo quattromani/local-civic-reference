@@ -1,0 +1,21 @@
+{
+  "publicMethodology": {
+    "introduction": "Each candidate card cites the source for its displayed claims, and different sources establish different facts.",
+    "registrationVerification": "Nebraska VoterCheck confirms a candidate's voter-registration affiliation when a verified lookup is available.",
+    "primaryParticipation": "A named partisan primary in the Gage County Electionware report confirms participation in that party's primary contest. It does not confirm voter registration.",
+    "filingInformation": "The county filing list identifies regular filings, petition candidacies, and declared write-ins. A write-in declaration does not mean the name is printed on the ballot. State and federal races use the final statewide general-election candidate list.",
+    "electionOutcomes": "Gage County vote totals come from the county Electionware report, which is labeled UNOFFICIAL RESULTS. The report covers Gage County reporting only, and the official state canvass establishes statewide and multi-county primary nominees.",
+    "stageSeparation": "The directory separates current listings from primary history. Primary history includes candidates who did not advance, candidates who withdrew, and primary nominees absent from the final general-election list.",
+    "missingVerification": "The directory uses \"Affiliation not confirmed\" when no affiliation source is confirmed. Reviewers do not infer an affiliation."
+  },
+  "sourceDescriptions": {
+    "countyPrimaryResults": "The Gage County Electionware report supplies the county primary totals shown here and is labeled UNOFFICIAL RESULTS. County totals alone do not establish final statewide or multi-county district outcomes.",
+    "ballotPartyAndFiling": "The official general-election candidate list identifies the candidate for the office and gives the ballot-party label. A ballot-party label does not verify voter registration.",
+    "missingAffiliation": "Reviewers have not confirmed a source for political affiliation.",
+    "registration": "Confirms voter-registration affiliation.",
+    "filing": "Lists the candidate for this office in the cited general-election candidate list.",
+    "officialNominee": "Establishes the official statewide or multi-county primary nominee.",
+    "uncontestedPrimary": "Explains advancement without a contested primary.",
+    "primaryParticipation": "The {contest} confirms participation in the named party contest, and participation does not verify voter registration."
+  }
+}

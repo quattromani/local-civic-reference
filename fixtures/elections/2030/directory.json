@@ -1,0 +1,293 @@
+{
+  "contractVersion": "1.0.0",
+  "schemaVersion": "4.0.0",
+  "electionId": "2030-example-general",
+  "datasetId": "synthetic-example-2030",
+  "election": {
+    "dateIso": "2030-11-05",
+    "type": "general",
+    "jurisdiction": "Example County"
+  },
+  "scope": "Synthetic test data only, not real election information.",
+  "filingSnapshotDate": "2030-09-20",
+  "filingWindowStatus": "Synthetic filing snapshot.",
+  "orderingPolicy": {
+    "topLevelOrder": "explicit",
+    "categories": [
+      {
+        "category": "Cities & Villages",
+        "categoryPosition": 0,
+        "officeOrder": "alphabetical"
+      },
+      {
+        "category": "School Boards",
+        "categoryPosition": 1,
+        "officeOrder": "alphabetical"
+      }
+    ]
+  },
+  "publicMethodology": {
+    "introduction": "Synthetic methodology for architecture testing only.",
+    "registrationVerification": "Synthetic methodology for architecture testing only.",
+    "primaryParticipation": "Synthetic methodology for architecture testing only.",
+    "filingInformation": "Synthetic methodology for architecture testing only.",
+    "electionOutcomes": "Synthetic methodology for architecture testing only.",
+    "stageSeparation": "Synthetic methodology for architecture testing only.",
+    "missingVerification": "Synthetic methodology for architecture testing only."
+  },
+  "sources": [
+    {
+      "sourceId": "registry",
+      "name": "Synthetic registry",
+      "url": "https://example.org/fixture/registry",
+      "reviewedDate": "2030-10-01",
+      "evidenceKind": "registration",
+      "publicStatus": "Synthetic test source",
+      "publicDescription": "Synthetic evidence for architecture testing only."
+    },
+    {
+      "sourceId": "roster",
+      "name": "Synthetic roster",
+      "url": "https://example.org/fixture/roster",
+      "reviewedDate": "2030-10-01",
+      "evidenceKind": "filing",
+      "publicStatus": "Synthetic test source",
+      "publicDescription": "Synthetic evidence for architecture testing only."
+    },
+    {
+      "sourceId": "primary",
+      "name": "Synthetic primary",
+      "url": "https://example.org/fixture/primary",
+      "reviewedDate": "2030-10-01",
+      "evidenceKind": "primary-results",
+      "publicStatus": "Synthetic test source",
+      "publicDescription": "Synthetic evidence for architecture testing only."
+    }
+  ],
+  "jurisdictions": [
+    {
+      "jurisdictionId": "example-city",
+      "name": "Example City"
+    },
+    {
+      "jurisdictionId": "example-district",
+      "name": "Example School District"
+    }
+  ],
+  "offices": [
+    {
+      "officeId": "example-mayor",
+      "officeName": "Example Mayor",
+      "category": "Cities & Villages",
+      "jurisdictionId": "example-city",
+      "district": null,
+      "partisanStatus": "Partisan",
+      "voteFor": 1,
+      "seatsAvailable": 1,
+      "seatSourceId": "roster",
+      "candidateOrder": "alphabetical",
+      "displayOrder": null,
+      "electionType": "2030 General Election with primary history",
+      "contestStatus": "Synthetic current list",
+      "generalElectionStatus": "Synthetic current list",
+      "candidateListNotice": "Synthetic fixture; no real candidates."
+    },
+    {
+      "officeId": "example-school",
+      "officeName": "Example School Board",
+      "category": "School Boards",
+      "jurisdictionId": "example-district",
+      "district": null,
+      "partisanStatus": "Nonpartisan",
+      "voteFor": 1,
+      "seatsAvailable": 1,
+      "seatSourceId": "roster",
+      "candidateOrder": "alphabetical",
+      "displayOrder": null,
+      "electionType": "2030 General Election with primary history",
+      "contestStatus": "Synthetic current list",
+      "generalElectionStatus": "Synthetic current list",
+      "candidateListNotice": "Synthetic fixture; no real candidates."
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "person-0",
+      "displayName": "Alex Example",
+      "ballotName": "Alex Example",
+      "nameSourceId": "roster",
+      "lastReviewed": "2030-10-01"
+    },
+    {
+      "candidateId": "person-1",
+      "displayName": "Blair Example",
+      "ballotName": "Blair Example",
+      "nameSourceId": "roster",
+      "lastReviewed": "2030-10-01"
+    },
+    {
+      "candidateId": "person-2",
+      "displayName": "Casey Example",
+      "ballotName": "Casey Example",
+      "nameSourceId": "roster",
+      "lastReviewed": "2030-10-01"
+    },
+    {
+      "candidateId": "person-3",
+      "displayName": "Devon Example",
+      "ballotName": "Devon Example",
+      "nameSourceId": "roster",
+      "lastReviewed": "2030-10-01"
+    }
+  ],
+  "affiliations": [
+    {
+      "affiliationId": "aff-0",
+      "candidateId": "person-0",
+      "label": "Libertarian",
+      "verificationState": "Verified",
+      "sourceId": "registry",
+      "verifiedDate": "2030-10-01",
+      "evidenceType": "registration"
+    },
+    {
+      "affiliationId": "aff-1",
+      "candidateId": "person-1",
+      "label": "Libertarian",
+      "verificationState": "Verified",
+      "sourceId": "roster",
+      "verifiedDate": "2030-10-01",
+      "evidenceType": "ballot-party"
+    },
+    {
+      "affiliationId": "aff-2",
+      "candidateId": "person-2",
+      "label": "Verification Needed",
+      "verificationState": "Pending Verification",
+      "sourceId": null,
+      "verifiedDate": null,
+      "evidenceType": null
+    },
+    {
+      "affiliationId": "aff-3",
+      "candidateId": "person-3",
+      "label": "Libertarian",
+      "verificationState": "Verified",
+      "sourceId": "primary",
+      "verifiedDate": "2030-10-01",
+      "evidenceType": "primary-participation"
+    }
+  ],
+  "candidacies": [
+    {
+      "candidacyId": "run-2030-0",
+      "candidateId": "person-0",
+      "officeId": "example-mayor",
+      "contestId": "example-mayor-contest",
+      "affiliationId": "aff-0",
+      "electionCycle": 2030,
+      "electionStageGroup": "current-general-election",
+      "resultId": null,
+      "filingSourceId": "roster",
+      "verificationSourceId": null,
+      "stageSourceId": "roster",
+      "verificationDate": "2030-10-01",
+      "seat": null,
+      "primaryStatus": "No Primary Recorded",
+      "generalElectionStatus": "Listed for the general election"
+    },
+    {
+      "candidacyId": "run-2030-1",
+      "candidateId": "person-1",
+      "officeId": "example-mayor",
+      "contestId": "example-mayor-contest",
+      "affiliationId": "aff-1",
+      "electionCycle": 2030,
+      "electionStageGroup": "current-general-election",
+      "resultId": null,
+      "filingSourceId": "roster",
+      "verificationSourceId": null,
+      "stageSourceId": "roster",
+      "verificationDate": "2030-10-01",
+      "seat": null,
+      "primaryStatus": "No Primary Recorded",
+      "generalElectionStatus": "Listed for the general election"
+    },
+    {
+      "candidacyId": "run-2030-2",
+      "candidateId": "person-2",
+      "officeId": "example-school",
+      "contestId": "example-school-contest",
+      "affiliationId": "aff-2",
+      "electionCycle": 2030,
+      "electionStageGroup": "current-general-election",
+      "resultId": null,
+      "filingSourceId": "roster",
+      "verificationSourceId": null,
+      "stageSourceId": "roster",
+      "verificationDate": "2030-10-01",
+      "seat": null,
+      "primaryStatus": "No Primary Recorded",
+      "generalElectionStatus": "Listed for the general election"
+    },
+    {
+      "candidacyId": "run-2030-3",
+      "candidateId": "person-3",
+      "officeId": "example-school",
+      "contestId": "example-school-contest",
+      "affiliationId": "aff-3",
+      "electionCycle": 2030,
+      "electionStageGroup": "primary-history",
+      "resultId": "result-3",
+      "filingSourceId": null,
+      "verificationSourceId": "primary",
+      "stageSourceId": "roster",
+      "verificationDate": "2030-10-01",
+      "seat": null,
+      "primaryStatus": "Did not advance",
+      "generalElectionStatus": "Not on current list"
+    }
+  ],
+  "contests": [
+    {
+      "contestId": "example-mayor-contest",
+      "officeId": "example-mayor",
+      "electionType": "2030 General Election",
+      "sourceId": "roster"
+    },
+    {
+      "contestId": "example-school-contest",
+      "officeId": "example-school",
+      "electionType": "2030 General Election",
+      "sourceId": "roster"
+    }
+  ],
+  "results": [
+    {
+      "resultId": "result-3",
+      "candidacyId": "run-2030-3",
+      "sourceId": "primary",
+      "votes": 12,
+      "percentage": 24.0,
+      "reportingScope": "Example County only",
+      "publicNote": "Synthetic primary result: 12 votes (24.00%)."
+    }
+  ],
+  "manualReview": [],
+  "scopeReview": [],
+  "sourceArtifacts": [],
+  "categorySummaryPolicy": [
+    {
+      "category": "Cities & Villages",
+      "primaryMetric": "officeRecords",
+      "unit": "office",
+      "includeSeatCount": false
+    },
+    {
+      "category": "School Boards",
+      "primaryMetric": "jurisdictions",
+      "unit": "district",
+      "includeSeatCount": true
+    }
+  ]
+}

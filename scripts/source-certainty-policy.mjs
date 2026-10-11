@@ -1,3 +1,4 @@
+import { sourceCopy } from "./source-copy.mjs";
 export const electionwarePolicy = Object.freeze({
   sourceId: "src-gage-electionware-2026-primary",
   reportStatus: "UNOFFICIAL RESULTS",
@@ -6,15 +7,7 @@ export const electionwarePolicy = Object.freeze({
   publicDescription: "This county report is labeled UNOFFICIAL RESULTS. The project uses it as its authoritative source for the Gage County reporting shown here; county totals alone do not establish final statewide or multi-county district outcomes."
 });
 
-export const publicMethodology = Object.freeze({
-  introduction: "Different sources establish different facts. Candidate cards identify the source used for each displayed claim.",
-  registrationVerification: "When available, Nebraska VoterCheck confirms a candidate’s voter-registration affiliation.",
-  primaryParticipation: "A named partisan primary in the Gage County Electionware report confirms participation in that party’s primary contest. It does not confirm voter registration.",
-  filingInformation: "The county filing list identifies regular filings, petition candidacies, and declared write-ins; a write-in declaration does not mean the name is printed on the ballot. State and federal races use the final statewide general-election candidate list.",
-  electionOutcomes: "Gage County vote totals come from its Electionware report, which is labeled UNOFFICIAL RESULTS and covers Gage County reporting only. The official state canvass establishes statewide and multi-county primary nominees.",
-  stageSeparation: "Current listings and primary history are separate. Primary history includes non-advancing candidates, withdrawals, and primary nominees absent from the final general-election list.",
-  missingVerification: "When no affiliation source is confirmed, the directory says “Affiliation not yet verified.” No affiliation is inferred."
-});
+export const publicMethodology = Object.freeze(sourceCopy.publicMethodology);
 
 export const correctionEmail = "gagecountygop.media@gmail.com";
 

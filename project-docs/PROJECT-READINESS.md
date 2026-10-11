@@ -6,7 +6,9 @@
 
 **Repository role:** Canonical civic knowledge source
 
-**Last reviewed:** October 6, 2026
+**Documentation reconciled:** October 11, 2026
+
+**Election data last reviewed:** October 6, 2026
 
 **Election schema:** 4.0.0
 
@@ -26,7 +28,7 @@ The former single-file stakeholder artifact, billboard-preview modal, and `dist/
 
 ```text
 src/
-  content/                    Authoritative editorial and interface content
+  content/                    Page copy, interface copy, methodology, and source descriptions
   data/elections/2026/        Canonical election model and source transcriptions
   provenance/elections/2026/  Archived source documents
   site/                       Editable HTML template, CSS, JavaScript, and fonts
@@ -111,7 +113,7 @@ Semantic landmarks, native disclosures, keyboard operation, visible focus, contr
 
 ### Publication safety
 
-The public projection excludes internal manual-review queues, scope-review records, source-archive paths, source tiers, discrepancy history, rejected values, and private voter details. Public output contains no embedded base64 assets, local paths, analytics, tracking, cookies, or remote runtime libraries.
+The public projection excludes internal manual-review queues, scope-review records, source-archive paths, source tiers, discrepancy history, rejected values, and private voter details. Public output contains no embedded base64 assets or local paths. Standard Google Analytics 4 is configured for the production hostname only. It uses analytics cookies and the external Google tag; localhost and synthetic fixture previews do not initialize tracking.
 
 ## Proof gates
 
@@ -128,18 +130,18 @@ The repository deploys the generated `public/` payload through GitHub Pages.
 
 - The repository owner enabled Pages with GitHub Actions as the publication source.
 - `.github/workflows/deploy-pages.yml` uploads `public/` unchanged; it does not create a second build or data authority.
-- The current GitHub Pages address is a temporary publication location rather than the permanent public home.
-- No canonical or Open Graph URL is emitted until the hosted URL is approved in `src/content/site-content.json`.
+- The approved public home is https://partyreveal.com/, as recorded in the October 7 decision.
+- Canonical and Open Graph URLs come from `src/content/site-content.json`.
 - `public/` must always be regenerated through `npm run build`; direct edits are release defects.
 
 ## Public-launch blockers
 
 These blockers apply to a trusted public election release. They do not invalidate the repository architecture.
 
-1. **State filing closeout:** Refresh the statewide filing source after remaining candidate-access pathways close; the county filing list is current through the August 3 local deadline.
-2. **Affiliation completion:** Resolve the 9 remaining `Verification Pending` affiliation records without inference.
-3. **Scope completion:** Resolve the 10 open scope-review items, including applicable multi-county district mapping.
-4. **Final ballot status:** Ingest an official final candidate list or sample ballot before using final contest-status language.
+1. **County ballot confirmation:** The statewide final candidate list is dated September 11. The county filing list includes entries through September 29 and was reviewed October 6; it is not a certified sample ballot. Confirm printed county ballot names against official ballot materials before using final county contest-status language.
+2. **Affiliation completion:** Verify the 43 remaining affiliation records using documented evidence, and do not infer affiliations.
+3. **Scope completion:** Resolve the 1 open scope-review record, including the applicable district mapping.
+4. **Final county ballot status:** Preserve the distinction between declared write-ins and printed ballot names until official county ballot materials establish the latter. The statewide final candidate list is already recorded.
 5. **Publication ownership:** Confirm ongoing reviewer, update cadence, and correction-response responsibility.
 6. **Hosted accessibility QA:** Repeat browser and assistive-technology checks against the final GitHub Pages URL after deployment.
 
@@ -160,7 +162,7 @@ These blockers apply to a trusted public election release. They do not invalidat
 ## Next recommended work
 
 1. Verify the deployed `public/` site in multiple browsers and assistive technology.
-2. Refresh the remaining statewide filing source after the relevant candidate-access deadlines.
+2. Confirm county printed ballot names against official county ballot materials, and record later source changes when supported.
 3. Resolve pending affiliation and scope-review records.
 4. Add a documented election-cycle rollover process before introducing the next cycle.
 5. Define the next civic knowledge domain only after its source, normalization, and validation contract is documented.
@@ -170,6 +172,10 @@ These blockers apply to a trusted public election release. They do not invalidat
 - **Current phase:** Published reference refinement and provisional election-data completion.
 - **Architecture confidence:** High.
 - **Data integrity confidence:** High within the documented source scope.
-- **Public-election completeness:** Provisional while filings and manual review remain open.
+- **Public-election completeness:** Limited to the selected races and reviewed filing sources; county printed ballot confirmation and manual review remain open.
 - **Primary risk:** Treating a time-bounded filing snapshot as a final ballot.
-- **Next milestone:** Hosted accessibility QA, followed by filing-window and final-ballot closeout.
+- **Next milestone:** Hosted accessibility QA, followed by county final-ballot confirmation and remaining manual review.
+
+## Documentation reconciliation on October 11, 2026
+
+The current source records contain 43 affiliations without verified evidence and 1 open scope-review record. Affiliation counts refer to affiliation records, not candidate-office entries. The county snapshot and state final-list dates are reproduced from the October 6 data review. The approved public address is recorded in the October 7 decision. The editorial review did not perform a new election-source or hosted-site review.

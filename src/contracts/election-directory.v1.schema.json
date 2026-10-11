@@ -1,0 +1,538 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:local-civic-reference:election-contract:1.0.0",
+  "type": "object",
+  "required": [
+    "contractVersion",
+    "schemaVersion",
+    "electionId",
+    "datasetId",
+    "election",
+    "orderingPolicy",
+    "publicMethodology",
+    "sources",
+    "jurisdictions",
+    "offices",
+    "candidates",
+    "affiliations",
+    "candidacies",
+    "contests",
+    "results",
+    "categorySummaryPolicy"
+  ],
+  "properties": {
+    "contractVersion": {
+      "const": "1.0.0"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "electionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "datasetId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "election": {
+      "type": "object",
+      "required": [
+        "dateIso",
+        "type",
+        "jurisdiction"
+      ],
+      "properties": {
+        "dateIso": {
+          "type": "string",
+          "format": "date"
+        },
+        "type": {
+          "const": "general"
+        },
+        "jurisdiction": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "orderingPolicy": {
+      "type": "object",
+      "required": [
+        "topLevelOrder",
+        "categories"
+      ],
+      "properties": {
+        "topLevelOrder": {
+          "const": "explicit"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "category",
+              "categoryPosition",
+              "officeOrder"
+            ],
+            "properties": {
+              "category": {
+                "type": "string",
+                "minLength": 1
+              },
+              "categoryPosition": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "officeOrder": {
+                "enum": [
+                  "alphabetical",
+                  "government-hierarchy",
+                  "official-ballot"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "publicMethodology": {
+      "type": "object",
+      "required": [
+        "introduction",
+        "registrationVerification",
+        "primaryParticipation",
+        "filingInformation",
+        "electionOutcomes",
+        "stageSeparation",
+        "missingVerification"
+      ],
+      "properties": {
+        "introduction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "registrationVerification": {
+          "type": "string",
+          "minLength": 1
+        },
+        "primaryParticipation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filingInformation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "electionOutcomes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stageSeparation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "missingVerification": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sourceId",
+          "name",
+          "url",
+          "reviewedDate",
+          "evidenceKind"
+        ],
+        "properties": {
+          "sourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "reviewedDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "evidenceKind": {
+            "enum": [
+              "registration",
+              "filing",
+              "primary-results",
+              "official-nominee",
+              "uncontested-primary"
+            ]
+          }
+        }
+      }
+    },
+    "jurisdictions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "jurisdictionId",
+          "name"
+        ],
+        "properties": {
+          "jurisdictionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "offices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "officeId",
+          "officeName",
+          "category",
+          "jurisdictionId",
+          "partisanStatus",
+          "voteFor",
+          "candidateOrder",
+          "displayOrder"
+        ],
+        "properties": {
+          "officeId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "officeName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "jurisdictionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "partisanStatus": {
+            "enum": [
+              "Partisan",
+              "Nonpartisan"
+            ]
+          },
+          "voteFor": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "candidateOrder": {
+            "enum": [
+              "alphabetical",
+              "official-ballot"
+            ]
+          },
+          "displayOrder": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidateId",
+          "displayName",
+          "ballotName",
+          "nameSourceId",
+          "lastReviewed"
+        ],
+        "properties": {
+          "candidateId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "displayName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ballotName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameSourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lastReviewed": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "affiliations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "affiliationId",
+          "candidateId",
+          "label",
+          "verificationState",
+          "sourceId",
+          "verifiedDate",
+          "evidenceType"
+        ],
+        "properties": {
+          "affiliationId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "candidateId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "verificationState": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "verifiedDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "evidenceType": {
+            "enum": [
+              "registration",
+              "ballot-party",
+              "primary-participation",
+              null
+            ]
+          }
+        }
+      }
+    },
+    "candidacies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidacyId",
+          "candidateId",
+          "officeId",
+          "contestId",
+          "affiliationId",
+          "electionCycle",
+          "electionStageGroup",
+          "resultId",
+          "filingSourceId",
+          "verificationSourceId",
+          "stageSourceId",
+          "verificationDate"
+        ],
+        "properties": {
+          "candidacyId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "candidateId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "officeId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contestId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "affiliationId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "electionCycle": {
+            "type": "integer"
+          },
+          "electionStageGroup": {
+            "enum": [
+              "current-general-election",
+              "primary-history"
+            ]
+          },
+          "resultId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "filingSourceId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "verificationSourceId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "stageSourceId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "verificationDate": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "contests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "contestId",
+          "officeId",
+          "electionType",
+          "sourceId"
+        ],
+        "properties": {
+          "contestId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "officeId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "electionType": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceId": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "resultId",
+          "candidacyId",
+          "sourceId",
+          "votes",
+          "percentage",
+          "reportingScope",
+          "publicNote"
+        ],
+        "properties": {
+          "resultId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "candidacyId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "votes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "percentage": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "reportingScope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publicNote": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "categorySummaryPolicy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "primaryMetric",
+          "unit",
+          "includeSeatCount"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "primaryMetric": {
+            "enum": [
+              "officeRecords",
+              "jurisdictions"
+            ]
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "includeSeatCount": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

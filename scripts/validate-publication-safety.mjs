@@ -48,7 +48,7 @@ for (const [pattern, label] of prohibitedPatterns) {
 }
 
 if (!/href="styles\/site\.css\?v=[a-f0-9]{12}"/.test(html)) errors.push("Public page does not use the versioned generated stylesheet architecture");
-if (!html.includes('type="module" src="scripts/app.js"')) errors.push("Public page does not use the modular application entry point");
+if (!/type="module" src="scripts\/app\.js(?:\?v=[a-f0-9]{12})?"/.test(html)) errors.push("Public page does not use the modular application entry point");
 if (/<style\b|<script>(?:.|\n)*<\/script>/i.test(html)) errors.push("Public HTML contains embedded production CSS or JavaScript");
 
 const result = {

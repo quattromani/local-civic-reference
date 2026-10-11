@@ -13,7 +13,7 @@
       "authorityTier": 1,
       "sourceType": "Official county filing snapshot",
       "publicStatus": "Official county filing list with entries through September 29, 2026",
-      "publicDescription": "The county list identifies filings, withdrawals, a petition candidacy, and declared write-in candidacies. Write-in declarations do not establish that a name is printed on the ballot.",
+      "publicDescription": "The county list records filings, withdrawals, a petition candidacy, and declared write-in candidacies. A write-in declaration does not establish that the name is printed on the ballot.",
       "reviewedDate": "2026-10-06"
     },
     {
@@ -47,7 +47,7 @@
       "authorityTier": 1,
       "sourceType": "Official statewide filing snapshot",
       "publicStatus": "Final statewide general candidate list dated September 11, 2026",
-      "publicDescription": "The Secretary of State final list establishes listed general-election candidates and ballot-party labels for state, federal, and state-filed local district races.",
+      "publicDescription": "The Secretary of State final list identifies general-election candidates and ballot-party labels for state, federal, and state-filed local district races.",
       "reviewedDate": "2026-10-06"
     },
     {
