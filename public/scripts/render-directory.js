@@ -1,5 +1,5 @@
-import { affiliationBadgeClass, affiliationIdentity, affiliationLabel } from "./affiliation-guide.js?v=6ce67c045de6";
-import { setupDirectorySearch } from "./search.js?v=6ce67c045de6";
+import { affiliationBadgeClass, affiliationIdentity, affiliationLabel } from "./affiliation-guide.js?v=f274351ba5ee";
+import { setupDirectorySearch } from "./search.js?v=f274351ba5ee";
 
 export function initializeDirectory({ siteConfig, interfaceCopy, affiliationGuide, electionData, categorySummaryData, renderOnly = false }) {
     /* Rendering logic below consumes siteConfig and the generated electionData projection. */

@@ -2,6 +2,13 @@
 
 Meaningful data, architecture, governance, and publication milestones are recorded here. Routine implementation details are intentionally omitted.
 
+## 2026-10-11 — Editorial presentation and cache consistency
+
+- Adopted the reviewed editorial layout, inset sample-ballot photograph, revised introductory wording, compact candidate rows, and responsive navigation.
+- Refined interactive spacing, count pills, typeahead presentation, and filtering visibility. Hidden records now remain hidden despite layout styles.
+- Versioned publication data requests with the application build to prevent cached earlier election files from causing initialization failures.
+- Retained canonical candidate data, affiliation evidence distinctions, source links, and verification dates.
+
 ## 2026-10-11 — Directory usability, election reuse, and analytics
 
 - Refined the opening copy, sample-ballot header, affiliation guide, race links, search controls, and dynamic counts while preserving evidence distinctions and neutral presentation.

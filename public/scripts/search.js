@@ -1,4 +1,4 @@
-import { matchesAffiliation, setupAffiliationGuide } from "./affiliation-guide.js?v=6ce67c045de6";
+import { matchesAffiliation, setupAffiliationGuide } from "./affiliation-guide.js?v=f274351ba5ee";
 
 function makeElement(tagName, className, textContent) {
   const element = document.createElement(tagName);
@@ -294,9 +294,12 @@ export function setupDirectorySearch({ directory, status, electionData, interfac
         filterDirectory();
       } });
 
+      const allRaces = document.querySelector("#all-races-filter");
+      allRaces?.addEventListener("click", () => { if (nonpartisanOnly) raceFilter.click(); });
       raceFilter.addEventListener("click", () => {
         nonpartisanOnly = !nonpartisanOnly;
         raceFilter.setAttribute("aria-pressed", String(nonpartisanOnly));
+        allRaces?.setAttribute("aria-pressed", String(!nonpartisanOnly));
         closeSuggestions();
         filterDirectory();
       });
@@ -304,6 +307,7 @@ export function setupDirectorySearch({ directory, status, electionData, interfac
       document.addEventListener("directory:navigate", () => {
         nonpartisanOnly = false;
         raceFilter.setAttribute("aria-pressed", "false");
+        allRaces?.setAttribute("aria-pressed", "true");
         input.value = "";
         closeSuggestions();
         const reset = document.querySelector("#affiliation-guide-reset");

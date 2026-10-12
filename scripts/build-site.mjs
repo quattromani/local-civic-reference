@@ -31,7 +31,7 @@ const styleVersion = sha256(fs.readdirSync(stylesRoot)
 
 const scriptsRoot = path.join(sourceRoot, "site/scripts");
 const scriptFiles = fs.readdirSync(scriptsRoot).filter((file) => file.endsWith(".js")).sort();
-const scriptVersion = sha256(scriptFiles.map((file) => `${file}\n${fs.readFileSync(path.join(scriptsRoot, file), "utf8")}`).join("\n")).slice(0, 12);
+const scriptVersion = sha256(scriptFiles.map((file) => `${file}\n${fs.readFileSync(path.join(scriptsRoot, file), "utf8")}`).join("\n") + contentBytes.toString("utf8") + canonicalBytes.toString("utf8")).slice(0, 12);
 
 const escapeHtml = (value) => String(value)
   .replaceAll("&", "&amp;")
@@ -167,6 +167,8 @@ const tokens = {
   HERO_IMAGE_WIDTH: String(content.hero.image.width),
   HERO_IMAGE_HEIGHT: String(content.hero.image.height),
   HERO_SAMPLE_LABEL: escapeHtml(content.hero.image.sampleLabel),
+  HERO_WHY_HEADING: escapeHtml(content.hero.whyHeading || "Why it matters"),
+  HERO_WHY_BODY: escapeHtml(content.hero.whyBody || "Consider each candidate’s experience and stated positions alongside the cited affiliation evidence."),
   HERO_KICKER: escapeHtml(content.hero.kicker),
   APPLICATION_SCRIPT_URL: `scripts/app.js?v=${scriptVersion}`,
   HERO_HEADLINE: escapeHtml(content.hero.headline),

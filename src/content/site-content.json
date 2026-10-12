@@ -12,7 +12,7 @@
     "label": "Election Day",
     "jurisdiction": "Gage County",
     "dateIso": "2026-11-03",
-    "dateDisplay": "Tuesday, November 3, 2026",
+    "dateDisplay": "November 3, 2026",
     "lastReviewed": "October 6, 2026",
     "calendar": {
       "fileName": "gage-county-election-day-2026.ics",
@@ -27,23 +27,23 @@
   },
   "navigation": [
     {
-      "label": "Find candidates",
+      "label": "Candidates",
       "href": "#candidate-directory"
     },
     {
-      "label": "About this guide",
+      "label": "About",
       "href": "#guide-notes"
     },
     {
-      "label": "FAQ",
-      "href": "#faq"
+      "label": "Sources",
+      "href": "#verification"
     }
   ],
   "hero": {
     "kicker": "Did you know?",
-    "headline": "School boards and many local races do not list party labels on the ballot.",
-    "body": "Explore selected 2026 races in Gage County, including declared write-in candidates. Your ballot's contests depend on where you live.",
-    "bodyEmphasis": "Gage County",
+    "headline": "Know your local candidates.",
+    "body": "School boards and many local races do not list party labels on the ballot.",
+    "bodyEmphasis": "many local races",
     "links": [
       {
         "text": "School boards",
@@ -72,10 +72,6 @@
       {
         "text": "educational service unit races",
         "href": "#category-other-local-districts"
-      },
-      {
-        "text": "cited affiliation evidence",
-        "href": "#verification"
       }
     ],
     "image": {
@@ -84,10 +80,12 @@
       "height": 724,
       "sampleLabel": "SAMPLE"
     },
-    "raceIntroduction": "School boards, township boards, and city and village races covered here use nonpartisan ballots. So do the Nebraska Legislature, State Board of Education, public power district, and educational service unit races in this guide."
+    "raceIntroduction": "School boards, township boards, and city and village races covered here use nonpartisan ballots. So do the Nebraska Legislature, State Board of Education, public power district, and educational service unit races in this guide.",
+    "whyHeading": "Why it matters",
+    "whyBody": "These officials help shape policies and public spending, and party affiliation is one consideration alongside a candidate's experience and stated positions."
   },
   "directory": {
-    "heading": "Search the candidate directory",
+    "heading": "Find candidates",
     "searchLabel": "Search the directory",
     "searchPlaceholder": "Candidate, office, city, or district",
     "suggestionsLabel": "Directory suggestions",
@@ -216,7 +214,7 @@
     }
   },
   "affiliationGuide": {
-    "heading": "What the labels mean",
+    "heading": "What the affiliation labels mean",
     "introduction": "Each label identifies the affiliation and the evidence behind it. Choose one label to narrow the list. Choose it again to remove that filter.",
     "showAll": "Show all affiliations",
     "groups": [

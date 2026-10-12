@@ -1,7 +1,10 @@
+import { setupNavigation } from "./navigation.js";
 import { setupPrintDisclosures, showFatalApplicationError } from "./accessibility.js";
 import { loadPublicationData } from "./data-loader.js";
 import { setupDirectoryLinks } from "./directory-links.js";
 import { initializeDirectory } from "./render-directory.js";
+
+setupNavigation();
 
 async function initializeApplication() {
   const { content, directory } = await loadPublicationData();

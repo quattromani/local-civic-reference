@@ -1,5 +1,8 @@
 async function loadJson(url, label) {
-  const response = await fetch(url, { credentials: "same-origin" });
+  // Tie each JSON request to the application build so earlier publications cannot mix.
+  const version = new URL(import.meta.url).searchParams.get("v");
+  if (version) url.searchParams.set("v", version);
+  const response = await fetch(url, { credentials: "same-origin", cache: "no-cache" });
   if (!response.ok) throw new Error(`${label} could not be loaded (${response.status}).`);
   return response.json();
 }

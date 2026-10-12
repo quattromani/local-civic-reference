@@ -23,48 +23,32 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <div class="masthead-dateline">
-        <span class="masthead-label">{{ELECTION_LABEL}}<span class="masthead-separator" aria-hidden="true">•</span>{{ELECTION_JURISDICTION}}</span>
-        <a class="masthead-date-link" href="{{ELECTION_CALENDAR_PATH}}" type="text/calendar" aria-label="{{ELECTION_CALENDAR_ARIA_LABEL}}">
-          <time class="masthead-date" datetime="{{ELECTION_DATE_ISO}}">{{ELECTION_DATE_DISPLAY}}</time>
-        </a>
+      <div class="editorial-brand">
+        <a class="editorial-wordmark" href="#top">Party Reveal</a>
+        <p class="editorial-place">{{ELECTION_JURISDICTION}} <span aria-hidden="true">•</span> Nebraska</p>
       </div>
-
-      <nav class="utility-nav" aria-label="Page navigation">
-        {{NAVIGATION_ITEMS}}
-      </nav>
+      <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="page-navigation" aria-label="Open navigation" hidden><span class="hamburger-icon" aria-hidden="true"></span><span>Menu</span></button>
+      <nav id="page-navigation" class="utility-nav" aria-label="Page navigation">{{NAVIGATION_ITEMS}}</nav>
+      <div class="editorial-election">
+        <span class="editorial-election-label">{{ELECTION_LABEL}}</span>
+        <a class="masthead-date-link" href="{{ELECTION_CALENDAR_PATH}}" type="text/calendar" aria-label="{{ELECTION_CALENDAR_ARIA_LABEL}}"><time class="masthead-date" datetime="{{ELECTION_DATE_ISO}}">{{ELECTION_DATE_DISPLAY}}</time></a>
+      </div>
     </div>
   </header>
-
   <main id="top">
-    <section class="hero" aria-labelledby="page-title">
-      <div class="hero-banner">
-        <picture>
-{{HERO_IMAGE_SOURCES}}
-        <img class="hero-image" src="{{HERO_IMAGE_PATH}}" width="{{HERO_IMAGE_WIDTH}}" height="{{HERO_IMAGE_HEIGHT}}" alt="" fetchpriority="high">
-        </picture>
-        <span class="hero-sample-label">{{HERO_SAMPLE_LABEL}}</span>
-        <div class="container hero-banner-content">
-          <p class="kicker">{{HERO_KICKER}}</p>
-          <h1 id="page-title" tabindex="-1">{{HERO_HEADLINE}}</h1>
-        </div>
-      </div>
-      <div class="container hero-introduction">
+    <section class="hero container editorial-intro" aria-labelledby="page-title">
+      <div class="editorial-intro-copy">
+        <h1 id="page-title" tabindex="-1">{{HERO_HEADLINE}}</h1>
+        <p class="kicker">{{HERO_KICKER}}</p>
         <p class="hero-copy">{{HERO_BODY}}</p>
-        <p class="hero-race-links">{{HERO_RACE_INTRODUCTION}}</p>
+        <details class="editorial-race-context"><summary>Which races use nonpartisan ballots?</summary><p class="hero-race-links">{{HERO_RACE_INTRODUCTION}}</p></details>
+        <h2 class="editorial-why-label">{{HERO_WHY_HEADING}}</h2>
+        <p class="editorial-why-copy">{{HERO_WHY_BODY}}</p>
       </div>
-    </section>
-
-    <section id="affiliation-guide" aria-labelledby="affiliation-guide-heading" hidden>
-      <div class="container">
-        <h2 id="affiliation-guide-heading">{{AFFILIATION_GUIDE_HEADING}}</h2>
-        <p class="affiliation-guide-introduction">{{AFFILIATION_GUIDE_INTRODUCTION}}</p>
-        <div id="affiliation-guide-groups" class="affiliation-guide-groups"></div>
-        <div class="affiliation-guide-actions">
-          <button id="affiliation-guide-reset" class="affiliation-guide-reset" type="button" disabled>{{AFFILIATION_GUIDE_RESET}}</button>
-          <button id="nonpartisan-race-filter" class="affiliation-guide-reset" type="button" aria-pressed="false" aria-controls="directory-content"><span aria-hidden="true" class="race-filter-check">✓ </span>{{NONPARTISAN_RACE_FILTER}}</button>
-        </div>
-      </div>
+      <figure class="editorial-ballot-image">
+        <picture>{{HERO_IMAGE_SOURCES}}<img class="hero-image" src="{{HERO_IMAGE_PATH}}" width="{{HERO_IMAGE_WIDTH}}" height="{{HERO_IMAGE_HEIGHT}}" alt="" fetchpriority="high"></picture>
+        <span class="hero-sample-label">{{HERO_SAMPLE_LABEL}}</span>
+      </figure>
     </section>
 
     <section id="candidate-directory" aria-labelledby="directory-heading" tabindex="-1">
@@ -72,11 +56,12 @@
         <div class="directory-tools">
           <div class="section-heading directory-utility-heading">
             <h2 id="directory-heading">{{DIRECTORY_HEADING}}</h2>
+            <p class="editorial-ballot-scope">Your ballot's contests depend on where you live.</p>
           </div>
 
           <div class="directory-search">
             <label class="visually-hidden" for="directory-search">{{SEARCH_LABEL}}</label>
-            <div class="search-control">
+            <div class="search-control"><span class="editorial-search-icon" aria-hidden="true"></span>
               <div class="typeahead" id="directory-typeahead">
                 <input
                   id="directory-search" disabled
@@ -123,6 +108,21 @@
           </ul>
           <p class="directory-count-explanation">{{COUNTS_EXPLANATION}}</p>
         </div>
+
+    <section id="affiliation-guide" aria-labelledby="affiliation-guide-heading" hidden>
+      <div class="container">
+        <details class="editorial-evidence-guide"><summary><h2 id="affiliation-guide-heading">{{AFFILIATION_GUIDE_HEADING}}</h2></summary>
+        <p class="affiliation-guide-introduction">{{AFFILIATION_GUIDE_INTRODUCTION}}</p>
+        <div id="affiliation-guide-groups" class="affiliation-guide-groups"></div>
+        </details>
+        <p class="editorial-evidence-note">Affiliation labels identify the evidence, not an endorsement.</p>
+        <div class="affiliation-guide-actions"><button id="all-races-filter" class="affiliation-guide-reset" type="button" aria-pressed="true" aria-controls="directory-content">All races</button>
+          <button id="affiliation-guide-reset" class="affiliation-guide-reset" type="button" disabled>{{AFFILIATION_GUIDE_RESET}}</button>
+          <button id="nonpartisan-race-filter" class="affiliation-guide-reset" type="button" aria-pressed="false" aria-controls="directory-content"><span aria-hidden="true" class="race-filter-check">✓ </span>{{NONPARTISAN_RACE_FILTER}}</button>
+        </div>
+      </div>
+    </section>
+
 
         <noscript>
           <div class="notice">

@@ -53,7 +53,7 @@ if (h1Count !== 1) errors.push(`Expected one page-level h1; found ${h1Count}`);
 for (const landmark of ["<header", "<main", "<nav", "<footer"]) {
   if (!html.includes(landmark)) errors.push(`Missing semantic landmark ${landmark}`);
 }
-if (!html.includes('<nav class="utility-nav" aria-label="Page navigation">')) errors.push("Page navigation landmark lacks a unique accessible label");
+if (!/<nav[^>]*class="utility-nav"[^>]*aria-label="Page navigation"/.test(html)) errors.push("Page navigation landmark lacks a unique accessible label");
 
 const staticIds = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
 const duplicateStaticIds = [...new Set(staticIds.filter((id, index) => staticIds.indexOf(id) !== index))];
@@ -92,7 +92,7 @@ if (content.interfaceCopy.clearSearchLabel !== "Clear directory search"
 if ((html.match(/<section class="hero"[\s\S]*?<\/section>/)?.[0] || "").includes("Browse the candidate directory")) errors.push("Redundant hero directory button remains");
 const calendarPath = path.join(root, "public", "assets", content.election.calendar.fileName);
 const calendarFile = fs.existsSync(calendarPath) ? fs.readFileSync(calendarPath, "utf8") : "";
-if (!html.includes('<time class="masthead-date" datetime="2026-11-03">Tuesday, November 3, 2026</time>')
+if (!html.includes('<time class="masthead-date" datetime="2026-11-03">November 3, 2026</time>')
   || !html.includes('class="masthead-date-link"')
   || !html.includes('type="text/calendar"')
   || content.election.dateIso !== "2026-11-03") {

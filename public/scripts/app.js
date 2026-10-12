@@ -1,7 +1,10 @@
-import { setupPrintDisclosures, showFatalApplicationError } from "./accessibility.js?v=6ce67c045de6";
-import { loadPublicationData } from "./data-loader.js?v=6ce67c045de6";
-import { setupDirectoryLinks } from "./directory-links.js?v=6ce67c045de6";
-import { initializeDirectory } from "./render-directory.js?v=6ce67c045de6";
+import { setupNavigation } from "./navigation.js?v=f274351ba5ee";
+import { setupPrintDisclosures, showFatalApplicationError } from "./accessibility.js?v=f274351ba5ee";
+import { loadPublicationData } from "./data-loader.js?v=f274351ba5ee";
+import { setupDirectoryLinks } from "./directory-links.js?v=f274351ba5ee";
+import { initializeDirectory } from "./render-directory.js?v=f274351ba5ee";
+
+setupNavigation();
 
 async function initializeApplication() {
   const { content, directory } = await loadPublicationData();

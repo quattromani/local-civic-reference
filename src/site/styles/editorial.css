@@ -1,0 +1,250 @@
+/* Editorial presentation of the canonical civic directory. */
+@media screen {
+  .container { max-width: 76rem; }
+  .editorial-wordmark { font-family: var(--heading-font); font-size: 2.2rem; line-height: 1.15; color: var(--ink); text-decoration: none; }
+  .masthead-dateline { gap: 0.3rem; }
+  .masthead-label { font-size: 0.65rem; }
+  .masthead-date-link { font-size: 0.95rem; }
+  .site-header { position: relative; border-bottom: 2px solid var(--accent); }
+  .hero-banner { min-height: clamp(18rem, 26vw, 25rem); }
+  .hero-introduction { padding-top: 1.6rem; padding-bottom: 0; }
+  .hero-copy { max-width: 60rem; font-size: 1.15rem; }
+  .hero-race-links { max-width: 64rem; }
+  #candidate-directory { padding-top: 1.5rem; }
+  .directory-tools { padding: 0; background: transparent; border: 0; }
+  .directory-utility-heading { padding: 0; }
+  .directory-utility-heading h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+  .directory-search { padding: 0; margin-top: 0.75rem; }
+  .directory-stats { display: flex; flex-wrap: wrap; gap: 1.5rem; border: 0; background: transparent; padding: 0.65rem 0; }
+  .directory-stat { display: flex; align-items: baseline; gap: 0.3rem; padding: 0; border: 0; }
+  .directory-stat-number { font-family: var(--body-font); font-size: 1rem; font-weight: 700; }
+  .directory-stat-label { font-size: 0.95rem; font-weight: 400; }
+  .directory-count-explanation { margin: 0; padding: 0; font-size: 0.85rem; }
+  #affiliation-guide { padding: 1rem 0 1.3rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.5rem; }
+  #affiliation-guide > .container { width: 100%; padding: 0; }
+  .editorial-evidence-guide > summary { min-height: 2.75rem; cursor: pointer; }
+  #affiliation-guide-heading { display: inline; font-family: var(--body-font); font-size: 1rem; font-weight: 600; }
+  .affiliation-guide-actions { margin-top: 0.65rem; }
+  .directory-category { border: 0; border-radius: 0; background: transparent; margin-bottom: 1.8rem; }
+  .category-summary { background: transparent; border-top: 2px solid var(--accent); border-bottom: 1px solid var(--rule); padding-left: 0; }
+  .category-title { font-family: var(--body-font); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.9rem; color: var(--accent); }
+  .category-count { border: 0; background: transparent; padding: 0; font-weight: 400; }
+  .category-offices { padding: 0; }
+  .office-title { font-size: clamp(1.25rem, 3vw, 1.55rem); }
+  .office-disclosure { padding: 0; }
+  .office-candidate-content { padding-left: 0; padding-right: 0; }
+  .candidate-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .candidate-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 2rem; padding: 1rem 0; border: 0; border-bottom: 1px solid var(--rule); border-radius: 0; background: transparent; box-shadow: none; }
+  .candidate-card-header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: baseline; gap: 2rem; grid-column: 1 / -1; margin-bottom: 0.25rem; }
+  .candidate-name { font-size: 1.15rem; }
+  .candidate-card .affiliation-badge { border-radius: 0.2rem; justify-self: start; padding: 0.2rem 0.5rem; font-size: 0.9rem; }
+  .candidate-card > p, .candidate-primary-results { grid-column: 1; margin-top: 0.3rem; }
+  .candidate-sources { grid-column: 2; width: 100%; margin-top: 0.25rem; }
+  .candidate-sources-summary { min-height: 2.75rem; border-top: 0; padding: 0.55rem 0; }
+  .candidate-sources[open] { grid-column: 1 / -1; }
+  .candidate-source-list { padding-top: 0.75rem; }
+  .active-filters { margin-left: 0; margin-right: 0; }
+  @media (max-width: 40rem) {
+    .editorial-wordmark { font-size: 1.8rem; }
+    .site-header .container { gap: 1rem; }
+    .candidate-card, .candidate-card-header { grid-template-columns: minmax(0, 1fr); gap: 0.4rem; }
+    .candidate-sources, .candidate-card > p, .candidate-primary-results { grid-column: 1; }
+    .candidate-card .affiliation-badge { max-width: 100%; white-space: normal; }
+    .directory-stats { gap: 0.5rem 1rem; }
+    .category-summary { padding-right: 2rem; }
+  }
+}
+@media screen {
+  #affiliation-guide #affiliation-guide-heading { font-family: var(--body-font); font-size: 1rem; font-weight: 600; line-height: 1.4; }
+  .candidate-sources { grid-row: 2 / span 2; align-self: start; }
+  .candidate-sources[open] { grid-row: auto; }
+  .office-disclosure[open] > .office-summary { background: transparent; }
+  @media (max-width: 40rem) { .candidate-sources { grid-row: auto; } }
+}
+@media screen {
+  .site-header { padding: 1.4rem 0 0; border-bottom: 0; background: transparent; }
+  .site-header .header-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 2rem; align-items: center; padding-bottom: 1.25rem; border-bottom: 2px solid var(--accent); }
+  .editorial-wordmark { display: inline-block; font-size: clamp(2.8rem, 5.5vw, 4.8rem); font-weight: 700; letter-spacing: -0.065em; }
+  .editorial-place { margin: 0.45rem 0 0; text-transform: uppercase; letter-spacing: 0.25em; font-size: 0.72rem; font-weight: 600; }
+  .editorial-election { display: grid; gap: 0.25rem; padding-left: 1.6rem; border-left: 1px solid var(--rule); }
+  .editorial-election-label { font-family: var(--heading-font); font-size: 1.05rem; }
+  .masthead-date-link { font-size: 1rem; text-decoration: none; }
+  .utility-nav { gap: 1.5rem; }
+  .utility-nav a { font-weight: 600; text-decoration: none; min-height: 2.75rem; display: inline-flex; align-items: center; }
+  .editorial-intro { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 2.8rem; padding-top: 1.7rem; padding-bottom: 1.2rem; align-items: center; }
+  .editorial-intro .kicker { color: var(--accent); margin-bottom: 0.8rem; letter-spacing: 0; font-size: 0.95rem; }
+  .editorial-intro h1 { color: var(--ink); font-size: clamp(2.7rem, 4.7vw, 4.3rem); line-height: 1.02; letter-spacing: -0.045em; max-width: 12ch; margin: 0 0 1rem; text-shadow: none; }
+  .editorial-intro .hero-copy { font-size: 1.2rem; line-height: 1.45; margin: 0; }
+  .editorial-intro .hero-copy strong { font-weight: inherit; }
+  .editorial-ballot-scope { font-size: 1.1rem; color: var(--ink-soft); margin: 0.5rem 0 0; line-height: 1.4; }
+  .editorial-race-context { margin-top: 0.5rem; font-size: 0.9rem; color: var(--ink-soft); }
+  .editorial-race-context > summary { min-height: 2.2rem; cursor: pointer; }
+  .editorial-ballot-image { position: relative; margin: 0; align-self: stretch; min-height: 18rem; overflow: hidden; }
+  .editorial-ballot-image picture { display: block; height: 100%; }
+  .editorial-ballot-image .hero-image { display: block; position: absolute; z-index: auto; width: 100%; height: 100%; object-fit: cover; object-position: 77% center; }
+  .editorial-ballot-image .hero-sample-label { top: 0.7rem; right: 0.7rem; }
+  #candidate-directory { padding-top: 0.4rem; }
+  .directory-utility-heading h2 { font-size: 1.9rem; }
+  .search-control { position: relative; display: block; }
+  .editorial-search-icon { position: absolute; width: 1.1rem; height: 1.1rem; border: 2px solid var(--accent); border-radius: 50%; left: 1rem; top: 1.05rem; z-index: 1; pointer-events: none; }
+  .editorial-search-icon::after { content: ''; position: absolute; width: 0.55rem; height: 2px; background: var(--accent); transform: rotate(45deg); right: -0.4rem; bottom: -0.2rem; }
+  #directory-search { padding-left: 3rem; padding-right: 4.5rem; background: transparent; font-size: 1.2rem; min-height: 3.5rem; border-radius: 0.2rem; }
+  .search-clear { position: absolute; right: 0.8rem; top: 0.4rem; width: auto; min-height: 2.75rem; padding: 0.2rem 0.4rem; border: 0; background: transparent; text-decoration: underline; font-weight: 400; }
+  .directory-count-explanation { display: none; }
+  #affiliation-guide > .container { display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 0 2rem; }
+  .affiliation-guide-actions { grid-column: 1; grid-row: 1 / span 2; margin: 0; gap: 0; }
+  .affiliation-guide-actions button { border-radius: 0.15rem; }
+  #all-races-filter[aria-pressed='true'], #nonpartisan-race-filter[aria-pressed='true'] { background: var(--accent); color: white; }
+  #affiliation-guide-reset { margin-left: 0.75rem; font-size: 0.85rem; }
+  #affiliation-guide-reset:disabled { display: none; }
+  .editorial-evidence-guide { grid-column: 2; grid-row: 1; max-width: 36rem; }
+  .editorial-evidence-guide > summary { display: block; min-height: 1.6rem; text-decoration: underline; color: var(--accent); }
+  .editorial-evidence-guide > summary::after { content: ' ›'; }
+  .editorial-evidence-note { grid-column: 2; margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
+  #affiliation-guide { padding-top: 0.25rem; }
+  .race-filter-check { display: none !important; }
+  @media (max-width: 48rem) {
+    .site-header .header-inner { grid-template-columns: 1fr auto; gap: 1rem; }
+    .editorial-wordmark { font-size: 2.8rem; }
+    .editorial-place { font-size: 0.6rem; letter-spacing: 0.16em; }
+    .editorial-election { grid-column: 1; grid-row: 2; padding-left: 0; border: 0; }
+    .utility-nav { grid-column: 2; grid-row: 1 / span 2; flex-direction: column; gap: 0; align-items: start; }
+    .editorial-intro { grid-template-columns: 1fr; gap: 1rem; padding-top: 1.2rem; }
+    .editorial-intro h1 { font-size: clamp(2.6rem, 10vw, 3.4rem); }
+    .editorial-ballot-image { min-height: 11rem; max-height: 12rem; }
+    #affiliation-guide > .container { display: flex; flex-direction: column; gap: 0.65rem; }
+    .affiliation-guide-actions { order: -1; flex-wrap: wrap; }
+    .affiliation-guide-actions > .affiliation-guide-reset { width: auto; }
+    .editorial-evidence-guide, .editorial-evidence-note { width: 100%; }
+  }
+}
+@media screen {
+  .editorial-intro h1 { max-width: none; font-size: clamp(2.7rem, 4.1vw, 3.8rem); }
+  .editorial-ballot-image .hero-image { object-position: 100% center; }
+  .utility-nav .find-candidates-link { background: transparent; color: var(--ink); padding: 0; border-radius: 0; }
+  .directory-tools .directory-stats { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+  .directory-tools .directory-stats > li { display: flex; flex-direction: row; align-items: baseline; gap: 0.3rem; border: 0; padding: 0; }
+  .directory-tools .directory-stat-number { font-size: 1rem; line-height: 1.4; font-family: var(--body-font); }
+  .directory-tools .directory-stat-label { font-size: 1rem; }
+  .directory-tools .directory-utility-heading { padding-left: 0; padding-right: 0; }
+}
+@media screen and (min-width: 49rem) { .editorial-intro h1 { font-size: clamp(2.7rem, 3.85vw, 3.5rem); } }
+
+@media screen { .directory-utility-heading .editorial-ballot-scope { margin: 0.35rem 0 0; font-size: 1rem; } }
+
+@media screen { .editorial-intro .editorial-why-label { font-family: var(--body-font); font-size: 0.95rem; font-weight: 700; color: var(--accent); text-transform: uppercase; margin: 1rem 0 0.55rem; line-height: 1.4; } .editorial-why-copy { margin: 0; font-size: 1.05rem; line-height: 1.5; max-width: 55ch; } }
+
+@media screen {
+  .editorial-intro .hero-copy,
+  .editorial-intro .editorial-why-copy {
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--ink-soft);
+    line-height: 1.45;
+    max-width: none;
+    margin: 0;
+  }
+  .editorial-intro .kicker,
+  .editorial-intro .editorial-why-label {
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+}
+@media screen {
+  .editorial-election .editorial-election-label {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .editorial-election .masthead-date-link,
+  .editorial-election .masthead-date {
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+}
+@media screen {
+  .directory-tools #active-filters { margin: 0.8rem 0; padding: 0; gap: 0.6rem 0.8rem; align-items: center; }
+  #active-filter-list { display: flex; flex-wrap: wrap; gap: 0.5rem; min-width: 0; }
+  .active-filter-chip { max-width: 100%; white-space: normal; overflow-wrap: anywhere; min-height: 2.75rem; }
+  #clear-all-filters { min-height: 2.75rem; flex-shrink: 0; }
+  .directory-tools .directory-stats { margin: 0.5rem 0 0; }
+  .affiliation-guide-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; grid-row: 1; }
+  #affiliation-guide-reset { order: 3; margin-left: 0.35rem; }
+  .editorial-evidence-guide[open] { grid-column: 1 / -1; grid-row: 2; width: 100%; max-width: none; margin-top: 0.8rem; }
+  #affiliation-guide:has(.editorial-evidence-guide[open]) .editorial-evidence-note { display: none; }
+  .editorial-evidence-guide .affiliation-guide-introduction { margin-top: 0.75rem; }
+  .candidate-source-row { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+  .candidate-source-entry { min-width: 0; overflow-wrap: anywhere; }
+  .candidate-source-list { display: grid; gap: 1rem; }
+  .editorial-race-context[open] { margin-bottom: 0.8rem; }
+  @media (max-width: 48rem) {
+    .directory-tools #active-filters { align-items: flex-start; }
+    #active-filter-list { width: 100%; }
+    .affiliation-guide-actions { gap: 0.5rem; }
+    #affiliation-guide-reset { margin-left: 0; }
+    .editorial-evidence-guide[open] { margin-top: 0; }
+    .office-summary-metadata { flex-wrap: wrap; gap: 0.4rem; }
+  }
+}
+/* Filtering must hide elements even when presentation rules set display. */
+[hidden] { display: none !important; }
+@media screen {
+  .directory-tools { margin-bottom: 0.8rem; }
+  #affiliation-guide { margin-bottom: 1rem; }
+  .candidate-card[hidden], .office-disclosure[hidden], .directory-category[hidden] { display: none !important; }
+}
+.navigation-toggle { display: none; }
+@media screen {
+  .typeahead { position: relative; min-width: 0; overflow: visible; }
+  .directory-tools { position: relative; overflow: visible; }
+  .typeahead-list { z-index: 40; margin-top: 0.25rem; max-height: min(22rem, 45vh); background: var(--paper); border-radius: 0.2rem; }
+  .typeahead-option { min-height: 3rem; gap: 0.25rem; padding: 0.7rem 0.85rem; text-align: left; width: 100%; }
+  .typeahead-option-label { font-weight: 600; }
+  .typeahead-option-meta { color: var(--ink-soft); overflow-wrap: anywhere; }
+  @media (max-width: 48rem) {
+    .navigation-ready .header-inner { grid-template-columns: minmax(0, 1fr) auto; }
+    .navigation-ready .editorial-wordmark { font-size: clamp(1.9rem, 7.8vw, 2.8rem); }
+    .navigation-ready .navigation-toggle { display: inline-flex; grid-column: 2; grid-row: 1; align-items: center; justify-content: center; gap: 0.55rem; min-height: 2.75rem; padding: 0.5rem 0.6rem; border: 1px solid var(--rule); border-radius: 0.2rem; background: transparent; color: var(--ink); font: inherit; cursor: pointer; }
+    .hamburger-icon { width: 1.1rem; height: 0.8rem; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; position: relative; }
+    .hamburger-icon::after { content: ''; position: absolute; left: 0; right: 0; top: calc(50% - 1px); border-top: 2px solid currentColor; }
+    .navigation-ready .utility-nav { display: none; }
+    .navigation-ready.navigation-open .utility-nav { display: flex; grid-column: 1 / -1; grid-row: 3; flex-direction: column; align-items: stretch; padding-top: 0.65rem; border-top: 1px solid var(--rule); gap: 0.3rem; }
+    .navigation-ready .editorial-election { grid-column: 1 / -1; grid-row: 2; }
+    .navigation-ready .utility-nav a { min-height: 2.75rem; }
+  }
+}
+@media screen {
+  .directory-tools .directory-stats { gap: 0.55rem; padding-top: 0.6rem; }
+  .directory-tools .directory-stats > li {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--sage-field);
+    padding: 0.3rem 0.75rem;
+    gap: 0.35rem;
+    line-height: 1.4;
+  }
+  .directory-tools .directory-stat-number,
+  .directory-tools .directory-stat-label { font-size: 0.95rem; }
+}
+@media screen {
+  .directory-tools .directory-stats { align-items: center; }
+  .directory-tools .directory-stats > li {
+    min-height: 0;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.75rem;
+  }
+  .directory-tools .directory-stat-number,
+  .directory-tools .directory-stat-label { line-height: 1.4; }
+  .directory-tools { margin-bottom: 1rem; }
+}

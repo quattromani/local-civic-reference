@@ -15,8 +15,8 @@
   <meta property="og:description" content="See candidates, political affiliations, and public sources for selected 2026 races in Gage County.">
 <link rel="canonical" href="https://partyreveal.com/">
   <meta property="og:url" content="https://partyreveal.com/">
-  <link rel="stylesheet" href="styles/site.css?v=dd0e8edc2025">
-<script type="module" src="scripts/analytics.js?v=6ce67c045de6" data-measurement-id="G-D28Q74TJYD" data-allowed-host="partyreveal.com"></script>
+  <link rel="stylesheet" href="styles/site.css?v=95f90655d361">
+<script type="module" src="scripts/analytics.js?v=f274351ba5ee" data-measurement-id="G-D28Q74TJYD" data-allowed-host="partyreveal.com"></script>
 </head>
 
 <body>
@@ -24,62 +24,47 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <div class="masthead-dateline">
-        <span class="masthead-label">Election Day<span class="masthead-separator" aria-hidden="true">•</span>Gage County</span>
-        <a class="masthead-date-link" href="assets/gage-county-election-day-2026.ics" type="text/calendar" aria-label="Add Tuesday, November 3, 2026 to your calendar with a one-day reminder">
-          <time class="masthead-date" datetime="2026-11-03">Tuesday, November 3, 2026</time>
-        </a>
+      <div class="editorial-brand">
+        <a class="editorial-wordmark" href="#top">Party Reveal</a>
+        <p class="editorial-place">Gage County <span aria-hidden="true">•</span> Nebraska</p>
       </div>
-
-      <nav class="utility-nav" aria-label="Page navigation">
-        <a class="find-candidates-link" href="#candidate-directory">Find candidates</a>
-        <a href="#guide-notes">About this guide</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+      <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="page-navigation" aria-label="Open navigation" hidden><span class="hamburger-icon" aria-hidden="true"></span><span>Menu</span></button>
+      <nav id="page-navigation" class="utility-nav" aria-label="Page navigation"><a class="find-candidates-link" href="#candidate-directory">Candidates</a>
+        <a href="#guide-notes">About</a>
+        <a href="#verification">Sources</a></nav>
+      <div class="editorial-election">
+        <span class="editorial-election-label">Election Day</span>
+        <a class="masthead-date-link" href="assets/gage-county-election-day-2026.ics" type="text/calendar" aria-label="Add Tuesday, November 3, 2026 to your calendar with a one-day reminder"><time class="masthead-date" datetime="2026-11-03">November 3, 2026</time></a>
+      </div>
     </div>
   </header>
-
   <main id="top">
-    <section class="hero" aria-labelledby="page-title">
-      <div class="hero-banner">
-        <picture>
-<source type="image/webp" srcset="assets/sample-ballot-desk-header-800.webp 800w, assets/sample-ballot-desk-header-1400.webp 1400w, assets/sample-ballot-desk-header-2172.webp 2172w" sizes="100vw">
-        <img class="hero-image" src="assets/sample-ballot-desk-header.jpg" width="2172" height="724" alt="" fetchpriority="high">
-        </picture>
+    <section class="hero container editorial-intro" aria-labelledby="page-title">
+      <div class="editorial-intro-copy">
+        <h1 id="page-title" tabindex="-1">Know your local candidates.</h1>
+        <p class="kicker">Did you know?</p>
+        <p class="hero-copy"><a class="hero-directory-link" href="#category-school-boards">School boards</a> and <strong>many local races</strong> do not list party labels on the ballot.</p>
+        <details class="editorial-race-context"><summary>Which races use nonpartisan ballots?</summary><p class="hero-race-links"><a class="hero-directory-link" href="#category-school-boards">School boards</a>, <a class="hero-directory-link" href="#category-township-boards">township boards</a>, and <a class="hero-directory-link" href="#category-cities-villages">city and village races</a> covered here use nonpartisan ballots. So do the <a class="hero-directory-link" href="#office-nebraska-legislature-district-30">Nebraska Legislature</a>, <a class="hero-directory-link" href="#office-state-board-of-education-district-5">State Board of Education</a>, <a class="hero-directory-link" href="#office-norris-public-power-district-subdivision-4">public power district</a>, and <a class="hero-directory-link" href="#category-other-local-districts">educational service unit races</a> in this guide.</p></details>
+        <h2 class="editorial-why-label">Why it matters</h2>
+        <p class="editorial-why-copy">These officials help shape policies and public spending, and party affiliation is one consideration alongside a candidate's experience and stated positions.</p>
+      </div>
+      <figure class="editorial-ballot-image">
+        <picture><source type="image/webp" srcset="assets/sample-ballot-desk-header-800.webp 800w, assets/sample-ballot-desk-header-1400.webp 1400w, assets/sample-ballot-desk-header-2172.webp 2172w" sizes="100vw"><img class="hero-image" src="assets/sample-ballot-desk-header.jpg" width="2172" height="724" alt="" fetchpriority="high"></picture>
         <span class="hero-sample-label">SAMPLE</span>
-        <div class="container hero-banner-content">
-          <p class="kicker">Did you know?</p>
-          <h1 id="page-title" tabindex="-1">School boards and many local races do not list party labels on the ballot.</h1>
-        </div>
-      </div>
-      <div class="container hero-introduction">
-        <p class="hero-copy">Explore selected 2026 races in <strong>Gage County</strong>, including declared write-in candidates. Your ballot's contests depend on where you live.</p>
-        <p class="hero-race-links"><a class="hero-directory-link" href="#category-school-boards">School boards</a>, <a class="hero-directory-link" href="#category-township-boards">township boards</a>, and <a class="hero-directory-link" href="#category-cities-villages">city and village races</a> covered here use nonpartisan ballots. So do the <a class="hero-directory-link" href="#office-nebraska-legislature-district-30">Nebraska Legislature</a>, <a class="hero-directory-link" href="#office-state-board-of-education-district-5">State Board of Education</a>, <a class="hero-directory-link" href="#office-norris-public-power-district-subdivision-4">public power district</a>, and <a class="hero-directory-link" href="#category-other-local-districts">educational service unit races</a> in this guide.</p>
-      </div>
-    </section>
-
-    <section id="affiliation-guide" aria-labelledby="affiliation-guide-heading" hidden>
-      <div class="container">
-        <h2 id="affiliation-guide-heading">What the labels mean</h2>
-        <p class="affiliation-guide-introduction">Each label identifies the affiliation and the evidence behind it. <strong>Choose one label to narrow the list. Choose it again to remove that filter.</strong></p>
-        <div id="affiliation-guide-groups" class="affiliation-guide-groups"></div>
-        <div class="affiliation-guide-actions">
-          <button id="affiliation-guide-reset" class="affiliation-guide-reset" type="button" disabled>Show all affiliations</button>
-          <button id="nonpartisan-race-filter" class="affiliation-guide-reset" type="button" aria-pressed="false" aria-controls="directory-content"><span aria-hidden="true" class="race-filter-check">✓ </span>Only nonpartisan races</button>
-        </div>
-      </div>
+      </figure>
     </section>
 
     <section id="candidate-directory" aria-labelledby="directory-heading" tabindex="-1">
       <div class="container">
         <div class="directory-tools">
           <div class="section-heading directory-utility-heading">
-            <h2 id="directory-heading">Search the candidate directory</h2>
+            <h2 id="directory-heading">Find candidates</h2>
+            <p class="editorial-ballot-scope">Your ballot's contests depend on where you live.</p>
           </div>
 
           <div class="directory-search">
             <label class="visually-hidden" for="directory-search">Search the directory</label>
-            <div class="search-control">
+            <div class="search-control"><span class="editorial-search-icon" aria-hidden="true"></span>
               <div class="typeahead" id="directory-typeahead">
                 <input
                   id="directory-search" disabled
@@ -126,6 +111,21 @@
           </ul>
           <p class="directory-count-explanation">Counts update with your search and filters. Current candidates exclude primary history.</p>
         </div>
+
+    <section id="affiliation-guide" aria-labelledby="affiliation-guide-heading" hidden>
+      <div class="container">
+        <details class="editorial-evidence-guide"><summary><h2 id="affiliation-guide-heading">What the affiliation labels mean</h2></summary>
+        <p class="affiliation-guide-introduction">Each label identifies the affiliation and the evidence behind it. <strong>Choose one label to narrow the list. Choose it again to remove that filter.</strong></p>
+        <div id="affiliation-guide-groups" class="affiliation-guide-groups"></div>
+        </details>
+        <p class="editorial-evidence-note">Affiliation labels identify the evidence, not an endorsement.</p>
+        <div class="affiliation-guide-actions"><button id="all-races-filter" class="affiliation-guide-reset" type="button" aria-pressed="true" aria-controls="directory-content">All races</button>
+          <button id="affiliation-guide-reset" class="affiliation-guide-reset" type="button" disabled>Show all affiliations</button>
+          <button id="nonpartisan-race-filter" class="affiliation-guide-reset" type="button" aria-pressed="false" aria-controls="directory-content"><span aria-hidden="true" class="race-filter-check">✓ </span>Only nonpartisan races</button>
+        </div>
+      </div>
+    </section>
+
 
         <noscript>
           <div class="notice">
@@ -251,6 +251,6 @@
     </div>
   </footer>
 
-  <script type="module" src="scripts/app.js?v=6ce67c045de6"></script>
+  <script type="module" src="scripts/app.js?v=f274351ba5ee"></script>
 </body>
 </html>
