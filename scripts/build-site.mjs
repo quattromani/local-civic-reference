@@ -1,6 +1,6 @@
 import sharp from "sharp";
 import { renderStaticDirectory } from "./render-static-directory.mjs";
-import { electionConfig } from "./election-config.mjs";
+import { electionConfig, resolveProjectPath } from "./election-config.mjs";
 import { publicRoot, canonicalDataPath, siteContentPath } from "./project-paths.mjs";
 import { validateElectionContract } from "./election-contract.mjs";
 import crypto from "node:crypto";
@@ -145,7 +145,14 @@ if (analytics && (!/^G-[A-Z0-9]+$/.test(analytics.measurementId) || analytics.al
 const optimizedHero = /\.jpe?g$/i.test(content.hero.image.path);
 const heroWidths = [800, 1400, content.hero.image.width].filter((width, index, widths) => widths.indexOf(width) === index);
 const heroVariant = width => content.hero.image.path.replace(/\.jpe?g$/i, `-${width}.webp`);
+const disclosures = electionConfig.disclosures
+  ? JSON.parse(fs.readFileSync(resolveProjectPath(electionConfig.disclosures), "utf8")) : [];
+const disclosureLinks = disclosures.map(page => {
+  if (!/^[a-z-]+$/.test(page.slug)) throw new Error("Invalid disclosure page slug");
+  return `<a href="${page.slug}.html">${escapeHtml(page.title)}</a>`;
+}).join("\n");
 const tokens = {
+  DISCLOSURE_LINKS: disclosures.length ? `<nav class="footer-disclosures" aria-label="Site information">${disclosureLinks}</nav>` : "",
   HERO_IMAGE_SOURCES: optimizedHero ? `<source type="image/webp" srcset="${heroWidths.map(width => `${heroVariant(width)} ${width}w`).join(", ")}" sizes="100vw">` : "",
   ANALYTICS_TAG: analytics ? `<script type="module" src="scripts/analytics.js?v=${scriptVersion}" data-measurement-id="${escapeHtml(analytics.measurementId)}" data-allowed-host="${escapeHtml(analytics.allowedHost)}"></script>` : "",
   ICON_VERSION: iconVersion,
@@ -176,11 +183,12 @@ const tokens = {
   ACTIVE_FILTERS_LABEL: escapeHtml(content.interfaceCopy.filtersLabel),
   CLEAR_ALL_FILTERS: escapeHtml(content.interfaceCopy.clearAllFilters),
   COUNTS_EXPLANATION: escapeHtml(content.interfaceCopy.countsExplanation),
-  HERO_BODY: linkHeroText(emphasizeText(content.hero.body, content.hero.bodyEmphasis)),
+  HERO_BODY: emphasizeText(content.hero.body, content.hero.bodyEmphasis),
   AFFILIATION_GUIDE_HEADING: escapeHtml(content.affiliationGuide.heading),
   AFFILIATION_GUIDE_INTRODUCTION: emphasizeText(content.affiliationGuide.introduction, content.affiliationGuide.instructionEmphasis),
   NONPARTISAN_RACE_FILTER: escapeHtml(content.interfaceCopy.showNonpartisanRaces),
   AFFILIATION_GUIDE_RESET: escapeHtml(content.affiliationGuide.showAll),
+  DIRECTORY_INTRODUCTION: content.directory.introduction ? `<p class="directory-introduction">${escapeHtml(content.directory.introduction)}</p>` : "",
   DIRECTORY_HEADING: escapeHtml(content.directory.heading),
   SEARCH_LABEL: escapeHtml(content.directory.searchLabel),
   SEARCH_PLACEHOLDER: escapeHtml(content.directory.searchPlaceholder),
@@ -239,7 +247,10 @@ for (const file of scriptFiles) {
   const script = fs.readFileSync(scriptPath, "utf8").replace(/(from\s+["'])(\.\/[^"']+\.js)(["'])/g, `$1$2?v=${scriptVersion}$3`);
   fs.writeFileSync(scriptPath, script);
 }
-fs.cpSync(path.join(sourceRoot, "site/assets"), path.join(publicRoot, "assets"), { recursive: true });
+fs.cpSync(path.join(sourceRoot, "site/assets"), path.join(publicRoot, "assets"), {
+  recursive: true,
+  filter: source => electionConfig.isFixture || !path.basename(source).startsWith("fixture-")
+});
 if (optimizedHero) for (const width of heroWidths) {
   await sharp(path.join(sourceRoot, "site", content.hero.image.path)).resize({ width, withoutEnlargement: true }).webp({ quality: 82 }).toFile(path.join(publicRoot, heroVariant(width)));
 }
@@ -253,6 +264,27 @@ const versionedStylesheetEntry = fs.readFileSync(stylesheetEntryPath, "utf8")
 fs.writeFileSync(stylesheetEntryPath, versionedStylesheetEntry);
 fs.writeFileSync(path.join(publicRoot, calendarPath), calendarFile);
 fs.writeFileSync(path.join(publicRoot, "index.html"), html);
+for (const page of disclosures) {
+  const values = { publisher: content.guide.publisher, siteTitle: content.site.title, jurisdiction: content.election.jurisdiction };
+  const text = value => escapeHtml(String(value).replace(/\{(publisher|siteTitle|jurisdiction)\}/g, (_, key) => values[key]));
+  const sections = page.sections.map(section => `<section><h2>${text(section.heading)}</h2>${section.paragraphs.map(paragraph => `<p>${text(paragraph)}</p>`).join("\n")}${section.links.length ? `<ul>${section.links.map(link => {
+    if (new URL(link.url).protocol !== "https:") throw new Error("Disclosure reference must use HTTPS");
+    return `<li><a href="${escapeHtml(link.url)}">${text(link.label)}</a></li>`;
+  }).join("\n")}</ul>` : ""}</section>`).join("\n");
+  const pageHtml = `<!DOCTYPE html>
+<html lang="${escapeHtml(content.site.language)}">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${text(page.title)} | ${text(content.site.title)}</title>
+<meta name="description" content="${text(page.introduction)}">
+<link rel="canonical" href="${escapeHtml(new URL(`${page.slug}.html`, content.site.canonicalUrl).href)}">
+<link rel="icon" href="assets/favicon.svg?v=${iconVersion}" type="image/svg+xml">
+<link rel="stylesheet" href="styles/site.css?v=${styleVersion}">${tokens.ANALYTICS_TAG}</head>
+<body class="disclosure-page"><a class="skip-link" href="#content">Skip to content</a>
+<header class="disclosure-header container reading-width"><a class="editorial-wordmark" href="index.html">${text(content.site.title)}</a><a href="index.html#candidate-directory">Back to candidates</a></header>
+<main id="content" class="container reading-width" tabindex="-1"><h1>${text(page.title)}</h1><p class="disclosure-updated">Updated ${text(page.updated)}</p><p>${text(page.introduction)}</p>${sections}<p><a href="mailto:${escapeHtml(content.guide.correctionEmail)}">${text(content.guide.correctionEmail)}</a></p></main>
+<footer class="container reading-width disclosure-footer"><nav class="footer-disclosures" aria-label="Site information">${disclosureLinks}</nav><p>Published by ${text(content.guide.publisher)}.</p></footer></body></html>`;
+  fs.writeFileSync(path.join(publicRoot, `${page.slug}.html`), pageHtml);
+}
 fs.writeFileSync(path.join(publicRoot, "data/site-content.json"), `${JSON.stringify(content, null, 2)}\n`);
 fs.writeFileSync(path.join(publicRoot, `data/${electionConfig.publicDataFile}`), `${JSON.stringify(publication)}\n`);
 fs.writeFileSync(path.join(publicRoot, "data/election-config.json"), `${JSON.stringify({ electionId: electionConfig.electionId, contractVersion: canonical.contractVersion, directoryFile: electionConfig.publicDataFile, isFixture: electionConfig.isFixture }, null, 2)}\n`);

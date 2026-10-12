@@ -4,6 +4,8 @@ import path from "node:path";
 import { projectRoot } from "./project-paths.mjs";
 
 const checks = [
+  ["Footer disclosure pages", "scripts/test-disclosures.mjs"],
+  ["Publication asset integrity", "scripts/test-public-assets.mjs"],
   ["Publication cache consistency", "scripts/test-publication-cache.mjs"],
   ["Rendered HTML and accessibility", "scripts/test-html-accessibility.mjs"],
   ["Election contract and reuse", "scripts/test-election-reuse.mjs"],

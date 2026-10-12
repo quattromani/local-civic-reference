@@ -11,3 +11,6 @@ tmp/
 
 # Isolated election previews and temporary build artifacts.
 work/
+
+# Historical downloads are retained locally, outside the active build.
+/output/

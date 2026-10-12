@@ -1,0 +1,22 @@
+.footer-disclosures { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; margin-top: 0.5rem; }
+.footer-disclosures a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.disclosure-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.5rem; border-bottom: 1px solid var(--rule); }
+.disclosure-header .editorial-wordmark { font-size: 2.2rem; }
+.disclosure-page .reading-width { max-width: 48rem; }
+.disclosure-page main { padding-block: 2rem; }
+.disclosure-page main h1 { font-size: clamp(2rem, 6vw, 3rem); }
+.disclosure-page #content > section { margin-top: 1.75rem; padding-block: 0; }
+.disclosure-page main h2 { font-size: 1.35rem; }
+.disclosure-page main p { margin-top: 0.7rem; }
+.disclosure-updated { color: var(--ink-soft); font-size: 0.9rem; }
+.disclosure-footer { padding-block: 1rem 2rem; border-top: 1px solid var(--rule); }
+.disclosure-footer p { font-size: 0.9rem; color: var(--ink-soft); }
+@media print { .disclosure-header .editorial-wordmark { font-size: 20pt; } }
+
+.footer-provenance { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+.footer-provenance .footer-disclosures { margin-top: 0; }
+.footer-sponsor { display: inline-flex; align-items: center; min-height: 2.75rem; }
+@media (min-width: 48rem) {
+  .footer-provenance { flex-direction: row; align-items: center; justify-content: space-between; gap: 1rem; }
+  .footer-sponsor { margin-left: auto; text-align: right; }
+}

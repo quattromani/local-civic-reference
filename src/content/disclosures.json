@@ -1,0 +1,111 @@
+[
+  {
+    "slug": "privacy",
+    "title": "Privacy",
+    "updated": "October 11, 2026",
+    "introduction": "Party Reveal uses Google Analytics 4 on its production website to understand how visitors use the guide. Standard Google Analytics uses cookies and collects usage information.",
+    "sections": [
+      {
+        "heading": "Information recorded",
+        "paragraphs": [
+          "The site records general actions, such as opening a race, viewing sources, selecting the election calendar, and using search or filters. Custom events do not include search text, candidate names, party choices, or source URLs. Search events report whether results were found.",
+          "Page-view settings omit query text and directory fragments. The site disables Google signals and advertising personalization signals. Google processes analytics information under its own privacy policy."
+        ],
+        "links": [
+          {
+            "label": "Google Privacy Policy",
+            "url": "https://policies.google.com/privacy"
+          },
+          {
+            "label": "Google Analytics cookies",
+            "url": "https://support.google.com/analytics/answer/11397207?hl=en"
+          },
+          {
+            "label": "Google Analytics opt-out add-on for supported browsers",
+            "url": "https://tools.google.com/dlpage/gaoptout"
+          }
+        ]
+      },
+      {
+        "heading": "Website hosting",
+        "paragraphs": [
+          "GitHub Pages hosts the website. GitHub describes its processing of visitor information in its privacy statement."
+        ],
+        "links": [
+          {
+            "label": "GitHub Privacy Statement",
+            "url": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+          }
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "Send questions about the website\u2019s privacy practices to the contact below."
+        ],
+        "links": []
+      }
+    ]
+  },
+  {
+    "slug": "use-of-guide",
+    "title": "Use of this guide",
+    "updated": "October 11, 2026",
+    "introduction": "The {publisher} publishes {siteTitle} as a reference for selected races in {jurisdiction}. The guide does not include every contest on your ballot, and inclusion does not indicate an endorsement.",
+    "sections": [
+      {
+        "heading": "Understanding the evidence",
+        "paragraphs": [
+          "Candidate entries cite public sources and distinguish voter-registration affiliation, party labels in official candidate lists, and participation in a party primary. Each type of evidence establishes different facts.",
+          "An unconfirmed affiliation means reviewers have not confirmed a supporting source, and no party is inferred. The directory separates current general-election candidates from primary history.",
+          "A declared write-in candidacy does not establish that the candidate\u2019s name is printed on the ballot."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Checking election information",
+        "paragraphs": [
+          "{siteTitle} is not an official election authority. Consult official election materials for the contests on your ballot, printed candidate names, polling information, deadlines, and final candidate lists."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Corrections",
+        "paragraphs": [
+          "To report an inaccurate or outdated entry, send a supporting public source to the contact below."
+        ],
+        "links": []
+      }
+    ]
+  },
+  {
+    "slug": "accessibility",
+    "title": "Accessibility",
+    "updated": "October 11, 2026",
+    "introduction": "We aim to make {siteTitle} easy to read and use. Visitors can browse candidates and cited sources without JavaScript. Search and filters require JavaScript.",
+    "sections": [
+      {
+        "heading": "Using the guide",
+        "paragraphs": [
+          "The site provides headings, labeled search controls, keyboard navigation, and expandable race and source sections. Affiliation information appears in text, so color is not the only way to identify it."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Accessibility review",
+        "paragraphs": [
+          "Checks include HTML validation, automated accessibility checks on expanded directory sections, and local keyboard search and mobile layout testing.",
+          "Automated checks do not establish complete accessibility or WCAG conformance. Full screen-reader testing and further manual checks for zoom, text spacing, touch targets, and other display settings remain to be completed."
+        ],
+        "links": []
+      },
+      {
+        "heading": "Reporting a problem",
+        "paragraphs": [
+          "If you have difficulty reading or using the guide, contact us below. Describe the page or action involved and, if possible, include your browser, device, and assistive technology. Let us know which information you were trying to find."
+        ],
+        "links": []
+      }
+    ]
+  }
+]

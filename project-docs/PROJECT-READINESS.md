@@ -134,9 +134,9 @@ The repository deploys the generated `public/` payload through GitHub Pages.
 - Canonical and Open Graph URLs come from `src/content/site-content.json`.
 - `public/` must always be regenerated through `npm run build`; direct edits are release defects.
 
-## Public-launch blockers
+## Remaining publication review
 
-These blockers apply to a trusted public election release. They do not invalidate the repository architecture.
+The site is published as a sourced reference for selected races. Open affiliation records remain explicitly unconfirmed. The items below limit completeness or require additional review; they do not justify inferring missing facts.
 
 1. **County ballot confirmation:** The statewide final candidate list is dated September 11. The county filing list includes entries through September 29 and was reviewed October 6; it is not a certified sample ballot. Confirm printed county ballot names against official ballot materials before using final county contest-status language.
 2. **Affiliation completion:** Verify the 43 remaining affiliation records using documented evidence, and do not infer affiliations.
@@ -164,7 +164,7 @@ These blockers apply to a trusted public election release. They do not invalidat
 1. Verify the deployed `public/` site in multiple browsers and assistive technology.
 2. Confirm county printed ballot names against official county ballot materials, and record later source changes when supported.
 3. Resolve pending affiliation and scope-review records.
-4. Add a documented election-cycle rollover process before introducing the next cycle.
+4. Use the documented election-cycle rollover process in `election-reuse.md`, with fresh source and roster review for every real election.
 5. Define the next civic knowledge domain only after its source, normalization, and validation contract is documented.
 
 ## Handoff

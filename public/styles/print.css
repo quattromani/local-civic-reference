@@ -183,9 +183,4 @@
 
 @media print {
   .hero-image, .hero-sample-label { display: none; }
-  .hero-banner { min-height: 0; background: #ffffff; }
-  .hero-banner::before { display: none; }
-  .hero-banner-content, .hero-introduction { padding-block: 0; }
-  .hero-banner h1 { max-width: none; color: #000000; font-size: 25pt; text-shadow: none; }
-  .hero-banner .kicker { color: #000000; text-shadow: none; }
 }

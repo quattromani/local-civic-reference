@@ -16,5 +16,6 @@
   "analytics": {
     "measurementId": "G-D28Q74TJYD",
     "allowedHost": "partyreveal.com"
-  }
+  },
+  "disclosures": "src/content/disclosures.json"
 }

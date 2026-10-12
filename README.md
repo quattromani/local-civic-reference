@@ -32,7 +32,7 @@ The public site receives a publication-safe projection of that model. Internal a
 
 ## Working with the repository
 
-Node.js 20 or later is required. The project intentionally has no runtime framework and no package dependencies.
+Use a Node.js version supported by `package.json` (22.22.2, 24.15.0, or a compatible version from 26 onward). Run `npm ci` to install the locked build and validation tools. The browser application has no runtime framework.
 
 ```bash
 npm run build

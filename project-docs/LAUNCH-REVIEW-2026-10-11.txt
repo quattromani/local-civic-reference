@@ -1,0 +1,29 @@
+Party Reveal launch review, October 11, 2026
+
+Local cleanup and disclosures are ready for review. No changes from this pass have been committed or pushed.
+
+Completed
+- Removed obsolete redesign selectors and superseded declarations while preserving the current layout.
+- Excluded synthetic fixture artwork from the production build. Preserved source artwork for reuse testing.
+- Updated setup and readiness documentation. Historical local downloads remain preserved and ignored.
+- Added Privacy, Use of this guide, and Accessibility footer links with simple standalone pages.
+- Kept disclosure text separate from design and election data.
+- Release validation covers data contracts, election reuse, evidence distinctions, generated output, HTML, automated accessibility, local assets, internal links and disclosures.
+- Dependency audit reported no known vulnerabilities at the time checked.
+- Live HTTPS, HTTP redirection and the election calendar responded successfully.
+
+Remaining owner review and manual checks
+- Confirm GA4 activity in the property's Realtime report and review its retention settings. Property settings were not available to inspect.
+- Complete screen-reader, zoom, text spacing, forced-color and touch-target testing. Automated tests do not establish full WCAG or ADA compliance.
+- Assign ongoing election-content review and correction handling. There are 43 affiliation entries awaiting confirmation and one scope review; the guide preserves uncertainty rather than inferring facts.
+- Confirm final printed-ballot details against official election materials. Declared write-ins are distinguished from printed names.
+- Review the privacy notice against the actual publisher's practices. It describes the installed standard cookie-based GA4 setup, rather than claiming cookie-free tracking.
+- Check external source links and mobile performance on real devices and networks. Local link checks do not verify every external reference.
+
+Optional publication polish
+- Add a social sharing image and preview metadata.
+- Add a sitemap and robots.txt. Both returned 404 on the live site during this review; their absence does not itself prevent indexing.
+- Measure real-world loading performance after publication. Smaller image and data assets alone do not establish a measured performance score.
+
+Publication checkpoint
+Canonical election facts and evidence distinctions remain unchanged. Design, text and data remain separate. The second election fixture remains available to verify reuse. New disclosure pages and cleanup require a separate commit and deployment before they appear on partyreveal.com.

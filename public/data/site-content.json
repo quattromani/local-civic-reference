@@ -91,7 +91,8 @@
     "suggestionsLabel": "Directory suggestions",
     "initialStatus": "Loading candidate listings.",
     "noScriptHeading": "Browse the candidate directory",
-    "noScriptBody": "Open the race drawers below to view candidates and sources. Search and filters require JavaScript."
+    "noScriptBody": "Open the race drawers below to view candidates and sources. Search and filters require JavaScript.",
+    "introduction": "Search or browse below to see candidates, their affiliation labels, and the sources behind them."
   },
   "guide": {
     "kicker": "About this guide",
