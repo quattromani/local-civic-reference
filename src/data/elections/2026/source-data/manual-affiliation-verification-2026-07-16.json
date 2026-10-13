@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "reviewedDate": "2026-07-16",
-  "lastUpdated": "2026-08-12",
+  "lastUpdated": "2026-10-13",
   "verificationSourceId": "src-ne-votercheck",
   "verified": [
     { "displayName": "Chad Omar", "affiliation": "Nonpartisan" },
@@ -123,11 +123,13 @@
     { "displayName": "Marc E. Hroch", "affiliation": "Republican", "reviewedDate": "2026-08-12" },
     { "displayName": "Nolan Pitcher", "affiliation": "Democratic", "reviewedDate": "2026-08-12" },
     { "displayName": "Robert L. Rhine", "affiliation": "Republican", "reviewedDate": "2026-08-12" },
-    { "displayName": "Travis A. Reiman", "affiliation": "Republican", "reviewedDate": "2026-08-12" }
+    { "displayName": "Travis A. Reiman", "affiliation": "Republican", "reviewedDate": "2026-08-12" },
+    { "displayName": "Gene Radar Reedy", "affiliation": "Republican", "reviewedDate": "2026-10-13", "sourceId": "src-gage-county-voter-roll-2026-10-13" },
+    { "displayName": "Anthony M. Landon", "affiliation": "Republican", "reviewedDate": "2026-10-13", "sourceId": "src-gage-county-voter-roll-2026-10-13" },
+    { "displayName": "Max Manuilov", "affiliation": "Nonpartisan", "reviewedDate": "2026-10-13", "sourceId": "src-gage-county-voter-roll-2026-10-13" }
   ],
   "pending": [
     "Adam Engelman",
-    "Max Manuilov",
     "Skip Barr",
     "Jeff Bacon",
     "Eric G. Malina"

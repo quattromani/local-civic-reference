@@ -43,7 +43,7 @@
   },
   "publicMethodology": {
     "introduction": "Each candidate card cites the source for its displayed claims, and different sources establish different facts.",
-    "registrationVerification": "Nebraska VoterCheck confirms a candidate's voter-registration affiliation when a verified lookup is available.",
+    "registrationVerification": "Voter-registration affiliations are checked through Nebraska VoterCheck or the Gage County Voter Roll. Each entry identifies its source.",
     "primaryParticipation": "A named partisan primary in the Gage County Electionware report confirms participation in that party's primary contest. It does not confirm voter registration.",
     "filingInformation": "The county filing list identifies regular filings, petition candidacies, and declared write-ins. A write-in declaration does not mean the name is printed on the ballot. State and federal races use the final statewide general-election candidate list.",
     "electionOutcomes": "Gage County vote totals come from the county Electionware report, which is labeled UNOFFICIAL RESULTS. The report covers Gage County reporting only, and the official state canvass establishes statewide and multi-county primary nominees.",
@@ -74,6 +74,17 @@
       "authorityTier": 1,
       "sourceType": "Official voter registration verification",
       "reviewedDate": "2026-08-12",
+      "evidenceKind": "registration"
+    },
+    {
+      "sourceId": "src-gage-county-voter-roll-2026-10-13",
+      "name": "Gage County Voter Roll",
+      "url": null,
+      "authorityTier": 1,
+      "sourceType": "Official voter registration verification",
+      "publicStatus": "Voter-roll confirmation reported by the publisher",
+      "reviewedDate": "2026-10-13",
+      "scopeNote": "Publisher reported confirmed affiliations for Gene Radar Reedy, Anthony M. Landon, and Max Manuilov on October 13, 2026. The roll itself was not inspected by the agent; no roll date or public download was supplied.",
       "evidenceKind": "registration"
     },
     {
@@ -3449,12 +3460,12 @@
     {
       "affiliationId": "aff-anthony-m-landon-2026",
       "candidateId": "cand-anthony-m-landon",
-      "label": "Verification Needed",
-      "verificationState": "Pending Verification",
-      "basis": null,
-      "sourceId": null,
-      "verifiedDate": null,
-      "evidenceType": null
+      "label": "Republican",
+      "verificationState": "Verified",
+      "basis": "Official voter registration verification",
+      "sourceId": "src-gage-county-voter-roll-2026-10-13",
+      "verifiedDate": "2026-10-13",
+      "evidenceType": "registration"
     },
     {
       "affiliationId": "aff-b-j-stein-2026",
@@ -4149,12 +4160,12 @@
     {
       "affiliationId": "aff-gene-radar-reedy-2026",
       "candidateId": "cand-gene-radar-reedy",
-      "label": "Verification Needed",
-      "verificationState": "Pending Verification",
-      "basis": null,
-      "sourceId": null,
-      "verifiedDate": null,
-      "evidenceType": null
+      "label": "Republican",
+      "verificationState": "Verified",
+      "basis": "Official voter registration verification",
+      "sourceId": "src-gage-county-voter-roll-2026-10-13",
+      "verifiedDate": "2026-10-13",
+      "evidenceType": "registration"
     },
     {
       "affiliationId": "aff-gregg-f-thomas-2026",
@@ -4749,12 +4760,12 @@
     {
       "affiliationId": "aff-max-manuilov-2026",
       "candidateId": "cand-max-manuilov",
-      "label": "Verification Needed",
-      "verificationState": "Pending Verification",
-      "basis": null,
-      "sourceId": null,
-      "verifiedDate": null,
-      "evidenceType": null
+      "label": "Nonpartisan",
+      "verificationState": "Verified",
+      "basis": "Official voter registration verification",
+      "sourceId": "src-gage-county-voter-roll-2026-10-13",
+      "verifiedDate": "2026-10-13",
+      "evidenceType": "registration"
     },
     {
       "affiliationId": "aff-max-quattromani-2026",
@@ -11268,14 +11279,6 @@
       "status": "Pending Verification"
     },
     {
-      "reviewId": "review-affiliation-anthony-m-landon-odell-village-board",
-      "candidateId": "cand-anthony-m-landon",
-      "candidacyId": "cdy-cand-anthony-m-landon-office-odell-village-board-contest-office-odell-village-board-2026-general-filing-snapshot",
-      "field": "partyAffiliation",
-      "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
-      "status": "Pending Verification"
-    },
-    {
       "reviewId": "review-affiliation-b-j-stein-diller-odell-public-schools",
       "candidateId": "cand-b-j-stein",
       "candidacyId": "cdy-cand-b-j-stein-office-diller-odell-public-schools-contest-office-diller-odell-public-schools-2026-general-filing-snapshot",
@@ -11396,14 +11399,6 @@
       "status": "Pending Verification"
     },
     {
-      "reviewId": "review-affiliation-gene-radar-reedy-blue-springs-mayor",
-      "candidateId": "cand-gene-radar-reedy",
-      "candidacyId": "cdy-cand-gene-radar-reedy-office-blue-springs-mayor-contest-office-blue-springs-mayor-2026-general-filing-snapshot",
-      "field": "partyAffiliation",
-      "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
-      "status": "Pending Verification"
-    },
-    {
       "reviewId": "review-affiliation-jared-spang-highland-township-board",
       "candidateId": "cand-jared-spang",
       "candidacyId": "cdy-cand-jared-spang-office-highland-township-board-contest-office-highland-township-board-2026-general-filing-snapshot",
@@ -11482,14 +11477,6 @@
       "field": "partyAffiliation",
       "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
       "status": "Pending Verification"
-    },
-    {
-      "reviewId": "review-affiliation-max-manuilov",
-      "candidateId": "cand-max-manuilov",
-      "candidacyId": "cdy-cand-max-manuilov-office-wymore-mayor-contest-office-wymore-mayor-nonpartisan-primary",
-      "field": "partyAffiliation",
-      "issue": "The Electionware-reported nonpartisan contest does not establish party affiliation, and no unique Nebraska VoterCheck result is present in the existing verification log.",
-      "status": "Open"
     },
     {
       "reviewId": "review-affiliation-melvin-oltmans-riverside-township-board",

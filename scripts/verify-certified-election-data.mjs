@@ -62,6 +62,7 @@ for (const value of duplicateValues(data.candidacies, (record) => `${record.cand
 const authoritativeSourceIds = new Set([
   "src-gage-electionware-2026-primary",
   "src-ne-votercheck",
+  "src-gage-county-voter-roll-2026-10-13",
   "src-gage-county-filing-snapshot-2026-10-06",
   "src-gage-general-offices-notice-2026",
   "src-gage-primary-offices-notice-2026",

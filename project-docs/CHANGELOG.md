@@ -2,6 +2,12 @@
 
 Meaningful data, architecture, governance, and publication milestones are recorded here. Routine implementation details are intentionally omitted.
 
+## 2026-10-13 — County voter-roll affiliation confirmations
+
+- Recorded Republican affiliations for Gene Radar Reedy (Blue Springs) and Anthony M. Landon (Odell), and Nonpartisan for Max Manuilov (Wymore).
+- The publisher supplied the results and confirmed the Gage County Voter Roll as the source. October 13 is the review/receipt date; the roll date and lookup date were not supplied, and the agent did not inspect the roll.
+- Preserved a distinct county voter-roll source, with no invented download link, and left earlier Nebraska VoterCheck dates intact.
+
 ## 2026-10-11 — Editorial presentation and cache consistency
 
 - Adopted the reviewed editorial layout, inset sample-ballot photograph, revised introductory wording, compact candidate rows, and responsive navigation.

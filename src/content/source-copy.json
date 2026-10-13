@@ -1,7 +1,7 @@
 {
   "publicMethodology": {
     "introduction": "Each candidate card cites the source for its displayed claims, and different sources establish different facts.",
-    "registrationVerification": "Nebraska VoterCheck confirms a candidate's voter-registration affiliation when a verified lookup is available.",
+    "registrationVerification": "Voter-registration affiliations are checked through Nebraska VoterCheck or the Gage County Voter Roll. Each entry identifies its source.",
     "primaryParticipation": "A named partisan primary in the Gage County Electionware report confirms participation in that party's primary contest. It does not confirm voter registration.",
     "filingInformation": "The county filing list identifies regular filings, petition candidacies, and declared write-ins. A write-in declaration does not mean the name is printed on the ballot. State and federal races use the final statewide general-election candidate list.",
     "electionOutcomes": "Gage County vote totals come from the county Electionware report, which is labeled UNOFFICIAL RESULTS. The report covers Gage County reporting only, and the official state canvass establishes statewide and multi-county primary nominees.",

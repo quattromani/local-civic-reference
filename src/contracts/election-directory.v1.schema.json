@@ -160,7 +160,7 @@
             "minLength": 1
           },
           "url": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "uri"
           },
           "reviewedDate": {

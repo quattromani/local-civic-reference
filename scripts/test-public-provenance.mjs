@@ -58,6 +58,26 @@ const positiveResults = expectedCandidates.map((name) => {
   };
 });
 
+// County-roll confirmations must not be relabeled as VoterCheck lookups.
+const countyRollResults = [
+  ["Gene Radar Reedy", "Republican"],
+  ["Anthony M. Landon", "Republican"],
+  ["Max Manuilov", "Nonpartisan"]
+].map(([name, label]) => {
+  const candidate = locateCandidate(rendered, name);
+  const affiliation = data.affiliations.find(item => item.candidateId === candidate.candidateId);
+  const source = candidate.sourceEntries.find(entry => entry.roles.includes("affiliation"));
+  if (affiliation.label !== label || affiliation.evidenceType !== "registration"
+    || affiliation.verifiedDate !== "2026-10-13"
+    || source?.sourceId !== "src-gage-county-voter-roll-2026-10-13"
+    || source.sourceLabel !== "Gage County Voter Roll" || source.sourceUrl !== null
+    || data.manualReview.some(item => item.candidateId === candidate.candidateId && item.field === "partyAffiliation")) {
+    throw new Error(`${name} lost the reviewed county voter-roll provenance`);
+  }
+  return { name, label, source: source.sourceLabel };
+});
+if (voterCheck.reviewedDate !== "2026-08-12") throw new Error("County-roll review changed the earlier VoterCheck date");
+
 const wrongUrlProjection = structuredClone(rendered);
 const wrongUrlCandidate = locateCandidate(wrongUrlProjection, "Duane Ruh");
 wrongUrlCandidate.sourceEntries.find((entry) => entry.roles.includes("affiliation")).sourceUrl = electionware.url;
@@ -77,6 +97,7 @@ if (!wrongLabelErrors.some((error) => error.includes(wrongLabelCandidate.candida
 process.stdout.write(`${JSON.stringify({
   valid: true,
   positiveResults,
+  countyRollResults,
   negativeChecks: {
     wrongUrlRejected: true,
     wrongLabelRejected: true,

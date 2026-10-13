@@ -32,6 +32,7 @@ const manuallyVerifiedAffiliations = new Map();
 for (const record of manualAffiliationVerification.verified) {
   if (manuallyVerifiedAffiliations.has(record.displayName)) throw new Error(`Duplicate manual affiliation result for ${record.displayName}`);
   if (!allowedAffiliationLabels.has(record.affiliation)) throw new Error(`Invalid manual affiliation label for ${record.displayName}: ${record.affiliation}`);
+  if (record.sourceId && !["src-ne-votercheck", "src-gage-county-voter-roll-2026-10-13"].includes(record.sourceId)) throw new Error(`Invalid manual affiliation source for ${record.displayName}`);
   manuallyVerifiedAffiliations.set(record.displayName, record);
 }
 const manualPendingNames = new Set(manualAffiliationVerification.pending);
@@ -42,6 +43,7 @@ for (const name of manualPendingNames) {
 const sourceIds = {
   electionware: "src-gage-electionware-2026-primary",
   voterCheck: "src-ne-votercheck",
+  countyVoterRoll: "src-gage-county-voter-roll-2026-10-13",
   countyFiling: "src-gage-county-filing-snapshot-2026-10-06",
   countyOfficesNotice: "src-gage-general-offices-notice-2026",
   countyPrimaryOfficesNotice: "src-gage-primary-offices-notice-2026",
@@ -61,7 +63,7 @@ const resolveAffiliation = ({ candidateName, label, verificationState, basis, so
       label: manuallyVerifiedRecord.affiliation,
       verificationState: "Verified",
       basis: "Official voter registration verification",
-      sourceId: sourceIds.voterCheck,
+      sourceId: manuallyVerifiedRecord.sourceId || sourceIds.voterCheck,
       verifiedDate: manuallyVerifiedRecord.reviewedDate || manualAffiliationVerification.reviewedDate
     };
   }
@@ -110,7 +112,20 @@ const sources = [
     url: "https://www.votercheck.necvr.ne.gov/voterview/",
     authorityTier: 1,
     sourceType: "Official voter registration verification",
-    reviewedDate: manualAffiliationVerification.lastUpdated || manualAffiliationVerification.reviewedDate
+    reviewedDate: [...manuallyVerifiedAffiliations.values()]
+      .filter(record => !record.sourceId || record.sourceId === sourceIds.voterCheck)
+      .map(record => record.reviewedDate || manualAffiliationVerification.reviewedDate)
+      .sort().at(-1) || manualAffiliationVerification.reviewedDate
+  },
+  {
+    sourceId: sourceIds.countyVoterRoll,
+    name: "Gage County Voter Roll",
+    url: null,
+    authorityTier: 1,
+    sourceType: "Official voter registration verification",
+    publicStatus: "Voter-roll confirmation reported by the publisher",
+    reviewedDate: "2026-10-13",
+    scopeNote: "Publisher reported confirmed affiliations for Gene Radar Reedy, Anthony M. Landon, and Max Manuilov on October 13, 2026. The roll itself was not inspected by the agent; no roll date or public download was supplied."
   },
   ...filingSnapshots.sources
 ];
@@ -709,13 +724,13 @@ data.contractVersion = "1.0.0";
 data.electionId = "2026-general-election-gage-county";
 data.election = { dateIso: "2026-11-03", type: "general", jurisdiction: "Gage County" };
 for (const source of data.sources) {
-  source.evidenceKind = source.sourceId === sourceIds.voterCheck ? "registration"
+  source.evidenceKind = [sourceIds.voterCheck, sourceIds.countyVoterRoll].includes(source.sourceId) ? "registration"
     : source.sourceId === sourceIds.electionware ? "primary-results"
     : source.sourceId === sourceIds.stateCanvass ? "official-nominee"
     : source.sourceId === sourceIds.countySampleBallots ? "uncontested-primary" : "filing";
 }
 for (const affiliation of data.affiliations) {
-  affiliation.evidenceType = !affiliation.sourceId ? null : affiliation.sourceId === sourceIds.voterCheck
+  affiliation.evidenceType = !affiliation.sourceId ? null : [sourceIds.voterCheck, sourceIds.countyVoterRoll].includes(affiliation.sourceId)
     ? "registration" : affiliation.sourceId.includes("filing") ? "ballot-party" : "primary-participation";
 }
 for (const result of data.results) {
