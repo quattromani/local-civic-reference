@@ -1,5 +1,5 @@
-import { affiliationBadgeClass, affiliationIdentity, affiliationLabel } from "./affiliation-guide.js?v=d9c1ed42a135";
-import { setupDirectorySearch } from "./search.js?v=d9c1ed42a135";
+import { affiliationBadgeClass, affiliationIdentity, affiliationLabel } from "./affiliation-guide.js?v=b8a820611613";
+import { setupDirectorySearch } from "./search.js?v=b8a820611613";
 
 export function initializeDirectory({ siteConfig, interfaceCopy, affiliationGuide, electionData, categorySummaryData, renderOnly = false }) {
     /* Rendering logic below consumes siteConfig and the generated electionData projection. */
@@ -207,6 +207,9 @@ export function initializeDirectory({ siteConfig, interfaceCopy, affiliationGuid
         `${interfaceCopy.officeVerificationPrefix} ${office.filingSnapshotDate}.${office.filingReviewedDate ? ` Last checked ${office.filingReviewedDate}.` : ""} ${office.candidateListNotice}`
       );
       currentSection.append(currentContext);
+      if (office.ballotClarification) {
+        currentSection.append(makeElement("p", "candidate-section-context", office.ballotClarification));
+      }
       if (currentCandidates.length) {
         const currentList = makeElement("ul", "candidate-list");
         currentList.setAttribute("aria-label", `${office.office} current general-election candidates`);

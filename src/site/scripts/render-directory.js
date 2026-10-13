@@ -207,6 +207,9 @@ export function initializeDirectory({ siteConfig, interfaceCopy, affiliationGuid
         `${interfaceCopy.officeVerificationPrefix} ${office.filingSnapshotDate}.${office.filingReviewedDate ? ` Last checked ${office.filingReviewedDate}.` : ""} ${office.candidateListNotice}`
       );
       currentSection.append(currentContext);
+      if (office.ballotClarification) {
+        currentSection.append(makeElement("p", "candidate-section-context", office.ballotClarification));
+      }
       if (currentCandidates.length) {
         const currentList = makeElement("ul", "candidate-list");
         currentList.setAttribute("aria-label", `${office.office} current general-election candidates`);

@@ -8,6 +8,9 @@
     "stageSeparation": "The directory separates current listings from primary history. Primary history includes candidates who did not advance, candidates who withdrew, and primary nominees absent from the final general-election list.",
     "missingVerification": "The directory uses \"Affiliation not confirmed\" when no affiliation source is confirmed. Reviewers do not infer an affiliation."
   },
+  "officeClarifications": {
+    "office-diller-odell-public-schools": "Three Ward 1 seats are up for election in 2026. Check your assigned ballot to determine whether this race applies to you."
+  },
   "sourceDescriptions": {
     "countyPrimaryResults": "The Gage County Electionware report supplies the county primary totals shown here and is labeled UNOFFICIAL RESULTS. County totals alone do not establish final statewide or multi-county district outcomes.",
     "ballotPartyAndFiling": "The official general-election candidate list identifies the candidate for the office and gives the ballot-party label. A ballot-party label does not verify voter registration.",

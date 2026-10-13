@@ -1,4 +1,4 @@
-import { matchesAffiliation, setupAffiliationGuide } from "./affiliation-guide.js?v=d9c1ed42a135";
+import { matchesAffiliation, setupAffiliationGuide } from "./affiliation-guide.js?v=b8a820611613";
 
 function makeElement(tagName, className, textContent) {
   const element = document.createElement(tagName);

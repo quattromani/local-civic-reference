@@ -1,8 +1,8 @@
-import { setupNavigation } from "./navigation.js?v=d9c1ed42a135";
-import { setupPrintDisclosures, showFatalApplicationError } from "./accessibility.js?v=d9c1ed42a135";
-import { loadPublicationData } from "./data-loader.js?v=d9c1ed42a135";
-import { setupDirectoryLinks } from "./directory-links.js?v=d9c1ed42a135";
-import { initializeDirectory } from "./render-directory.js?v=d9c1ed42a135";
+import { setupNavigation } from "./navigation.js?v=b8a820611613";
+import { setupPrintDisclosures, showFatalApplicationError } from "./accessibility.js?v=b8a820611613";
+import { loadPublicationData } from "./data-loader.js?v=b8a820611613";
+import { setupDirectoryLinks } from "./directory-links.js?v=b8a820611613";
+import { initializeDirectory } from "./render-directory.js?v=b8a820611613";
 
 setupNavigation();
 

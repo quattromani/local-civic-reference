@@ -2,6 +2,11 @@
 
 Meaningful data, architecture, governance, and publication milestones are recorded here. Routine implementation details are intentionally omitted.
 
+## 2026-10-13 — Diller-Odell Ward 1 ballot clarification
+
+- Named the race “Diller-Odell School Board, Ward 1” and added the user-approved clarification that three seats are up in 2026 and voters should check their assigned ballot.
+- Preserved all candidate affiliations and residence information; no manual-checklist findings were applied.
+
 ## 2026-10-13 — County voter-roll affiliation confirmations
 
 - Recorded Republican affiliations for Gene Radar Reedy (Blue Springs) and Anthony M. Landon (Odell), and Nonpartisan for Max Manuilov (Wymore).
