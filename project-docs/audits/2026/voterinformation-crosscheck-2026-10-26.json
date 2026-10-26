@@ -1,0 +1,398 @@
+{
+  "reviewedDate": "2026-10-26",
+  "sourcePolicy": "User considers Voter Information accurate but incomplete. Use as credible supplementary evidence; Gage County records control the local roster and ballot coverage. Preserve each claim\u2019s source and evidence type.",
+  "countyRacePagesReviewed": 30,
+  "surnameSearches": 124,
+  "matchedCurrentCandidateEntries": [
+    {
+      "officeId": "office-us-senator",
+      "name": "Chuck Conboy",
+      "vipName": "Chuck Conboy",
+      "localAffiliation": "America First",
+      "localEvidence": "Ballot party",
+      "vipLabel": "America First",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-senator-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-us-senator",
+      "name": "Mike Marvin",
+      "vipName": "Mike Marvin",
+      "localAffiliation": "Legal Marijuana NOW",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Legal Marijuana NOW",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-senator-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-us-senator",
+      "name": "Dan Osborn",
+      "vipName": "Dan Osborn",
+      "localAffiliation": "Affiliation not yet verified",
+      "localEvidence": null,
+      "vipLabel": "Nonpartisan",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-senator-g26/",
+      "finding": "Supplementary affiliation information; existing entry has no confirmed affiliation source."
+    },
+    {
+      "officeId": "office-us-senator",
+      "name": "Robin Richards",
+      "vipName": "Robin Richards",
+      "localAffiliation": "Nebraska Working People",
+      "localEvidence": "Ballot party",
+      "vipLabel": "Nebraska Working People",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-senator-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-us-senator",
+      "name": "Pete Ricketts",
+      "vipName": "Pete Ricketts",
+      "localAffiliation": "Republican",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-senator-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-us-house-district-3",
+      "name": "Macey Budke",
+      "vipName": "Macey Budke",
+      "localAffiliation": "Nebraska Working People",
+      "localEvidence": "Ballot party",
+      "vipLabel": "Nebraska Working People",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-house-of-representatives-district-3-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-us-house-district-3",
+      "name": "Mark Cohen",
+      "vipName": "Mark Cohen",
+      "localAffiliation": "Affiliation not yet verified",
+      "localEvidence": null,
+      "vipLabel": "Nonpartisan",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-house-of-representatives-district-3-g26/",
+      "finding": "Supplementary affiliation information; existing entry has no confirmed affiliation source."
+    },
+    {
+      "officeId": "office-us-house-district-3",
+      "name": "David J. Else",
+      "vipName": "David Else",
+      "localAffiliation": "Legal Marijuana NOW",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Legal Marijuana NOW",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-house-of-representatives-district-3-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-us-house-district-3",
+      "name": "Adrian Smith",
+      "vipName": "Adrian Smith",
+      "localAffiliation": "Republican",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-house-of-representatives-district-3-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-us-house-district-3",
+      "name": "Becky Kelly Stille",
+      "vipName": "Becky Kelly Stille",
+      "localAffiliation": "Democratic",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Democrat",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-house-of-representatives-district-3-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-governor",
+      "name": "Rick Beard",
+      "vipName": "Rick Beard",
+      "localAffiliation": "Legal Marijuana NOW",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Legal Marijuana",
+      "url": "https://www.voterinformation.org/races/general-2026/governor-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-governor",
+      "name": "Brett Lindstrom",
+      "vipName": "Brett Lindstrom",
+      "localAffiliation": "America First",
+      "localEvidence": "Ballot party",
+      "vipLabel": "America First",
+      "url": "https://www.voterinformation.org/races/general-2026/governor-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-governor",
+      "name": "Jim Pillen",
+      "vipName": "Jim Pillen",
+      "localAffiliation": "Republican",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/governor-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-governor",
+      "name": "Lynne Walz",
+      "vipName": "Lynne Walz",
+      "localAffiliation": "Democratic",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Democrat",
+      "url": "https://www.voterinformation.org/races/general-2026/governor-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-secretary-of-state",
+      "name": "Bob Krist",
+      "vipName": "Bob Krist",
+      "localAffiliation": "America First",
+      "localEvidence": "Ballot party",
+      "vipLabel": "America First",
+      "url": "https://www.voterinformation.org/races/general-2026/secretary-of-state-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-secretary-of-state",
+      "name": "Scott Petersen",
+      "vipName": "Scott Petersen",
+      "localAffiliation": "Republican",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/secretary-of-state-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-secretary-of-state",
+      "name": "Paul Rumbaugh",
+      "vipName": "Paul Rumbaugh",
+      "localAffiliation": "Nebraska Working People",
+      "localEvidence": "Ballot party",
+      "vipLabel": "Nebraska Working People",
+      "url": "https://www.voterinformation.org/races/general-2026/secretary-of-state-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-secretary-of-state",
+      "name": "Sarah J. Slattery",
+      "vipName": "Sarah J Slattery",
+      "localAffiliation": "Democratic",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Democrat",
+      "url": "https://www.voterinformation.org/races/general-2026/secretary-of-state-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-state-treasurer",
+      "name": "Daniel Ebers",
+      "vipName": "Daniel Ebers",
+      "localAffiliation": "Democratic",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Democrat",
+      "url": "https://www.voterinformation.org/races/general-2026/state-treasurer-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-state-treasurer",
+      "name": "Joey Spellerberg",
+      "vipName": "Joey Spellerberg",
+      "localAffiliation": "Republican",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/state-treasurer-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-attorney-general",
+      "name": "Jocelyn Brasher",
+      "vipName": "Jocelyn Brasher",
+      "localAffiliation": "Democratic",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Democrat",
+      "url": "https://www.voterinformation.org/races/general-2026/attorney-general-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-attorney-general",
+      "name": "Mike Hilgers",
+      "vipName": "Mike Hilgers",
+      "localAffiliation": "Republican",
+      "localEvidence": "Primary participation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/attorney-general-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-state-auditor",
+      "name": "Mike Foley",
+      "vipName": "Mike Foley",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/auditor-of-public-accounts-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-state-auditor",
+      "name": "John Knight",
+      "vipName": "John Knight",
+      "localAffiliation": "America First",
+      "localEvidence": "Ballot party",
+      "vipLabel": "America First",
+      "url": "https://www.voterinformation.org/races/general-2026/auditor-of-public-accounts-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-state-board-of-education-district-5",
+      "name": "Michaela Conway",
+      "vipName": "Michaela Conway",
+      "localAffiliation": "Democratic",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Democrat",
+      "url": "https://www.voterinformation.org/races/general-2026/state-board-of-education-district-05-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-state-board-of-education-district-5",
+      "name": "Angie Eberspacher",
+      "vipName": "Angie Eberspacher",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/state-board-of-education-district-05-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-legislature-district-30",
+      "name": "Janet M. Bock",
+      "vipName": "Janet M. Bock",
+      "localAffiliation": "Democratic",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Democrat",
+      "url": "https://www.voterinformation.org/races/general-2026/legislature-district-30-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-nebraska-legislature-district-30",
+      "name": "Cally Ideus",
+      "vipName": "Cally Ideus",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/legislature-district-30-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-norris-public-power-district-subdivision-4",
+      "name": "Mark P. Kujath",
+      "vipName": "Mark Kujath",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/norris-public-power-district-subdivision-04---g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-norris-public-power-district-subdivision-4",
+      "name": "John D. Novotny",
+      "vipName": "John Novotny",
+      "localAffiliation": "Democratic",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Democrat",
+      "url": "https://www.voterinformation.org/races/general-2026/norris-public-power-district-subdivision-04---g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-esu-4-district-3",
+      "name": "Jeff Bacon",
+      "vipName": "Jeff Bacon",
+      "localAffiliation": "Affiliation not yet verified",
+      "localEvidence": null,
+      "vipLabel": "Nonpartisan",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-04-district-03-g26/",
+      "finding": "Supplementary affiliation information; existing entry has no confirmed affiliation source."
+    },
+    {
+      "officeId": "office-esu-5-district-5",
+      "name": "Carla J. Loemker",
+      "vipName": "Carla J. Loemker",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-05-district-05-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-esu-5-district-7",
+      "name": "Duane W. Smith",
+      "vipName": "Duane W. Smith",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-05-district-07-g26/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-esu-6-district-5",
+      "name": "Eric G. Malina",
+      "vipName": "Eric G. Malina",
+      "localAffiliation": "Affiliation not yet verified",
+      "localEvidence": null,
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-06-district-05-g26/",
+      "finding": "Supplementary affiliation information; existing entry has no confirmed affiliation source."
+    },
+    {
+      "officeId": "office-freeman-public-schools",
+      "name": "Kyle Dorn",
+      "vipName": "Kyle Dorn",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/freeman-school-district-vote-up-to-3/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-freeman-public-schools",
+      "name": "Jordan N. Freeman",
+      "vipName": "Jordan N. Freeman",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/freeman-school-district-vote-up-to-3/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-freeman-public-schools",
+      "name": "Shawn E. Mencl",
+      "vipName": "Shawn E. Mencl",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/freeman-school-district-vote-up-to-3/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    },
+    {
+      "officeId": "office-freeman-public-schools",
+      "name": "Theron Troxel",
+      "vipName": "Theron Troxel",
+      "localAffiliation": "Republican",
+      "localEvidence": "Registered affiliation",
+      "vipLabel": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/freeman-school-district-vote-up-to-3/",
+      "finding": "Affiliation labels agree after ordinary label normalization."
+    }
+  ],
+  "vipAdditionalEntriesInRepresentedRaces": [
+    {
+      "officeId": "office-freeman-public-schools",
+      "name": "Mary D. Benes",
+      "party": "Republican",
+      "url": "https://www.voterinformation.org/races/general-2026/freeman-school-district-vote-up-to-3/"
+    }
+  ],
+  "candidateDataChanged": false,
+  "limits": "The 124 surname searches for the other 134 unmatched names returned no additional matching candidate entries. Anne DeVries and Doug Pieper appear in NRD races outside our present coverage, so those are not same-office matches for their township entries. Judge party labels are reported by VIP and have not been entered as verified voter registrations."
+}

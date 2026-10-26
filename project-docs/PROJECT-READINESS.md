@@ -179,3 +179,7 @@ The site is published as a sourced reference for selected races. Open affiliatio
 ## Documentation reconciliation on October 11, 2026
 
 The current source records contain 43 affiliations without verified evidence and 1 open scope-review record. Affiliation counts refer to affiliation records, not candidate-office entries. The county snapshot and state final-list dates are reproduced from the October 6 data review. The approved public address is recorded in the October 7 decision. The editorial review did not perform a new election-source or hosted-site review.
+
+## October 26, 2026: Local judicial retention review
+
+Six judicial retention questions are prepared locally with separate canonical records and a publication-safe projection. Candidate data is unchanged. The user reviewed and approved the judicial drawer and four reported affiliation updates for commit and push on October 26, 2026. The audit identifies an unresolved Rhine/Rinne spelling conflict, two ballot-name variants, and selected-coverage gaps. No new registration checks are claimed.

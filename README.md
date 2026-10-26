@@ -90,3 +90,9 @@ Before adding a new subject area, document:
 Project status and blockers are tracked in [PROJECT-READINESS.md](project-docs/PROJECT-READINESS.md). Architectural reasoning is recorded in [DECISIONS.md](project-docs/DECISIONS.md). Source roles are inventoried in [DATA-SOURCES.md](project-docs/DATA-SOURCES.md), and meaningful milestones are recorded in [CHANGELOG.md](project-docs/CHANGELOG.md).
 
 Maintainers apply the same standards to comparable records, cite evidence for each claim, and provide accessible presentations. Each source supports only the facts its evidence establishes.
+
+## Judicial retention
+
+The active election configuration may specify a `judicialRetention` dataset. Judges and Yes/No retention questions remain separate from candidate, candidacy, and affiliation records. `scripts/judicial-retention.mjs` validates the dataset and creates the public projection. `src/site/scripts/judicial-retention.js` renders the same court groups and sourced questions for both static and interactive use. Wording lives in `src/content/site-content.json`; evidence stays under `src/provenance/`. Candidate totals exclude judges. The retention drawer has its own counts and shares directory search without acquiring candidate affiliation labels.
+
+`npm run release` includes the focused retention checks. The October 26, 2026 architecture decision records the pattern, and `project-docs/audits/2026/candidate-crosscheck-2026-10-26.md` records the accompanying roster review and unresolved official-source differences.

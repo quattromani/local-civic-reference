@@ -160,7 +160,10 @@
             "minLength": 1
           },
           "url": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "uri"
           },
           "reviewedDate": {
@@ -173,7 +176,8 @@
               "filing",
               "primary-results",
               "official-nominee",
-              "uncontested-primary"
+              "uncontested-primary",
+              "reported-affiliation"
             ]
           }
         }
@@ -342,7 +346,8 @@
               "registration",
               "ballot-party",
               "primary-participation",
-              null
+              null,
+              "reported-affiliation"
             ]
           }
         }

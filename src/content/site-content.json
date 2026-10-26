@@ -3,7 +3,7 @@
   "site": {
     "title": "Party Reveal",
     "pageTitle": "Party Reveal | Know Your Gage County Candidates",
-    "description": "See candidates, political affiliations, and public sources for selected 2026 races in Gage County.",
+    "description": "See candidates, political affiliations, judicial retention questions, and public sources for selected 2026 ballot contests in Gage County.",
     "language": "en",
     "themeColor": "#244d46",
     "canonicalUrl": "https://partyreveal.com/"
@@ -13,7 +13,7 @@
     "jurisdiction": "Gage County",
     "dateIso": "2026-11-03",
     "dateDisplay": "November 3, 2026",
-    "lastReviewed": "October 6, 2026",
+    "lastReviewed": "October 26, 2026",
     "calendar": {
       "fileName": "gage-county-election-day-2026.ics",
       "ariaLabel": "Add Tuesday, November 3, 2026 to your calendar with a one-day reminder",
@@ -27,8 +27,12 @@
   },
   "navigation": [
     {
-      "label": "Candidates",
+      "label": "Directory",
       "href": "#candidate-directory"
+    },
+    {
+      "label": "Judges",
+      "href": "#judicial-retention"
     },
     {
       "label": "About",
@@ -85,21 +89,21 @@
     "whyBody": "These officials help shape policies and public spending, and party affiliation is one consideration alongside a candidate's experience and stated positions."
   },
   "directory": {
-    "heading": "Find candidates",
+    "heading": "Find candidates and judges",
     "searchLabel": "Search the directory",
-    "searchPlaceholder": "Candidate, office, city, or district",
+    "searchPlaceholder": "Candidate, judge, office, city, or district",
     "suggestionsLabel": "Directory suggestions",
-    "initialStatus": "Loading candidate listings.",
-    "noScriptHeading": "Browse the candidate directory",
-    "noScriptBody": "Open the race drawers below to view candidates and sources. Search and filters require JavaScript.",
-    "introduction": "Search or browse below to see candidates, their affiliation labels, and the sources behind them."
+    "initialStatus": "Loading directory listings.",
+    "noScriptHeading": "Browse candidates and judges",
+    "noScriptBody": "Open the sections below to view candidates, judges, and sources. Search and filters require JavaScript.",
+    "introduction": "Search or browse candidates, their affiliation labels, and the sources behind them. Judicial retention questions appear in a separate section below."
   },
   "guide": {
     "kicker": "About this guide",
     "heading": "How to read this directory",
-    "introduction": "The Gage County GOP publishes the directory, which covers selected 2026 races in Gage County. The directory does not include every contest on your ballot.",
-    "noticeHeading": "Candidate inclusion and endorsements",
-    "noticeBody": "The Gage County GOP uses the same sourcing and presentation standards for candidates in the directory. Inclusion does not indicate a Gage County GOP endorsement.",
+    "introduction": "The Gage County GOP publishes this directory of selected 2026 candidate races and judicial retention questions in Gage County. The directory does not include every contest on your ballot.",
+    "noticeHeading": "Inclusion and endorsements",
+    "noticeBody": "The Gage County GOP applies consistent sourcing and presentation standards to comparable entries. Inclusion of a candidate or judge does not indicate a Gage County GOP endorsement.",
     "verificationHeading": "How information is verified",
     "methodologyLabels": {
       "registrationVerification": "Party registration",
@@ -107,10 +111,11 @@
       "filingInformation": "Current filings",
       "electionOutcomes": "Election results",
       "stageSeparation": "Election stage",
-      "missingVerification": "Pending verification"
+      "missingVerification": "Pending verification",
+      "reportedAffiliation": "Reported affiliation"
     },
     "correctionHeading": "Sources, review, and corrections",
-    "correctionIntroduction": "Each candidate card includes source links and review dates.",
+    "correctionIntroduction": "Candidate and judicial retention entries include source links and review dates.",
     "correctionPrompt": "To report an inaccurate or outdated entry, send a supporting public source to the correction contact.",
     "correctionEmail": "gagecountygop.media@gmail.com",
     "publisher": "Gage County GOP"
@@ -159,6 +164,10 @@
       {
         "question": "How can an error be corrected?",
         "answer": "Send a supporting public source to the correction contact listed under \"Sources, review, and corrections\"."
+      },
+      {
+        "question": "How do judicial retention votes work?",
+        "answer": "Nebraska judges are appointed by the governor through a merit selection process. In a retention election, voters decide separately whether each judge should remain in office for another six-year term. For each judge, vote Yes to retain or No against retention."
       }
     ]
   },
@@ -194,7 +203,7 @@
     "noMatches": "No matches for \"{query}\".",
     "reviewDateSentence": "The guide was reviewed on {date}.",
     "affiliationFilterStatus": "Affiliation filter: {label}.",
-    "emptyAffiliationResults": "No candidate entries match the selected filters and search.",
+    "emptyAffiliationResults": "No entries match the selected filters and search.",
     "nonpartisanRaceLabel": "Nonpartisan race",
     "nonpartisanRaceExplanation": "Party labels do not appear on the ballot.",
     "showNonpartisanRaces": "Only nonpartisan races",
@@ -205,14 +214,17 @@
     "clearAllFilters": "Clear all filters",
     "removeFilter": "Remove {label} filter",
     "searchFilterLabel": "Search: {query}",
-    "countsExplanation": "Counts update with your search and filters. Current candidates exclude primary history.",
+    "countsExplanation": "Candidate counts update with search and filters and exclude primary history. Judicial retention questions are counted separately. Affiliation filters apply only to candidate races.",
     "matchingOfficeUnit": "matching office",
     "currentCandidateUnit": "current candidate",
     "evidenceLabels": {
       "Registered affiliation": "Voter registration",
       "Ballot party": "Party listed for the race",
-      "Primary participation": "Party primary participation"
-    }
+      "Primary participation": "Party primary participation",
+      "Reported affiliation": "Reported affiliation"
+    },
+    "judicialRetentionStatusOne": "1 judicial retention question.",
+    "judicialRetentionStatusMany": "{count} judicial retention questions."
   },
   "affiliationGuide": {
     "heading": "What the affiliation labels mean",
@@ -235,11 +247,33 @@
         "description": "Participation in a named party primary. It does not verify voter registration."
       },
       {
+        "evidence": "Reported affiliation",
+        "heading": "Reported affiliation",
+        "description": "Political affiliation reported by Voter Information Project. The source is a voter-guide listing, rather than a direct voter-registration check."
+      },
+      {
         "evidence": null,
         "heading": "Affiliation not confirmed",
         "description": "No affiliation source has been confirmed. No party is inferred."
       }
     ],
     "instructionEmphasis": "Choose one label to narrow the list. Choose it again to remove that filter."
+  },
+  "judicialRetention": {
+    "heading": "Judicial retention",
+    "introduction": "Nebraska judges are appointed by the governor through a merit selection process. In a retention election, voters decide separately whether each judge should remain in office for another six-year term.",
+    "instructions": "For each judge, vote Yes to retain or No against retention.",
+    "viewJudges": "View judges",
+    "hideJudges": "Hide judges",
+    "questionLabel": "Retention question",
+    "termLabel": "Six-year term",
+    "choicesLabel": "Ballot choices: Yes or No",
+    "filterNotice": "Affiliation filters apply only to candidate races. Clear the affiliation filter to view judicial retention questions.",
+    "sourcesLabel": "Sources and last checked",
+    "reviewedLabel": "Last checked",
+    "judgeUnit": "judge",
+    "questionUnit": "retention question",
+    "summaryOne": "1 judge, 1 retention question",
+    "summaryMany": "{count} judges, {count} retention questions"
   }
 }

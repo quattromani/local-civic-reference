@@ -1,0 +1,189 @@
+{
+  "schemaVersion": "1.0.0",
+  "electionId": "2026-general-election-gage-county",
+  "electionDate": "2026-11-03",
+  "coverage": "Gage County judicial retention questions confirmed by the user and supplied NW Quad Area 05 ballot photographs.",
+  "lastReviewed": "2026-10-26",
+  "sources": [
+    {
+      "sourceId": "ne-retention-list-2026-08-03",
+      "title": "Nebraska Secretary of State: final list of judges who filed for retention",
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/Final_List_of_Judges_Who_Filed_for_Retention_List_8.3.26.pdf",
+      "sourceDate": "2026-08-03",
+      "reviewedDate": "2026-10-26",
+      "supports": [
+        "ballotName",
+        "court",
+        "district",
+        "termYears",
+        "ballotQuestion"
+      ]
+    },
+    {
+      "sourceId": "ne-retention-voter-guide",
+      "title": "Nebraska Judicial Branch: voter guide to judicial retention elections",
+      "url": "https://nebraskajudicial.gov/administration/public/voters%E2%80%99-guide-nebraska%E2%80%99s-judicial-retention-elections",
+      "reviewedDate": "2026-10-26",
+      "supports": [
+        "selectionProcess",
+        "retentionProcess"
+      ]
+    }
+  ],
+  "courts": [
+    {
+      "courtId": "workers-compensation",
+      "name": "Nebraska Workers’ Compensation Court",
+      "district": null,
+      "scope": "Statewide",
+      "displayOrder": 1
+    },
+    {
+      "courtId": "district-court-1",
+      "name": "District Court",
+      "district": "1",
+      "scope": "District 1",
+      "displayOrder": 2
+    },
+    {
+      "courtId": "county-court-1",
+      "name": "County Court",
+      "district": "1",
+      "scope": "District 1",
+      "displayOrder": 3
+    }
+  ],
+  "judges": [
+    {
+      "judgeId": "judge-dirk-v-block",
+      "ballotName": "Dirk V. Block",
+      "nameSourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "judgeId": "judge-thomas-e-stine",
+      "ballotName": "Thomas E. Stine",
+      "nameSourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "judgeId": "judge-ricky-a-schreiner",
+      "ballotName": "Ricky A. Schreiner",
+      "nameSourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "judgeId": "judge-julie-d-smith",
+      "ballotName": "Julie D. Smith",
+      "nameSourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "judgeId": "judge-david-j-a-bargen",
+      "ballotName": "David J. A. Bargen",
+      "nameSourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "judgeId": "judge-richard-r-smith",
+      "ballotName": "Richard R. Smith",
+      "nameSourceId": "ne-retention-list-2026-08-03"
+    }
+  ],
+  "retentionQuestions": [
+    {
+      "questionId": "retain-dirk-v-block-2026",
+      "judgeId": "judge-dirk-v-block",
+      "courtId": "workers-compensation",
+      "contestType": "judicial-retention",
+      "ballotQuestion": "Shall Judge Dirk V. Block be retained in office?",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "termYears": 6,
+      "displayOrder": 1,
+      "sourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "questionId": "retain-thomas-e-stine-2026",
+      "judgeId": "judge-thomas-e-stine",
+      "courtId": "workers-compensation",
+      "contestType": "judicial-retention",
+      "ballotQuestion": "Shall Judge Thomas E. Stine be retained in office?",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "termYears": 6,
+      "displayOrder": 2,
+      "sourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "questionId": "retain-ricky-a-schreiner-2026",
+      "judgeId": "judge-ricky-a-schreiner",
+      "courtId": "district-court-1",
+      "contestType": "judicial-retention",
+      "ballotQuestion": "Shall Judge Ricky A. Schreiner be retained in office?",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "termYears": 6,
+      "displayOrder": 3,
+      "sourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "questionId": "retain-julie-d-smith-2026",
+      "judgeId": "judge-julie-d-smith",
+      "courtId": "district-court-1",
+      "contestType": "judicial-retention",
+      "ballotQuestion": "Shall Judge Julie D. Smith be retained in office?",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "termYears": 6,
+      "displayOrder": 4,
+      "sourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "questionId": "retain-david-j-a-bargen-2026",
+      "judgeId": "judge-david-j-a-bargen",
+      "courtId": "district-court-1",
+      "contestType": "judicial-retention",
+      "ballotQuestion": "Shall Judge David J. A. Bargen be retained in office?",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "termYears": 6,
+      "displayOrder": 5,
+      "sourceId": "ne-retention-list-2026-08-03"
+    },
+    {
+      "questionId": "retain-richard-r-smith-2026",
+      "judgeId": "judge-richard-r-smith",
+      "courtId": "county-court-1",
+      "contestType": "judicial-retention",
+      "ballotQuestion": "Shall Judge Richard R. Smith be retained in office?",
+      "choices": [
+        "Yes",
+        "No"
+      ],
+      "termYears": 6,
+      "displayOrder": 6,
+      "sourceId": "ne-retention-list-2026-08-03"
+    }
+  ],
+  "provenance": {
+    "ballotPhotographs": [
+      "src/provenance/elections/2026/sources/gage-2026-user-ballot-front-2026-10-26.png",
+      "src/provenance/elections/2026/sources/gage-2026-user-ballot-back-2026-10-26.png"
+    ],
+    "scopeConfirmation": "User confirmed these six judges appear on Gage County ballots for November 3, 2026. Photos show NW Quad Area 05; not a complete inventory of precinct-specific candidate races.",
+    "ordering": "Court and judge order follows supplied ballot photographs; no recommendation is implied.",
+    "sourceManifest": "project-docs/audits/2026/candidate-crosscheck-2026-10-26.json",
+    "artifactHashes": {
+      "src/provenance/elections/2026/sources/ne-2026-retention-list-2026-08-03.pdf": "1694277901e6c793d3ab0994e72a65293d9532a52e9f2b636140b2ec0a83cd67",
+      "src/provenance/elections/2026/sources/gage-2026-user-ballot-front-2026-10-26.png": "bf332365f11ce78b65157ef9e52c1cc5f2f98522f1e619396bfea9524bdaed14",
+      "src/provenance/elections/2026/sources/gage-2026-user-ballot-back-2026-10-26.png": "c013f0363f28c13ac3b3f8d9933b3faa8686bfed6234a4d5fa096aa0d4988096"
+    }
+  },
+  "processSourceId": "ne-retention-voter-guide"
+}

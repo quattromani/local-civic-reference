@@ -35,7 +35,9 @@ const requireRecord = (records, id, recordType, ownerId) => {
 const sourceDescriptionFor = ({ roles, sourceId, contest, source }) => {
   const descriptions = new Set();
   if (roles.includes("affiliation")) {
-    if (source.evidenceKind === "registration") {
+    if (source.evidenceKind === "reported-affiliation") {
+      descriptions.add(sourceCopy.sourceDescriptions.reportedAffiliation);
+    } else if (source.evidenceKind === "registration") {
       descriptions.add(sourceCopy.sourceDescriptions.registration);
     } else if (roles.includes("filing")) {
       descriptions.add(sourceCopy.sourceDescriptions.ballotPartyAndFiling);
@@ -220,7 +222,7 @@ export function createPublicDirectoryProjection(data) {
         ballotName: candidate.ballotName,
         seat: candidacy.seat || office.district || "",
         affiliation: affiliation.sourceId ? affiliation.label : "Affiliation not yet verified",
-        affiliationEvidenceLabel: !affiliation.sourceId ? null : ({ registration: "Registered affiliation", "ballot-party": "Ballot party", "primary-participation": "Primary participation" })[affiliation.evidenceType],
+        affiliationEvidenceLabel: !affiliation.sourceId ? null : ({ registration: "Registered affiliation", "ballot-party": "Ballot party", "primary-participation": "Primary participation", "reported-affiliation": "Reported affiliation" })[affiliation.evidenceType],
         affiliationVerificationState: affiliation.verificationState,
         electionStageGroup: candidacy.electionStageGroup,
         primaryOutcome: candidacy.primaryStatus,

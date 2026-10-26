@@ -973,3 +973,13 @@
 @media screen {
   .directory-utility-heading .directory-introduction { margin: 0 0 1rem; max-width: 48rem; }
 }
+
+/* Retention keeps the directory hierarchy without candidate affiliation controls. */
+.judicial-retention .candidate-section-context {
+  max-width: 75ch;
+  margin-block: 1rem;
+}
+.judicial-retention > .category-offices > .source-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,1902 @@
+{
+  "reviewedDate": "2026-10-26",
+  "scope": "175 current candidacies, 174 distinct people, 69 represented office records. Current roster and ballot/filing status only; no fresh voter-registration identity matching or historical primary-results re-audit.",
+  "method": "Refreshed official PDFs; hashes compared with existing archived lists. Used current roster as a checklist; normalized-name screening followed by office/ward and filing-status review of county sample ballot and filing list. A name elsewhere on the sample ballot does not establish presence in the reviewed office.",
+  "sources": [
+    {
+      "id": "state",
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/Final_Statewide_General_Candidate_Filing_List_9.11.26.pdf",
+      "retrieved": "2026-10-26",
+      "sha256": "d27a071715896b8c82b8cce8d48200b4207ba10c44f1778f56f92c4efcd7cf96",
+      "bytes": 120495,
+      "localArchive": "src/provenance/elections/2026/sources/ne-2026-final-general-candidate-list-2026-09-11.pdf"
+    },
+    {
+      "id": "county",
+      "url": "https://gagecountyne.gov/wp-content/uploads/sites/35/2026/07/2026-filings_for_office-General-for-web-page-w-auto-adv.pdf",
+      "retrieved": "2026-10-26",
+      "sha256": "3f972200a1f7809fcd3b595af60fdf96eb220be01d45eec4c8bf39d01c474845",
+      "bytes": 117319,
+      "localArchive": "src/provenance/elections/2026/sources/gage-2026-general-filing-snapshot-2026-10-06.pdf"
+    },
+    {
+      "id": "sample",
+      "url": "https://gagecountyne.gov/wp-content/uploads/sites/35/2026/07/Sample-ballot-Gen-2026.pdf",
+      "retrieved": "2026-10-26",
+      "sha256": "994eb43a82d1da0b3fd865839deaea8de173a32cdf7b909d5bff74329dfee26c",
+      "bytes": 292934,
+      "localArchive": "src/provenance/elections/2026/sources/gage-2026-general-sample-ballot-2026-10-26.pdf"
+    },
+    {
+      "id": "judges",
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/Final_List_of_Judges_Who_Filed_for_Retention_List_8.3.26.pdf",
+      "retrieved": "2026-10-26",
+      "sha256": "1694277901e6c793d3ab0994e72a65293d9532a52e9f2b636140b2ec0a83cd67",
+      "bytes": 91615,
+      "localArchive": "src/provenance/elections/2026/sources/ne-2026-retention-list-2026-08-03.pdf"
+    }
+  ],
+  "candidateEntries": [
+    {
+      "name": "Rodger Pella",
+      "ballotName": "Rodger Pella",
+      "office": "Adams Township Board",
+      "officeId": "office-adams-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Vinson VanEngen",
+      "ballotName": "Vinson VanEngen",
+      "office": "Adams Township Board",
+      "officeId": "office-adams-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Andy Buhr",
+      "ballotName": "Andy Buhr",
+      "office": "Adams Village Board",
+      "officeId": "office-adams-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Andy Buhr"
+    },
+    {
+      "name": "Chris Schiebur",
+      "ballotName": "Chris Schiebur",
+      "office": "Adams Village Board",
+      "officeId": "office-adams-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Chris Schiebur"
+    },
+    {
+      "name": "Steve Robeson",
+      "ballotName": "Steve Robeson",
+      "office": "Adams Village Board",
+      "officeId": "office-adams-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Steve Robeson"
+    },
+    {
+      "name": "David A. Zimmerman",
+      "ballotName": "David A. Zimmerman",
+      "office": "Barneston Township Board",
+      "officeId": "office-barneston-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "David A. Zimmerman"
+    },
+    {
+      "name": "Jason Allington",
+      "ballotName": "Jason Allington",
+      "office": "Barneston Township Board",
+      "officeId": "office-barneston-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Jason Allington"
+    },
+    {
+      "name": "Keith A. Maguire",
+      "ballotName": "Keith A. Maguire",
+      "office": "Barneston Township Board",
+      "officeId": "office-barneston-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Keith A. Maguire"
+    },
+    {
+      "name": "Lewis Carr",
+      "ballotName": "Lewis Carr",
+      "office": "Barneston Township Board",
+      "officeId": "office-barneston-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Lewis Carr"
+    },
+    {
+      "name": "Louis Svoboda",
+      "ballotName": "Louis Svoboda",
+      "office": "Barneston Village Board",
+      "officeId": "office-barneston-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Louis Svoboda"
+    },
+    {
+      "name": "Scott R. Habluetzel",
+      "ballotName": "Scott R. Habluetzel",
+      "office": "Barneston Village Board",
+      "officeId": "office-barneston-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Scott R. Habluetzel"
+    },
+    {
+      "name": "Todd Wilcox",
+      "ballotName": "Todd Wilcox",
+      "office": "Barneston Village Board",
+      "officeId": "office-barneston-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Todd Wilcox"
+    },
+    {
+      "name": "David R. Eskra",
+      "ballotName": "David R. Eskra",
+      "office": "Beatrice City Council",
+      "officeId": "office-beatrice-city-council",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "David R. Eskra"
+    },
+    {
+      "name": "Mike McLain",
+      "ballotName": "Mike McLain",
+      "office": "Beatrice City Council",
+      "officeId": "office-beatrice-city-council",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Mike McLain"
+    },
+    {
+      "name": "Rod Aden",
+      "ballotName": "Rod Aden",
+      "office": "Beatrice City Council",
+      "officeId": "office-beatrice-city-council",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Rod Aden"
+    },
+    {
+      "name": "Terry Doyle",
+      "ballotName": "Terry Doyle",
+      "office": "Beatrice City Council",
+      "officeId": "office-beatrice-city-council",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Terry Doyle"
+    },
+    {
+      "name": "Duane Ruh",
+      "ballotName": "Duane Ruh",
+      "office": "Beatrice Mayor",
+      "officeId": "office-beatrice-mayor",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Duane Ruh"
+    },
+    {
+      "name": "Ted Fairbanks",
+      "ballotName": "Ted Fairbanks",
+      "office": "Beatrice Mayor",
+      "officeId": "office-beatrice-mayor",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Ted Fairbanks"
+    },
+    {
+      "name": "Chad Omar",
+      "ballotName": "Chad Omar",
+      "office": "Beatrice Public Schools",
+      "officeId": "office-beatrice-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Chad Omar"
+    },
+    {
+      "name": "Charles Riedesel",
+      "ballotName": "Charles Riedesel",
+      "office": "Beatrice Public Schools",
+      "officeId": "office-beatrice-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Charles Riedesel"
+    },
+    {
+      "name": "Dee Enevoldsen",
+      "ballotName": "Dee Enevoldsen",
+      "office": "Beatrice Public Schools",
+      "officeId": "office-beatrice-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Dee Enevoldsen"
+    },
+    {
+      "name": "Doris J. Martin",
+      "ballotName": "Doris J. Martin",
+      "office": "Beatrice Public Schools",
+      "officeId": "office-beatrice-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Doris J. Martin"
+    },
+    {
+      "name": "Matt Bogle",
+      "ballotName": "Matt Bogle",
+      "office": "Beatrice Public Schools",
+      "officeId": "office-beatrice-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Matt Bogle"
+    },
+    {
+      "name": "Sabrina M. Given",
+      "ballotName": "Sabrina M. Given",
+      "office": "Beatrice Public Schools",
+      "officeId": "office-beatrice-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Sabrina M. Given"
+    },
+    {
+      "name": "Bradley R. Thimm",
+      "ballotName": "Bradley R. Thimm",
+      "office": "Blakely Township Board",
+      "officeId": "office-blakely-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Kyle Wollenburg",
+      "ballotName": "Kyle Wollenburg",
+      "office": "Blakely Township Board",
+      "officeId": "office-blakely-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Tim Graff",
+      "ballotName": "Tim Graff",
+      "office": "Blakely Township Board",
+      "officeId": "office-blakely-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Carol M. Hughes",
+      "ballotName": "Carol M. Hughes",
+      "office": "Blue Springs City Council",
+      "officeId": "office-blue-springs-city-council",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Carol M. Hughes"
+    },
+    {
+      "name": "Debra P. Dorn",
+      "ballotName": "Debra P. Dorn",
+      "office": "Blue Springs City Council",
+      "officeId": "office-blue-springs-city-council",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Debra P. Dorn"
+    },
+    {
+      "name": "Gene Radar Reedy",
+      "ballotName": "Gene Radar Reedy",
+      "office": "Blue Springs Mayor",
+      "officeId": "office-blue-springs-mayor",
+      "filingMethod": "By petition",
+      "reviewedDate": "2026-10-26",
+      "finding": "Ballot name variant: county filing list/site say Gene Radar Reedy; sample ballot prints Radar Reedy; petition status agrees.",
+      "sampleBallotName": "Radar Reedy"
+    },
+    {
+      "name": "Brad Breunsbach",
+      "ballotName": "Brad Breunsbach",
+      "office": "Blue Springs/Wymore Township Board",
+      "officeId": "office-blue-springs-wymore-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Dennis G. Husa",
+      "ballotName": "Dennis G. Husa",
+      "office": "Blue Springs/Wymore Township Board",
+      "officeId": "office-blue-springs-wymore-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Larry Frerichs",
+      "ballotName": "Larry Frerichs",
+      "office": "Blue Springs/Wymore Township Board",
+      "officeId": "office-blue-springs-wymore-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Larry Frerichs"
+    },
+    {
+      "name": "Rodney F. Goes",
+      "ballotName": "Rodney F. Goes",
+      "office": "Blue Springs/Wymore Township Board",
+      "officeId": "office-blue-springs-wymore-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Scott Kapke",
+      "ballotName": "Scott Kapke",
+      "office": "Clatonia Township Board",
+      "officeId": "office-clatonia-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Thomas Uhlman",
+      "ballotName": "Thomas Uhlman",
+      "office": "Clatonia Township Board",
+      "officeId": "office-clatonia-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Bernita Antons",
+      "ballotName": "Bernita Antons",
+      "office": "Clatonia Village Board",
+      "officeId": "office-clatonia-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Bernita Antons"
+    },
+    {
+      "name": "Carrie Keslar",
+      "ballotName": "Carrie Keslar",
+      "office": "Clatonia Village Board",
+      "officeId": "office-clatonia-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Carrie Keslar"
+    },
+    {
+      "name": "John Kaiser",
+      "ballotName": "John Kaiser",
+      "office": "Clatonia Village Board",
+      "officeId": "office-clatonia-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "John Kaiser"
+    },
+    {
+      "name": "Shannon Brydl",
+      "ballotName": "Shannon Brydl",
+      "office": "Clatonia Village Board",
+      "officeId": "office-clatonia-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Shannon Brydl"
+    },
+    {
+      "name": "Adam German",
+      "ballotName": "Adam German",
+      "office": "Cortland Village Board",
+      "officeId": "office-cortland-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Adam German"
+    },
+    {
+      "name": "Cheryl Moormeier",
+      "ballotName": "Cheryl Moormeier",
+      "office": "Cortland Village Board",
+      "officeId": "office-cortland-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Cheryl Moormeier"
+    },
+    {
+      "name": "Lisa Kohout",
+      "ballotName": "Lisa Kohout",
+      "office": "Cortland Village Board",
+      "officeId": "office-cortland-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Lisa Kohout"
+    },
+    {
+      "name": "Adam Engelman",
+      "ballotName": "Adam Engelman",
+      "office": "Diller-Odell School Board, Ward 1",
+      "officeId": "office-diller-odell-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Adam Engelman"
+    },
+    {
+      "name": "Allen Roelfs",
+      "ballotName": "Allen Roelfs",
+      "office": "Diller-Odell School Board, Ward 1",
+      "officeId": "office-diller-odell-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Allen Roelfs"
+    },
+    {
+      "name": "Angie Clifford",
+      "ballotName": "Angie Clifford",
+      "office": "Diller-Odell School Board, Ward 1",
+      "officeId": "office-diller-odell-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Angie Clifford"
+    },
+    {
+      "name": "B.J. Stein",
+      "ballotName": "B.J. Stein",
+      "office": "Diller-Odell School Board, Ward 1",
+      "officeId": "office-diller-odell-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Initial punctuation variant only: sample ballot prints BJ Stein.",
+      "sampleBallotName": "BJ Stein"
+    },
+    {
+      "name": "Kasey Murphy",
+      "ballotName": "Kasey Murphy",
+      "office": "Diller-Odell School Board, Ward 1",
+      "officeId": "office-diller-odell-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Kasey Murphy"
+    },
+    {
+      "name": "Randall Saathoff",
+      "ballotName": "Randall Saathoff",
+      "office": "Diller-Odell School Board, Ward 1",
+      "officeId": "office-diller-odell-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Randall Saathoff"
+    },
+    {
+      "name": "Josh Novotny",
+      "ballotName": "Josh Novotny",
+      "office": "Elm Township Board",
+      "officeId": "office-elm-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Josh Novotny"
+    },
+    {
+      "name": "Larry W. Bergmeier",
+      "ballotName": "Larry W. Bergmeier",
+      "office": "Elm Township Board",
+      "officeId": "office-elm-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Larry W. Bergmeier"
+    },
+    {
+      "name": "Terrance A. Bures",
+      "ballotName": "Terrance A. Bures",
+      "office": "Elm Township Board",
+      "officeId": "office-elm-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Terrance A. Bures"
+    },
+    {
+      "name": "Jeff Bacon",
+      "ballotName": "Jeff Bacon",
+      "office": "Educational Service Unit 4 - District 3",
+      "officeId": "office-esu-4-district-3",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Jeff Bacon"
+    },
+    {
+      "name": "Carla J. Loemker",
+      "ballotName": "Carla J. Loemker",
+      "office": "Educational Service Unit 5 - District 5",
+      "officeId": "office-esu-5-district-5",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Carla J. Loemker"
+    },
+    {
+      "name": "Duane W. Smith",
+      "ballotName": "Duane W. Smith",
+      "office": "Educational Service Unit 5 - District 7",
+      "officeId": "office-esu-5-district-7",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Duane W. Smith"
+    },
+    {
+      "name": "Eric G. Malina",
+      "ballotName": "Eric G. Malina",
+      "office": "Educational Service Unit 6 - District 5",
+      "officeId": "office-esu-6-district-5",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Eric G. Malina"
+    },
+    {
+      "name": "Alan W. Wiese",
+      "ballotName": "Alan W. Wiese",
+      "office": "Filley Township Board",
+      "officeId": "office-filley-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Alan W. Wiese"
+    },
+    {
+      "name": "Dennis Remmers",
+      "ballotName": "Dennis Remmers",
+      "office": "Filley Township Board",
+      "officeId": "office-filley-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Dennis Remmers"
+    },
+    {
+      "name": "Les Blythe",
+      "ballotName": "Les Blythe",
+      "office": "Filley Township Board",
+      "officeId": "office-filley-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Les Blythe"
+    },
+    {
+      "name": "Brandon Jensen",
+      "ballotName": "Brandon Jensen",
+      "office": "Filley Village Board",
+      "officeId": "office-filley-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Brandon Jensen"
+    },
+    {
+      "name": "Connor Mason",
+      "ballotName": "Connor Mason",
+      "office": "Filley Village Board",
+      "officeId": "office-filley-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Connor Mason"
+    },
+    {
+      "name": "Isaac Frerichs",
+      "ballotName": "Isaac Frerichs",
+      "office": "Filley Village Board",
+      "officeId": "office-filley-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Isaac Frerichs"
+    },
+    {
+      "name": "Jordan N. Freeman",
+      "ballotName": "Jordan N. Freeman",
+      "office": "Freeman Public Schools",
+      "officeId": "office-freeman-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Jordan N. Freeman"
+    },
+    {
+      "name": "Kyle Dorn",
+      "ballotName": "Kyle Dorn",
+      "office": "Freeman Public Schools",
+      "officeId": "office-freeman-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Kyle Dorn"
+    },
+    {
+      "name": "Shawn E. Mencl",
+      "ballotName": "Shawn E. Mencl",
+      "office": "Freeman Public Schools",
+      "officeId": "office-freeman-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Shawn E. Mencl"
+    },
+    {
+      "name": "Theron Troxel",
+      "ballotName": "Theron Troxel",
+      "office": "Freeman Public Schools",
+      "officeId": "office-freeman-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Theron Troxel"
+    },
+    {
+      "name": "Max Quattromani",
+      "ballotName": "Max Quattromani",
+      "office": "Gage County Assessor",
+      "officeId": "office-gage-county-assessor",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Max Quattromani"
+    },
+    {
+      "name": "Amanda Fanning",
+      "ballotName": "Amanda Fanning",
+      "office": "Gage County Attorney",
+      "officeId": "office-gage-county-attorney",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Amanda Fanning"
+    },
+    {
+      "name": "Dawn Hill",
+      "ballotName": "Dawn Hill",
+      "office": "Gage County Clerk",
+      "officeId": "office-gage-county-clerk",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Dawn Hill"
+    },
+    {
+      "name": "Kelly D. Bagwell",
+      "ballotName": "Kelly D. Bagwell",
+      "office": "Gage County Clerk of the District Court",
+      "officeId": "office-gage-county-clerk-of-district-court",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Kelly D. Bagwell"
+    },
+    {
+      "name": "Donna Remmers Munoz",
+      "ballotName": "Donna Remmers Munoz",
+      "office": "Gage County Register of Deeds",
+      "officeId": "office-gage-county-register-of-deeds",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Donna Remmers Munoz"
+    },
+    {
+      "name": "Spencer Behrens",
+      "ballotName": "Spencer Behrens",
+      "office": "Gage County Sheriff",
+      "officeId": "office-gage-county-sheriff",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Spencer Behrens"
+    },
+    {
+      "name": "Eddie Dorn",
+      "ballotName": "Eddie Dorn",
+      "office": "Gage County Supervisor - District 1",
+      "officeId": "office-gage-county-supervisor-district-1",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Eddie Dorn"
+    },
+    {
+      "name": "Erich Tiemann",
+      "ballotName": "Erich Tiemann",
+      "office": "Gage County Supervisor - District 3",
+      "officeId": "office-gage-county-supervisor-district-3",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Erich Tiemann"
+    },
+    {
+      "name": "Gary Lytle",
+      "ballotName": "Gary Lytle",
+      "office": "Gage County Supervisor - District 5",
+      "officeId": "office-gage-county-supervisor-district-5",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Gary Lytle"
+    },
+    {
+      "name": "Terry Jurgens",
+      "ballotName": "Terry Jurgens",
+      "office": "Gage County Supervisor - District 7",
+      "officeId": "office-gage-county-supervisor-district-7",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Terry Jurgens"
+    },
+    {
+      "name": "Chris Witulski",
+      "ballotName": "Chris Witulski",
+      "office": "Gage County Surveyor",
+      "officeId": "office-gage-county-surveyor",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Chris Witulski"
+    },
+    {
+      "name": "Lisa Sohl",
+      "ballotName": "Lisa Sohl",
+      "office": "Gage County Treasurer",
+      "officeId": "office-gage-county-treasurer",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Lisa Sohl"
+    },
+    {
+      "name": "Jason Siems",
+      "ballotName": "Jason Siems",
+      "office": "Grant Township Board",
+      "officeId": "office-grant-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Jason Siems"
+    },
+    {
+      "name": "Kyle Pohlmann",
+      "ballotName": "Kyle Pohlmann",
+      "office": "Grant Township Board",
+      "officeId": "office-grant-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Kyle Pohlmann"
+    },
+    {
+      "name": "Wes Cammack",
+      "ballotName": "Wes Cammack",
+      "office": "Grant Township Board",
+      "officeId": "office-grant-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Wes Cammack"
+    },
+    {
+      "name": "Gary Gronewold",
+      "ballotName": "Gary Gronewold",
+      "office": "Hanover Township Board",
+      "officeId": "office-hanover-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Kent Buss",
+      "ballotName": "Kent Buss",
+      "office": "Hanover Township Board",
+      "officeId": "office-hanover-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Kent Buss"
+    },
+    {
+      "name": "Anne DeVries",
+      "ballotName": "Anne DeVries",
+      "office": "Highland Township Board",
+      "officeId": "office-highland-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Anne DeVries"
+    },
+    {
+      "name": "Dale Kisling",
+      "ballotName": "Dale Kisling",
+      "office": "Highland Township Board",
+      "officeId": "office-highland-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Edward E. Balderson",
+      "ballotName": "Edward E. Balderson",
+      "office": "Highland Township Board",
+      "officeId": "office-highland-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Jared Spang",
+      "ballotName": "Jared Spang",
+      "office": "Highland Township Board",
+      "officeId": "office-highland-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Nolan Pitcher",
+      "ballotName": "Nolan Pitcher",
+      "office": "Highland Township Board",
+      "officeId": "office-highland-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Nolan Pitcher"
+    },
+    {
+      "name": "Brett Wells",
+      "ballotName": "Brett Wells",
+      "office": "Holt Township Board",
+      "officeId": "office-holt-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "John Busboom",
+      "ballotName": "John Busboom",
+      "office": "Holt Township Board",
+      "officeId": "office-holt-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "John Busboom"
+    },
+    {
+      "name": "Jordan Busboom",
+      "ballotName": "Jordan Busboom",
+      "office": "Holt Township Board",
+      "officeId": "office-holt-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Jordan Busboom"
+    },
+    {
+      "name": "Chris Mason",
+      "ballotName": "Chris Mason",
+      "office": "Hooker Township Board",
+      "officeId": "office-hooker-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Doug Schoneweis",
+      "ballotName": "Doug Schoneweis",
+      "office": "Hooker Township Board",
+      "officeId": "office-hooker-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Jody Buhr",
+      "ballotName": "Jody Buhr",
+      "office": "Hooker Township Board",
+      "officeId": "office-hooker-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Gregg F. Thomas",
+      "ballotName": "Gregg F. Thomas",
+      "office": "Island Grove Township Board",
+      "officeId": "office-island-grove-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Gregg F. Thomas"
+    },
+    {
+      "name": "Mark Wieden",
+      "ballotName": "Mark Wieden",
+      "office": "Island Grove Township Board",
+      "officeId": "office-island-grove-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Mark Wieden"
+    },
+    {
+      "name": "Robert L. Rhine",
+      "ballotName": "Robert L. Rhine",
+      "office": "Island Grove Township Board",
+      "officeId": "office-island-grove-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Unresolved spelling conflict: county filing list and site say Rhine; county sample ballot says Rinne.",
+      "sampleBallotName": "Robert L. Rinne"
+    },
+    {
+      "name": "Marc E. Hroch",
+      "ballotName": "Marc E. Hroch",
+      "office": "Liberty Township Board",
+      "officeId": "office-liberty-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Marc E. Hroch"
+    },
+    {
+      "name": "Skip Barr",
+      "ballotName": "Skip Barr",
+      "office": "Liberty Township Board",
+      "officeId": "office-liberty-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Skip Barr"
+    },
+    {
+      "name": "Tom McGuire",
+      "ballotName": "Tom McGuire",
+      "office": "Liberty Township Board",
+      "officeId": "office-liberty-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Tom McGuire"
+    },
+    {
+      "name": "Dennis Sedlacek",
+      "ballotName": "Dennis Sedlacek",
+      "office": "Liberty Village Board",
+      "officeId": "office-liberty-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Dennis Sedlacek"
+    },
+    {
+      "name": "Donald Wade",
+      "ballotName": "Donald Wade",
+      "office": "Liberty Village Board",
+      "officeId": "office-liberty-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Donald Wade"
+    },
+    {
+      "name": "Michael Tallant",
+      "ballotName": "Michael Tallant",
+      "office": "Liberty Village Board",
+      "officeId": "office-liberty-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Michael Tallant"
+    },
+    {
+      "name": "Thomasena Wiles",
+      "ballotName": "Thomasena Wiles",
+      "office": "Liberty Village Board",
+      "officeId": "office-liberty-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Thomasena Wiles"
+    },
+    {
+      "name": "Dan Crawford",
+      "ballotName": "Dan Crawford",
+      "office": "Lincoln Township Board",
+      "officeId": "office-lincoln-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Dan Crawford"
+    },
+    {
+      "name": "David L. Koenig",
+      "ballotName": "David L. Koenig",
+      "office": "Lincoln Township Board",
+      "officeId": "office-lincoln-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "David L. Koenig"
+    },
+    {
+      "name": "Justin M. Wiegand",
+      "ballotName": "Justin M. Wiegand",
+      "office": "Lincoln Township Board",
+      "officeId": "office-lincoln-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Justin M. Wiegand"
+    },
+    {
+      "name": "Alan Folkerts",
+      "ballotName": "Alan Folkerts",
+      "office": "Logan Township Board",
+      "officeId": "office-logan-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Alan Folkerts"
+    },
+    {
+      "name": "Eric Jobman",
+      "ballotName": "Eric Jobman",
+      "office": "Logan Township Board",
+      "officeId": "office-logan-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Eric Jobman"
+    },
+    {
+      "name": "Jeff Gronewold",
+      "ballotName": "Jeff Gronewold",
+      "office": "Logan Township Board",
+      "officeId": "office-logan-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Jeff Gronewold"
+    },
+    {
+      "name": "Joshua Dittmer",
+      "ballotName": "Joshua Dittmer",
+      "office": "Midland Township Board",
+      "officeId": "office-midland-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Matthew Langley",
+      "ballotName": "Matthew Langley",
+      "office": "Midland Township Board",
+      "officeId": "office-midland-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Jocelyn Brasher",
+      "ballotName": "Jocelyn Brasher",
+      "office": "Nebraska Attorney General",
+      "officeId": "office-nebraska-attorney-general",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Jocelyn Brasher"
+    },
+    {
+      "name": "Mike Hilgers",
+      "ballotName": "Mike Hilgers",
+      "office": "Nebraska Attorney General",
+      "officeId": "office-nebraska-attorney-general",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Mike Hilgers"
+    },
+    {
+      "name": "Brett Lindstrom",
+      "ballotName": "Brett Lindstrom and Michael Picard",
+      "office": "Nebraska Governor and Lieutenant Governor",
+      "officeId": "office-nebraska-governor",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Brett Lindstrom and Michael Picard"
+    },
+    {
+      "name": "Jim Pillen",
+      "ballotName": "Jim Pillen and Joe Kelly",
+      "office": "Nebraska Governor and Lieutenant Governor",
+      "officeId": "office-nebraska-governor",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Jim Pillen and Joe Kelly"
+    },
+    {
+      "name": "Lynne Walz",
+      "ballotName": "Lynne Walz and Ben Steffen",
+      "office": "Nebraska Governor and Lieutenant Governor",
+      "officeId": "office-nebraska-governor",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Lynne Walz and Ben Steffen"
+    },
+    {
+      "name": "Rick Beard",
+      "ballotName": "Rick Beard and Keenya Barnes",
+      "office": "Nebraska Governor and Lieutenant Governor",
+      "officeId": "office-nebraska-governor",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Rick Beard and Keenya Barnes"
+    },
+    {
+      "name": "Cally Ideus",
+      "ballotName": "Cally Ideus",
+      "office": "Nebraska Legislature - District 30",
+      "officeId": "office-nebraska-legislature-district-30",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Cally Ideus"
+    },
+    {
+      "name": "Janet M. Bock",
+      "ballotName": "Janet M. Bock",
+      "office": "Nebraska Legislature - District 30",
+      "officeId": "office-nebraska-legislature-district-30",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Janet M. Bock"
+    },
+    {
+      "name": "Bob Krist",
+      "ballotName": "Bob Krist",
+      "office": "Nebraska Secretary of State",
+      "officeId": "office-nebraska-secretary-of-state",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Bob Krist"
+    },
+    {
+      "name": "Paul Rumbaugh",
+      "ballotName": "Paul Rumbaugh",
+      "office": "Nebraska Secretary of State",
+      "officeId": "office-nebraska-secretary-of-state",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Paul Rumbaugh"
+    },
+    {
+      "name": "Sarah J. Slattery",
+      "ballotName": "Sarah J. Slattery",
+      "office": "Nebraska Secretary of State",
+      "officeId": "office-nebraska-secretary-of-state",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Sarah J. Slattery"
+    },
+    {
+      "name": "Scott Petersen",
+      "ballotName": "Scott Petersen",
+      "office": "Nebraska Secretary of State",
+      "officeId": "office-nebraska-secretary-of-state",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Scott Petersen"
+    },
+    {
+      "name": "John Knight",
+      "ballotName": "John Knight",
+      "office": "Nebraska State Auditor",
+      "officeId": "office-nebraska-state-auditor",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "John Knight"
+    },
+    {
+      "name": "Mike Foley",
+      "ballotName": "Mike Foley",
+      "office": "Nebraska State Auditor",
+      "officeId": "office-nebraska-state-auditor",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Mike Foley"
+    },
+    {
+      "name": "Daniel Ebers",
+      "ballotName": "Daniel Ebers",
+      "office": "Nebraska State Treasurer",
+      "officeId": "office-nebraska-state-treasurer",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Daniel Ebers"
+    },
+    {
+      "name": "Joey Spellerberg",
+      "ballotName": "Joey Spellerberg",
+      "office": "Nebraska State Treasurer",
+      "officeId": "office-nebraska-state-treasurer",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Joey Spellerberg"
+    },
+    {
+      "name": "Craig E. Schmidt",
+      "ballotName": "Craig E. Schmidt",
+      "office": "Nemaha Township Board",
+      "officeId": "office-nemaha-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Levi Parde",
+      "ballotName": "Levi Parde",
+      "office": "Nemaha Township Board",
+      "officeId": "office-nemaha-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Roy Mulder",
+      "ballotName": "Roy Mulder",
+      "office": "Nemaha Township Board",
+      "officeId": "office-nemaha-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "John D. Novotny",
+      "ballotName": "John D. Novotny",
+      "office": "Norris Public Power District - Subdivision 4",
+      "officeId": "office-norris-public-power-district-subdivision-4",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "John D. Novotny"
+    },
+    {
+      "name": "Mark P. Kujath",
+      "ballotName": "Mark P. Kujath",
+      "office": "Norris Public Power District - Subdivision 4",
+      "officeId": "office-norris-public-power-district-subdivision-4",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Mark P. Kujath"
+    },
+    {
+      "name": "Andrew W. Adam",
+      "ballotName": "Andrew W. Adam",
+      "office": "Odell Village Board",
+      "officeId": "office-odell-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Andrew W. Adam"
+    },
+    {
+      "name": "Anthony M. Landon",
+      "ballotName": "Anthony M. Landon",
+      "office": "Odell Village Board",
+      "officeId": "office-odell-village-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Travis A. Reiman",
+      "ballotName": "Travis A. Reiman",
+      "office": "Odell Village Board",
+      "officeId": "office-odell-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Travis A. Reiman"
+    },
+    {
+      "name": "Travus M. Snyder",
+      "ballotName": "Travus M. Snyder",
+      "office": "Odell Village Board",
+      "officeId": "office-odell-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Travus M. Snyder"
+    },
+    {
+      "name": "Dave Bures",
+      "ballotName": "Dave Bures",
+      "office": "Paddock Township Board",
+      "officeId": "office-paddock-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Dave Bures"
+    },
+    {
+      "name": "Dennis R. Kostal",
+      "ballotName": "Dennis R. Kostal",
+      "office": "Paddock Township Board",
+      "officeId": "office-paddock-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Dennis R. Kostal"
+    },
+    {
+      "name": "Theodore F. Hajek",
+      "ballotName": "Theodore F. Hajek",
+      "office": "Paddock Township Board",
+      "officeId": "office-paddock-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Theodore F. Hajek"
+    },
+    {
+      "name": "Alan A. Wallman",
+      "ballotName": "Alan A. Wallman",
+      "office": "Pickrell Village Board",
+      "officeId": "office-pickrell-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Alan A. Wallman"
+    },
+    {
+      "name": "Ross Trauernicht",
+      "ballotName": "Ross Trauernicht",
+      "office": "Pickrell Village Board",
+      "officeId": "office-pickrell-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Ross Trauernicht"
+    },
+    {
+      "name": "Doug Pieper",
+      "ballotName": "Doug Pieper",
+      "office": "Riverside Township Board",
+      "officeId": "office-riverside-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Melvin Oltmans",
+      "ballotName": "Melvin Oltmans",
+      "office": "Riverside Township Board",
+      "officeId": "office-riverside-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Gary Remmers",
+      "ballotName": "Gary Remmers",
+      "office": "Rockford Township Board",
+      "officeId": "office-rockford-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Jessica Nelson",
+      "ballotName": "Jessica Nelson",
+      "office": "Rockford Township Board",
+      "officeId": "office-rockford-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Michael H Durst",
+      "ballotName": "Michael H Durst",
+      "office": "Rockford Township Board",
+      "officeId": "office-rockford-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Brad Frerichs",
+      "ballotName": "Brad Frerichs",
+      "office": "Sherman Township Board",
+      "officeId": "office-sherman-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Brad Frerichs"
+    },
+    {
+      "name": "Darin Frerichs",
+      "ballotName": "Darin Frerichs",
+      "office": "Sherman Township Board",
+      "officeId": "office-sherman-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Darin Frerichs"
+    },
+    {
+      "name": "Denise Spilker",
+      "ballotName": "Denise Spilker",
+      "office": "Sherman Township Board",
+      "officeId": "office-sherman-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Denise Spilker"
+    },
+    {
+      "name": "Fred Wright",
+      "ballotName": "Fred Wright",
+      "office": "Sicily Township Board",
+      "officeId": "office-sicily-township-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Fred Wright"
+    },
+    {
+      "name": "John R. McKeever",
+      "ballotName": "John R. McKeever",
+      "office": "Sicily Township Board",
+      "officeId": "office-sicily-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Wendell Lane",
+      "ballotName": "Wendell Lane",
+      "office": "Sicily Township Board",
+      "officeId": "office-sicily-township-board",
+      "filingMethod": "Declared write-in",
+      "reviewedDate": "2026-10-26",
+      "finding": "Declared write-in confirmed in unchanged county filing list; not printed for this office on county sample ballot.",
+      "sampleBallotName": null
+    },
+    {
+      "name": "Beverly R. Acton",
+      "ballotName": "Beverly R. Acton",
+      "office": "Southern Public Schools",
+      "officeId": "office-southern-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Beverly R. Acton"
+    },
+    {
+      "name": "David A. Zimmerman",
+      "ballotName": "David A. Zimmerman",
+      "office": "Southern Public Schools",
+      "officeId": "office-southern-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "David A. Zimmerman"
+    },
+    {
+      "name": "Debra Schlake",
+      "ballotName": "Debra Schlake",
+      "office": "Southern Public Schools",
+      "officeId": "office-southern-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Debra Schlake"
+    },
+    {
+      "name": "Jeff Argo",
+      "ballotName": "Jeff Argo",
+      "office": "Southern Public Schools",
+      "officeId": "office-southern-public-schools",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Jeff Argo"
+    },
+    {
+      "name": "Angie Eberspacher",
+      "ballotName": "Angie Eberspacher",
+      "office": "State Board of Education - District 5",
+      "officeId": "office-state-board-of-education-district-5",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Angie Eberspacher"
+    },
+    {
+      "name": "Michaela Conway",
+      "ballotName": "Michaela Conway",
+      "office": "State Board of Education - District 5",
+      "officeId": "office-state-board-of-education-district-5",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Michaela Conway"
+    },
+    {
+      "name": "Adrian Smith",
+      "ballotName": "Adrian Smith",
+      "office": "United States House - District 3",
+      "officeId": "office-us-house-district-3",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Adrian Smith"
+    },
+    {
+      "name": "Becky Kelly Stille",
+      "ballotName": "Becky Kelly Stille",
+      "office": "United States House - District 3",
+      "officeId": "office-us-house-district-3",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Becky Kelly Stille"
+    },
+    {
+      "name": "David J. Else",
+      "ballotName": "David J. Else",
+      "office": "United States House - District 3",
+      "officeId": "office-us-house-district-3",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "David J. Else"
+    },
+    {
+      "name": "Macey Budke",
+      "ballotName": "Macey Budke",
+      "office": "United States House - District 3",
+      "officeId": "office-us-house-district-3",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Macey Budke"
+    },
+    {
+      "name": "Mark Cohen",
+      "ballotName": "Mark Cohen",
+      "office": "United States House - District 3",
+      "officeId": "office-us-house-district-3",
+      "filingMethod": "By petition",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Mark Cohen"
+    },
+    {
+      "name": "Chuck Conboy",
+      "ballotName": "Chuck Conboy",
+      "office": "United States Senate",
+      "officeId": "office-us-senator",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Chuck Conboy"
+    },
+    {
+      "name": "Dan Osborn",
+      "ballotName": "Dan Osborn",
+      "office": "United States Senate",
+      "officeId": "office-us-senator",
+      "filingMethod": "By petition",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Dan Osborn"
+    },
+    {
+      "name": "Mike Marvin",
+      "ballotName": "Mike Marvin",
+      "office": "United States Senate",
+      "officeId": "office-us-senator",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Mike Marvin"
+    },
+    {
+      "name": "Pete Ricketts",
+      "ballotName": "Pete Ricketts",
+      "office": "United States Senate",
+      "officeId": "office-us-senator",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Pete Ricketts"
+    },
+    {
+      "name": "Robin Richards",
+      "ballotName": "Robin Richards",
+      "office": "United States Senate",
+      "officeId": "office-us-senator",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Robin Richards"
+    },
+    {
+      "name": "Chris Bredemeier",
+      "ballotName": "Chris Bredemeier",
+      "office": "Virginia Village Board",
+      "officeId": "office-virginia-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Chris Bredemeier"
+    },
+    {
+      "name": "Russell Harms",
+      "ballotName": "Russell Harms",
+      "office": "Virginia Village Board",
+      "officeId": "office-virginia-village-board",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Russell Harms"
+    },
+    {
+      "name": "Curt M. Oblinger",
+      "ballotName": "Curt M. Oblinger",
+      "office": "Wymore City Council",
+      "officeId": "office-wymore-city-council",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Curt M. Oblinger"
+    },
+    {
+      "name": "Isaac Bachmann",
+      "ballotName": "Isaac Bachmann",
+      "office": "Wymore City Council",
+      "officeId": "office-wymore-city-council",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Isaac Bachmann"
+    },
+    {
+      "name": "Lisa K. Munstermann",
+      "ballotName": "Lisa K. Munstermann",
+      "office": "Wymore City Council",
+      "officeId": "office-wymore-city-council",
+      "filingMethod": "Regular filing",
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Lisa K. Munstermann"
+    },
+    {
+      "name": "Max Manuilov",
+      "ballotName": "Max Manuilov",
+      "office": "Wymore Mayor",
+      "officeId": "office-wymore-mayor",
+      "filingMethod": null,
+      "reviewedDate": "2026-10-26",
+      "finding": "Name and represented office checked against county sample ballot; no substantive discrepancy found.",
+      "sampleBallotName": "Max Manuilov"
+    }
+  ],
+  "coverageGaps": [
+    {
+      "office": "Lewiston School District 69",
+      "names": [
+        "Rae Lynne Bredemeier",
+        "Aaron Rule",
+        "Sharon L. Mencl"
+      ]
+    },
+    {
+      "office": "Norris School District 160, Ward 2",
+      "names": [
+        "Steph Meese"
+      ]
+    },
+    {
+      "office": "Norris School District 160, Ward 4",
+      "names": [
+        "Aaron Wubbels"
+      ]
+    },
+    {
+      "office": "Norris School District 160, Ward 6",
+      "names": [
+        "Craig Gana"
+      ]
+    },
+    {
+      "office": "Tri County School District 300",
+      "names": [
+        "Aaron Bock",
+        "Brian R. Quackenbush",
+        "Brandon Esau",
+        "Brian Scherling",
+        "Brandon Pohlmann"
+      ]
+    },
+    {
+      "office": "Crete School District 2",
+      "names": [
+        "Marilyn Schacht",
+        "Eric Fahrlander",
+        "Greg Hollman",
+        "Greg Mach"
+      ]
+    },
+    {
+      "office": "Wilber-Clatonia School District 82",
+      "names": [
+        "Laura Niles",
+        "Chris Woerner",
+        "Tim Riechers"
+      ]
+    },
+    {
+      "office": "Southeast Community College, Board of Governors, District 1",
+      "names": [
+        "Michael Schoop"
+      ]
+    },
+    {
+      "office": "Nemaha NRD, Subdistrict 1",
+      "names": []
+    },
+    {
+      "office": "Nemaha NRD, Subdistrict 6",
+      "names": [
+        "J. Duane Sugden"
+      ]
+    },
+    {
+      "office": "Nemaha NRD, At Large",
+      "names": [
+        "Tracy Ensor"
+      ]
+    },
+    {
+      "office": "Lower Big Blue NRD, Subdistrict 1",
+      "names": [
+        "Ryan Birkett",
+        "Anne DeVries"
+      ]
+    },
+    {
+      "office": "Lower Big Blue NRD, Subdistrict 2",
+      "names": [
+        "Bruce Weise",
+        "Doug Pieper"
+      ]
+    },
+    {
+      "office": "Lower Big Blue NRD, Subdistrict 5",
+      "names": [
+        "Dean Roehr"
+      ]
+    },
+    {
+      "office": "Lower Big Blue NRD, Subdistrict 6",
+      "names": [
+        "Matthew Mason"
+      ]
+    },
+    {
+      "office": "Lower Big Blue NRD, At Large",
+      "names": [
+        "Jason Pohlmann"
+      ]
+    }
+  ],
+  "coverageGapCandidateEntries": 28,
+  "changesAppliedToCandidates": false
+}

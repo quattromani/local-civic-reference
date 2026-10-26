@@ -1,3 +1,4 @@
+import { renderJudicialRetention } from "./judicial-retention.js";
 import { setupNavigation } from "./navigation.js";
 import { setupPrintDisclosures, showFatalApplicationError } from "./accessibility.js";
 import { loadPublicationData } from "./data-loader.js";
@@ -14,6 +15,7 @@ async function initializeApplication() {
     correctionEmail: content.guide.correctionEmail
   };
 
+  renderJudicialRetention(directory.judicialRetention, content.judicialRetention);
   initializeDirectory({
     siteConfig,
     interfaceCopy: content.interfaceCopy,

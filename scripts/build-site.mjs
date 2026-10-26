@@ -1,4 +1,5 @@
 import sharp from "sharp";
+import { createJudicialRetentionProjection } from "./judicial-retention.mjs";
 import { renderStaticDirectory } from "./render-static-directory.mjs";
 import { electionConfig, resolveProjectPath } from "./election-config.mjs";
 import { publicRoot, canonicalDataPath, siteContentPath } from "./project-paths.mjs";
@@ -20,6 +21,7 @@ const canonicalBytes = fs.readFileSync(canonicalPath);
 const content = JSON.parse(contentBytes.toString("utf8"));
 const canonical = JSON.parse(canonicalBytes.toString("utf8"));
 validateElectionContract(canonical, content, electionConfig);
+const judicialRetention = createJudicialRetentionProjection(electionConfig);
 const sha256 = (value) => crypto.createHash("sha256").update(value).digest("hex");
 const iconVersion = sha256(Buffer.concat(["favicon.svg", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"].map(file => fs.readFileSync(path.join(sourceRoot, "site/assets", file))))).slice(0, 12);
 const stylesRoot = path.join(sourceRoot, "site/styles");
@@ -31,7 +33,7 @@ const styleVersion = sha256(fs.readdirSync(stylesRoot)
 
 const scriptsRoot = path.join(sourceRoot, "site/scripts");
 const scriptFiles = fs.readdirSync(scriptsRoot).filter((file) => file.endsWith(".js")).sort();
-const scriptVersion = sha256(scriptFiles.map((file) => `${file}\n${fs.readFileSync(path.join(scriptsRoot, file), "utf8")}`).join("\n") + contentBytes.toString("utf8") + canonicalBytes.toString("utf8")).slice(0, 12);
+const scriptVersion = sha256(scriptFiles.map((file) => `${file}\n${fs.readFileSync(path.join(scriptsRoot, file), "utf8")}`).join("\n") + contentBytes.toString("utf8") + canonicalBytes.toString("utf8") + JSON.stringify(judicialRetention)).slice(0, 12);
 
 const escapeHtml = (value) => String(value)
   .replaceAll("&", "&amp;")
@@ -234,7 +236,8 @@ const publication = {
   generatedFrom: electionConfig.dataset,
   contractVersion: canonical.contractVersion,
   offices: createPublicDirectoryProjection(canonical),
-  categorySummaries: createCategorySummaryData(canonical)
+  categorySummaries: createCategorySummaryData(canonical),
+  judicialRetention
 };
 
 html = renderStaticDirectory(html, content, publication);
@@ -295,6 +298,7 @@ const manifest = {
   contentSchemaVersion: content.schemaVersion,
   canonicalDatasetSha256: sha256(canonicalBytes),
   contentSha256: sha256(contentBytes),
+  judicialDatasetSha256: electionConfig.judicialRetention ? sha256(fs.readFileSync(resolveProjectPath(electionConfig.judicialRetention))) : null,
   publishedDirectorySha256: sha256(fs.readFileSync(path.join(publicRoot, `data/${electionConfig.publicDataFile}`))),
   publicationTarget: "GitHub Pages /public"
 };

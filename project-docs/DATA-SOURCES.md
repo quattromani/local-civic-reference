@@ -83,3 +83,7 @@ The current canonical source registry replaces the county August 3 snapshot with
 ## Gage County Voter Roll confirmation received October 13, 2026
 
 The publisher reported Republican affiliations for Gene Radar Reedy of Blue Springs and Anthony Landon of Odell (official filing name: Anthony M. Landon), and Nonpartisan for Max Manuilov of Wymore. The publisher identified the Gage County Voter Roll as the source. The agent did not inspect the roll. No roll date, lookup date, public download, or underlying personal registration information was supplied. October 13 is the review/receipt date, not an asserted roll date. These results use `src-gage-county-voter-roll-2026-10-13` in the manual affiliation log, separately from Nebraska VoterCheck. Public source URLs may be null for an identified source without a supplied public link.
+
+## October 26, 2026: Reported affiliations from Voter Information Project
+
+The user approved four affiliations from VIP's 2026 race pages: Jeff Bacon (Nonpartisan), Eric G. Malina (Republican), Dan Osborn (Nonpartisan), and Mark Cohen (Nonpartisan). Canonical source records cite each race page; the snapshot in `src/provenance/elections/2026/sources/vip-gage-records-2026-10-26.json` preserves the reviewed labels. `source-data/reported-affiliations-2026-10-26.json` records the authorized updates. These are `reported-affiliation` evidence, not direct voter-registration checks. County/state records retain control of roster and official ballot names.

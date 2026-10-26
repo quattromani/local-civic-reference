@@ -96,7 +96,7 @@
           <ul class="directory-stats" aria-label="Directory summary">
             <li class="directory-stat">
               <span class="directory-stat-number" data-directory-office-count>—</span>
-              <span class="directory-stat-label">Offices</span>
+              <span class="directory-stat-label">Candidate offices</span>
             </li>
             <li class="directory-stat">
               <span class="directory-stat-number" data-directory-candidate-count>—</span>
@@ -104,7 +104,7 @@
             </li>
             <li class="directory-stat">
               <span class="directory-stat-number" data-directory-category-count>—</span>
-              <span class="directory-stat-label">Categories</span>
+              <span class="directory-stat-label">Candidate categories</span>
             </li>
           </ul>
           <p class="directory-count-explanation">{{COUNTS_EXPLANATION}}</p>
@@ -117,9 +117,9 @@
         <div id="affiliation-guide-groups" class="affiliation-guide-groups"></div>
         </details>
         <p class="editorial-evidence-note">Affiliation labels identify the evidence, not an endorsement.</p>
-        <div class="affiliation-guide-actions"><button id="all-races-filter" class="affiliation-guide-reset" type="button" aria-pressed="true" aria-controls="directory-content">All races</button>
+        <div class="affiliation-guide-actions"><button id="all-races-filter" class="affiliation-guide-reset" type="button" aria-pressed="true" aria-controls="directory-content judicial-retention-content">All races</button>
           <button id="affiliation-guide-reset" class="affiliation-guide-reset" type="button" disabled>{{AFFILIATION_GUIDE_RESET}}</button>
-          <button id="nonpartisan-race-filter" class="affiliation-guide-reset" type="button" aria-pressed="false" aria-controls="directory-content"><span aria-hidden="true" class="race-filter-check">✓ </span>{{NONPARTISAN_RACE_FILTER}}</button>
+          <button id="nonpartisan-race-filter" class="affiliation-guide-reset" type="button" aria-pressed="false" aria-controls="directory-content judicial-retention-content"><span aria-hidden="true" class="race-filter-check">✓ </span>{{NONPARTISAN_RACE_FILTER}}</button>
         </div>
       </div>
     </section>
@@ -134,6 +134,7 @@
 
         <p id="directory-status" class="directory-status" role="status" aria-live="polite">{{DIRECTORY_INITIAL_STATUS}}</p>
         <div class="directory-categories" id="directory-content"></div>
+        <div class="directory-categories" id="judicial-retention-content"></div>
       </div>
     </section>
 

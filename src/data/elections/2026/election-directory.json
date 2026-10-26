@@ -48,7 +48,8 @@
     "filingInformation": "The county filing list identifies regular filings, petition candidacies, and declared write-ins. A write-in declaration does not mean the name is printed on the ballot. State and federal races use the final statewide general-election candidate list.",
     "electionOutcomes": "Gage County vote totals come from the county Electionware report, which is labeled UNOFFICIAL RESULTS. The report covers Gage County reporting only, and the official state canvass establishes statewide and multi-county primary nominees.",
     "stageSeparation": "The directory separates current listings from primary history. Primary history includes candidates who did not advance, candidates who withdrew, and primary nominees absent from the final general-election list.",
-    "missingVerification": "The directory uses \"Affiliation not confirmed\" when no affiliation source is confirmed. Reviewers do not infer an affiliation."
+    "missingVerification": "The directory uses \"Affiliation not confirmed\" when no affiliation source is confirmed. Reviewers do not infer an affiliation.",
+    "reportedAffiliation": "Some affiliations are reported by Voter Information Project. Those entries identify the voter guide as their source and are distinct from direct voter-registration checks."
   },
   "sources": [
     {
@@ -162,6 +163,46 @@
       "publicDescription": "The county sample-ballot notice explains that candidates are declared nominated and omitted from the primary ballot when filings do not exceed the statutory primary threshold.",
       "reviewedDate": "2026-07-15",
       "evidenceKind": "uncontested-primary"
+    },
+    {
+      "sourceId": "src-vip-dan-osborn-2026-10-26",
+      "name": "Voter Information Project: Dan Osborn",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-senator-g26/",
+      "reviewedDate": "2026-10-26",
+      "sourceType": "Supplementary voter guide",
+      "evidenceKind": "reported-affiliation",
+      "publicStatus": "Voter Information Project affiliation listing",
+      "publicDescription": "Reports the candidate's political affiliation. This citation is a voter-guide listing, not a direct voter-registration check."
+    },
+    {
+      "sourceId": "src-vip-mark-cohen-2026-10-26",
+      "name": "Voter Information Project: Mark Cohen",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-house-of-representatives-district-3-g26/",
+      "reviewedDate": "2026-10-26",
+      "sourceType": "Supplementary voter guide",
+      "evidenceKind": "reported-affiliation",
+      "publicStatus": "Voter Information Project affiliation listing",
+      "publicDescription": "Reports the candidate's political affiliation. This citation is a voter-guide listing, not a direct voter-registration check."
+    },
+    {
+      "sourceId": "src-vip-jeff-bacon-2026-10-26",
+      "name": "Voter Information Project: Jeff Bacon",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-04-district-03-g26/",
+      "reviewedDate": "2026-10-26",
+      "sourceType": "Supplementary voter guide",
+      "evidenceKind": "reported-affiliation",
+      "publicStatus": "Voter Information Project affiliation listing",
+      "publicDescription": "Reports the candidate's political affiliation. This citation is a voter-guide listing, not a direct voter-registration check."
+    },
+    {
+      "sourceId": "src-vip-eric-g-malina-2026-10-26",
+      "name": "Voter Information Project: Eric G. Malina",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-06-district-05-g26/",
+      "reviewedDate": "2026-10-26",
+      "sourceType": "Supplementary voter guide",
+      "evidenceKind": "reported-affiliation",
+      "publicStatus": "Voter Information Project affiliation listing",
+      "publicDescription": "Reports the candidate's political affiliation. This citation is a voter-guide listing, not a direct voter-registration check."
     }
   ],
   "jurisdictions": [
@@ -3770,12 +3811,12 @@
     {
       "affiliationId": "aff-dan-osborn-2026",
       "candidateId": "cand-dan-osborn",
-      "label": "Verification Needed",
-      "verificationState": "Pending Verification",
-      "basis": null,
-      "sourceId": null,
-      "verifiedDate": null,
-      "evidenceType": null
+      "label": "Nonpartisan",
+      "verificationState": "Verified",
+      "basis": "Affiliation reported by Voter Information Project",
+      "sourceId": "src-vip-dan-osborn-2026-10-26",
+      "verifiedDate": "2026-10-26",
+      "evidenceType": "reported-affiliation"
     },
     {
       "affiliationId": "aff-daniel-ebers-2026",
@@ -4060,12 +4101,12 @@
     {
       "affiliationId": "aff-eric-g-malina-2026",
       "candidateId": "cand-eric-g-malina",
-      "label": "Verification Needed",
-      "verificationState": "Pending Verification",
-      "basis": null,
-      "sourceId": null,
-      "verifiedDate": null,
-      "evidenceType": null
+      "label": "Republican",
+      "verificationState": "Verified",
+      "basis": "Affiliation reported by Voter Information Project",
+      "sourceId": "src-vip-eric-g-malina-2026-10-26",
+      "verifiedDate": "2026-10-26",
+      "evidenceType": "reported-affiliation"
     },
     {
       "affiliationId": "aff-eric-jobman-2026",
@@ -4280,12 +4321,12 @@
     {
       "affiliationId": "aff-jeff-bacon-2026",
       "candidateId": "cand-jeff-bacon",
-      "label": "Verification Needed",
-      "verificationState": "Pending Verification",
-      "basis": null,
-      "sourceId": null,
-      "verifiedDate": null,
-      "evidenceType": null
+      "label": "Nonpartisan",
+      "verificationState": "Verified",
+      "basis": "Affiliation reported by Voter Information Project",
+      "sourceId": "src-vip-jeff-bacon-2026-10-26",
+      "verifiedDate": "2026-10-26",
+      "evidenceType": "reported-affiliation"
     },
     {
       "affiliationId": "aff-jeff-gronewold-2026",
@@ -4710,12 +4751,12 @@
     {
       "affiliationId": "aff-mark-cohen-2026",
       "candidateId": "cand-mark-cohen",
-      "label": "Verification Needed",
-      "verificationState": "Pending Verification",
-      "basis": null,
-      "sourceId": null,
-      "verifiedDate": null,
-      "evidenceType": null
+      "label": "Nonpartisan",
+      "verificationState": "Verified",
+      "basis": "Affiliation reported by Voter Information Project",
+      "sourceId": "src-vip-mark-cohen-2026-10-26",
+      "verifiedDate": "2026-10-26",
+      "evidenceType": "reported-affiliation"
     },
     {
       "affiliationId": "aff-mark-p-kujath-2026",
@@ -11335,14 +11376,6 @@
       "status": "Pending Verification"
     },
     {
-      "reviewId": "review-affiliation-dan-osborn-us-senator",
-      "candidateId": "cand-dan-osborn",
-      "candidacyId": "cdy-cand-dan-osborn-office-us-senator-contest-office-us-senator-2026-general-filing-snapshot",
-      "field": "partyAffiliation",
-      "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
-      "status": "Pending Verification"
-    },
-    {
       "reviewId": "review-affiliation-dennis-g-husa-blue-springs-wymore-township-board",
       "candidateId": "cand-dennis-g-husa",
       "candidacyId": "cdy-cand-dennis-g-husa-office-blue-springs-wymore-township-board-contest-office-blue-springs-wymore-township-board-2026-general-filing-snapshot",
@@ -11375,14 +11408,6 @@
       "status": "Pending Verification"
     },
     {
-      "reviewId": "review-affiliation-eric-g-malina-esu-6-district-5",
-      "candidateId": "cand-eric-g-malina",
-      "candidacyId": "cdy-cand-eric-g-malina-office-esu-6-district-5-contest-office-esu-6-district-5-2026-general-filing-snapshot",
-      "field": "partyAffiliation",
-      "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
-      "status": "Pending Verification"
-    },
-    {
       "reviewId": "review-affiliation-gary-gronewold-hanover-township-board",
       "candidateId": "cand-gary-gronewold",
       "candidacyId": "cdy-cand-gary-gronewold-office-hanover-township-board-contest-office-hanover-township-board-2026-general-filing-snapshot",
@@ -11402,14 +11427,6 @@
       "reviewId": "review-affiliation-jared-spang-highland-township-board",
       "candidateId": "cand-jared-spang",
       "candidacyId": "cdy-cand-jared-spang-office-highland-township-board-contest-office-highland-township-board-2026-general-filing-snapshot",
-      "field": "partyAffiliation",
-      "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
-      "status": "Pending Verification"
-    },
-    {
-      "reviewId": "review-affiliation-jeff-bacon-esu-4-district-3",
-      "candidateId": "cand-jeff-bacon",
-      "candidacyId": "cdy-cand-jeff-bacon-office-esu-4-district-3-contest-office-esu-4-district-3-2026-general-filing-snapshot",
       "field": "partyAffiliation",
       "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
       "status": "Pending Verification"
@@ -11458,14 +11475,6 @@
       "reviewId": "review-affiliation-levi-parde-nemaha-township-board",
       "candidateId": "cand-levi-parde",
       "candidacyId": "cdy-cand-levi-parde-office-nemaha-township-board-contest-office-nemaha-township-board-2026-general-filing-snapshot",
-      "field": "partyAffiliation",
-      "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
-      "status": "Pending Verification"
-    },
-    {
-      "reviewId": "review-affiliation-mark-cohen-us-house-district-3",
-      "candidateId": "cand-mark-cohen",
-      "candidacyId": "cdy-cand-mark-cohen-office-us-house-district-3-contest-office-us-house-district-3-2026-general-filing-snapshot",
       "field": "partyAffiliation",
       "issue": "The official nonpartisan filing snapshot establishes the candidacy but not political affiliation.",
       "status": "Pending Verification"
@@ -11619,6 +11628,26 @@
       "artifactId": "artifact-gage-primary-sample-ballots-2026",
       "path": "src/provenance/elections/2026/sources/gage-2026-primary-sample-ballots.pdf",
       "sourceId": "src-gage-primary-sample-ballots-2026"
+    },
+    {
+      "artifactId": "artifact-src-vip-dan-osborn-2026-10-26",
+      "path": "src/provenance/elections/2026/sources/vip-gage-records-2026-10-26.json",
+      "sourceId": "src-vip-dan-osborn-2026-10-26"
+    },
+    {
+      "artifactId": "artifact-src-vip-mark-cohen-2026-10-26",
+      "path": "src/provenance/elections/2026/sources/vip-gage-records-2026-10-26.json",
+      "sourceId": "src-vip-mark-cohen-2026-10-26"
+    },
+    {
+      "artifactId": "artifact-src-vip-jeff-bacon-2026-10-26",
+      "path": "src/provenance/elections/2026/sources/vip-gage-records-2026-10-26.json",
+      "sourceId": "src-vip-jeff-bacon-2026-10-26"
+    },
+    {
+      "artifactId": "artifact-src-vip-eric-g-malina-2026-10-26",
+      "path": "src/provenance/elections/2026/sources/vip-gage-records-2026-10-26.json",
+      "sourceId": "src-vip-eric-g-malina-2026-10-26"
     }
   ],
   "categorySummaryPolicy": [

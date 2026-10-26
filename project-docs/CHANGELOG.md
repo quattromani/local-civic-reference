@@ -66,3 +66,18 @@ Meaningful data, architecture, governance, and publication milestones are record
 - Completed WCAG 2.2 AA remediation and accessibility regression coverage.
 - Completed the manual Nebraska VoterCheck affiliation review while retaining neutral pending-verification states.
 - Added official filing snapshots, Gage County Electionware reporting, state canvass evidence, and archived source checksums.
+
+## 2026-10-26: Judicial retention and candidate-source review
+
+- Added six individually sourced Yes/No retention questions under three courts, with appointment/retention explanation, exact ballot names, search, static rendering, source dates, and separate counts.
+- Preserved candidate data, affiliation evidence, and primary history. Updated directory inclusion wording and kept affiliation filters scoped to candidate races.
+- Added focused judicial validation and behavior checks to the release suite, and archived the supplied photographs and official retention/sample-ballot evidence.
+- Reviewed all 175 current candidacies against refreshed official sources. Recorded the Rhine/Rinne spelling conflict, Reedy and Stein ballot-name variants, and 28 additional candidate entries outside selected site coverage. No disputed candidate changes applied.
+- Prepared a local review; no commit, push, or deployment performed.
+
+## 2026-10-26: Apply four VIP affiliations
+
+- Applied user-approved reported affiliations for Jeff Bacon, Eric G. Malina, Dan Osborn, and Mark Cohen, with individual Voter Information Project source links and distinct evidence labels.
+- Extended the source contract, methodology, affiliation guide, and validation for reported affiliations without presenting them as direct voter-registration checks.
+- Confirmed Mary Benes remains excluded and retained Ricky A. Schreiner's official ballot spelling, as clarified by the user.
+- Commit and push remain pending review.

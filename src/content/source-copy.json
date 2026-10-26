@@ -6,7 +6,8 @@
     "filingInformation": "The county filing list identifies regular filings, petition candidacies, and declared write-ins. A write-in declaration does not mean the name is printed on the ballot. State and federal races use the final statewide general-election candidate list.",
     "electionOutcomes": "Gage County vote totals come from the county Electionware report, which is labeled UNOFFICIAL RESULTS. The report covers Gage County reporting only, and the official state canvass establishes statewide and multi-county primary nominees.",
     "stageSeparation": "The directory separates current listings from primary history. Primary history includes candidates who did not advance, candidates who withdrew, and primary nominees absent from the final general-election list.",
-    "missingVerification": "The directory uses \"Affiliation not confirmed\" when no affiliation source is confirmed. Reviewers do not infer an affiliation."
+    "missingVerification": "The directory uses \"Affiliation not confirmed\" when no affiliation source is confirmed. Reviewers do not infer an affiliation.",
+    "reportedAffiliation": "Some affiliations are reported by Voter Information Project. Those entries identify the voter guide as their source and are distinct from direct voter-registration checks."
   },
   "officeClarifications": {
     "office-diller-odell-public-schools": "Three Ward 1 seats are up for election in 2026. Check your assigned ballot to determine whether this race applies to you."
@@ -19,6 +20,7 @@
     "filing": "Lists the candidate for this office in the cited general-election candidate list.",
     "officialNominee": "Establishes the official statewide or multi-county primary nominee.",
     "uncontestedPrimary": "Explains advancement without a contested primary.",
-    "primaryParticipation": "The {contest} confirms participation in the named party contest, and participation does not verify voter registration."
+    "primaryParticipation": "The {contest} confirms participation in the named party contest, and participation does not verify voter registration.",
+    "reportedAffiliation": "Reports the candidate's political affiliation. This citation is a voter-guide listing, not a direct voter-registration check."
   }
 }

@@ -1,0 +1,32 @@
+{
+  "reviewedDate": "2026-10-26",
+  "sourceName": "Voter Information Project",
+  "evidenceType": "reported-affiliation",
+  "userAuthorization": "User requested these four reported affiliation updates on October 26, 2026. County sources continue to control roster and ballot names.",
+  "records": [
+    {
+      "displayName": "Dan Osborn",
+      "affiliation": "Nonpartisan",
+      "sourceUrl": "https://www.voterinformation.org/races/general-2026/united-states-senator-g26/",
+      "reviewedDate": "2026-10-26"
+    },
+    {
+      "displayName": "Mark Cohen",
+      "affiliation": "Nonpartisan",
+      "sourceUrl": "https://www.voterinformation.org/races/general-2026/united-states-house-of-representatives-district-3-g26/",
+      "reviewedDate": "2026-10-26"
+    },
+    {
+      "displayName": "Jeff Bacon",
+      "affiliation": "Nonpartisan",
+      "sourceUrl": "https://www.voterinformation.org/races/general-2026/educational-service-unit-04-district-03-g26/",
+      "reviewedDate": "2026-10-26"
+    },
+    {
+      "displayName": "Eric G. Malina",
+      "affiliation": "Republican",
+      "sourceUrl": "https://www.voterinformation.org/races/general-2026/educational-service-unit-06-district-05-g26/",
+      "reviewedDate": "2026-10-26"
+    }
+  ]
+}

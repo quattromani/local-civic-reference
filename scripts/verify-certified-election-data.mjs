@@ -74,7 +74,10 @@ const filingSourceIds = new Set([
   "src-gage-county-filing-snapshot-2026-10-06",
   "src-ne-general-filing-snapshot-2026-09-11"
 ]);
-const expectedSourceIds = new Set(authoritativeSourceIds);
+const expectedSourceIds = new Set([...authoritativeSourceIds,
+  "src-vip-dan-osborn-2026-10-26", "src-vip-mark-cohen-2026-10-26",
+  "src-vip-jeff-bacon-2026-10-26", "src-vip-eric-g-malina-2026-10-26"
+]);
 if (data.sources.length !== expectedSourceIds.size) errors.push(`Expected ${expectedSourceIds.size} scoped sources; found ${data.sources.length}`);
 for (const source of data.sources) {
   if (!expectedSourceIds.has(source.sourceId)) errors.push(`Unexpected source remains: ${source.sourceId}`);

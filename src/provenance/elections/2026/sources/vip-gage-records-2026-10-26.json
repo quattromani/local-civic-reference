@@ -1,0 +1,442 @@
+{
+  "reviewedDate": "2026-10-26",
+  "index": "https://www.voterinformation.org/county/gage/",
+  "races": [
+    {
+      "candidates": [
+        {
+          "name": "Chuck Conboy",
+          "party": "America First"
+        },
+        {
+          "name": "Mike Marvin",
+          "party": "Legal Marijuana NOW"
+        },
+        {
+          "name": "Dan Osborn",
+          "party": "Nonpartisan"
+        },
+        {
+          "name": "Robin Richards",
+          "party": "Nebraska Working People"
+        },
+        {
+          "name": "Pete Ricketts",
+          "party": "Republican"
+        }
+      ],
+      "title": "United States Senator - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-senator-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Macey Budke",
+          "party": "Nebraska Working People"
+        },
+        {
+          "name": "Mark Cohen",
+          "party": "Nonpartisan"
+        },
+        {
+          "name": "David Else",
+          "party": "Legal Marijuana NOW"
+        },
+        {
+          "name": "Adrian Smith",
+          "party": "Republican"
+        },
+        {
+          "name": "Becky Kelly Stille",
+          "party": "Democrat"
+        }
+      ],
+      "title": "United States House of Representatives - District 3 - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/united-states-house-of-representatives-district-3-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Rick Beard",
+          "party": "Legal Marijuana"
+        },
+        {
+          "name": "Brett Lindstrom",
+          "party": "America First"
+        },
+        {
+          "name": "Jim Pillen",
+          "party": "Republican"
+        },
+        {
+          "name": "Lynne Walz",
+          "party": "Democrat"
+        }
+      ],
+      "title": "Governor - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/governor-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Bob Krist",
+          "party": "America First"
+        },
+        {
+          "name": "Scott Petersen",
+          "party": "Republican"
+        },
+        {
+          "name": "Paul Rumbaugh",
+          "party": "Nebraska Working People"
+        },
+        {
+          "name": "Sarah J Slattery",
+          "party": "Democrat"
+        }
+      ],
+      "title": "Secretary of State - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/secretary-of-state-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Daniel Ebers",
+          "party": "Democrat"
+        },
+        {
+          "name": "Joey Spellerberg",
+          "party": "Republican"
+        }
+      ],
+      "title": "State Treasurer - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/state-treasurer-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Jocelyn Brasher",
+          "party": "Democrat"
+        },
+        {
+          "name": "Mike Hilgers",
+          "party": "Republican"
+        }
+      ],
+      "title": "Attorney General - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/attorney-general-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Mike Foley",
+          "party": "Republican"
+        },
+        {
+          "name": "John Knight",
+          "party": "America First"
+        }
+      ],
+      "title": "Auditor of Public Accounts - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/auditor-of-public-accounts-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Dirk V. Block",
+          "party": "Republican"
+        },
+        {
+          "name": "Thomas E. Stine",
+          "party": "Republican"
+        }
+      ],
+      "title": "Judge of the Nebraska Workers' Compensation Court G26",
+      "url": "https://www.voterinformation.org/races/general-2026/judge-of-the-nebraska-workers-compensation-court-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "David J.A. Bargen",
+          "party": "Republican"
+        },
+        {
+          "name": "Rick A. Schreiner",
+          "party": "Republican"
+        },
+        {
+          "name": "Julie D. Smith",
+          "party": "Republican"
+        }
+      ],
+      "title": "Judge of the District Court - District 01 G26",
+      "url": "https://www.voterinformation.org/races/general-2026/judge-of-the-district-court-district-01-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Richard R. Smith",
+          "party": "Republican"
+        }
+      ],
+      "title": "Judge of the County Court - District 01 G26",
+      "url": "https://www.voterinformation.org/races/general-2026/judge-of-the-county-court-district-01-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Michaela Conway",
+          "party": "Democrat"
+        },
+        {
+          "name": "Angie Eberspacher",
+          "party": "Republican"
+        }
+      ],
+      "title": "State Board of Education - District 05 - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/state-board-of-education-district-05-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Janet M. Bock",
+          "party": "Democrat"
+        },
+        {
+          "name": "Cally Ideus",
+          "party": "Republican"
+        }
+      ],
+      "title": "Legislature - District 30 - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/legislature-district-30-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Michael Schoop",
+          "party": "Republican"
+        }
+      ],
+      "title": "Southeast Community College Board of Governors - District 01 - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/southeast-community-college-board-of-governors-district-01-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Tracy Ensor",
+          "party": "Nonpartisan"
+        }
+      ],
+      "title": "Nemaha Natural Resources District  Board of Directors - At Large - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/nemaha-natural-resources-district-board-of-directors-at-large-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Jason Pohlmann",
+          "party": "Republican"
+        }
+      ],
+      "title": "Lower Big Blue Natural Resources District  Board of Directors - At Large  - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/lower-big-blue-natural-resources-district-board-of-directors-at-large-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "No Candidate",
+          "party": "N/A"
+        }
+      ],
+      "title": "Nemaha Natural Resources District  Board of Directors - SubDistrict 01 - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/nemaha-natural-resources-district-board-of-directors-subdistrict-01-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Ryan Birkett",
+          "party": "Republican"
+        },
+        {
+          "name": "Anne DeVries",
+          "party": "Democrat"
+        }
+      ],
+      "title": "Lower Big Blue Natural Resources District Board of Directors - Subdistrict 1 - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/lower-big-blue-natural-resources-district-board-of-directors-subdistrict-1---g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Doug Pieper",
+          "party": "Republican"
+        },
+        {
+          "name": "Bruce Weise",
+          "party": "Republican"
+        }
+      ],
+      "title": "Lower Big Blue Natural Resources District Board of Directors - Subdistrict 2 - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/lower-big-blue-natural-resources-district-board-of-directors-subdistrict-2---g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Dean Roehr",
+          "party": "Republican"
+        },
+        {
+          "name": "Den Roehr",
+          "party": "Republican"
+        }
+      ],
+      "title": "Lower Big Blue Natural Resources District  Board of Directors - SubDistrict 5  - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/lower-big-blue-natural-resources-district-board-of-directors-subdistrict-5-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Matthew Mason",
+          "party": "Nonpartisan"
+        }
+      ],
+      "title": "Lower Big Blue Natural Resources District  Board of Directors - SubDistrict 6  - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/lower-big-blue-natural-resources-district-board-of-directors-subdistrict-6-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "J. Duane Sugden",
+          "party": "Republican"
+        }
+      ],
+      "title": "Nemaha Natural Resources District  Board of Directors - SubDistrict 06  - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/nemaha-natural-resources-district-board-of-directors-subdistrict-06-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Ryan Birkett",
+          "party": "Republican"
+        },
+        {
+          "name": "Anne DeVries",
+          "party": "Democrat"
+        }
+      ],
+      "title": "Lower Big Blue Natural Resources District  Board of Directors - SubDistrict 1  - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/lower-big-blue-natural-resources-district-board-of-directors-subdistrict-1-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Doug Pieper",
+          "party": "Republican"
+        },
+        {
+          "name": "Bruce Weise",
+          "party": "Republican"
+        }
+      ],
+      "title": "Lower Big Blue Natural Resources District  Board of Directors - SubDistrict 2  - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/lower-big-blue-natural-resources-district-board-of-directors-subdistrict-2-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Mark Kujath",
+          "party": "Republican"
+        },
+        {
+          "name": "John Novotny",
+          "party": "Democrat"
+        }
+      ],
+      "title": "Norris Public Power District - Subdivision 04 - G26",
+      "url": "https://www.voterinformation.org/races/general-2026/norris-public-power-district-subdivision-04---g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Jeff Bacon",
+          "party": "Nonpartisan"
+        }
+      ],
+      "title": "Educational Service Unit 04 - District 03  G26",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-04-district-03-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Carla J. Loemker",
+          "party": "Republican"
+        }
+      ],
+      "title": "Educational Service Unit 05 - District 05  G26",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-05-district-05-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Duane W. Smith",
+          "party": "Republican"
+        }
+      ],
+      "title": "Educational Service Unit 05 - District 07  G26",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-05-district-07-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Eric G. Malina",
+          "party": "Republican"
+        }
+      ],
+      "title": "Educational Service Unit 06 - District 05  G26",
+      "url": "https://www.voterinformation.org/races/general-2026/educational-service-unit-06-district-05-g26/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Mary D. Benes",
+          "party": "Republican"
+        },
+        {
+          "name": "Kyle Dorn",
+          "party": "Republican"
+        },
+        {
+          "name": "Jordan N. Freeman",
+          "party": "Republican"
+        },
+        {
+          "name": "Shawn E. Mencl",
+          "party": "Republican"
+        },
+        {
+          "name": "Theron Troxel",
+          "party": "Republican"
+        }
+      ],
+      "title": "Freeman School District (Vote up to 3)  G26",
+      "url": "https://www.voterinformation.org/races/general-2026/freeman-school-district-vote-up-to-3/"
+    },
+    {
+      "candidates": [
+        {
+          "name": "Laura Niles",
+          "party": "Republican"
+        },
+        {
+          "name": "Tim Riechers",
+          "party": "Republican"
+        },
+        {
+          "name": "Chris Woerner",
+          "party": "Nonpartisan"
+        }
+      ],
+      "title": "Wilber Clatonia School District (Vote up to 3)  G26",
+      "url": "https://www.voterinformation.org/races/general-2026/wilber-clatonia-school-district-vote-up-to-3--g26/"
+    }
+  ]
+}

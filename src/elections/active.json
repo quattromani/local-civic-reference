@@ -17,5 +17,6 @@
     "measurementId": "G-D28Q74TJYD",
     "allowedHost": "partyreveal.com"
   },
-  "disclosures": "src/content/disclosures.json"
+  "disclosures": "src/content/disclosures.json",
+  "judicialRetention": "src/data/elections/2026/judicial-retention.json"
 }

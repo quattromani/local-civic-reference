@@ -740,6 +740,26 @@ for (const result of data.results) {
     ? `Gage County primary result: ${result.votes.toLocaleString("en-US")} votes (${result.percentage.toFixed(2)}%).`
     : `Gage County reporting portion: ${result.votes.toLocaleString("en-US")} votes (${result.percentage.toFixed(2)}%). Statewide or districtwide advancement is established separately by the official state canvass.`;
 }
+// User-approved supplementary affiliations preserve their actual evidence type.
+const reportedAffiliations = JSON.parse(fs.readFileSync(path.join(sourceDataRoot, "reported-affiliations-2026-10-26.json"), "utf8"));
+for (const record of reportedAffiliations.records) {
+  const candidate = data.candidates.find(item => item.displayName === record.displayName);
+  if (!candidate || !["Republican", "Nonpartisan"].includes(record.affiliation)) throw new Error(`Invalid reported affiliation for ${record.displayName}`);
+  const affiliation = data.affiliations.find(item => item.candidateId === candidate.candidateId);
+  if (!affiliation || affiliation.sourceId) throw new Error(`Reported affiliation must not overwrite existing sourced evidence for ${record.displayName}`);
+  const sourceId = `src-vip-${slug(record.displayName)}-2026-10-26`;
+  data.sources.push({
+    sourceId, name: `${reportedAffiliations.sourceName}: ${record.displayName}`,
+    url: record.sourceUrl, reviewedDate: record.reviewedDate,
+    sourceType: "Supplementary voter guide", evidenceKind: "reported-affiliation",
+    publicStatus: "Voter Information Project affiliation listing",
+    publicDescription: "Reports the candidate's political affiliation. This citation is a voter-guide listing, not a direct voter-registration check."
+  });
+  Object.assign(affiliation, { label: record.affiliation, verificationState: "Verified", basis: "Affiliation reported by Voter Information Project", sourceId, verifiedDate: record.reviewedDate, evidenceType: "reported-affiliation" });
+  data.manualReview = data.manualReview.filter(item => item.candidateId !== candidate.candidateId);
+  data.sourceArtifacts.push({ artifactId: `artifact-${sourceId}`, path: "src/provenance/elections/2026/sources/vip-gage-records-2026-10-26.json", sourceId });
+}
+
 const serialized = process.argv.includes("--compact") ? JSON.stringify(data) : JSON.stringify(data, null, 2);
 if (process.argv.includes("--write")) {
   fs.writeFileSync(path.join(electionDataRoot, "election-directory.json"), `${serialized}\n`);

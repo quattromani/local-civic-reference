@@ -42,7 +42,7 @@ export function validateElectionContract(data, content, config) {
     else {
       const source = ref("sources",a.sourceId);
       if (!a.evidenceType || !a.verifiedDate || a.verificationState !== "Verified") throw new Error("Sourced affiliation requires evidence type and verification date");
-      if (source.evidenceKind !== ({registration:"registration","ballot-party":"filing","primary-participation":"primary-results"})[a.evidenceType]) throw new Error("Affiliation evidence conflicts with source kind");
+      if (source.evidenceKind !== ({registration:"registration","ballot-party":"filing","primary-participation":"primary-results","reported-affiliation":"reported-affiliation"})[a.evidenceType]) throw new Error("Affiliation evidence conflicts with source kind");
     }
   }
   for (const c of data.contests) { ref("offices",c.officeId); ref("sources",c.sourceId); }

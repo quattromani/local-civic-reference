@@ -1,3 +1,4 @@
+import { filterJudicialRetention } from "./judicial-retention.js";
 import { matchesAffiliation, setupAffiliationGuide } from "./affiliation-guide.js";
 
 function makeElement(tagName, className, textContent) {
@@ -53,6 +54,16 @@ export function setupDirectorySearch({ directory, status, electionData, interfac
         }));
         return [officeSuggestion, ...candidateSuggestions];
       });
+
+      document.querySelectorAll(".judicial-card").forEach((card, index) => suggestionIndex.push({
+        id: `judge-${index}`, type: "judge", value: card.querySelector("h5").textContent,
+        label: card.querySelector("h5").textContent, meta: card.closest(".judicial-court").dataset.label,
+        primaryText: card.querySelector("h5").textContent.toLowerCase(), secondaryText: card.closest(".judicial-court").dataset.searchText
+      }));
+      document.querySelectorAll(".judicial-court").forEach((court, index) => suggestionIndex.push({
+        id: `court-${index}`, type: "court", value: court.dataset.label,
+        label: court.dataset.label, meta: "Judicial retention", primaryText: court.dataset.label.toLowerCase(), secondaryText: "judicial retention"
+      }));
 
       function matchScore(item, query) {
         if (item.primaryText.startsWith(query)) return 0;
@@ -139,11 +150,11 @@ export function setupDirectorySearch({ directory, status, electionData, interfac
       }
 
       function captureOpenState() {
-        return Array.from(directory.querySelectorAll("details")).map((item) => item.open);
+        return Array.from(document.querySelectorAll("#directory-content details, #judicial-retention-content details")).map((item) => item.open);
       }
 
       function restoreOpenState() {
-        const disclosures = Array.from(directory.querySelectorAll("details"));
+        const disclosures = Array.from(document.querySelectorAll("#directory-content details, #judicial-retention-content details"));
         const savedOpenState = openStateBeforeSearch;
         disclosures.forEach((item, index) => {
           item.hidden = false;
@@ -193,6 +204,7 @@ export function setupDirectorySearch({ directory, status, electionData, interfac
 
         if (!query && !selectedAffiliation && !nonpartisanOnly) {
           restoreOpenState();
+          filterJudicialRetention();
           directory.querySelectorAll(".office-summary-meta").forEach((meta) => { meta.textContent = meta.dataset.completeMetadata; meta.hidden = false; });
           directory.querySelectorAll(".category-count").forEach((count) => { count.textContent = count.dataset.completeSummary; });
           updateSummary(electionData.length, completeCurrentCandidates.size, completeCategoryCount);
@@ -272,13 +284,15 @@ export function setupDirectorySearch({ directory, status, electionData, interfac
           if (categoryHasResults) visibleCategories += 1;
         });
 
+        const visibleJudges = filterJudicialRetention({ query, affiliation: selectedAffiliation, active: true });
         updateSummary(visibleOffices, visibleCurrentCandidates.size, visibleCategories);
-        status.classList.toggle("visually-hidden", visibleOffices > 0);
-        if (visibleOffices === 0) {
+        status.classList.toggle("visually-hidden", visibleOffices > 0 || visibleJudges > 0);
+        if (visibleOffices === 0 && visibleJudges === 0) {
           status.textContent = selectedAffiliation || nonpartisanOnly ? interfaceCopy.emptyAffiliationResults : interfaceCopy.noMatches.replace("{query}", input.value.trim());
         } else {
           status.textContent = `${visibleCandidates} candidate ${visibleCandidates === 1 ? "entry" : "entries"}, ${visibleOffices} ${visibleOffices === 1 ? "office" : "offices"}, ${visibleCategories} ${visibleCategories === 1 ? "category" : "categories"}`;
         }
+        if (visibleJudges) status.textContent += "; " + (visibleJudges === 1 ? interfaceCopy.judicialRetentionStatusOne : interfaceCopy.judicialRetentionStatusMany).replace("{count}", String(visibleJudges));
         if (visibleHistoryEntries) status.textContent += " " + interfaceCopy.filteredHistoryNotice
           .replace("{count}", String(visibleHistoryEntries)).replace("{unit}", visibleHistoryEntries === 1 ? "entry" : "entries");
         if (nonpartisanOnly) status.textContent += " " + interfaceCopy.nonpartisanRaceFilterStatus;

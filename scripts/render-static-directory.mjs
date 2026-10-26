@@ -1,3 +1,4 @@
+import { renderJudicialRetention } from "../src/site/scripts/judicial-retention.js";
 import { JSDOM } from "jsdom";
 import { initializeDirectory } from "../src/site/scripts/render-directory.js";
 
@@ -20,6 +21,7 @@ export function renderStaticDirectory(html, content, publication) {
       categorySummaryData: publication.categorySummaries,
       renderOnly: true
     });
+    renderJudicialRetention(publication.judicialRetention, content.judicialRetention);
     const directory = dom.window.document.querySelector("#directory-content");
     if (publication.offices.length && !directory.childElementCount) {
       throw new Error("Static directory rendering failed; refusing an incomplete publication.");
@@ -28,6 +30,7 @@ export function renderStaticDirectory(html, content, publication) {
       '<div class="directory-categories" id="directory-content"></div>',
       directory.outerHTML
     );
+    result = result.replace('<div class="directory-categories" id="judicial-retention-content"></div>', dom.window.document.querySelector("#judicial-retention-content").outerHTML);
     result = result.replace(
       /<ul class="directory-stats"[^>]*>[\s\S]*?<\/ul>/,
       dom.window.document.querySelector(".directory-stats").outerHTML
