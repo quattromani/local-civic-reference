@@ -610,8 +610,8 @@
       "jurisdiction": "City of Blue Springs",
       "jurisdictionType": "Municipality",
       "partisanStatus": "Nonpartisan",
-      "seatsAvailable": 2,
-      "voteFor": 2,
+      "seatsAvailable": 1,
+      "voteFor": 1,
       "candidates": [
         {
           "name": "Gene Radar Reedy",

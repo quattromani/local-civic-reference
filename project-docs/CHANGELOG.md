@@ -81,3 +81,7 @@ Meaningful data, architecture, governance, and publication milestones are record
 - Extended the source contract, methodology, affiliation guide, and validation for reported affiliations without presenting them as direct voter-registration checks.
 - Confirmed Mary Benes remains excluded and retained Ricky A. Schreiner's official ballot spelling, as clarified by the user.
 - Commit and push remain pending review.
+
+## 2026-10-26: Blue Springs mayor ballot limit
+
+Corrected Blue Springs mayor from two seats/votes to one, matching the archived county general-election sample ballot (page 2). Found during GOP card regeneration. Candidate identities and affiliations are unchanged. The user approved committing and pushing this correction before refreshing the GOP publication source reference.

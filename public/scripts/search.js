@@ -1,5 +1,5 @@
-import { filterJudicialRetention } from "./judicial-retention.js?v=e66145a52803";
-import { matchesAffiliation, setupAffiliationGuide } from "./affiliation-guide.js?v=e66145a52803";
+import { filterJudicialRetention } from "./judicial-retention.js?v=85d890ea7bad";
+import { matchesAffiliation, setupAffiliationGuide } from "./affiliation-guide.js?v=85d890ea7bad";
 
 function makeElement(tagName, className, textContent) {
   const element = document.createElement(tagName);

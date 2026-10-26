@@ -26,3 +26,7 @@ for (const name of ['Dan Osborn', 'Mark Cohen']) {
 }
 assert.equal(data.lastValidated, '2026-10-06');
 console.log(JSON.stringify({valid:true, finalListOffices:14, declaredWriteIns:declared.length}));
+
+const blueSpringsMayor = data.offices.find(office => office.officeId === 'office-blue-springs-mayor');
+assert.equal(blueSpringsMayor.voteFor, 1);
+assert.equal(blueSpringsMayor.seatsAvailable, 1);
