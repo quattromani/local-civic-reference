@@ -48,12 +48,12 @@ try {
   globalThis.window = dom.window; globalThis.document = dom.window.document; globalThis.CustomEvent = dom.window.CustomEvent;
   // Static output must already contain every question, without running application code.
   assert.equal(document.querySelectorAll(".judicial-card").length, 6);
-  assert.equal(document.querySelectorAll(".judicial-affiliation a").length, 6);
+  assert.equal(document.querySelectorAll(".judicial-affiliation").length, 6);
   assert.equal(document.querySelectorAll(".judicial-court").length, 3);
   renderJudicialRetention(expected, content.judicialRetention);
   initializeDirectory({ siteConfig: { lastReviewed: content.election.lastReviewed, electionDay: content.election.dateDisplay, correctionEmail: content.guide.correctionEmail }, interfaceCopy: content.interfaceCopy, affiliationGuide: content.affiliationGuide, electionData: publication.offices, categorySummaryData: publication.categorySummaries });
   assert.equal(document.querySelectorAll(".judicial-card").length, 6, "Initialization must not duplicate judges");
-  assert.equal(document.querySelectorAll(".judicial-card .affiliation-badge").length, 0);
+  assert.equal(document.querySelectorAll(".judicial-card .affiliation-badge--republican").length, 6);
   assert.equal(document.querySelectorAll(".judicial-card input, .judicial-card button").length, 0, "Ballot choices are explanatory, not a simulated vote");
   const originalCandidateCount = document.querySelector("[data-directory-candidate-count]").textContent;
   const input = document.querySelector("#directory-search");

@@ -47,16 +47,18 @@ export function renderJudicialRetention(data, copy) {
       const header = element("div", "candidate-card-header");
       header.append(element("h5", "candidate-name", question.name));
       if (question.affiliation) {
-        const affiliation = element("p", "candidate-note judicial-affiliation", `${question.affiliation.label} · Reported by `);
-        const link = element("a", "source-link", "Voter Information Project");
-        link.href = question.affiliation.source.url;
-        affiliation.append(link); header.append(affiliation);
+        const affiliation = element("span", "affiliation-badge affiliation-badge--republican judicial-affiliation", question.affiliation.label);
+        affiliation.setAttribute("role", "group");
+        affiliation.setAttribute("aria-label", `Political affiliation: ${question.affiliation.label}. Reported by Voter Information Project.`);
+        header.append(affiliation);
       }
       card.append(header, element("p", "candidate-election-status", `${copy.questionLabel}, ${copy.termLabel}`), element("p", "candidate-note", question.ballotQuestion), element("p", "candidate-note", copy.choicesLabel));
       const sources = element("details", "candidate-sources");
       sources.append(element("summary", "candidate-sources-summary", copy.sourcesLabel));
       const sourceList = element("div", "candidate-source-list");
-      for (const source of question.sources) {
+      const judicialSources = [...question.sources];
+      if (question.affiliation) judicialSources.push({ ...question.affiliation.source, title: "Voter Information Project: reported Republican affiliation" });
+      for (const source of judicialSources) {
         const entry = element("div", "candidate-source-entry");
         const link = element("a", "source-link", source.title);
         link.href = source.url;
