@@ -13,9 +13,14 @@ const expected = createJudicialRetentionProjection(electionConfig);
 assert.deepEqual(publication.judicialRetention, expected, "Public judicial fields must equal the canonical projection");
 assert.equal(expected.questions.length, 6);
 assert.equal(expected.courts.length, 3);
+for (const question of expected.questions) {
+  assert.equal(question.affiliation.label, "Republican");
+  assert.equal(question.affiliation.evidenceType, "reported-affiliation");
+  assert.match(question.affiliation.source.url, /^https:\/\/www.voterinformation.org\/races\//);
+}
 assert.deepEqual(expected.questions.map(q => q.name), ["Dirk V. Block", "Thomas E. Stine", "Ricky A. Schreiner", "Julie D. Smith", "David J. A. Bargen", "Richard R. Smith"]);
 assert.equal(createJudicialRetentionProjection({}), null, "Another election must not inherit these judges");
-assert.doesNotMatch(JSON.stringify(expected), /provenance|ballotPhotographs|localArchive|affiliation/);
+assert.doesNotMatch(JSON.stringify(expected), /provenance|ballotPhotographs|localArchive/);
 const sourceText = fs.readFileSync("src/provenance/elections/2026/sources/ne-2026-retention-list-2026-08-03.txt", "utf8");
 const normalize = value => value.replace(/\s+/g, " ");
 for (const question of expected.questions) {
@@ -43,6 +48,7 @@ try {
   globalThis.window = dom.window; globalThis.document = dom.window.document; globalThis.CustomEvent = dom.window.CustomEvent;
   // Static output must already contain every question, without running application code.
   assert.equal(document.querySelectorAll(".judicial-card").length, 6);
+  assert.equal(document.querySelectorAll(".judicial-affiliation a").length, 6);
   assert.equal(document.querySelectorAll(".judicial-court").length, 3);
   renderJudicialRetention(expected, content.judicialRetention);
   initializeDirectory({ siteConfig: { lastReviewed: content.election.lastReviewed, electionDay: content.election.dateDisplay, correctionEmail: content.guide.correctionEmail }, interfaceCopy: content.interfaceCopy, affiliationGuide: content.affiliationGuide, electionData: publication.offices, categorySummaryData: publication.categorySummaries });

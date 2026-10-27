@@ -28,6 +28,24 @@
         "selectionProcess",
         "retentionProcess"
       ]
+    },
+    {
+      "sourceId": "vip-judicial-workers-compensation",
+      "title": "Voter Information Project: reported judicial affiliations",
+      "url": "https://www.voterinformation.org/races/general-2026/judge-of-the-nebraska-workers-compensation-court-g26/",
+      "reviewedDate": "2026-10-26"
+    },
+    {
+      "sourceId": "vip-judicial-district-court-1",
+      "title": "Voter Information Project: reported judicial affiliations",
+      "url": "https://www.voterinformation.org/races/general-2026/judge-of-the-district-court-district-01-g26/",
+      "reviewedDate": "2026-10-26"
+    },
+    {
+      "sourceId": "vip-judicial-county-court-1",
+      "title": "Voter Information Project: reported judicial affiliations",
+      "url": "https://www.voterinformation.org/races/general-2026/judge-of-the-county-court-district-01-g26/",
+      "reviewedDate": "2026-10-26"
     }
   ],
   "courts": [
@@ -57,32 +75,68 @@
     {
       "judgeId": "judge-dirk-v-block",
       "ballotName": "Dirk V. Block",
-      "nameSourceId": "ne-retention-list-2026-08-03"
+      "nameSourceId": "ne-retention-list-2026-08-03",
+      "affiliation": {
+        "label": "Republican",
+        "evidenceType": "reported-affiliation",
+        "sourceId": "vip-judicial-workers-compensation",
+        "reviewedDate": "2026-10-26"
+      }
     },
     {
       "judgeId": "judge-thomas-e-stine",
       "ballotName": "Thomas E. Stine",
-      "nameSourceId": "ne-retention-list-2026-08-03"
+      "nameSourceId": "ne-retention-list-2026-08-03",
+      "affiliation": {
+        "label": "Republican",
+        "evidenceType": "reported-affiliation",
+        "sourceId": "vip-judicial-workers-compensation",
+        "reviewedDate": "2026-10-26"
+      }
     },
     {
       "judgeId": "judge-ricky-a-schreiner",
       "ballotName": "Ricky A. Schreiner",
-      "nameSourceId": "ne-retention-list-2026-08-03"
+      "nameSourceId": "ne-retention-list-2026-08-03",
+      "affiliation": {
+        "label": "Republican",
+        "evidenceType": "reported-affiliation",
+        "sourceId": "vip-judicial-district-court-1",
+        "reviewedDate": "2026-10-26"
+      }
     },
     {
       "judgeId": "judge-julie-d-smith",
       "ballotName": "Julie D. Smith",
-      "nameSourceId": "ne-retention-list-2026-08-03"
+      "nameSourceId": "ne-retention-list-2026-08-03",
+      "affiliation": {
+        "label": "Republican",
+        "evidenceType": "reported-affiliation",
+        "sourceId": "vip-judicial-district-court-1",
+        "reviewedDate": "2026-10-26"
+      }
     },
     {
       "judgeId": "judge-david-j-a-bargen",
       "ballotName": "David J. A. Bargen",
-      "nameSourceId": "ne-retention-list-2026-08-03"
+      "nameSourceId": "ne-retention-list-2026-08-03",
+      "affiliation": {
+        "label": "Republican",
+        "evidenceType": "reported-affiliation",
+        "sourceId": "vip-judicial-district-court-1",
+        "reviewedDate": "2026-10-26"
+      }
     },
     {
       "judgeId": "judge-richard-r-smith",
       "ballotName": "Richard R. Smith",
-      "nameSourceId": "ne-retention-list-2026-08-03"
+      "nameSourceId": "ne-retention-list-2026-08-03",
+      "affiliation": {
+        "label": "Republican",
+        "evidenceType": "reported-affiliation",
+        "sourceId": "vip-judicial-county-court-1",
+        "reviewedDate": "2026-10-26"
+      }
     }
   ],
   "retentionQuestions": [

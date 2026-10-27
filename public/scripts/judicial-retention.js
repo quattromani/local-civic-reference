@@ -46,6 +46,12 @@ export function renderJudicialRetention(data, copy) {
       card.dataset.searchText = `${question.name} ${question.ballotQuestion}`.toLowerCase();
       const header = element("div", "candidate-card-header");
       header.append(element("h5", "candidate-name", question.name));
+      if (question.affiliation) {
+        const affiliation = element("p", "candidate-note judicial-affiliation", `${question.affiliation.label} · Reported by `);
+        const link = element("a", "source-link", "Voter Information Project");
+        link.href = question.affiliation.source.url;
+        affiliation.append(link); header.append(affiliation);
+      }
       card.append(header, element("p", "candidate-election-status", `${copy.questionLabel}, ${copy.termLabel}`), element("p", "candidate-note", question.ballotQuestion), element("p", "candidate-note", copy.choicesLabel));
       const sources = element("details", "candidate-sources");
       sources.append(element("summary", "candidate-sources-summary", copy.sourcesLabel));

@@ -33,7 +33,8 @@ export function createJudicialRetentionProjection(config) {
     if (!Number.isInteger(question.displayOrder) || question.displayOrder < 1 || orders.has(question.displayOrder)) throw new Error("Invalid retention display order");
     orders.add(question.displayOrder);
     publicSource(judge.nameSourceId);
-    return { questionId: question.questionId, judgeId: judge.judgeId, name: judge.ballotName, courtId: question.courtId, contestType: question.contestType, ballotQuestion: question.ballotQuestion, choices: [...question.choices], termYears: question.termYears, displayOrder: question.displayOrder, sources: [...new Set([judge.nameSourceId, question.sourceId])].map(publicSource) };
+    if (judge.affiliation && (judge.affiliation.label !== "Republican" || judge.affiliation.evidenceType !== "reported-affiliation")) throw new Error("Invalid reported judicial affiliation");
+    return { questionId: question.questionId, judgeId: judge.judgeId, name: judge.ballotName, affiliation: judge.affiliation ? { label: judge.affiliation.label, evidenceType: judge.affiliation.evidenceType, source: publicSource(judge.affiliation.sourceId) } : null, courtId: question.courtId, contestType: question.contestType, ballotQuestion: question.ballotQuestion, choices: [...question.choices], termYears: question.termYears, displayOrder: question.displayOrder, sources: [...new Set([judge.nameSourceId, question.sourceId])].map(publicSource) };
   }).sort((a,b) => a.displayOrder - b.displayOrder);
   if (referencedJudges.size !== judges.size) throw new Error("Judge missing retention question");
   return {
