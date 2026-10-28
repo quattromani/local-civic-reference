@@ -42,6 +42,7 @@ export function createJudicialRetentionProjection(config) {
     electionDate: data.electionDate,
     courts: [...courts.values()].sort((a,b) => a.displayOrder - b.displayOrder).map(court => ({ courtId: court.courtId, name: court.name, district: court.district, scope: court.scope })),
     questions,
-    processSource: publicSource(data.processSourceId)
+    processSource: publicSource(data.processSourceId),
+    voterResources: (data.voterResources || []).map(resource => ({ ...publicSource(resource.sourceId), description: resource.description }))
   };
 }

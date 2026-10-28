@@ -25,9 +25,17 @@ export function renderJudicialRetention(data, copy) {
   utility.append(affordance); heading.append(utility); summary.append(heading);
   const body = element("div", "category-offices");
   body.append(element("p", "candidate-section-context", copy.introduction), element("p", "candidate-section-context", copy.instructions));
-  const processLink = element("a", "source-link", data.processSource.title);
-  processLink.href = data.processSource.url;
-  body.append(processLink);
+  const resources = element("div", "judicial-resources");
+  resources.append(element("h4", "office-title", "Resources for evaluating judges"));
+  for (const resource of data.voterResources?.length ? data.voterResources : [data.processSource]) {
+    const entry = element("p", "candidate-section-context");
+    const link = element("a", "source-link", resource.title);
+    link.href = resource.url;
+    entry.append(link);
+    if (resource.description) entry.append(element("span", "", ` ${resource.description}`));
+    resources.append(entry);
+  }
+  body.append(resources);
   for (const court of data.courts) {
     const group = element("details", "office-disclosure judicial-court");
     group.id = `judicial-court-${court.courtId}`;

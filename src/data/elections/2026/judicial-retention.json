@@ -46,6 +46,15 @@
       "title": "Voter Information Project: reported judicial affiliations",
       "url": "https://www.voterinformation.org/races/general-2026/judge-of-the-county-court-district-01-g26/",
       "reviewedDate": "2026-10-26"
+    },
+    {
+      "sourceId": "ne-bar-judicial-evaluation",
+      "title": "Nebraska State Bar Association: judicial evaluation poll results",
+      "url": "https://www.nebar.com/?pg=JPEResults",
+      "reviewedDate": "2026-10-28",
+      "supports": [
+        "judicialEvaluationResource"
+      ]
     }
   ],
   "courts": [
@@ -239,5 +248,15 @@
       "src/provenance/elections/2026/sources/gage-2026-user-ballot-back-2026-10-26.png": "c013f0363f28c13ac3b3f8d9933b3faa8686bfed6234a4d5fa096aa0d4988096"
     }
   },
-  "processSourceId": "ne-retention-voter-guide"
+  "processSourceId": "ne-retention-voter-guide",
+  "voterResources": [
+    {
+      "sourceId": "ne-retention-voter-guide",
+      "description": "Learn how judicial selection and retention elections work."
+    },
+    {
+      "sourceId": "ne-bar-judicial-evaluation",
+      "description": "Read the 2026 judicial performance evaluations by Nebraska lawyers, coordinated by the Nebraska State Bar Association."
+    }
+  ]
 }

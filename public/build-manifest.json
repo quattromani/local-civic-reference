@@ -3,7 +3,7 @@
   "contentSchemaVersion": "1.0.0",
   "canonicalDatasetSha256": "729ffaf46818c04817ccc53ffd9299615058f217242834522d1ae7d0867ef095",
   "contentSha256": "6e5e16a90585defa45c902feafeba0bb253eb5a55a773fc6d4e6f0942f8d91db",
-  "judicialDatasetSha256": "cad21fe3be5ebddedeecc39bfcea6773e59a69c9d8ab13d25ac8fd51e312ad78",
-  "publishedDirectorySha256": "6a4eb7b9da76eca8de3cac691ab8cfbfb4850815c2a23986e992376b1f94b43b",
+  "judicialDatasetSha256": "e3fe19f6bf06e5c0953234ebd5cf23b648990e380022fb2e41c06c9bdcf3a80f",
+  "publishedDirectorySha256": "d9b62bb61f65f94746e417b07e511b82546637ea3d1f1a34942963741895967e",
   "publicationTarget": "GitHub Pages /public"
 }
